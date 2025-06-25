@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ka">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-lang="pageTitle">OSGWeb.ge - Websites That Grow Your Business</title>
+    <meta name="description" content="..." data-lang-meta="pageDescription">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div> 
+
+    <header>
+        <nav class="container">
+            <a href="#hero" class="logo nav-link">
+                <img src="./osg.png" alt="OSGWeb.ge Logo">
+                <span>OSGWeb.ge</span>
+            </a>
+            <div class="nav-right">
+                <ul class="nav-links">
+                    <li><a href="#services" class="nav-link" data-lang="navServices">Services</a></li>
+                    <li><a href="#portfolio" class="nav-link" data-lang="navPortfolio">Portfolio</a></li>
+                    <li><a href="#testimonials" class="nav-link" data-lang="navTestimonials">Testimonials</a></li>
+                    <li><a href="#contact-page" class="nav-link" data-lang="navContact">Contact</a></li>
+                    <li><a href="#review-page" class="nav-link btn btn-secondary" data-lang="navReview">Leave a Review</a></li>
+                </ul>
+                <div class="language-selector">
+                    <button class="current-lang-btn" id="current-lang-btn" aria-haspopup="true" aria-expanded="false">KA</button>
+                    <div class="language-options" id="language-options" role="menu">
+                        <a href="#" role="menuitem" data-lang-value="ka">ქართული</a>
+                        <a href="#" role="menuitem" data-lang-value="en">English</a>
+                        <a href="#" role="menuitem" data-lang-value="ru">Русский</a>
+                        
+                    </div>
+                </div>
+                <button id="hamburger-menu" class="hamburger-menu" aria-label="Open menu"><i class="fas fa-bars"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- This is the UPGRADED mobile panel -->
+<div id="mobile-nav-panel" class="mobile-nav-panel">
+    <button id="close-mobile-menu" class="close-btn" aria-label="Close menu">×</button>
+    
+    <div class="mobile-nav-content">
+        <ul class="mobile-nav-links">
+            <li><a href="#services" class="nav-link" data-lang="navServices">Services</a></li>
+            <li><a href="#portfolio" class="nav-link" data-lang="navPortfolio">Portfolio</a></li>
+            <li><a href="#testimonials" class="nav-link" data-lang="navTestimonials">Testimonials</a></li>
+            <li><a href="#contact-page" class="nav-link" data-lang="navContact">Contact</a></li>
+            <li><a href="#review-page" class="nav-link" data-lang="navReview">Leave a Review</a></li>
+        </ul>
+
+        <div class="mobile-lang-switcher">
+            <button data-lang-value="ka">ქართული</button>
+            <span>/</span>
+            <button data-lang-value="en">English</button>
+            <span>/</span>
+            <button data-lang-value="ru">Русский</button>
+        </div>
+    </div>
+</div>
+
+    <main>
+        <!-- === VIEW 1: MAIN HOMEPAGE CONTENT === -->
+        <div id="main-content-view" class="page-view">
+            <section id="hero">
+                <div class="aurora-background"></div>
+                <div class="container hero-grid">
+                    <div class="hero-text">
+                        <h1 data-aos="fade-up" data-lang="heroTitle"></h1>
+                        <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="100" data-lang="heroSubtitle"></p>
+                        <div class="hero-buttons" data-aos="fade-up" data-aos-delay="200">
+                            <a href="#contact-page" class="btn btn-primary nav-link" data-lang="heroButton"></a>
+                        </div>
+                    </div>
+                    <div class="hero-visual" data-aos="fade-left" data-aos-delay="300">
+                        <div class="browser-mockup"><div class="browser-header"><span></span><span></span><span></span></div><div class="browser-body"></div></div>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="trust-bar"><div class="container"><div class="marquee"><div class="marquee-content"><span>🚀 Supabase</span><span>🎨 Figma</span><span>💻 Webflow</span><span>🌟 Framer</span><span>🚀 Supabase</span><span>🎨 Figma</span><span>💻 Webflow</span><span>🌟 Framer</span></div></div></div></section>
+
+            <section id="services" class="content-section">
+                <div class="container">
+                    <h2 class="section-title" data-aos="fade-up" data-lang="servicesTitle"></h2>
+                    <div class="services-grid">
+                        <div class="card" data-aos="fade-up" data-aos-delay="100">
+                            <h3 data-lang="service1Title"></h3>
+                            <p data-lang="service1Desc"></p>
+                        </div>
+                        <div class="card" data-aos="fade-up" data-aos-delay="200">
+                            <h3 data-lang="service2Title"></h3>
+                            <p data-lang="service2Desc"></p>
+                        </div>
+                        <div class="card" data-aos="fade-up" data-aos-delay="300">
+                            <h3 data-lang="service3Title"></h3>
+                            <p data-lang="service3Desc"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="portfolio" class="content-section-dark">
+                <div class="container">
+                    <h2 class="section-title" data-aos="fade-up" data-lang="portfolioTitle"></h2>
+                    <div class="bento-grid">
+                        <a href="https://osg-website-tamplate.vercel.app/" target="_blank" rel="noopener noreferrer" class="bento-item featured" data-aos="fade-up">
+                            <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="An elegantly plated salmon dish from 'The Slate Table' restaurant project.">
+                            <div class="overlay"><h3 data-lang="portfolio1Title"></h3></div>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="bento-item" data-aos="fade-up" data-aos-delay="100">
+                            <img src="https://images.pexels.com/photos/305821/pexels-photo-305821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A stylish barbershop interior with vintage chairs for 'The Gents Chair' project.">
+                            <div class="overlay"><h3 data-lang="portfolio2Title"></h3></div>
+                        </a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" class="bento-item" data-aos="fade-up" data-aos-delay="200">
+                            <img src="https://images.pexels.com/photos/1445696/pexels-photo-1445696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A cozy cafe ambiance with a cup of coffee for the 'Aroma Collective' project.">
+                            <div class="overlay"><h3 data-lang="portfolio3Title"></h3></div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="testimonials" class="content-section">
+                <div class="container">
+                    <h2 class="section-title" data-aos="fade-up" data-lang="testimonialsTitle"></h2>
+                    <div id="review-list" class="review-grid">
+                        <!-- Add verified reviews here manually -->
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- === VIEW 2: CONTACT "PAGE" === -->
+        <div id="contact-page-view" class="page-view">
+            <section id="contact-page" class="content-section-dark centered-page">
+                <div class="container">
+                    <h2 class="section-title" data-aos="fade-up" data-lang="contactTitle"></h2>
+                    <div class="contact-grid">
+                        <div class="contact-info" data-aos="fade-right">
+                            <h3 data-lang="contactInfoTitle"></h3>
+                            <p data-lang="contactInfoDesc"></p>
+                            <div class="info-item"><i class="fas fa-envelope"></i><a href="mailto:osgbusiness01@gmail.com">osgbusiness01@gmail.com</a></div>
+                            <div class="info-item"><i class="fas fa-phone"></i><span>+995 123 456 789</span></div>
+                            <div class="info-item"><i class="fas fa-map-marker-alt"></i><span data-lang="contactInfoLocation"></span></div>
+                        </div>
+                        <form action="https://formspree.io/f/myzjpoln" method="POST" class="contact-form" data-aos="fade-left">
+                            <div class="form-group">
+                                <label for="contact-name" class="visually-hidden" data-lang="formNamePlaceholder"></label>
+                                <input id="contact-name" type="text" name="name" data-lang-placeholder="formNamePlaceholder" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-email" class="visually-hidden" data-lang="formEmailPlaceholder"></label>
+                                <input id="contact-email" type="email" name="email" data-lang-placeholder="formEmailPlaceholder" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact-message" class="visually-hidden" data-lang="formMessagePlaceholder"></label>
+                                <textarea id="contact-message" name="message" rows="5" data-lang-placeholder="formMessagePlaceholder" required></textarea>
+                            </div>
+                            <div class="form-button-group">
+                                <button type="submit" class="btn btn-primary" data-lang="formSendButton"></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- === VIEW 3: REVIEW "PAGE" === -->
+        <div id="review-page-view" class="page-view">
+            <section id="review-page" class="review-page-section centered-page">
+                <div class="container">
+                    <div class="review-form-container" data-aos="fade-up">
+                        <div id="review-form-wrapper">
+                            <div class="review-form-header">
+                                <h2 class="section-title" data-lang="reviewPageTitle"></h2>
+                                <p class="review-form-subtitle" data-lang="reviewPageSubtitle"></p>
+                            </div>
+                            <form id="review-form" class="review-form horizontal-form" action="https://formspree.io/f/myzjpoln" method="POST">
+                                <div class="form-grid">
+                                    <div class="input-group form-group">
+                                        <label for="review-fullname" class="visually-hidden" data-lang-placeholder="formFullNamePlaceholder"></label>
+                                        <i class="fa-solid fa-user"></i>
+                                        <input id="review-fullname" type="text" name="fullname" data-lang-placeholder="formFullNamePlaceholder" required>
+                                    </div>
+                                    <div class="input-group form-group">
+                                        <label for="review-email" class="visually-hidden" data-lang-placeholder="formEmailPlaceholder"></label>
+                                        <i class="fa-solid fa-envelope"></i>
+                                        <input id="review-email" type="email" name="email" data-lang-placeholder="formEmailPlaceholder" required>
+                                    </div>
+                                    <div class="input-group form-group">
+                                        <label for="review-company" class="visually-hidden" data-lang-placeholder="formCompanyPlaceholder"></label>
+                                        <i class="fa-solid fa-building"></i>
+                                        <input id="review-company" type="text" name="company" data-lang-placeholder="formCompanyPlaceholder">
+                                    </div>
+                                    <div class="input-group form-group">
+                                        <label for="review-website" class="visually-hidden" data-lang-placeholder="formWebsitePlaceholder"></label>
+                                        <i class="fa-solid fa-link"></i>
+                                        <input id="review-website" type="url" name="website_link" data-lang-placeholder="formWebsitePlaceholder" required>
+                                    </div>
+                                    <div class="input-group star-rating-group">
+                                        <label id="rating-label" data-lang="reviewFormRatingLabel"></label>
+                                        <div class="star-rating-system" role="radiogroup" aria-labelledby="rating-label">
+                                            <input type="radio" id="rate-5" name="rating" value="5" required><label for="rate-5" title="5 stars">★</label>
+                                            <input type="radio" id="rate-4" name="rating" value="4"><label for="rate-4" title="4 stars">★</label>
+                                            <input type="radio" id="rate-3" name="rating" value="3"><label for="rate-3" title="3 stars">★</label>
+                                            <input type="radio" id="rate-2" name="rating" value="2"><label for="rate-2" title="2 stars">★</label>
+                                            <input type="radio" id="rate-1" name="rating" value="1"><label for="rate-1" title="1 star">★</label>
+                                        </div>
+                                    </div>
+                                    <div class="input-group textarea-group form-group">
+                                        <label for="review-message" class="visually-hidden" data-lang-placeholder="reviewFormMessagePlaceholder"></label>
+                                        <i class="fa-solid fa-comment-dots"></i>
+                                        <textarea id="review-message" name="review_message" rows="4" data-lang-placeholder="reviewFormMessagePlaceholder" required></textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary form-submit-btn" data-lang="reviewFormSubmitButton"></button>
+                            </form>
+                        </div>
+                        <div id="review-success-message" class="review-success-message" style="display: none;">
+                            <i class="fas fa-check-circle"></i>
+                            <h3 data-lang="reviewSuccessTitle"></h3>
+                            <p data-lang="reviewPendingMessage"></p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" data-aos="fade-up">
+                    <h4 class="logo">OSGWeb.ge</h4>
+                    <p data-lang="footerAbout"></p>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="100">
+                    <h4 data-lang="footerLinksTitle"></h4>
+                    <ul>
+                        <li><a href="#services" class="nav-link" data-lang="navServices"></a></li>
+                        <li><a href="#portfolio" class="nav-link" data-lang="navPortfolio"></a></li>
+                        <li><a href="#testimonials" class="nav-link" data-lang="navTestimonials"></a></li>
+                        <li><a href="#contact-page" class="nav-link" data-lang="navContact"></a></li>
+                    </ul>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                    <h4 data-lang="footerContactTitle"></h4>
+                    <p><i class="fas fa-envelope"></i> osgbusiness01@gmail.com</p>
+                    <p><i class="fas fa-phone"></i> +995 123 456 789</p>
+                </div>
+                <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                    <h4 data-lang="footerSocialTitle"></h4>
+                    <div class="social-icons">
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-lang="footerCopyright"></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
