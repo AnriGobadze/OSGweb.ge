@@ -43,7 +43,6 @@
         </nav>
     </header>
 
-    <!-- This is the UPGRADED mobile panel -->
 <div id="mobile-nav-panel" class="mobile-nav-panel">
     <button id="close-mobile-menu" class="close-btn" aria-label="Close menu">×</button>
 
@@ -67,7 +66,6 @@
 </div>
 
     <main>
-        <!-- === VIEW 1: MAIN HOMEPAGE CONTENT === -->
         <div id="main-content-view" class="page-view">
             <section id="hero">
                 <div class="aurora-background"></div>
@@ -131,7 +129,26 @@
                 <div class="container">
                     <h2 class="section-title" data-aos="fade-up" data-lang="testimonialsTitle"></h2>
                     <div id="review-list" class="review-grid">
+                        <div class="review-card" data-aos="fade-up">
+    <div class="review-header">
+        <img src="./Everluxe.jpg" alt="Company Logo" class="review-avatar">
+        <div class="review-author-info">
+            <p class="review-author">თამილა</p>
+            <p class="review-company">მფლობელი, Everluxe Store </p>
+        </div>
+    </div>
+    <div class="stars">★★★★★</div>
+    <p class="review-text">
+        მართლა არ ველოდი ასეთ შედეგს – OSG კომპანიის სერვისმა გაყიდვები მაგრად ამიწია. გულიანი მადლობა გუნდის თითოეულ წევრს!
+    </p>
+    <a href="https://everluxe.vercel.app" target="_blank" rel="noopener noreferrer" class="review-project-link">
+        View Live Project <i class="fas fa-arrow-right"></i>
+    </a>
+</div>
                     </div>
+                     <div class="end-of-reviews-marker" data-aos="fade-up">
+            <span data-lang="noMoreReviews">No more reviews</span>
+        </div>
                 </div>
             </section>
         </div>
@@ -199,6 +216,22 @@
                                         <i class="fa-solid fa-building"></i>
                                         <input id="review-company" type="text" name="company" data-lang-placeholder="formCompanyPlaceholder">
                                     </div>
+
+<div id="logo-upload-wrapper" class="input-group form-group">
+    <div id="image-preview-container" class="image-preview-container">
+        <img src="#" alt="Company logo preview" id="image-preview" class="image-preview">
+        <button type="button" id="remove-image-btn" class="remove-image-btn" aria-label="Remove image">×</button>
+    </div>
+
+    <label for="review-logo" class="file-upload-label">
+        <i class="fa-solid fa-image"></i>
+        <span class="file-upload-text" data-lang="formLogoPlaceholder">Add company logo (optional)</span>
+    </label>
+    <input id="review-logo" type="file" name="company_logo" accept="image/*" class="visually-hidden">
+</div>
+<!-- ============================================================== -->
+
+
                                     <div class="input-group form-group">
                                         <label for="review-website" class="visually-hidden" data-lang-placeholder="formWebsitePlaceholder"></label>
                                         <i class="fa-solid fa-link"></i>
@@ -252,7 +285,6 @@
                     <div class="social-icons">
                         <a href="https://www.facebook.com/okagi.okagi.2025/" target="_blank" rel="noopener noreferrer" aria-label="Our Facebook Page"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/osg.agency/" target="_blank" rel="noopener noreferrer" aria-label="Our Instagram Profile"><i class="fab fa-instagram"></i></a>
-                        <!-- <a target="_blank" rel="noopener noreferrer" aria-label="Our LinkedIn Profile"><i class="fab fa-linkedin-in"></i></a> -->
                     </div>
                 </div>
             </div>
