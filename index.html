@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ka">
+<html lang="GE">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,8 +13,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-        <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
+    <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
 
     <header>
         <nav class="container">
@@ -29,12 +31,11 @@
                     <li><a href="#contact-page" class="nav-link" data-lang="navContact">Contact</a></li>
                 </ul>
                 <div class="language-selector">
-                    <button class="current-lang-btn" id="current-lang-btn" aria-haspopup="true" aria-expanded="false">KA</button>
+                    <button class="current-lang-btn" id="current-lang-btn" aria-haspopup="true" aria-expanded="false">GE</button>
                     <div class="language-options" id="language-options" role="menu">
-                        <a href="#" role="menuitem" data-lang-value="ka">ქართული</a>
+                        <a href="#" role="menuitem" data-lang-value="ge">ქართული</a>
                         <a href="#" role="menuitem" data-lang-value="en">English</a>
                         <a href="#" role="menuitem" data-lang-value="ru">Русский</a>
-
                     </div>
                 </div>
                 <button id="hamburger-menu" class="hamburger-menu" aria-label="Open menu"><i class="fas fa-bars"></i></button>
@@ -42,26 +43,24 @@
         </nav>
     </header>
 
-<div id="mobile-nav-panel" class="mobile-nav-panel">
-    <button id="close-mobile-menu" class="close-btn" aria-label="Close menu">×</button>
-
-    <div class="mobile-nav-content">
-        <ul class="mobile-nav-links">
-            <li><a href="#services" class="nav-link" data-lang="navServices">Services</a></li>
-            <li><a href="#portfolio" class="nav-link" data-lang="navPortfolio">Portfolio</a></li>
-            <li><a href="#testimonials" class="nav-link" data-lang="navTestimonials">Testimonials</a></li>
-            <li><a href="#contact-page" class="nav-link" data-lang="navContact">Contact</a></li>
-        </ul>
-
-        <div class="mobile-lang-switcher">
-            <button data-lang-value="ka">KA</button>
-            <span>/</span>
-            <button data-lang-value="en">EN</button>
-            <span>/</span>
-            <button data-lang-value="ru">RU</button>
+    <div id="mobile-nav-panel" class="mobile-nav-panel">
+        <button id="close-mobile-menu" class="close-btn" aria-label="Close menu">×</button>
+        <div class="mobile-nav-content">
+            <ul class="mobile-nav-links">
+                <li><a href="#services" class="nav-link" data-lang="navServices">Services</a></li>
+                <li><a href="#portfolio" class="nav-link" data-lang="navPortfolio">Portfolio</a></li>
+                <li><a href="#testimonials" class="nav-link" data-lang="navTestimonials">Testimonials</a></li>
+                <li><a href="#contact-page" class="nav-link" data-lang="navContact">Contact</a></li>
+            </ul>
+            <div class="mobile-lang-switcher">
+                <button data-lang-value="ge">ge</button>
+                <span>/</span>
+                <button data-lang-value="en">EN</button>
+                <span>/</span>
+                <button data-lang-value="ru">RU</button>
+            </div>
         </div>
     </div>
-</div>
 
     <main>
         <div id="main-content-view" class="page-view">
@@ -76,12 +75,21 @@
                         </div>
                     </div>
                     <div class="hero-visual" data-aos="fade-left" data-aos-delay="300">
-                        <div class="browser-mockup"><div class="browser-header"><span></span><span></span><span></span></div><div class="browser-body"></div></div>
+                        <div class="browser-mockup">
+                            <div class="browser-header"><span></span><span></span><span></span></div>
+                            <div class="browser-body"></div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section id="trust-bar"><div class="container"><div class="marquee"><div class="marquee-content"><span>🚀 Supabase</span><span>🎨 Figma</span><span>💻 Webflow</span><span>🌟 Framer</span><span>🚀 Supabase</span><span>🎨 Figma</span><span>💻 Webflow</span><span>🌟 Framer</span></div></div></div></section>
+            <section id="trust-bar">
+                <div class="container">
+                    <div class="marquee">
+                        <div class="marquee-content"><span>🚀 Supabase</span><span>🎨 Figma</span><span>💻 Webflow</span><span>🌟 Framer</span><span>🚀 Supabase</span><span>🎨 Figma</span><span>💻 Webflow</span><span>🌟 Framer</span></div>
+                    </div>
+                </div>
+            </section>
 
             <section id="services" class="content-section">
                 <div class="container">
@@ -109,15 +117,21 @@
                     <div class="bento-grid">
                         <a href="https://osg-website-tamplate.vercel.app/" target="_blank" rel="noopener noreferrer" class="bento-item featured" data-aos="fade-up">
                             <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="An elegantly plated salmon dish from 'The Slate Table' restaurant project.">
-                            <div class="overlay"><h3 data-lang="portfolio1Title"></h3></div>
+                            <div class="overlay">
+                                <h3 data-lang="portfolio1Title"></h3>
+                            </div>
                         </a>
                         <a href="https://osgwebsitebarbershoptamplate.vercel.app/" target="_blank" rel="noopener noreferrer" class="bento-item" data-aos="fade-up" data-aos-delay="100">
                             <img src="https://images.pexels.com/photos/305821/pexels-photo-305821.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A stylish barbershop interior with vintage chairs for 'The Gents Chair' project.">
-                            <div class="overlay"><h3 data-lang="portfolio2Title"></h3></div>
+                            <div class="overlay">
+                                <h3 data-lang="portfolio2Title"></h3>
+                            </div>
                         </a>
                         <a href="https://osgwebcafetamplate.vercel.app/#home" target="_blank" rel="noopener noreferrer" class="bento-item" data-aos="fade-up" data-aos-delay="200">
                             <img src="https://images.pexels.com/photos/1445696/pexels-photo-1445696.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="A cozy cafe ambiance with a cup of coffee for the 'Aroma Collective' project.">
-                            <div class="overlay"><h3 data-lang="portfolio3Title"></h3></div>
+                            <div class="overlay">
+                                <h3 data-lang="portfolio3Title"></h3>
+                            </div>
                         </a>
                     </div>
                 </div>
@@ -128,28 +142,44 @@
                     <h2 class="section-title" data-aos="fade-up" data-lang="testimonialsTitle"></h2>
                     <div id="review-list" class="review-grid">
                         <div class="review-card" data-aos="fade-up">
-    <div class="review-header">
-        <img src="./Everluxe.jpg" alt="Company Logo" class="review-avatar">
-        <div class="review-author-info">
-            <p class="review-author">თამილა</p>
-            <p class="review-company">მფლობელი, Everluxe Store </p>
-        </div>
-    </div>
-    <div class="stars">★★★★★</div>
-    <p class="review-text">
-        მართლა არ ველოდი ასეთ შედეგს – OSG კომპანიის სერვისმა გაყიდვები მაგრად ამიწია. გულიანი მადლობა გუნდის თითოეულ წევრს!
-    </p>
-    <a href="https://everluxe.vercel.app" target="_blank" rel="noopener noreferrer" class="review-project-link">
-        View Live Project <i class="fas fa-arrow-right"></i>
-    </a>
-</div>
+                            <div class="review-header">
+                                <img src="./Everluxe.jpg" alt="Company Logo" class="review-avatar">
+                                <div class="review-author-info">
+                                    <p class="review-author">თამილა</p>
+                                    <p class="review-company">მფლობელი, Everluxe Store </p>
+                                </div>
+                            </div>
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">
+                                მართლა არ ველოდი ასეთ შედეგს – OSG კომპანიის სერვისმა გაყიდვები მაგრად ამიწია. გულიანი მადლობა გუნდის თითოეულ წევრს!
+                            </p>
+                            <a href="https://everluxe.vercel.app" target="_blank" rel="noopener noreferrer" class="review-project-link">
+                                View Live Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                        <div class="review-card" data-aos="fade-up" data-aos-delay="100">
+                            <div class="review-header">
+                                <img src="./NoBusinessImage.jpg" alt="Company Logo" class="review-avatar">
+                                <div class="review-author-info">
+                                    <p class="review-author">გიორგი</p>
+                                    <p class="review-company">მფლობელი, HellShop</p>
+                                </div>
+                            </div>
+                            <div class="stars">★★★★★</div>
+                            <p class="review-text">
+                                კმაყოფილი ვარ OSG კომპანიის სერვისით, მადლობას ვუხდი მათ ჯერ იმიტომ რომ თბილი ადამიანები არიან, ყველაზე სწრაფი მომსახურება აქვთ და რაც მთავარია ჩემი გაყიდვები უკვე ზუსტად 30% ით ამაღლდა
+                            </p>
+                            <a href="https://hellshopwebsite.vercel.app/" target="_blank" rel="noopener noreferrer" class="review-project-link">
+                                View Live Project <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
                     </div>
                     <div class="review-prompt">
-    <a href="#review-page" class="nav-link" data-lang="reviewPromptText">Have you worked with us? We’d love to hear your feedback.</a>
-</div>
-                     <div class="end-of-reviews-marker" data-aos="fade-up">
-            <span data-lang="noMoreReviews">No more reviews</span>
-        </div>
+                        <a href="#review-page" class="nav-link" data-lang="reviewPromptText">Have you worked with us? We’d love to hear your feedback.</a>
+                    </div>
+                    <div class="end-of-reviews-marker" data-aos="fade-up">
+                        <span data-lang="noMoreReviews">No more reviews</span>
+                    </div>
                 </div>
             </section>
         </div>
@@ -217,22 +247,17 @@
                                         <i class="fa-solid fa-building"></i>
                                         <input id="review-company" type="text" name="company" data-lang-placeholder="formCompanyPlaceholder">
                                     </div>
-
-<div id="logo-upload-wrapper" class="input-group form-group">
-    <div id="image-preview-container" class="image-preview-container">
-        <img src="#" alt="Company logo preview" id="image-preview" class="image-preview">
-        <button type="button" id="remove-image-btn" class="remove-image-btn" aria-label="Remove image">×</button>
-    </div>
-
-    <label for="review-logo" class="file-upload-label">
-        <i class="fa-solid fa-image"></i>
-        <span class="file-upload-text" data-lang="formLogoPlaceholder">Add company logo (optional)</span>
-    </label>
-    <input id="review-logo" type="file" name="company_logo" accept="image/*" class="visually-hidden">
-</div>
-<!-- ============================================================== -->
-
-
+                                    <div id="logo-upload-wrapper" class="input-group form-group">
+                                        <div id="image-preview-container" class="image-preview-container">
+                                            <img src="#" alt="Company logo preview" id="image-preview" class="image-preview">
+                                            <button type="button" id="remove-image-btn" class="remove-image-btn" aria-label="Remove image">×</button>
+                                        </div>
+                                        <label for="review-logo" class="file-upload-label">
+                                            <i class="fa-solid fa-image"></i>
+                                            <span class="file-upload-text" data-lang="formLogoPlaceholder">Add company logo (optional)</span>
+                                        </label>
+                                        <input id="review-logo" type="file" name="company_logo" accept="image/*" class="visually-hidden">
+                                    </div>
                                     <div class="input-group form-group">
                                         <label for="review-website" class="visually-hidden" data-lang-placeholder="formWebsitePlaceholder"></label>
                                         <i class="fa-solid fa-link"></i>
@@ -286,6 +311,7 @@
                     <div class="social-icons">
                         <a href="https://www.facebook.com/okagi.okagi.2025/" target="_blank" rel="noopener noreferrer" aria-label="Our Facebook Page"><i class="fab fa-facebook-f"></i></a>
                         <a href="https://www.instagram.com/osg.agency/" target="_blank" rel="noopener noreferrer" aria-label="Our Instagram Profile"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.tiktok.com/@osg.agency" target="_blank" rel="noopener noreferrer" aria-label="Our TikTok Profile"><i class="fab fa-tiktok"></i></a>
                     </div>
                 </div>
             </div>
@@ -298,4 +324,5 @@
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>
