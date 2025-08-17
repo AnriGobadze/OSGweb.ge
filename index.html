@@ -46,7 +46,7 @@
     </header>
 
     <div id="mobile-nav-panel" class="mobile-nav-panel">
-         <button id="close-mobile-menu" class="close-btn" aria-label="Close menu">×</button>
+        <button id="close-mobile-menu" class="close-btn" aria-label="Close menu">×</button>
         <div class="mobile-nav-content">
             <ul class="mobile-nav-links">
                 <li><a href="#services" class="nav-link" data-lang="navServices">Services</a></li>
@@ -64,7 +64,11 @@
             </div>
         </div>
     </div>
+
     <main>
+        <!-- ================================ -->
+        <!-- START: MAIN SCROLLING CONTENT    -->
+        <!-- ================================ -->
         <div id="main-content-view" class="page-view">
             <section id="hero">
                 <div class="aurora-background"></div>
@@ -142,45 +146,69 @@
             <section id="testimonials" class="content-section">
                 <div class="container">
                     <h2 class="section-title" data-aos="fade-up" data-lang="testimonialsTitle"></h2>
-                    <div id="review-list" class="review-grid">
-                        <div class="review-card" data-aos="fade-up">
-                            <div class="review-header">
-                                <img src="./Everluxe.jpg" alt="Company Logo" class="review-avatar">
-                                <div class="review-author-info">
-                                    <p class="review-author">თამილა</p>
-                                    <p class="review-company">მფლობელი, Everluxe Store </p>
-                                </div>
+                    <div class="review-card case-card" data-aos="fade-up" role="article" aria-labelledby="everluxe-title">
+                        <div class="case-top">
+                            <img src="./Everluxe.jpg" alt="Everluxe logo" class="review-avatar">
+                            <div class="case-meta">
+                                <p id="everluxe-title" class="review-author">თამილა — მფლობელი, Everluxe</p>
+                                <p class="case-tags" data-lang="webInfoTitle" >eCommerce · Stripe Checkout · Launched: May 2025</p>
                             </div>
-                            <div class="stars">★★★★★</div>
-                            <p class="review-text">
-                                მართლა არ ველოდი ასეთ შედეგს OSG კომპანიის სერვისმა გაყიდვები მაგრად ამიწია. გულიანი მადლობა გუნდის თითოეულ წევრს!
-                            </p>
-                            <a href="https://everluxe.vercel.app" target="_blank" rel="noopener noreferrer" class="review-project-link">
-                                View Live Project <i class="fas fa-arrow-right"></i>
-                            </a>
+                            <span class="verified-badge" aria-hidden="true" data-lang="checkedTitle">✓ შემოწმებული</span>
                         </div>
-                        <div class="review-card" data-aos="fade-up" data-aos-delay="100">
-                            <div class="review-header">
-                                <img src="./osee.png" alt="Company Logo" class="review-avatar">
-                                <div class="review-author-info">
-                                    <p class="review-author">თამრიკო</p>
-                                    <p class="review-company">მფლობელი, HellShop</p>
-                                </div>
+                        <div class="case-body">
+                            <div class="screenshot-thumb" aria-hidden="true">
+                                <img src="./Everlux.Web.png" alt="Everluxe websie screenshot" />
                             </div>
-                            <div class="stars">★★★★★</div>
-                            <p class="review-text">
-                                კმაყოფილი ვარ OSG კომპანიის სერვისით, მადლობას ვუხდი მათ ჯერ იმიტომ რომ თბილი ადამიანები არიან, ყველაზე სწრაფი მომსახურება აქვთ და რაც მთავარია ჩემი გაყიდვები უკვე ზუსტად 30% ით ამაღლდა
-                            </p>
-                            <a href="https://hellshopwebsite.vercel.app/" target="_blank" rel="noopener noreferrer" class="review-project-link">
-                                View Live Project <i class="fas fa-arrow-right"></i>
-                            </a>
+                            <div class="case-copy">
+                                <div class="outcome-row">
+                                    <span class="outcome-pill" aria-label="+30% გაყიდვები" data-lang="salesTitle">+30% გაყიდვები</span>
+                                    <span class="case-source" data-lang="sourceTitle">წყარო: GA4 • 60 დღე</span>
+                                </div>
+                                <blockquote class="client-quote" cite="https://everluxe.vercel.app">
+                                    “მართლა არ ველოდი ასეთ შედეგს. osg კომპანიის სერვისმა გაყიდვებში ძალაინ დამეხმარა, მადლობა გუნდის თითოეულ წევრს!”
+                                    <footer class="quote-author">— თამილა, Everluxe</footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="case-ctas">
+                            <a class="btn btn-primary" href="https://everluxe.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Open Everluxe live site" data-lang="viewPRTitle">View Live Project</a>
                         </div>
                     </div>
+
+                    <div class="review-card case-card" data-aos="fade-up" data-aos-delay="100" role="article" aria-labelledby="hellshop-title">
+                        <div class="case-top">
+                            <img src="./osee.png" alt="HellShop logo" class="review-avatar">
+                            <div class="case-meta">
+                                <p id="hellshop-title" class="review-author">თამრიკო — მფლობელი, HellShop</p>
+                                <p class="case-tags" data-lang="webInfoTitle2">Online Store · Performance · Launched: Apr 2025</p>
+                            </div>
+                            <span class="verified-badge" aria-hidden="true" data-lang="checkedTitle" >✓ შემოწმებული</span>
+                        </div>
+                        <div class="case-body">
+                            <div class="screenshot-thumb" aria-hidden="true">
+                                <img src="./Hellshop.Web.png" alt="HellShop პროდუქტის გვერდის სქრინშოტი" />
+                            </div>
+                            <div class="case-copy">
+                                <div class="outcome-row">
+                                    <span class="outcome-pill" aria-label="+30% გაყიდვები" data-lang="salesTitle2" >+22% გაყიდვები</span>
+                                    <span class="case-source"  data-lang="sourceTitle2" >წყარო: Admin / GA4 • 45 დღე</span>
+                                </div>
+                                <blockquote class="client-quote" cite="https://hellshopwebsite.vercel.app/">
+                                    “კმაყოფილი ვარ სერვისით, სწრაფი მომსახურება აქვთ და რა მთავარია გაყიდვები უკვე საკმაოდ ამიმაღლდა.”
+                                    <footer class="quote-author">— თამრიკო, HellShop</footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                        <div class="case-ctas">
+                            <a class="btn btn-primary" href="https://hellshopwebsite.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open HellShop live site" data-lang="viewPRTitle">View Live Project</a>
+                        </div>
+                    </div>
+
                     <div class="review-prompt">
                         <a href="#review-page" class="nav-link" data-lang="reviewPromptText">Have you worked with us? We’d love to hear your feedback.</a>
                     </div>
                     <div class="end-of-reviews-marker" data-aos="fade-up">
-                        <span data-lang="noMoreReviews">No more reviews</span>
+                        <a href="#all-reviews-page" class="btn btn-secondary nav-link" data-lang="seeAllReviews">See All Reviews</a>
                     </div>
                 </div>
             </section>
@@ -189,63 +217,83 @@
                 <div class="container">
                     <h2 class="section-title" data-aos="fade-up" data-lang="pricingTitle"></h2>
                     <div class="pricing-cards-grid">
-                        <div class="pricing-card" data-aos="fade-up" data-aos-delay="100">
+                        <div class="pricing-card starter" data-aos="fade-up" data-aos-delay="100">
                             <h3 class="plan-title" data-lang="pricingStarterTitle"></h3>
                             <p class="price" data-lang="pricingStarterPrice"></p>
+                            <p class="billing-period">One-time payment</p>
                             <ul class="features-list">
+                                <li class="feature-group-label">Core Features</li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingStarterFeature1"></span></li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingStarterFeature2"></span></li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingStarterFeature3"></span></li>
+                                <li class="feature-group-label">SEO & Performance</li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingStarterFeature4"></span></li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingStarterFeature5"></span></li>
                             </ul>
-                            <a href="#contact-page" class="btn btn-secondary get-started-btn" data-plan="Starter" data-lang="pricingGetStarted"></a>
+                            <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Starter" data-lang="pricingGetStarted"></a>
                         </div>
-                        <div class="pricing-card most-popular" data-aos="fade-up" data-aos-delay="200">
+
+                        <div class="pricing-card most-popular pro" data-aos="fade-up" data-aos-delay="200">
                             <div class="popular-tag" data-lang="pricingMostPopular"></div>
                             <h3 class="plan-title" data-lang="pricingProTitle"></h3>
                             <p class="price" data-lang="pricingProPrice"></p>
+                            <p class="billing-period">One-time payment</p>
                             <ul class="features-list">
+                                <li class="feature-group-label">All Starter Features +</li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingProFeature1"></span></li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingProFeature2"></span></li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingProFeature3"></span></li>
+                                <li class="feature-group-label">Admin & Analytics</li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingProFeature4"></span></li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingProFeature5"></span></li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingProFeature6"></span></li>
                             </ul>
                             <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Pro" data-lang="pricingGetStarted"></a>
                         </div>
-                        <div class="pricing-card" data-aos="fade-up" data-aos-delay="300">
+
+                        <div class="pricing-card premium" data-aos="fade-up" data-aos-delay="300">
                             <h3 class="plan-title" data-lang="pricingPremiumTitle"></h3>
                             <p class="price" data-lang="pricingPremiumPrice"></p>
+                            <p class="billing-period">One-time payment</p>
                             <ul class="features-list">
+                                <li class="feature-group-label">All Pro Features +</li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingPremiumFeature1"></span></li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingPremiumFeature2"></span></li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingPremiumFeature3"></span></li>
+                                <li class="feature-group-label">Optimization & Support</li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingPremiumFeature4"></span></li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingPremiumFeature5"></span></li>
                                 <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingPremiumFeature6"></span></li>
                             </ul>
-                            <a href="#contact-page" class="btn btn-secondary get-started-btn" data-plan="Premium" data-lang="pricingGetStarted"></a>
+                            <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Premium" data-lang="pricingGetStarted"></a>
                         </div>
                     </div>
+
                     <div class="book-a-call-btn-wrapper" data-aos="fade-up" data-aos-delay="400">
-                        <a id="book-a-call-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary book-a-call" data-lang="pricingBookACall"></a>
+                        <a id="book-a-call-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary book-a-call" data-lang="pricingBookACall"></a>
+                    </div>
+                    <div class="pricing-trust-snippet" data-aos="fade-up" data-aos-delay="500">
+                        <p>Trusted by <strong>40+ businesses</strong> to grow their online presence.</p>
                     </div>
                 </div>
             </section>
         </div>
 
+        <!-- ================================ -->
+        <!-- START: VIRTUAL CONTACT PAGE      -->
+        <!-- ================================ -->
         <div id="contact-page-view" class="page-view">
             <section id="contact-page" class="content-section-dark centered-page">
                 <div class="container">
-                    <h2 class="section-title" data-aos="fade-up" data-lang="contactTitle"></h2>
+                    <div class="page-header" data-aos="fade-up">
+                        <a href="#hero" class="nav-link back-link" data-lang="backToHome">← Back</a>
+                    </div>
+
                     <div class="contact-grid">
                         <div class="contact-info" data-aos="fade-right">
                             <h3 data-lang="contactInfoTitle"></h3>
                             <p data-lang="contactInfoDesc"></p>
                             <div class="info-item"><i class="fas fa-envelope"></i><a href="mailto:osgbusiness01@gmail.com">osgbusiness01@gmail.com</a></div>
-                            <div class="info-item"><i class="fas fa-phone"></i><span>+995 591 92 90 81</span></div>
                             <div class="info-item"><i class="fas fa-phone"></i><span>+995 555 09 59 59</span></div>
                             <div class="info-item"><i class="fas fa-map-marker-alt"></i><span data-lang="contactInfoLocation"></span></div>
                         </div>
@@ -271,13 +319,20 @@
             </section>
         </div>
 
+        <!-- ================================ -->
+        <!-- START: VIRTUAL REVIEW-FORM PAGE  -->
+        <!-- ================================ -->
         <div id="review-page-view" class="page-view">
             <section id="review-page" class="review-page-section centered-page">
                 <div class="container">
+                    <div class="page-header" data-aos="fade-up">
+                        <h2 class="section-title" data-lang="reviewPageTitle"></h2>
+                        <a href="#testimonials" class="nav-link back-link" data-lang="backToHome">← Back</a>
+                    </div>
+
                     <div class="review-form-container" data-aos="fade-up">
                         <div id="review-form-wrapper">
                             <div class="review-form-header">
-                                <h2 class="section-title" data-lang="reviewPageTitle"></h2>
                                 <p class="review-form-subtitle" data-lang="reviewPageSubtitle"></p>
                             </div>
                             <form id="review-form" class="review-form horizontal-form" action="https://formspree.io/f/myzjpoln" method="POST">
@@ -341,6 +396,84 @@
                 </div>
             </section>
         </div>
+        
+        <!-- ================================ -->
+        <!-- START: VIRTUAL ALL-REVIEWS PAGE  -->
+        <!-- ================================ -->
+        <div id="all-reviews-page-view" class="page-view">
+            <section id="all-reviews-page" class="content-section-dark centered-page">
+                <div class="container">
+                    <div class="page-header" data-aos="fade-up">
+                        <h2 class="section-title" data-lang="allReviewsTitle"></h2>
+                        <a href="#testimonials" class="nav-link back-link" data-lang="backToHome">← Back</a>
+                    </div>
+                    
+                    <div class="all-reviews-grid" data-aos="fade-up" data-aos-delay="100">
+                        <div class="review-card case-card">
+                            <div class="case-top">
+                                <img src="./Everluxe.jpg" alt="Everluxe logo" class="review-avatar">
+                                <div class="case-meta">
+                                    <p class="review-author">თამილა — მფლობელი, Everluxe</p>
+                                    <p class="case-tags" data-lang="webInfoTitle" >eCommerce · Stripe Checkout · Launched: May 2025</p>
+                                </div>
+                                <span class="verified-badge" aria-hidden="true" data-lang="checkedTitle" >✓ შემოწმებული</span>
+                            </div>
+                            <div class="case-body">
+                                <div class="screenshot-thumb" aria-hidden="true">
+                                    <img src="./Everlux.Web.png" alt="Everluxe პროდუქტის გვერდის სქრინშოტი" />
+                                </div>
+                                <div class="case-copy">
+                                    <div class="outcome-row">
+                                        <span class="outcome-pill" aria-label="+30% გაყიდვები" data-lang="salesTitle" >+30% გაყიდვები</span>
+                                        <span class="case-source" data-lang="sourceTitle">წყარო: GA4 • 60 დღე</span>
+                                    </div>
+                                    <blockquote class="client-quote" cite="https://everluxe.vercel.app">
+                                        “მართლა არ ველოდი ასეთ შედეგს. osg კომპანიის სერვისმა გაყიდვებში ძალაინ დამეხმარა, მადლობა გუნდის თითოეულ წევრს!”
+                                        <footer class="quote-author">— თამილა, Everluxe</footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="case-ctas">
+                                <a class="btn btn-primary" href="https://everluxe.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Open Everluxe live site" data-lang="viewPRTitle">View Live Project</a>
+                            </div>
+                        </div>
+
+                        <div class="review-card case-card">
+                            <div class="case-top">
+                                <img src="./osee.png" alt="HellShop logo" class="review-avatar">
+                                <div class="case-meta">
+                                    <p class="review-author">თამრიკო — მფლობელი, HellShop</p>
+                                    <p class="case-tags"  data-lang="webInfoTitle2">Online Store · Performance · Launched: Apr 2025</p>
+                                </div>
+                                <span class="verified-badge" aria-hidden="true" data-lang="checkedTitle" >✓ შემოწმებული</span>
+                            </div>
+                            <div class="case-body">
+                                <div class="screenshot-thumb" aria-hidden="true">
+                                    <img src="./Hellshop.Web.png" alt="HellShop პროდუქტის გვერდის სქრინშოტი" />
+                                </div>
+                                <div class="case-copy">
+                                    <div class="outcome-row">
+                                        <span class="outcome-pill" aria-label="+30% გაყიდვები" data-lang="salesTitle2" >+22% გაყიდვები</span>
+                                        <span class="case-source" data-lang="sourceTitle2">წყარო: Admin / GA4 • 45 დღე</span>
+                                    </div>
+                                    <blockquote class="client-quote" cite="https://hellshopwebsite.vercel.app/">
+                                        “კმაყოფილი ვარ სერვისით, სწრაფი მომსახურება აქვთ და რა მთავარია გაყიდვები უკვე საკმაოდ ამიმაღლდა.”
+                                        <footer class="quote-author">— თამრიკო, HellShop</footer>
+                                    </blockquote>
+                                </div>
+                            </div>
+                            <div class="case-ctas">
+                                <a class="btn btn-primary" href="https://hellshopwebsite.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open HellShop live site" data-lang="viewPRTitle">View Live Project</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="end-of-reviews-marker" data-aos="fade-up">
+                        <span data-lang="noMoreReviews">No more reviews</span>
+                    </div>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer class="site-footer">
@@ -353,7 +486,6 @@
                 <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
                     <h4 data-lang="footerContactTitle"></h4>
                     <p><i class="fas fa-envelope"></i> osgbusiness01@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> +995 591 92 90 81</p>
                     <p><i class="fas fa-phone"></i> +995 555 09 59 59 </p>
                 </div>
                 <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
@@ -370,7 +502,6 @@
             </div>
         </div>
     </footer>
-
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
