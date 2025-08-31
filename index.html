@@ -219,8 +219,9 @@
         <h2 class="section-title" data-aos="fade-up" data-lang="pricingTitle"></h2>
         
         <div class="billing-cycle-toggle" data-aos="fade-up" data-aos-delay="50">
-            <button class="toggle-btn active" data-period="onetime" data-lang="oneTimePayment" aria-checked="true" role="radio">One-Time</button>
+            <button class="toggle-btn active" data-period="onetime" data-lang="oneTimePaymentTitle" aria-checked="true" role="radio">One-Time</button>
             <button class="toggle-btn" data-period="monthly" data-lang="monthlyPayment" aria-checked="false" role="radio">Monthly</button>
+            <button class="toggle-btn" data-period="individual" data-lang="individualPayment" aria-checked="false" role="radio">Individual</button>
         </div>
 
         <div class="pricing-cards-grid">
@@ -277,6 +278,17 @@
                 </ul>
                 <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Premium" data-lang="pricingGetStarted"></a>
             </div>
+                <div class="pricing-card individual-plan hidden" data-aos="fade-up" data-billing-cycle="individual">
+        <h3 class="plan-title" data-lang="individualTitle"></h3>
+        <p class="price" data-lang="individualPrice"></p>
+        <p class="billing-period" data-lang="individualDesc"></p>
+        <ul class="features-list">
+            <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="individualFeature1"></span></li>
+            <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="individualFeature2"></span></li>
+            <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="individualFeature3"></span></li>
+        </ul>
+        <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Individual" data-lang="pricingGetStarted"></a>
+                </div>
 
         </div>
 

@@ -184,6 +184,17 @@ section { padding: 4rem 0; }
     transition: background-color var(--transition-smooth), color var(--transition-fast);
     white-space: nowrap;
 }
+.toggle-btn:first-child {
+    border-radius: 50px 2px 2px 50px;
+}
+
+.toggle-btn:nth-child(2) {
+    border-radius: 2px;
+}
+
+.toggle-btn:last-child {
+    border-radius: 2px 50px 50px 2px;
+}
 
 .toggle-btn.active {
     background: var(--primary-gradient);
@@ -191,7 +202,35 @@ section { padding: 4rem 0; }
     box-shadow: var(--shadow-md);
 }
 
-/* Pricing Cards Grid */
+
+
+.toggle-btn[data-period="individual"].active {
+    background: linear-gradient(90deg, #6B46C1, #805AD5); 
+}
+
+.pricing-cards-grid.individual-mode {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pricing-card.individual-plan {
+    border-color: #805AD5;
+    box-shadow: 0 10px 40px rgba(107, 70, 193, 0.2);
+}
+.pricing-card.individual-plan .price {
+    color: #6B46C1;
+}
+.pricing-card.individual-plan .get-started-btn {
+    background: linear-gradient(90deg, #6B46C1, #805AD5);
+    background-size: 200% auto;
+}
+.pricing-card.individual-plan .get-started-btn:hover {
+    background-position: right center;
+}
+
 .pricing-cards-grid { 
     display: grid; 
     gap: 30px; 
@@ -212,12 +251,10 @@ section { padding: 4rem 0; }
 }
 
 
-/* THE CRITICAL CSS RULE */
 .pricing-card.hidden {
     display: none;
 }
 
-/* Base Pricing Card Styles */
 .pricing-card { 
     background: var(--card-bg); 
     border: 1px solid var(--border-color); 
@@ -350,9 +387,24 @@ section { padding: 4rem 0; }
 /* === RESPONSIVE MEDIA QUERIES ==== */
 /* =============================== */
 
+@media (max-width: 420px) {
+    .billing-cycle-toggle {
+        flex-direction: column; /* Stack the buttons vertically */
+        align-items: stretch;   /* Make buttons fill the width */
+        border-radius: 12px;    /* A less pill-like shape looks better when stacked */
+        padding: 0.5rem;
+    }
+
+    .toggle-btn {
+        text-align: center; /* Ensure text is centered */
+        padding: 0.8rem 1rem;
+    }
+}
+
 
 
 @media (min-width: 768px) {
+
     section { padding: 6rem 0; }
     .bento-grid { grid-template-columns: repeat(3, 1fr); }
     .bento-item.featured { grid-column: span 2; grid-row: span 2; }
