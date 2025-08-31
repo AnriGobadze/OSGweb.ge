@@ -159,8 +159,79 @@ section { padding: 4rem 0; }
 .end-of-reviews-marker::before, .end-of-reviews-marker::after { content: ''; flex-grow: 1; border-bottom: 1px solid var(--border-color); }
 .end-of-reviews-marker span { padding: 0 1.5rem; }
 #pricing { padding: 6rem 0; background-color: var(--bg-color); }
-.pricing-cards-grid { display: grid; gap: 30px; max-width: 1300px; margin: 0 auto; padding: 0 20px; grid-template-columns: 1fr; }
-.pricing-card { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 12px; box-shadow: var(--shadow-md); padding: 2.5rem;  display: flex; flex-direction: column; justify-content: space-between; transition: transform var(--transition-smooth), box-shadow var(--transition-smooth); text-align: left; position: relative; overflow: hidden; }
+.billing-cycle-toggle {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    background-color: var(--bg-color-darker);
+    padding: 0.4rem;
+    border-radius: 50px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.toggle-btn {
+    border: none;
+    background: transparent;
+    padding: 0.6rem 1.25rem;
+    border-radius: 50px;
+    font-weight: 600;
+    cursor: pointer;
+    color: var(--text-color-light);
+    transition: background-color var(--transition-smooth), color var(--transition-fast);
+    white-space: nowrap;
+}
+
+.toggle-btn.active {
+    background: var(--primary-gradient);
+    color: white;
+    box-shadow: var(--shadow-md);
+}
+
+/* Pricing Cards Grid */
+.pricing-cards-grid { 
+    display: grid; 
+    gap: 30px; 
+    max-width: 1300px; 
+    margin: 0 auto; 
+    padding: 0 20px; 
+    grid-template-columns: 1fr; 
+}
+
+@keyframes text-update {
+    0% { opacity: 0; transform: translateY(5px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+.price.updating,
+.billing-period.updating {
+    animation: text-update 0.3s ease-out;
+}
+
+
+/* THE CRITICAL CSS RULE */
+.pricing-card.hidden {
+    display: none;
+}
+
+/* Base Pricing Card Styles */
+.pricing-card { 
+    background: var(--card-bg); 
+    border: 1px solid var(--border-color); 
+    border-radius: 12px; 
+    box-shadow: var(--shadow-md); 
+    padding: 2.5rem;  
+    display: flex; 
+    flex-direction: column; 
+    justify-content: space-between; 
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth); 
+    text-align: left; 
+    position: relative; 
+    overflow: hidden; 
+}
 .pricing-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-lg); }
 .pricing-card.most-popular { border: 2px solid var(--primary-color); box-shadow: 0 10px 40px var(--primary-color-glow); padding-right: 20px;}
 .popular-tag { position: absolute; top: 18px; right: -45px; background: var(--primary-gradient); color: white; padding: 6px 40px; font-weight: 600; font-size: 0.9rem; box-shadow: var(--shadow-sm); transform: rotate(45deg); text-align: center; }
