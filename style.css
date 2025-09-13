@@ -323,8 +323,10 @@ section { padding: 4rem 0; }
     border-radius: 12px;
     box-shadow: var(--shadow-md);
     padding: 2.5rem 2rem;
- width: calc(100% - 1rem);    margin: 0 auto;
-}.review-form-header { text-align: center; margin-bottom: 2.5rem; }
+    width: calc(100% - 1rem);    
+    margin: 0 auto;
+}
+.review-form-header { text-align: center; margin-bottom: 2.5rem; }
 .review-page-section .section-title { margin-bottom: 1rem; }
 .review-form-header .review-form-subtitle { max-width: 500px; margin: auto; opacity: 0.8; color: var(--text-color-light); }
 .horizontal-form .form-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem; }
@@ -530,7 +532,7 @@ section { padding: 4rem 0; }
 }
 
 /* ================================== */
-/* ==========Go Back Link =========== */
+/* ==========Go Back Link   ========= */
 /* ================================== */
 .page-view .back-link {
     position: fixed;
