@@ -41,12 +41,14 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.preventDefault();
                     const isMobileClick = e.target.closest('.mobile-nav-links');
 
-                    if (isMobileClick && this.elements.body.classList.contains('mobile-nav-is-open')) {
-                        closeMobileMenu(); 
-                        setTimeout(() => this.switchView(targetId), 500); 
-                    } else {
-                        this.switchView(targetId);
-                    }
+                if (this.elements.body.classList.contains('mobile-nav-is-open')) {
+                    closeMobileMenu();
+                    setTimeout(() => this.switchView(targetId), 500);
+                } else {
+                    this.switchView(targetId);
+                }
+
+
                 }
             });
 
@@ -56,7 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         },
 
-        switchView(targetId, isPopState = false) {
+        switchView(targetId, isPopState = false, onComplete = null){
             if (!isPopState) {
                 if(window.location.hash !== targetId) {
                    history.pushState({ target: targetId }, '', targetId);
@@ -69,11 +71,16 @@ document.addEventListener('DOMContentLoaded', () => {
             document.querySelectorAll('.nav-link').forEach(link => link.classList.remove('active-link'));
 
             if (isPageView) {
+                this.elements.body.style.overflow = 'hidden';
                 this.elements.body.classList.add('virtual-page-active');
                 const targetView = document.getElementById(targetId.substring(1) + '-view');
                 if (targetView) targetView.classList.add('active');
                 window.scrollTo(0, 0);
+                if (typeof onComplete === 'function') {
+                    setTimeout(onComplete, 50); 
+                }
             } else {
+                this.elements.body.style.overflow = '';
                 this.elements.body.classList.remove('virtual-page-active');
                 this.elements.mainContentView.classList.add('active');
                 
@@ -83,10 +90,9 @@ document.addEventListener('DOMContentLoaded', () => {
                          const headerOffset = document.querySelector('header').offsetHeight;
                          const elementPosition = targetSection.getBoundingClientRect().top;
                          const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-
                          window.scrollTo({
                              top: offsetPosition,
-                             behavior: 'auto'
+                             behavior: 'smooth'
                          });
                     }
                 }, 50);
@@ -140,33 +146,6 @@ document.addEventListener('DOMContentLoaded', () => {
     
     SpaNavigator.init();
 
-    // ========================================
-    // STICKY BACK-LINK ON VIRTUAL PAGES
-    // ========================================
-    const pageHeaders = document.querySelectorAll('.page-view .page-header');
-
-    if (pageHeaders.length > 0) {
-        const observerOptions = {
-            root: null, 
-            rootMargin: '0px 0px -100% 0px', 
-            threshold: 0
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                const backLink = entry.target.querySelector('.back-link');
-                if (!backLink) return;
-
-                if (!entry.isIntersecting) {
-                    backLink.classList.add('is-sticky');
-                } else {
-                    backLink.classList.remove('is-sticky');
-                }
-            });
-        }, observerOptions);
-
-        pageHeaders.forEach(header => observer.observe(header));
-    }
 
     // ================================
     // AOS INIT
@@ -314,11 +293,18 @@ const applyTranslations = (lang) => {
                 contactTextarea.value = finalMessage;
             }
 
-            SpaNavigator.switchView('#contact-page');
-
-            setTimeout(() => {
-                contactTextarea?.focus();
-            }, 100);
+            if (document.body.classList.contains('mobile-nav-is-open')) {
+                closeMobileMenu();
+                setTimeout(() => {
+                    SpaNavigator.switchView('#contact-page', false, () => {
+                        document.getElementById('contact-message')?.focus();
+                    });
+                }, 500);
+            } else {
+                SpaNavigator.switchView('#contact-page', false, () => {
+                    document.getElementById('contact-message')?.focus();
+                });
+            }
         });
     });
 
