@@ -389,8 +389,17 @@ const handleBillingToggle = (e) => {
     }
 
 
+
+    document.getElementById("book-a-call-link").addEventListener("click", function(e) {
+    e.preventDefault();
+    window.open("https://wa.me/995555095959?call", "_blank");
+});
+
+
     
 
 
     applyTranslations(currentLang);
 });
+
+
