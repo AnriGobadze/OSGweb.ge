@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
     mobileNavOverlay?.addEventListener('click', closeMobileMenu);
     
 
+    
     // ================================
     // SPA-LIKE NAVIGATION
     // ================================
