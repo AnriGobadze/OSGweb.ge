@@ -1,0 +1,382 @@
+/* ====================================================================
+   OSGWeb.ge — May 2026 Discount Upgrade
+   pricing-discount.css
+   Add AFTER <link rel="stylesheet" href="style.css"> in <head>
+   ==================================================================== */
+
+/* ── SECTION CONTEXT ─────────────────────────────────────────────────
+   The sign is absolutely positioned within #pricing, which needs a
+   stacking context. `overflow: visible` lets the sign bleed outside
+   the section's padding box on desktop.
+────────────────────────────────────────────────────────────────────── */
+#pricing {
+  position: relative;
+  overflow: visible !important;
+}
+
+/* ── ROPE & SIGN ROOT ────────────────────────────────────────────────
+   Transform-origin is top-center so the sign rotates about the nail,
+   mimicking a real pendulum pivot point.
+   JS drives --sign-rotate via requestAnimationFrame each frame.
+────────────────────────────────────────────────────────────────────── */
+.discount-sign-root {
+  --sign-rotate: 0deg;
+
+  /* Desktop: anchored to pricing section header area */
+  position: absolute;
+  top: 2.6rem;
+  right: clamp(0.25rem, 3.5vw, 2rem);
+  z-index: 30;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  transform-origin: top center;
+  transform: rotate(var(--sign-rotate));
+  will-change: transform;
+  cursor: default;
+  user-select: none;
+
+  /* Never let AOS hijack this element */
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: opacity 0.25s ease; /* for mobile-nav hide */
+}
+
+/* Hide when the mobile menu panel is open (it would overlap) */
+body.mobile-nav-is-open .discount-sign-root {
+  opacity: 0 !important;
+  pointer-events: none;
+}
+
+/* ── NAIL ────────────────────────────────────────────────────────────
+   The physical pivot point the rope threads through.
+────────────────────────────────────────────────────────────────────── */
+.sign-nail {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 36% 36%, #EDD08A 0%, #A07820 55%, #6B4E10 100%);
+  box-shadow:
+    0 2px 6px rgba(0, 0, 0, 0.5),
+    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* ── ROPE SVG ─────────────────────────────────────────────────────── */
+.rope-svg {
+  display: block;
+  overflow: visible;
+  flex-shrink: 0;
+}
+
+/* ── SIGN CARD ───────────────────────────────────────────────────────
+   Dark navy with a gold border. Two CSS pseudo-elements add a wood-
+   grain texture and a top-lit sheen, keeping it fully CSS (no images).
+────────────────────────────────────────────────────────────────────── */
+.sign-card {
+  background: linear-gradient(172deg, #13304F 0%, #0D2137 52%, #091928 100%);
+  border: 2px solid #C9A84C;
+  border-radius: 10px;
+  padding: 0.6rem 1rem 0.75rem;
+  min-width: 152px;
+  max-width: 172px;
+  position: relative;
+  overflow: hidden;
+  box-shadow:
+    0 4px 0 rgba(0, 0, 0, 0.55),
+    0 10px 28px rgba(0, 0, 0, 0.38),
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 0 0 1px rgba(255, 255, 255, 0.035);
+}
+
+/* Horizontal wood-grain texture */
+.sign-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    transparent,
+    transparent 9px,
+    rgba(255, 255, 255, 0.013) 9px,
+    rgba(255, 255, 255, 0.013) 10px
+  );
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Lens sheen at the top */
+.sign-card::after {
+  content: '';
+  position: absolute;
+  inset: 0 0 60% 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.055), transparent);
+  border-radius: 10px 10px 0 0;
+  pointer-events: none;
+}
+
+/* ── SIGN HOLES ──────────────────────────────────────────────────────
+   Decorative screw-holes that imply the rope runs through the card.
+────────────────────────────────────────────────────────────────────── */
+.sign-holes {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.sign-hole {
+  display: block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 35%, #1A3A5C, #040D18 80%);
+  border: 1.5px solid #8B6914;
+  box-shadow:
+    inset 0 1px 4px rgba(0, 0, 0, 0.85),
+    0 1px 2px rgba(201, 168, 76, 0.22);
+}
+
+/* ── SIGN INNER CONTENT ──────────────────────────────────────────── */
+.sign-inner {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+.sign-eyebrow {
+  font-family: var(--font-heading, 'Anta', sans-serif);
+  font-size: 0.6rem;
+  letter-spacing: 0.16em;
+  color: #F4D35E;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  opacity: 0.88;
+}
+
+.sign-price-grid {
+  display: flex;
+  flex-direction: column;
+}
+
+.sign-price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.22rem 0;
+}
+
+.sign-tier {
+  font-family: var(--font-body, 'Anta', sans-serif);
+  font-size: 0.68rem;
+  color: #7AAFD4;
+  letter-spacing: 0.04em;
+}
+
+.sign-amount {
+  font-family: var(--font-numeric, 'Patrick Hand', cursive);
+  font-size: 1.18rem;
+  color: #FAF0DC;
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.sign-sep {
+  height: 1px;
+  background: linear-gradient(
+    to right,
+    transparent,
+    rgba(201, 168, 76, 0.38),
+    transparent
+  );
+  margin: 0.2rem 0;
+}
+
+/* ── COUNTDOWN ───────────────────────────────────────────────────── */
+.sign-timer {
+  margin-top: 0.55rem;
+  padding-top: 0.45rem;
+  border-top: 1px solid rgba(201, 168, 76, 0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+}
+
+.sign-timer-label {
+  font-size: 0.52rem;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: #527A96;
+}
+
+.sign-timer-value {
+  font-family: var(--font-numeric, 'Patrick Hand', cursive);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #F4D35E;
+  letter-spacing: 0.06em;
+}
+
+/* ── SALE RIBBON (diagonal corner banner, top-left) ──────────────── */
+.sale-ribbon {
+  display: none;
+  position: absolute;
+  top: 15px;
+  left: -30px;
+  width: 100px;
+  padding: 4px 0;
+  background: linear-gradient(90deg, #A87C10, #F4D35E 50%, #A87C10);
+  color: #0F2A44;
+  font-size: 0.55rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-align: center;
+  transform: rotate(-45deg);
+  z-index: 3;
+  box-shadow: 0 2px 8px rgba(201, 168, 76, 0.45);
+}
+
+#pricing.sale-active .pricing-card.starter .sale-ribbon,
+#pricing.sale-active .pricing-card.pro    .sale-ribbon {
+  display: block;
+}
+
+/* ── ORIGINAL PRICE → STRIKETHROUGH ─────────────────────────────── */
+#pricing.sale-active .pricing-card.starter .price,
+#pricing.sale-active .pricing-card.pro    .price {
+  font-size: 1.5rem !important;
+  text-decoration: line-through;
+  text-decoration-color: rgba(200, 50, 50, 0.65);
+  text-decoration-thickness: 2px;
+  color: var(--text-color-light) !important;
+  opacity: 0.6;
+  margin-bottom: 0 !important;
+}
+
+#pricing.sale-active .pricing-card.starter .billing-period,
+#pricing.sale-active .pricing-card.pro    .billing-period {
+  font-size: 0.85rem;
+  margin-bottom: 0.3rem;
+}
+
+/* ── SALE PRICE DISPLAY ──────────────────────────────────────────── */
+.sale-price-display {
+  display: none;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.45rem;
+  margin: 0.15rem 0 1.5rem;
+  animation: saleReveal 0.5s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+#pricing.sale-active .sale-price-display {
+  display: flex;
+}
+
+@keyframes saleReveal {
+  from { opacity: 0; transform: translateY(8px) scale(0.96); }
+  to   { opacity: 1; transform: none; }
+}
+
+.sale-badge {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(135deg, #C9A84C, #F4D35E 60%, #C9A84C);
+  color: #0F2A44;
+  font-size: 0.58rem;
+  font-weight: 900;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  padding: 4px 8px;
+  border-radius: 4px;
+  line-height: 1;
+  align-self: center;
+  box-shadow: 0 1px 6px rgba(201, 168, 76, 0.45);
+}
+
+.sale-new-price {
+  font-family: var(--font-numeric, 'Patrick Hand', cursive);
+  font-size: 2.85rem;
+  font-weight: 700;
+  color: var(--primary-color, #0F2A44);
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+/* ── PRICING CARD REVEAL ANIMATIONS ─────────────────────────────────
+   JS adds `.pre-reveal` immediately so cards start hidden,
+   then removes it when IntersectionObserver fires → CSS transition
+   carries the card to its natural resting state.
+   This avoids transform conflicts with the existing :hover rules.
+────────────────────────────────────────────────────────────────────── */
+.pricing-card {
+  transition:
+    opacity    0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    transform  0.75s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow var(--transition-smooth, 0.5s cubic-bezier(0.165, 0.84, 0.44, 1));
+}
+
+.pricing-card.pre-reveal {
+  opacity: 0 !important;
+  transform: translateY(52px) scale(0.96) !important;
+  pointer-events: none;
+}
+
+/* Individual plan card is not part of the reveal sequence */
+.pricing-card.individual-plan {
+  opacity: 1 !important;
+  transform: none !important;
+  pointer-events: auto;
+}
+
+/* ── MOBILE & TABLET SIGN BEHAVIOR ───────────────────────────────────
+   Below 992px the hamburger is visible. The sign detaches from the
+   pricing section and hangs from the bottom of the fixed header,
+   landing just to the left of the hamburger button.
+────────────────────────────────────────────────────────────────────── */
+@media (max-width: 991px) {
+  .discount-sign-root {
+    /* Detach from pricing section, fix to viewport */
+    position: fixed;
+    top: var(--header-height, 80px); /* Rope starts exactly at header bottom */
+    right: 4.8rem;                   /* Left of the hamburger button */
+    bottom: auto;
+    z-index: calc(var(--z-header, 1000) - 1);
+    transform-origin: top center;
+  }
+}
+
+@media (max-width: 767px) {
+  .discount-sign-root {
+    right: 4.2rem;
+  }
+
+  .rope-svg {
+    height: 32px !important;
+  }
+
+  .sign-card {
+    min-width: 122px;
+    max-width: 140px;
+    padding: 0.5rem 0.8rem 0.6rem;
+  }
+
+  .sign-eyebrow    { font-size: 0.55rem; }
+  .sign-tier       { font-size: 0.62rem; }
+  .sign-amount     { font-size: 1.02rem; }
+  .sign-timer-value { font-size: 0.82rem; }
+}
+
+@media (max-width: 380px) {
+  .discount-sign-root {
+    right: 3.8rem;
+  }
+}

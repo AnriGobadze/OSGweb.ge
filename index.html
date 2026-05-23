@@ -44,6 +44,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pricing-discount.css">
 </head>
 
 <body>
@@ -304,6 +305,64 @@
 <section id="pricing" class="content-section">
     <div class="container">
         <h2 class="section-title" data-aos="fade-up" data-lang="pricingTitle"></h2>
+        <!-- ═══ MAY DISCOUNT SIGN ═══ -->
+        <div id="discount-sign"
+             class="discount-sign-root"
+             role="img"
+             aria-label="May Sale: Starter 299 GEL, Pro 499 GEL. Offer ends 31 May.">
+
+          <div class="sign-nail" aria-hidden="true"></div>
+
+          <svg class="rope-svg"
+               viewBox="0 0 14 72" width="14" height="72"
+               aria-hidden="true"
+               xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ropeGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%"   stop-color="#6B4F2A"/>
+                <stop offset="42%"  stop-color="#C8A165"/>
+                <stop offset="100%" stop-color="#6B4F2A"/>
+              </linearGradient>
+            </defs>
+            <path d="M7,0 C6,18 8,36 7,54 C6.5,61 7,68 7,72"
+                  stroke="url(#ropeGrad)" stroke-width="3.5"
+                  fill="none" stroke-linecap="round"/>
+            <path d="M7,6 C5,14 9,22 7,30 C5,38 9,46 7,53 C6,60 7,66 7,70"
+                  stroke="rgba(35,15,3,0.22)" stroke-width="2"
+                  fill="none" stroke-linecap="round"/>
+          </svg>
+
+          <div class="sign-card" aria-hidden="true">
+
+            <div class="sign-holes">
+              <span class="sign-hole"></span>
+              <span class="sign-hole"></span>
+            </div>
+
+            <div class="sign-inner">
+              <p class="sign-eyebrow" data-lang="maySaleText">✦ MAY SALE ✦</p>
+
+              <div class="sign-price-grid">
+                <div class="sign-price-item">
+                  <span class="sign-tier" data-lang="pricingStarterTitle">Starter</span>
+                  <span class="sign-amount">299 ₾</span>
+                </div>
+                <div class="sign-sep" aria-hidden="true"></div>
+                <div class="sign-price-item">
+                  <span class="sign-tier" data-lang="pricingProTitle">Pro</span>
+                  <span class="sign-amount" >499 ₾</span>
+                </div>
+              </div>
+
+              <div class="sign-timer">
+                <span class="sign-timer-label" data-lang="saleEndsInText">Ends in</span>
+                <strong id="sign-countdown" class="sign-timer-value">–</strong>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- ═══ MAY DISCOUNT SIGN — END ═══ -->
         
         <div class="billing-cycle-toggle" data-aos="fade-up" data-aos-delay="50">
             <button class="toggle-btn active" data-period="onetime" data-lang="oneTimePaymentTitle" aria-checked="true" role="radio">One-Time</button>
@@ -313,9 +372,14 @@
 
         <div class="pricing-cards-grid">
             
-            <div class="pricing-card starter" data-aos="fade-up" data-aos-delay="100" data-plan-id="Starter">
+            <div class="pricing-card starter" data-plan-id="Starter">
+                <div class="sale-ribbon" aria-hidden="true" data-lang="disountText">Sale</div>
                 <h3 class="plan-title" data-lang="pricingStarterTitle"></h3>
                 <p class="price" data-lang="pricingStarterPrice" data-price-point></p>
+                <div class="sale-price-display" aria-label="Sale price: 299 GEL">
+                    <span class="sale-badge" aria-hidden="true" data-lang="saleNowText">NOW</span>
+                    <span class="sale-new-price">299 ₾</span>
+                </div>
                 <p class="billing-period" data-lang="oneTimePayment" data-billing-period></p>
                 <ul class="features-list">
                     <li class="feature-group-label">Core Features</li>
@@ -329,10 +393,15 @@
                 <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Starter" data-lang="pricingGetStarted"></a>
             </div>
 
-            <div class="pricing-card most-popular pro" data-aos="fade-up" data-aos-delay="200" data-plan-id="Pro">
+            <div class="pricing-card most-popular pro" data-plan-id="Pro">
+                <div class="sale-ribbon" aria-hidden="true" data-lang="disountText">Sale</div>
                 <div class="popular-tag" data-lang="pricingMostPopular"></div>
                 <h3 class="plan-title" data-lang="pricingProTitle"></h3>
                 <p class="price" data-lang="pricingProPrice" data-price-point></p>
+                <div class="sale-price-display" aria-label="Sale price: 499 GEL">
+                    <span class="sale-badge" aria-hidden="true" data-lang="saleNowText">NOW</span>
+                    <span class="sale-new-price">499 ₾</span>
+                </div>
                 <p class="billing-period" data-lang="oneTimePayment" data-billing-period></p>
                 <ul class="features-list">
                     <!-- Features remain unchanged -->
@@ -348,7 +417,7 @@
                 <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Pro" data-lang="pricingGetStarted"></a>
             </div>
 
-            <div class="pricing-card premium" data-aos="fade-up" data-aos-delay="300" data-plan-id="Premium">
+            <div class="pricing-card premium" data-plan-id="Premium">
                 <h3 class="plan-title" data-lang="pricingPremiumTitle"></h3>
                 <p class="price" data-lang="pricingPremiumPrice" data-price-point></p>
                 <p class="billing-period" data-lang="oneTimePayment" data-billing-period></p>
@@ -614,6 +683,7 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="script.js"></script>
+    <script src="pricing-discount.js" defer></script>
 </body>
 
 </html>
