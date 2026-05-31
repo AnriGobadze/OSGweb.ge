@@ -1,28 +1,44 @@
 /* ====================================================================
-   OSGWeb.ge — May 2026 Discount Upgrade
-   pricing-discount.css
-   Add AFTER <link rel="stylesheet" href="style.css"> in <head>
+   OSGWeb.ge — June 2026 Special Promotion
+   pricing-june-special.css
+   Replace pricing-discount.css — add AFTER style.css in <head>
    ==================================================================== */
 
-/* ── SECTION CONTEXT ─────────────────────────────────────────────────
-   The sign is absolutely positioned within #pricing, which needs a
-   stacking context. `overflow: visible` lets the sign bleed outside
-   the section's padding box on desktop.
-────────────────────────────────────────────────────────────────────── */
+/* ── FONTS ────────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600&display=swap');
+
+/* ── CSS VARIABLES — June palette ────────────────────────────────── */
+:root {
+  --june-green-deep:   #1A3D2B;
+  --june-green-mid:    #2E6B4A;
+  --june-green-light:  #4A9A6E;
+  --june-sage:         #7DB89A;
+  --june-cream:        #F5F0E8;
+  --june-ivory:        #FAF7F2;
+  --june-parchment:    #EDE5D4;
+  --june-amber:        #C8893A;
+  --june-amber-light:  #E8A84E;
+  --june-amber-pale:   #F5D18A;
+  --june-ink:          #1C2B22;
+  --june-rope-dark:    #5C3D1E;
+  --june-rope-mid:     #8B5E30;
+  --june-rope-light:   #C49A58;
+  --june-rope-hi:      #DEB97A;
+  --june-rope-shadow:  #3A2210;
+}
+
+/* ── SECTION CONTEXT ──────────────────────────────────────────────── */
 #pricing {
   position: relative;
   overflow: visible !important;
 }
 
-/* ── ROPE & SIGN ROOT ────────────────────────────────────────────────
-   Transform-origin is top-center so the sign rotates about the nail,
-   mimicking a real pendulum pivot point.
-   JS drives --sign-rotate via requestAnimationFrame each frame.
-────────────────────────────────────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════════════
+   SIGN ROOT & PENDULUM
+══════════════════════════════════════════════════════════════════ */
 .discount-sign-root {
   --sign-rotate: 0deg;
 
-  /* Desktop: anchored to pricing section header area */
   position: absolute;
   top: 2.6rem;
   right: clamp(0.25rem, 3.5vw, 2rem);
@@ -38,210 +54,279 @@
   cursor: default;
   user-select: none;
 
-  /* Never let AOS hijack this element */
   opacity: 1 !important;
   visibility: visible !important;
-  transition: opacity 0.25s ease; /* for mobile-nav hide */
+  transition: opacity 0.25s ease;
 }
 
-/* Hide when the mobile menu panel is open (it would overlap) */
 body.mobile-nav-is-open .discount-sign-root {
   opacity: 0 !important;
   pointer-events: none;
 }
 
-/* ── NAIL ────────────────────────────────────────────────────────────
-   The physical pivot point the rope threads through.
-────────────────────────────────────────────────────────────────────── */
+/* ── NAIL — forged iron look ─────────────────────────────────────── */
 .sign-nail {
-  width: 14px;
-  height: 14px;
+  width: 13px;
+  height: 13px;
   border-radius: 50%;
-  background: radial-gradient(circle at 36% 36%, #EDD08A 0%, #A07820 55%, #6B4E10 100%);
+  background:
+    radial-gradient(circle at 30% 28%, #6B6B6B 0%, #2A2A2A 50%, #111 100%);
   box-shadow:
-    0 2px 6px rgba(0, 0, 0, 0.5),
-    inset 0 1px 2px rgba(255, 255, 255, 0.3);
+    0 2px 5px rgba(0,0,0,0.7),
+    0 1px 0 rgba(255,255,255,0.12),
+    inset 0 1px 1px rgba(255,255,255,0.15);
   flex-shrink: 0;
   position: relative;
   z-index: 2;
 }
 
-/* ── ROPE SVG ─────────────────────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════════════
+   REALISTIC BRAIDED ROPE SVG
+   The rope SVG is replaced in the HTML with the new braided version.
+   These rules size and place it correctly.
+══════════════════════════════════════════════════════════════════ */
 .rope-svg {
   display: block;
   overflow: visible;
   flex-shrink: 0;
+  /* Slight shadow under the rope for depth */
+  filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.35));
 }
 
-/* ── SIGN CARD ───────────────────────────────────────────────────────
-   Dark navy with a gold border. Two CSS pseudo-elements add a wood-
-   grain texture and a top-lit sheen, keeping it fully CSS (no images).
-────────────────────────────────────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════════════
+   SIGN CARD — Parchment / Linen texture
+══════════════════════════════════════════════════════════════════ */
 .sign-card {
-  background: linear-gradient(172deg, #13304F 0%, #0D2137 52%, #091928 100%);
-  border: 2px solid #C9A84C;
-  border-radius: 10px;
-  padding: 0.6rem 1rem 0.75rem;
-  min-width: 152px;
-  max-width: 172px;
+  background:
+    /* Fine linen weave */
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 3px,
+      rgba(0,0,0,0.018) 3px,
+      rgba(0,0,0,0.018) 4px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 3px,
+      rgba(0,0,0,0.012) 3px,
+      rgba(0,0,0,0.012) 4px
+    ),
+    linear-gradient(165deg, var(--june-ivory) 0%, var(--june-parchment) 55%, #E0D4BF 100%);
+
+  border: 1.5px solid rgba(139,94,48,0.30);
+  border-radius: 8px;
+  padding: 0.65rem 1.05rem 0.8rem;
+  min-width: 156px;
+  max-width: 176px;
   position: relative;
   overflow: hidden;
+
   box-shadow:
-    0 4px 0 rgba(0, 0, 0, 0.55),
-    0 10px 28px rgba(0, 0, 0, 0.38),
-    inset 0 1px 0 rgba(255, 255, 255, 0.07),
-    0 0 0 1px rgba(255, 255, 255, 0.035);
+    0 5px 0 rgba(0,0,0,0.18),
+    0 1px 0 rgba(0,0,0,0.10),
+    0 12px 32px rgba(0,0,0,0.22),
+    inset 0 1px 0 rgba(255,255,255,0.70),
+    inset 0 -1px 0 rgba(0,0,0,0.06);
 }
 
-/* Horizontal wood-grain texture */
+/* Aged paper vignette at edges */
 .sign-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: repeating-linear-gradient(
-    90deg,
-    transparent,
-    transparent 9px,
-    rgba(255, 255, 255, 0.013) 9px,
-    rgba(255, 255, 255, 0.013) 10px
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    transparent 55%,
+    rgba(139,94,48,0.10) 100%
   );
   border-radius: inherit;
   pointer-events: none;
+  z-index: 0;
 }
 
-/* Lens sheen at the top */
+/* Top sheen / highlight */
 .sign-card::after {
   content: '';
   position: absolute;
-  inset: 0 0 60% 0;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.055), transparent);
-  border-radius: 10px 10px 0 0;
+  inset: 0 0 65% 0;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.45), transparent);
+  border-radius: 8px 8px 0 0;
   pointer-events: none;
+  z-index: 0;
 }
 
-/* ── SIGN HOLES ──────────────────────────────────────────────────────
-   Decorative screw-holes that imply the rope runs through the card.
-────────────────────────────────────────────────────────────────────── */
+/* ── EYELET HOLES — brass grommets ─────────────────────────────── */
 .sign-holes {
   display: flex;
   justify-content: space-between;
-  padding: 0 0.3rem;
-  margin-bottom: 0.5rem;
+  padding: 0 0.25rem;
+  margin-bottom: 0.55rem;
+  position: relative;
+  z-index: 1;
 }
 
 .sign-hole {
   display: block;
-  width: 9px;
-  height: 9px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 35%, #1A3A5C, #040D18 80%);
-  border: 1.5px solid #8B6914;
+  /* Brass ring */
+  background: conic-gradient(
+    from 120deg,
+    var(--june-rope-dark) 0deg,
+    var(--june-amber-light) 90deg,
+    var(--june-rope-light) 180deg,
+    var(--june-rope-dark) 270deg,
+    var(--june-rope-dark) 360deg
+  );
   box-shadow:
-    inset 0 1px 4px rgba(0, 0, 0, 0.85),
-    0 1px 2px rgba(201, 168, 76, 0.22);
+    inset 0 1px 3px rgba(0,0,0,0.6),
+    0 1px 2px rgba(200,137,58,0.30);
+  position: relative;
 }
 
-/* ── SIGN INNER CONTENT ──────────────────────────────────────────── */
+/* Inner hole */
+.sign-hole::after {
+  content: '';
+  position: absolute;
+  inset: 2.5px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 40% 35%, #2A1A0A, #0D0805);
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.9);
+}
+
+/* ── SIGN INNER ───────────────────────────────────────────────── */
 .sign-inner {
   position: relative;
   z-index: 1;
   text-align: center;
 }
 
+/* ── EYEBROW — "✦ JUNE SPECIAL ✦" ────────────────────────────── */
 .sign-eyebrow {
-  font-family: var(--font-heading, 'Anta', sans-serif);
-  font-size: 0.6rem;
-  letter-spacing: 0.16em;
-  color: #F4D35E;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.52rem;
+  font-weight: 500;
+  letter-spacing: 0.20em;
+  color: var(--june-green-deep);
   text-transform: uppercase;
   margin-bottom: 0.5rem;
-  opacity: 0.88;
+  opacity: 0.85;
 }
 
-.sign-price-grid {
+/* ── HEADLINE — big italic serif ─────────────────────────────── */
+.sign-headline {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--june-green-deep);
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  margin-bottom: 0.5rem;
+}
+
+/* ── SPOTS COUNTER ────────────────────────────────────────────── */
+.sign-spots-wrap {
   display: flex;
   flex-direction: column;
-}
-
-.sign-price-item {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
-  gap: 0.6rem;
-  padding: 0.22rem 0;
+  gap: 0.18rem;
+  padding: 0.45rem 0.4rem;
+  background: var(--june-green-deep);
+  border-radius: 5px;
+  margin-bottom: 0.5rem;
+  position: relative;
+  overflow: hidden;
 }
 
-.sign-tier {
-  font-family: var(--font-body, 'Anta', sans-serif);
-  font-size: 0.68rem;
-  color: #7AAFD4;
-  letter-spacing: 0.04em;
+/* Subtle shimmer on the counter block */
+.sign-spots-wrap::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    105deg,
+    transparent 30%,
+    rgba(255,255,255,0.06) 50%,
+    transparent 70%
+  );
+  animation: signShimmer 3.5s ease-in-out infinite;
 }
 
-.sign-amount {
-  font-family: var(--font-numeric, 'Patrick Hand', cursive);
-  font-size: 1.18rem;
-  color: #FAF0DC;
-  font-weight: 700;
+@keyframes signShimmer {
+  0%, 100% { transform: translateX(-100%); }
+  50%       { transform: translateX(100%); }
+}
+
+.sign-spots-number {
+  font-family: 'DM Mono', monospace;
+  font-size: 1.9rem;
+  font-weight: 500;
+  color: var(--june-amber-pale);
   line-height: 1;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
 }
 
+.sign-spots-label {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.48rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--june-sage);
+}
+
+/* ── DIVIDER ──────────────────────────────────────────────────── */
 .sign-sep {
   height: 1px;
   background: linear-gradient(
     to right,
     transparent,
-    rgba(201, 168, 76, 0.38),
+    rgba(139,94,48,0.30),
     transparent
   );
-  margin: 0.2rem 0;
+  margin: 0.28rem 0;
 }
 
-/* ── COUNTDOWN ───────────────────────────────────────────────────── */
-.sign-timer {
-  margin-top: 0.55rem;
-  padding-top: 0.45rem;
-  border-top: 1px solid rgba(201, 168, 76, 0.18);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.1rem;
-}
-
-.sign-timer-label {
-  font-size: 0.52rem;
-  letter-spacing: 0.11em;
+/* ── FOOTER LINE ──────────────────────────────────────────────── */
+.sign-footer {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.48rem;
+  letter-spacing: 0.12em;
+  color: var(--june-amber);
   text-transform: uppercase;
-  color: #527A96;
+  opacity: 0.80;
 }
 
-.sign-timer-value {
-  font-family: var(--font-numeric, 'Patrick Hand', cursive);
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: #F4D35E;
-  letter-spacing: 0.06em;
-}
-
-/* ── SALE RIBBON (diagonal corner banner, top-left) ──────────────── */
+/* ══════════════════════════════════════════════════════════════════
+   PRICING CARD — JUNE RIBBON (replaces gold May ribbon)
+══════════════════════════════════════════════════════════════════ */
 .sale-ribbon {
   display: none;
   position: absolute;
   top: 15px;
   left: -30px;
-  width: 100px;
+  width: 110px;
   padding: 4px 0;
-  background: linear-gradient(90deg, #A87C10, #F4D35E 50%, #A87C10);
-  color: #0F2A44;
-  font-size: 0.55rem;
-  font-weight: 900;
-  letter-spacing: 0.14em;
+  background: linear-gradient(
+    90deg,
+    var(--june-green-deep),
+    var(--june-green-light) 50%,
+    var(--june-green-deep)
+  );
+  color: var(--june-ivory);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.50rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   text-align: center;
   transform: rotate(-45deg);
   z-index: 3;
-  box-shadow: 0 2px 8px rgba(201, 168, 76, 0.45);
+  box-shadow: 0 2px 8px rgba(30,80,50,0.45);
 }
 
 #pricing.sale-active .pricing-card.starter .sale-ribbon,
@@ -249,15 +334,15 @@ body.mobile-nav-is-open .discount-sign-root {
   display: block;
 }
 
-/* ── ORIGINAL PRICE → STRIKETHROUGH ─────────────────────────────── */
+/* ── STRIKETHROUGH ORIGINAL PRICE ────────────────────────────── */
 #pricing.sale-active .pricing-card.starter .price,
 #pricing.sale-active .pricing-card.pro    .price {
   font-size: 1.5rem !important;
   text-decoration: line-through;
-  text-decoration-color: rgba(200, 50, 50, 0.65);
+  text-decoration-color: rgba(180,60,60,0.55);
   text-decoration-thickness: 2px;
   color: var(--text-color-light) !important;
-  opacity: 0.6;
+  opacity: 0.55;
   margin-bottom: 0 !important;
 }
 
@@ -267,7 +352,7 @@ body.mobile-nav-is-open .discount-sign-root {
   margin-bottom: 0.3rem;
 }
 
-/* ── SALE PRICE DISPLAY ──────────────────────────────────────────── */
+/* ── SALE PRICE DISPLAY ───────────────────────────────────────── */
 .sale-price-display {
   display: none;
   align-items: baseline;
@@ -286,37 +371,41 @@ body.mobile-nav-is-open .discount-sign-root {
   to   { opacity: 1; transform: none; }
 }
 
+/* June-green badge */
 .sale-badge {
   display: inline-flex;
   align-items: center;
-  background: linear-gradient(135deg, #C9A84C, #F4D35E 60%, #C9A84C);
-  color: #0F2A44;
-  font-size: 0.58rem;
-  font-weight: 900;
-  letter-spacing: 0.13em;
+  background: linear-gradient(
+    135deg,
+    var(--june-green-deep),
+    var(--june-green-light) 60%,
+    var(--june-green-deep)
+  );
+  color: var(--june-cream);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.52rem;
+  font-weight: 500;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   padding: 4px 8px;
   border-radius: 4px;
   line-height: 1;
   align-self: center;
-  box-shadow: 0 1px 6px rgba(201, 168, 76, 0.45);
+  box-shadow: 0 1px 6px rgba(46,107,74,0.40);
 }
 
 .sale-new-price {
-  font-family: var(--font-numeric, 'Patrick Hand', cursive);
+  font-family: 'Playfair Display', Georgia, serif;
   font-size: 2.85rem;
   font-weight: 700;
-  color: var(--primary-color, #0F2A44);
+  color: var(--primary-color, var(--june-green-deep));
   line-height: 1;
   letter-spacing: -0.03em;
 }
 
-/* ── PRICING CARD REVEAL ANIMATIONS ─────────────────────────────────
-   JS adds `.pre-reveal` immediately so cards start hidden,
-   then removes it when IntersectionObserver fires → CSS transition
-   carries the card to its natural resting state.
-   This avoids transform conflicts with the existing :hover rules.
-────────────────────────────────────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════════════
+   PRICING CARD SCROLL REVEAL (unchanged logic, refreshed transition)
+══════════════════════════════════════════════════════════════════ */
 .pricing-card {
   transition:
     opacity    0.75s cubic-bezier(0.22, 1, 0.36, 1),
@@ -330,24 +419,20 @@ body.mobile-nav-is-open .discount-sign-root {
   pointer-events: none;
 }
 
-/* Individual plan card is not part of the reveal sequence */
 .pricing-card.individual-plan {
   opacity: 1 !important;
   transform: none !important;
   pointer-events: auto;
 }
 
-/* ── MOBILE & TABLET SIGN BEHAVIOR ───────────────────────────────────
-   Below 992px the hamburger is visible. The sign detaches from the
-   pricing section and hangs from the bottom of the fixed header,
-   landing just to the left of the hamburger button.
-────────────────────────────────────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════════════════════════ */
 @media (max-width: 991px) {
   .discount-sign-root {
-    /* Detach from pricing section, fix to viewport */
     position: fixed;
-    top: var(--header-height, 80px); /* Rope starts exactly at header bottom */
-    right: 4.8rem;                   /* Left of the hamburger button */
+    top: var(--header-height, 80px);
+    right: 4.8rem;
     bottom: auto;
     z-index: calc(var(--z-header, 1000) - 1);
     transform-origin: top center;
@@ -355,28 +440,23 @@ body.mobile-nav-is-open .discount-sign-root {
 }
 
 @media (max-width: 767px) {
-  .discount-sign-root {
-    right: 4.2rem;
-  }
+  .discount-sign-root { right: 4.2rem; }
 
-  .rope-svg {
-    height: 32px !important;
-  }
+  .rope-svg { height: 40px !important; }
 
   .sign-card {
-    min-width: 122px;
-    max-width: 140px;
-    padding: 0.5rem 0.8rem 0.6rem;
+    min-width: 126px;
+    max-width: 144px;
+    padding: 0.5rem 0.8rem 0.65rem;
   }
 
-  .sign-eyebrow    { font-size: 0.55rem; }
-  .sign-tier       { font-size: 0.62rem; }
-  .sign-amount     { font-size: 1.02rem; }
-  .sign-timer-value { font-size: 0.82rem; }
+  .sign-eyebrow       { font-size: 0.48rem; }
+  .sign-headline      { font-size: 0.92rem; }
+  .sign-spots-number  { font-size: 1.55rem; }
+  .sign-spots-label   { font-size: 0.44rem; }
+  .sign-footer        { font-size: 0.44rem; }
 }
 
 @media (max-width: 380px) {
-  .discount-sign-root {
-    right: 3.8rem;
-  }
+  .discount-sign-root { right: 3.8rem; }
 }

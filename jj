@@ -1,0 +1,56 @@
+        <div id="discount-sign"
+             class="discount-sign-root"
+             role="img"
+             aria-label="May Sale: Starter 299 GEL, Pro 699 GEL. Offer ends 31 May.">
+
+          <div class="sign-nail" aria-hidden="true"></div>
+
+          <svg class="rope-svg"
+               viewBox="0 0 14 72" width="14" height="72"
+               aria-hidden="true"
+               xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ropeGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%"   stop-color="#6B4F2A"/>
+                <stop offset="42%"  stop-color="#C8A165"/>
+                <stop offset="100%" stop-color="#6B4F2A"/>
+              </linearGradient>
+            </defs>
+            <path d="M7,0 C6,18 8,36 7,54 C6.5,61 7,68 7,72"
+                  stroke="url(#ropeGrad)" stroke-width="3.5"
+                  fill="none" stroke-linecap="round"/>
+            <path d="M7,6 C5,14 9,22 7,30 C5,38 9,46 7,53 C6,60 7,66 7,70"
+                  stroke="rgba(35,15,3,0.22)" stroke-width="2"
+                  fill="none" stroke-linecap="round"/>
+          </svg>
+
+          <div class="sign-card" aria-hidden="true">
+
+            <div class="sign-holes">
+              <span class="sign-hole"></span>
+              <span class="sign-hole"></span>
+            </div>
+
+            <div class="sign-inner">
+              <p class="sign-eyebrow" data-lang="maySaleText">✦ MAY SALE ✦</p>
+
+              <div class="sign-price-grid">
+                <div class="sign-price-item">
+                  <span class="sign-tier" data-lang="pricingStarterTitle">Starter</span>
+                  <span class="sign-amount">299 ₾</span>
+                </div>
+                <div class="sign-sep" aria-hidden="true"></div>
+                <div class="sign-price-item">
+                  <span class="sign-tier" data-lang="pricingProTitle">Pro</span>
+                  <span class="sign-amount" >699 ₾</span>
+                </div>
+              </div>
+
+              <div class="sign-timer">
+                <span class="sign-timer-label" data-lang="saleEndsInText">Ends in</span>
+                <strong id="sign-countdown" class="sign-timer-value">–</strong>
+              </div>
+            </div>
+
+          </div>
+        </div>
