@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "skills": {
+    "21st-ai": {
+      "source": "21st-dev/skill",
+      "sourceType": "github",
+      "skillPath": "skills/21st-ai/SKILL.md",
+      "computedHash": "c859b3edd8bdbc181d43bfc6dc6a68b1015e7103b65178fe800a83fdbba0ca09"
+    }
+  }
+}
