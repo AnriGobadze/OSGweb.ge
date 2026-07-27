@@ -220,8 +220,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             salesTitle2: "+22% sales", sourceTitle2: "Source: Admin / GA4 • 45 day", webInfoTitle2: "Online Store · Performance · Launched: Apr 2025", viewPRTitle: "View Live Project",
 
-            pageDescription: "OSG Digital Agency crafts bespoke, high-performance websites for businesses that refuse to look ordinary.",
-            pageTitle: "OSG Digital Agency - A Top 1% Boutique Web Studio",
+            pageDescription: "OSG is a boutique web development and UI/UX design studio building high-performance digital platforms for ambitious brands. No templates, pure custom engineering.",
+            pageTitle: "Custom Web Development & UI/UX Design Studio | OSG",
 
             navServices: "Services", navPortfolio: "Portfolio", navTestimonials: "Testimonials", navPricing: "Pricing", navContact: "Contact",
             heroTitle: "Your Business,<br><span class='gradient-text'>Digitally.</span>", heroSubtitle: "Websites That Work For You", heroButton: "Start a Project <i class=\"fas fa-chevron-right\" aria-hidden=\"true\"></i>", heroButtonSecondary: "Explore Services",
@@ -285,7 +285,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         ge: {
             proPackageLabel: "პრო პაკეტი", starterPackageLabel: "სტარტერ პაკეტი",
-            badgeEyebrow: "✦ ამჟამად ვიღებთ ✦", badgeHeadline: "მხოლოდ&nbsp;2&nbsp;პრემიუმ<br>პროექტი", badgeSub: "2026 წლის ივლისისთვის",
+            badgeEyebrow: "✦ ამჟამად ვიღებთ ✦", badgeHeadline: "მხოლოდ&nbsp;2&nbsp;პრემიუმ<br>პროექტს", badgeSub: "2026 წლის ივლისისთვის",
 
             individualPayment: "ინდივ.", individualTitle: "სპეციალური შეკვეთა", individualPrice: "ინდივიდუალური შეთავაზება", individualDesc: "მოგვიყევით პროექტზე.",
             individualFeature1: "10+ გვერდიანი ვებსაიტი", individualFeature2: "ელ. კომერცია და ჯავშნები", individualFeature3: "API-ს რთული ინტეგრაციები",
@@ -295,8 +295,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             salesTitle2: "+22% გაყიდვები", sourceTitle2: "წყარო: Admin / GA4 • 45 დღე", webInfoTitle2: "ონლაინ მაღაზია · შესრულება · გამოშვების თარიღი: აპრ 2025", viewPRTitle: "პროექტის ნახვა",
 
-            pageDescription: "OSG Digital Agency ქმნის მორგებულ, მაღალეფექტურ ვებსაიტებს ბიზნესებისთვის, რომლებსაც ჩვეულებრივობა არ სურთ.",
-            pageTitle: "OSG Digital Agency - ლუქს-კლასის ბუტიკ ვებ სტუდია",
+            pageDescription: "OSG Digital Agency — ბუტიკ ვებ სტუდია. ვქმნით მორგებულ, მაღალხარისხიან ციფრულ პლატფორმებს და ვებსაიტებს ბიზნესებისთვის.",
+            pageTitle: "ვებსაიტების დამზადება და UI/UX დიზაინი | OSG",
 
             navServices: "სერვისები", navPortfolio: "პორტფოლიო", navTestimonials: "შეფასებები", navPricing: "ფასები", navContact: "კონტაქტი",
             heroTitle: "შენი ბიზნესი,<br><span class='gradient-text'>ციფრულად.</span>", heroSubtitle: "ვებსაიტები, რომლებიც მუშაობენ თქვენთვის", heroButton: "პროექტის დაწყება <i class=\"fas fa-chevron-right\" aria-hidden=\"true\"></i>", heroButtonSecondary: "სერვისების ნახვა",
@@ -601,7 +601,9 @@ document.addEventListener('DOMContentLoaded', () => {
         e.currentTarget.classList.add('active');
         e.currentTarget.setAttribute('aria-checked', 'true');
         billingToggleButtons.forEach(btn => { if (btn !== e.currentTarget) btn.setAttribute('aria-checked', 'false'); });
-        document.querySelector('.billing-cycle-toggle')?.classList.toggle('is-individual', currentBillingPeriod === 'individual');
+        const billingToggleEl = document.querySelector('.billing-cycle-toggle');
+        billingToggleEl?.classList.toggle('is-individual', currentBillingPeriod === 'individual');
+        billingToggleEl?.classList.toggle('is-monthly', currentBillingPeriod === 'monthly');
         syncToggleIndicator();
 
         if (currentBillingPeriod === 'individual') {
@@ -874,13 +876,22 @@ document.addEventListener('DOMContentLoaded', () => {
         const MAX_OFFSET = 10;
 
         document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
+            let pendingEvent = null;
+
             btn.addEventListener('mousemove', (e) => {
-                const rect = btn.getBoundingClientRect();
-                const relX = e.clientX - (rect.left + rect.width / 2);
-                const relY = e.clientY - (rect.top + rect.height / 2);
-                const offsetX = Math.max(-MAX_OFFSET, Math.min(MAX_OFFSET, relX * MAGNET_STRENGTH));
-                const offsetY = Math.max(-MAX_OFFSET, Math.min(MAX_OFFSET, relY * MAGNET_STRENGTH));
-                btn.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+                const isFirstPending = pendingEvent === null;
+                pendingEvent = e;
+                if (!isFirstPending) return;
+
+                requestAnimationFrame(() => {
+                    const rect = btn.getBoundingClientRect();
+                    const relX = pendingEvent.clientX - (rect.left + rect.width / 2);
+                    const relY = pendingEvent.clientY - (rect.top + rect.height / 2);
+                    const offsetX = Math.max(-MAX_OFFSET, Math.min(MAX_OFFSET, relX * MAGNET_STRENGTH));
+                    const offsetY = Math.max(-MAX_OFFSET, Math.min(MAX_OFFSET, relY * MAGNET_STRENGTH));
+                    btn.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+                    pendingEvent = null;
+                });
             });
             btn.addEventListener('mouseleave', () => {
                 btn.style.transform = '';
@@ -890,10 +901,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function initSpotlightCards() {
         document.querySelectorAll('.card, .pricing-card').forEach(card => {
+            let pendingEvent = null;
+
             card.addEventListener('mousemove', (e) => {
-                const rect = card.getBoundingClientRect();
-                card.style.setProperty('--spot-x', `${e.clientX - rect.left}px`);
-                card.style.setProperty('--spot-y', `${e.clientY - rect.top}px`);
+                const isFirstPending = pendingEvent === null;
+                pendingEvent = e;
+                if (!isFirstPending) return;
+
+                requestAnimationFrame(() => {
+                    const rect = card.getBoundingClientRect();
+                    card.style.setProperty('--spot-x', `${pendingEvent.clientX - rect.left}px`);
+                    card.style.setProperty('--spot-y', `${pendingEvent.clientY - rect.top}px`);
+                    pendingEvent = null;
+                });
             });
         });
     }

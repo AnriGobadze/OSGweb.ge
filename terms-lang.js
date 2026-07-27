@@ -36,6 +36,9 @@ document.addEventListener('DOMContentLoaded', () => {
             clause10Title: "პროექტის მიღება-ჩაბარება",
             clause10Body: "ვებსაიტის სატესტო ვერსიის გადაცემის შემდეგ, კლიენტს აქვს 5 სამუშაო დღე შენიშვნებისა და ხარვეზების მოსაწოდებლად. აღნიშნულ ვადაში უკუკავშირის არარსებობის შემთხვევაში, სამუშაო ითვლება სრულად და ჯეროვნად შესრულებულად.",
 
+            clause11Title: "საგარანტიო მომსახურების ვადა",
+            clause11Body: "ვებსაიტის ინტერნეტში გაშვებიდან OSG უსასყიდლოდ ასწორებს გამოვლენილ ტექნიკურ ხარვეზებსა და მცირე შესწორებებს, არჩეული პაკეტის შესაბამისად:<br><br>Starter პაკეტი: 14 დღე;<br>Pro პაკეტი: 21 დღე;<br>Premium პაკეტი: 3 თვე (90 დღე).<br><br>აღნიშნული საგარანტიო ვადების გასვლის შემდეგ, ნებისმიერი ტექნიკური მხარდაჭერა, განახლება ან ცვლილება ხორციელდება ცალკე შეთანხმებული ტარიფით.",
+
             footnote: "ბოლო განახლება: 2026 წლის ივლისი · კითხვების შემთხვევაში დაგვიკავშირდით — <a href=\"mailto:osgbusiness01@gmail.com\">osgbusiness01@gmail.com</a>",
 
             footerAbout: "ინოვაციური ციფრული გამოცდილება ბრენდის წარმატებისთვის.",
@@ -80,6 +83,9 @@ document.addEventListener('DOMContentLoaded', () => {
             clause10Title: "Project Acceptance and Handover",
             clause10Body: "After the test version of the website is delivered, the Client has 5 business days to submit comments and report any issues. If no feedback is received within this period, the work is considered fully and properly completed.",
 
+            clause11Title: "Warranty Period",
+            clause11Body: "From the moment the website goes live, OSG will fix any identified technical faults and minor corrections free of charge, according to the selected package:<br><br>Starter package: 14 days;<br>Pro package: 21 days;<br>Premium package: 3 months (90 days).<br><br>After these warranty periods expire, any technical support, updates, or changes will be provided under a separately agreed rate.",
+
             footnote: "Last updated: July 2026 · If you have any questions, contact us — <a href=\"mailto:osgbusiness01@gmail.com\">osgbusiness01@gmail.com</a>",
 
             footerAbout: "A top 1% boutique studio engineering digital presence for brands that demand excellence.",
@@ -123,6 +129,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
             clause10Title: "Приём и передача проекта",
             clause10Body: "После передачи тестовой версии сайта у Клиента есть 5 рабочих дней для предоставления замечаний и указания недочётов. При отсутствии обратной связи в течение этого срока работа считается полностью и надлежащим образом выполненной.",
+
+            clause11Title: "Гарантийный срок",
+            clause11Body: "С момента запуска сайта в интернете OSG бесплатно устраняет выявленные технические неисправности и незначительные доработки в соответствии с выбранным пакетом:<br><br>Пакет Starter: 14 дней;<br>Пакет Pro: 21 день;<br>Пакет Premium: 3 месяца (90 дней).<br><br>По истечении указанных гарантийных сроков любая техническая поддержка, обновления или изменения осуществляются по отдельно согласованному тарифу.",
 
             footnote: "Последнее обновление: июль 2026 г. · Если у вас есть вопросы, свяжитесь с нами — <a href=\"mailto:osgbusiness01@gmail.com\">osgbusiness01@gmail.com</a>",
 

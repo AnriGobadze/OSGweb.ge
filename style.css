@@ -202,7 +202,8 @@ code, pre, kbd { font-family: var(--font-mono); }
 
 .gradient-text { background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
-a, button { transition: color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-spring), box-shadow var(--transition-fast), border-color var(--transition-fast); }
+a, button { transition: color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-spring), box-shadow var(--transition-fast), border-color var(--transition-fast); touch-action: manipulation; }
+input, textarea { touch-action: manipulation; }
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: var(--focus-outline); outline-offset: 3px; border-radius: 4px; }
 
 .btn { display: inline-block; padding: 13px 30px; border-radius: 12px; text-decoration: none; font-weight: 700; font-family: var(--font-body); cursor: pointer; border: 1px solid transparent; transition: transform var(--transition-spring), box-shadow var(--transition-fast), background-position 0.6s ease, border-color var(--transition-fast); user-select: none; letter-spacing: 0.01em; }
@@ -224,8 +225,8 @@ header nav { display: flex; justify-content: space-between; align-items: center;
    width instead of only appearing at the >=768px breakpoint below. */
 .terms-nav .language-selector { display: flex; }
 .nav-links a { color: var(--text-color); text-decoration: none; font-weight: 600; padding: 0.5rem 0; position: relative; }
-.nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 0; height: 2px; background: var(--primary-gradient); transition: width var(--transition-fast); border-radius: 2px; }
-.nav-links a:hover::after, .nav-links a.active-link::after { width: 100%; }
+.nav-links a::after { content: ''; position: absolute; bottom: 0; left: 0; width: 100%; height: 2px; background: var(--primary-gradient); transform: scaleX(0); transform-origin: left; transition: transform var(--transition-fast); border-radius: 2px; }
+.nav-links a:hover::after, .nav-links a.active-link::after { transform: scaleX(1); }
 .nav-links a:hover, .nav-links a.active-link { color: var(--accent-mint); }
 .logo { display: flex; align-items: center; gap: 0.75rem; font-weight: 700; font-family: var(--font-heading); font-size: 1.5rem; text-decoration: none; color: var(--dark-title); }
 header .logo img { height: 65px; width: auto; }
@@ -303,11 +304,6 @@ body.mobile-nav-is-open .hamburger-bar:nth-child(3) { transform: translateY(-8px
     will-change: transform;
     -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 58%, transparent 90%);
     mask-image: linear-gradient(to bottom, #000 0%, #000 58%, transparent 90%);
-    /* Left edge: straight for the top half, then a soft elliptical
-       curve into the bottom-left corner for the bottom half — the
-       percentage vertical radius keeps that split proportional at any
-       panel height. */
-    border-bottom-left-radius: 64px 42%;
 }
 
 .mobile-nav-content { display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-end; padding: 7rem 2.5rem 2rem; }
@@ -369,31 +365,20 @@ section { padding: 4rem 0; }
    a mask, so the sitewide `.site-bg` texture — fixed behind everything
    else on the page — shows through and the hero merges seamlessly into
    the rest of the page instead of sitting on top of it as a separate
-   box. The radial layers ride on top of the base linear fade using the
-   default `add` mask compositing, so they nudge a few irregular patches
-   of opacity slightly lower/higher than the straight line — an organic,
-   misty edge instead of a razor-straight cutoff — with zero risk from
-   cross-browser mask-composite keyword differences. */
+   box. A single linear gradient keeps the fade predictable and free of
+   cross-browser multi-layer mask-compositing quirks. */
 .hero-video-wrap {
     position: absolute;
     inset: 0;
     z-index: 0;
     overflow: hidden;
     background: var(--bg-color-darker);
-    -webkit-mask-image:
-        linear-gradient(to bottom, #000 0%, #000 58%, transparent 88%),
-        radial-gradient(45% 55% at 18% 84%, #000 0%, transparent 72%),
-        radial-gradient(50% 60% at 55% 90%, #000 0%, transparent 74%),
-        radial-gradient(45% 55% at 88% 82%, #000 0%, transparent 72%);
-    mask-image:
-        linear-gradient(to bottom, #000 0%, #000 58%, transparent 88%),
-        radial-gradient(45% 55% at 18% 84%, #000 0%, transparent 72%),
-        radial-gradient(50% 60% at 55% 90%, #000 0%, transparent 74%),
-        radial-gradient(45% 55% at 88% 82%, #000 0%, transparent 72%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 58%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 58%, transparent 100%);
 }
 .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 /* Deliberately much deeper than a typical hero scrim: this is the
-   overlay's RESTING state, reached the instant the 1.5s cinematic
+   overlay's RESTING state, reached the instant the 1.8s cinematic
    intro hands off (see `heroFadeIn` below) — raw video reads first,
    then contrast steps up hard so the hero copy pops. */
 .hero-video-overlay {
@@ -488,11 +473,11 @@ section { padding: 4rem 0; }
    ══════════════════════════════════════════════════════════════════ */
 html.hero-scroll-lock, body.hero-scroll-lock { overflow: hidden; height: 100%; }
 
-/* Stage 1 (0–1.5s): ONLY the logo mark + "OSGWeb.ge" text float over
+/* Stage 1 (0–1.8s): ONLY the logo mark + "OSGWeb.ge" text float over
    the raw video (`.logo` is never touched by this class, so it's
    visible from first paint). Everything else — nav links, language
    selector, hamburger (`.nav-right`), the header's own background/
-   border/blur, and hero copy — stays hidden until the 1.5s reveal.
+   border/blur, and hero copy — stays hidden until the 1.8s reveal.
    Hero copy hides via `visibility`, never `opacity`, so its reveal can
    be a pure slide with zero fade; the navbar reveals with a normal
    fade. */
@@ -514,22 +499,22 @@ html.hero-cinematic-init header {
 }
 
 html.hero-cinematic-init .nav-right {
-    animation: heroFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards;
+    animation: heroFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
 }
 html.hero-cinematic-init .hero-text h1 {
-    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.5s forwards;
+    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
 }
 html.hero-cinematic-init .hero-subtitle {
-    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.64s forwards;
+    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.94s forwards;
 }
 html.hero-cinematic-init .hero-buttons {
-    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.78s forwards;
+    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 2.08s forwards;
 }
 html.hero-cinematic-init .hero-video-overlay {
-    animation: heroFadeIn 1s ease 1.5s forwards;
+    animation: heroFadeIn 1s ease 1.8s forwards;
 }
 html.hero-cinematic-init header {
-    animation: headerFogIn 1.6s cubic-bezier(0.22, 1, 0.36, 1) 1.5s forwards;
+    animation: headerFogIn 1.6s cubic-bezier(0.22, 1, 0.36, 1) 1.8s forwards;
 }
 
 @keyframes heroFadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -870,7 +855,6 @@ html.hero-cinematic-init header {
     box-shadow: 0 4px 16px rgba(16, 185, 129, 0.45);
     transition: transform var(--transition-spring), width var(--transition-spring), background var(--transition-fast), box-shadow var(--transition-fast);
     z-index: 0;
-    will-change: transform, width;
 }
 
 /* Matches the Individual/Bespoke card's own violet treatment, instead
@@ -878,6 +862,12 @@ html.hero-cinematic-init header {
 .billing-cycle-toggle.is-individual .toggle-indicator {
     background: var(--bespoke-gradient);
     box-shadow: 0 4px 16px var(--bespoke-glow);
+}
+
+/* Monthly gets squared-off left/right edges instead of the default
+   fully-rounded pill, so it visually reads as distinct from One-Time. */
+.billing-cycle-toggle.is-monthly .toggle-indicator {
+    border-radius: 0;
 }
 
 .toggle-btn {
