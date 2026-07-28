@@ -218,7 +218,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             monthlyPayment: "Monthly", monthlyPaymentBilling: "per month",
 
-            salesTitle2: "+22% sales", sourceTitle2: "Source: Admin / GA4 • 45 day", webInfoTitle2: "Online Store · Performance · Launched: Apr 2025", viewPRTitle: "View Live Project",
+            salesTitle2: "+22% sales", sourceTitle2: "Source: Admin / GA4 • 45 day", webInfoTitle2: "<span class=\"case-tag-prefix\">Online Store · Performance · </span>Launched: Apr 2025", viewPRTitle: "View Live Project",
 
             pageDescription: "OSG is a boutique web development and UI/UX design studio building high-performance digital platforms for ambitious brands. No templates, pure custom engineering.",
             pageTitle: "Custom Web Development & UI/UX Design Studio | OSG",
@@ -281,7 +281,7 @@ document.addEventListener('DOMContentLoaded', () => {
             whatsappMessage: "Hello! I'd like to book a call to discuss your web services.",
 
             seeAllReviews: "See All Reviews", allReviewsTitle: "What Our Clients Say", backToHome: "← Back", noMoreReviews: "No more reviews",
-            checkedTitle: "✓ Checked", webInfoTitle: "eCommerce · Stripe Checkout · Launched: May 2025", salesTitle: "+30% Sales", sourceTitle: "Source: GA4 • 60 day",
+            checkedTitle: "✓ Checked", webInfoTitle: "<span class=\"case-tag-prefix\">eCommerce · Stripe Checkout · </span>Launched: May 2025", salesTitle: "+30% Sales", sourceTitle: "Source: GA4 • 60 day",
         },
         ge: {
             proPackageLabel: "პრო პაკეტი", starterPackageLabel: "სტარტერ პაკეტი",
@@ -293,7 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             monthlyPayment: "თვიური", monthlyPaymentBilling: "თვეში",
 
-            salesTitle2: "+22% გაყიდვები", sourceTitle2: "წყარო: Admin / GA4 • 45 დღე", webInfoTitle2: "ონლაინ მაღაზია · შესრულება · გამოშვების თარიღი: აპრ 2025", viewPRTitle: "პროექტის ნახვა",
+            salesTitle2: "+22% გაყიდვები", sourceTitle2: "წყარო: Admin / GA4 • 45 დღე", webInfoTitle2: "<span class=\"case-tag-prefix\">ონლაინ მაღაზია · შესრულება · </span>გამოშვების თარიღი: აპრ 2025", viewPRTitle: "პროექტის ნახვა",
 
             pageDescription: "OSG Digital Agency — ბუტიკ ვებ სტუდია. ვქმნით მორგებულ, მაღალხარისხიან ციფრულ პლატფორმებს და ვებსაიტებს ბიზნესებისთვის.",
             pageTitle: "ვებსაიტების დამზადება და UI/UX დიზაინი | OSG",
@@ -354,7 +354,7 @@ document.addEventListener('DOMContentLoaded', () => {
             whatsappMessage: "გამარჯობა, მსურს ზარის დაჯავშნა თქვენს ვებ-გვერდის სერვისებზე სასაუბროდ.",
 
             seeAllReviews: "ყველა შეფასების ნახვა", allReviewsTitle: "რას ამბობენ კლიენტები", backToHome: "← უკან", noMoreReviews: "მეტი შეფასება არ არის",
-            checkedTitle: "✓ შემოწმებული", webInfoTitle: "eCommerce · Stripe Checkout · გამოშვების თარიღი: მაისი 2025", salesTitle: "+30% გაყიდვები", sourceTitle: "წყარო: GA4 • 60 დღე",
+            checkedTitle: "✓ შემოწმებული", webInfoTitle: "<span class=\"case-tag-prefix\">eCommerce · Stripe Checkout · </span>გამოშვების თარიღი: მაისი 2025", salesTitle: "+30% გაყიდვები", sourceTitle: "წყარო: GA4 • 60 დღე",
         },
         ru: {
             proPackageLabel: "Пакет Pro", starterPackageLabel: "Пакет Стартовый",
@@ -366,7 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             monthlyPayment: "Ежемесячный", monthlyPaymentBilling: "в месяц",
 
-            salesTitle2: "+22% продажи", sourceTitle2: "источник: Admin / GA4 • 45 день", webInfoTitle2: "Интернет-магазин · Производительность · Запуск: апр 2025", viewPRTitle: "просмотреть проект",
+            salesTitle2: "+22% продажи", sourceTitle2: "источник: Admin / GA4 • 45 день", webInfoTitle2: "<span class=\"case-tag-prefix\">Интернет-магазин · Производительность · </span>Запуск: апр 2025", viewPRTitle: "просмотреть проект",
 
             pageDescription: "OSG Digital Agency создаёт эксклюзивные, высокоэффективные веб-сайты для бизнеса, который не терпит посредственности.",
             pageTitle: "OSG Digital Agency - Бутик-студия веб-разработки премиум-класса",
@@ -427,7 +427,7 @@ document.addEventListener('DOMContentLoaded', () => {
             whatsappMessage: "Здравствуйте, я хотел бы заказать звонок, чтобы обсудить ваши услуги по веб-разработке.",
 
             seeAllReviews: "Посмотреть все отзывы", allReviewsTitle: "Что говорят наши клиенты", backToHome: "← Назад", noMoreReviews: "Больше отзывов нет",
-            checkedTitle: "✓ Проверено", webInfoTitle: "eCommerce · Stripe Checkout · Дата выхода: май 2025 г.", salesTitle: "+30% Продажи", sourceTitle: "источник: GA4 • 60 день",
+            checkedTitle: "✓ Проверено", webInfoTitle: "<span class=\"case-tag-prefix\">eCommerce · Stripe Checkout · </span>Дата выхода: май 2025 г.", salesTitle: "+30% Продажи", sourceTitle: "источник: GA4 • 60 день",
         }
     };
 
