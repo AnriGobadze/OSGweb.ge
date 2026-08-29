@@ -210,7 +210,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const translations = {
         en: {
             proPackageLabel: "Pro Package", starterPackageLabel: "Starter Package",
-            badgeEyebrow: "✦ CURRENTLY ACCEPTING ✦", badgeHeadline: "Only&nbsp;2&nbsp;Premium<br>Projects", badgeSub: "For July 2026",
+            badgeEyebrow: "✦ ONLY ACCEPTING ✦", badgeHeadline: "Only&nbsp;3&nbsp;Premium<br>Projects", badgeSub: "For September 2026",
 
             individualPayment: "Individual", individualTitle: "Custom Solution", individualPrice: "Custom Quote", individualDesc: "Tell us about your project",
             individualFeature1: "Multi-page (10+) websites", individualFeature2: "E-commerce & Booking Systems", individualFeature3: "Advanced API Integrations",
@@ -296,7 +296,7 @@ pricingPremiumPrice5050: "2600", pricingPremiumPrice3mo: "1990", pricingPremiumP
         },
         ge: {
             proPackageLabel: "პრო პაკეტი", starterPackageLabel: "სტარტერ პაკეტი",
-            badgeEyebrow: "✦ ამჟამად ვიღებთ ✦", badgeHeadline: "მხოლოდ&nbsp;2&nbsp;პრემიუმ<br>პროექტს", badgeSub: "2026 წლის ივლისისთვის",
+            badgeEyebrow: "✦ ამჟამად ვიღებთ ✦", badgeHeadline: "მხოლოდ&nbsp;3&nbsp;პრემიუმ<br>პროექტს", badgeSub: "2026 წლის სექტემბრისთვის",
 
             individualPayment: "ინდივ.", individualTitle: "სპეციალური შეკვეთა", individualPrice: "ინდივიდუალური შეთავაზება", individualDesc: "მოგვიყევით პროექტზე.",
             individualFeature1: "10+ გვერდიანი ვებსაიტი", individualFeature2: "ელ. კომერცია და ჯავშნები", individualFeature3: "API-ს რთული ინტეგრაციები",
@@ -384,7 +384,7 @@ pricingPremiumPrice5050: "2600", pricingPremiumPrice3mo: "1990", pricingPremiumP
         },
         ru: {
             proPackageLabel: "Пакет Pro", starterPackageLabel: "Пакет Стартовый",
-            badgeEyebrow: "✦ СЕЙЧАС ПРИНИМАЕМ ✦", badgeHeadline: "Только&nbsp;2&nbsp;премиум<br>проекта", badgeSub: "На июль 2026",
+            badgeEyebrow: "✦ СЕЙЧАС ПРИНИМАЕМ ✦", badgeHeadline: "Только&nbsp;3&nbsp;премиум<br>проекта", badgeSub: "На Сентябрь 2026",
 
             individualPayment: "Индив.", individualTitle: "Индивидуальный проект", individualPrice: "Индивидуальная цена", individualDesc: "Расскажите нам о проекте",
             individualFeature1: "Многостраничные (10+) сайты", individualFeature2: "E-commerce и системы бронирования", individualFeature3: "Сложные API-интеграции",
