@@ -216,8 +216,6 @@ document.addEventListener('DOMContentLoaded', () => {
             individualFeature1: "Multi-page (10+) websites", individualFeature2: "E-commerce & Booking Systems", individualFeature3: "Advanced API Integrations",
             individualCardPrie: "The price is determined by the project complexity.",
 
-            monthlyPayment: "Monthly", monthlyPaymentBilling: "per month",
-
             salesTitle2: "+22% sales", sourceTitle2: "Source: Admin / GA4 • 45 day", webInfoTitle2: "<span class=\"case-tag-prefix\">Online Store · Performance · </span>Launched: Apr 2025", viewPRTitle: "View Live Project",
 
             pageDescription: "OSG is a boutique web development and UI/UX design studio building high-performance digital platforms for ambitious brands. No templates, pure custom engineering.",
@@ -259,19 +257,32 @@ document.addEventListener('DOMContentLoaded', () => {
             groupAutomation: "Automation & Experience", groupEnterpriseSupport: "Enterprise Support",
             pricingProInclLabel: "Includes All Starter Tier Capabilities +", pricingPremiumInclLabel: "Includes All Pro Tier Capabilities +",
 
-            pricingStarterTitle: "Starter", pricingStarterPrice: "1,200₾", pricingStarterPriceMonthly: "130₾",
+            pricingStarterTitle: "Starter", pricingStarterPrice: "1,200₾",
             pricingStarterFeature1: "Custom Multi-Section Digital Infrastructure (Up to 3 high-fidelity pages)",
             pricingStarterFeature2: "Bespoke User Experience (UX) & Luxury Visual Architecture",
             pricingStarterFeature3: "Blazing-Fast Performance Optimization (95+ Google PageSpeed Score)",
             pricingStarterFeature4: "Core Search Engine Optimization (SEO)",
 
-            pricingProTitle: "Pro", pricingProPrice: "2,500₾", pricingProPriceMonthly: "250₾",
+paymentPlansTitle: "Payment Plans",
+plan5050Title: "50/50",
+plan3moTitle: "3-Month",
+plan6moTitle: "6-Month",
+plan5050Period: "50% Upfront / 50% at Launch",
+plan3moPeriod: "3 monthly payments\n(+15% fee)",
+plan6moPeriod: "6 monthly payments\n(+25% fee)",
+
+pricingStarterPrice5050: "600₾", pricingStarterPrice3mo: "460", pricingStarterPrice6mo: "250₾",
+pricingProPrice5050: "1250", pricingProPrice3mo: "955", pricingProPrice6mo: "520",
+pricingPremiumPrice5050: "2600", pricingPremiumPrice3mo: "1990", pricingPremiumPrice6mo: "630",
+
+
+            pricingProTitle: "Pro", pricingProPrice: "2,500₾", 
             pricingProFeature1: "Up to 5 Custom High-Conversion Pages",
             pricingProFeature2: "Advanced Admin & Analytics Dashboard",
             pricingProFeature3: "Dynamic CMS Integration (Supabase / Headless)",
             pricingProFeature4: "Fluid Modern Micro-Animations & Interactions",
 
-            pricingPremiumTitle: "Premium", pricingPremiumPrice: "5,200₾", pricingPremiumPriceMonthly: "500₾",
+            pricingPremiumTitle: "Premium", pricingPremiumPrice: "5,200₾", 
             pricingPremiumFeature1: "Up to 10 Pages & Enterprise Custom Architecture",
             pricingPremiumFeature2: "Advanced E-commerce / Custom Booking Engine",
             pricingPremiumFeature3: "Comprehensive Technical & On-Page SEO Audit",
@@ -291,7 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
             individualFeature1: "10+ გვერდიანი ვებსაიტი", individualFeature2: "ელ. კომერცია და ჯავშნები", individualFeature3: "API-ს რთული ინტეგრაციები",
             individualCardPrie: "ფასი განისაზღვრება პროექტის სირთულის მიხედვით.",
 
-            monthlyPayment: "თვიური", monthlyPaymentBilling: "თვეში",
+        
 
             salesTitle2: "+22% გაყიდვები", sourceTitle2: "წყარო: Admin / GA4 • 45 დღე", webInfoTitle2: "<span class=\"case-tag-prefix\">ონლაინ მაღაზია · შესრულება · </span>გამოშვების თარიღი: აპრ 2025", viewPRTitle: "პროექტის ნახვა",
 
@@ -332,19 +343,34 @@ document.addEventListener('DOMContentLoaded', () => {
             groupAutomation: "ავტომატიზაცია და გამოცდილება", groupEnterpriseSupport: "საწარმოო დონის მხარდაჭერა",
             pricingProInclLabel: "მოიცავს Starter პაკეტის ყველა შესაძლებლობას +", pricingPremiumInclLabel: "მოიცავს Pro პაკეტის ყველა შესაძლებლობას +",
 
-            pricingStarterTitle: "სტარტერი", pricingStarterPrice: "1,200₾", pricingStarterPriceMonthly: "130₾",
+            pricingStarterTitle: "სტარტერი", pricingStarterPrice: "1,200₾",
             pricingStarterFeature1: "მორგებული მრავალსექციური ციფრული ინფრასტრუქტურა (მაქსიმუმ 3 მაღალი ხარისხის გვერდი)",
             pricingStarterFeature2: "ინდივიდუალური მომხმარებლის გამოცდილება (UX) და დახვეწილი ვიზუალური არქიტექტურა",
             pricingStarterFeature3: "მაქსიმალურად სწრაფი წარმადობის ოპტიმიზაცია (Google PageSpeed 95+ ქულა)",
             pricingStarterFeature4: "საბაზისო საძიებო სისტემების ოპტიმიზაცია (SEO)",
 
-            pricingProTitle: "პრო", pricingProPrice: "2,500₾", pricingProPriceMonthly: "250₾",
+paymentPlansTitle: "განვადება",
+plan5050Title: "50/50",
+plan3moTitle: "3-თვიანი",
+plan6moTitle: "6-თვიანი",
+plan5050Period: "50% წინასწარ /\n50% გაშვებისას",
+plan3moPeriod: "3 ყოველთვიური გადახდა\n(+15% საკომისიო)",
+plan6moPeriod: "6 ყოველთვიური გადახდა\n(+25% საკომისიო)",
+
+pricingStarterPrice5050: "600₾", pricingStarterPrice3mo: "460", pricingStarterPrice6mo: "250₾",
+pricingProPrice5050: "1250", pricingProPrice3mo: "955", pricingProPrice6mo: "520",
+pricingPremiumPrice5050: "2600", pricingPremiumPrice3mo: "1990", pricingPremiumPrice6mo: "630",
+
+
+
+
+            pricingProTitle: "პრო", pricingProPrice: "2,500₾", 
             pricingProFeature1: "მაქსიმუმ 5 მორგებული, მაღალკონვერტირებადი გვერდი",
             pricingProFeature2: "გაფართოებული ადმინისტრირებისა და ანალიტიკის დაფა",
             pricingProFeature3: "დინამიური CMS ინტეგრაცია (Supabase / Headless)",
             pricingProFeature4: "დახვეწილი, თანამედროვე მიკრო-ანიმაციები და ინტერაქციები",
 
-            pricingPremiumTitle: "პრემიუმი", pricingPremiumPrice: "5,200₾", pricingPremiumPriceMonthly: "500₾",
+            pricingPremiumTitle: "პრემიუმი", pricingPremiumPrice: "5,200₾", 
             pricingPremiumFeature1: "მაქსიმუმ 10 გვერდი და საწარმოო დონის მორგებული არქიტექტურა",
             pricingPremiumFeature2: "გაფართოებული ელ-კომერციის ან მორგებული ჯავშნების სისტემა",
             pricingPremiumFeature3: "ტექნიკური და გვერდზე SEO-ს სრულყოფილი აუდიტი",
@@ -364,7 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
             individualFeature1: "Многостраничные (10+) сайты", individualFeature2: "E-commerce и системы бронирования", individualFeature3: "Сложные API-интеграции",
             individualCardPrie: "Цена определяется сложностью проекта.",
 
-            monthlyPayment: "Ежемесячный", monthlyPaymentBilling: "в месяц",
+     
 
             salesTitle2: "+22% продажи", sourceTitle2: "источник: Admin / GA4 • 45 день", webInfoTitle2: "<span class=\"case-tag-prefix\">Интернет-магазин · Производительность · </span>Запуск: апр 2025", viewPRTitle: "просмотреть проект",
 
@@ -405,19 +431,33 @@ document.addEventListener('DOMContentLoaded', () => {
             groupAutomation: "Автоматизация и впечатления", groupEnterpriseSupport: "Корпоративная поддержка",
             pricingProInclLabel: "Включает все возможности пакета Starter +", pricingPremiumInclLabel: "Включает все возможности пакета Pro +",
 
-            pricingStarterTitle: "Стартовый", pricingStarterPrice: "1 200₾", pricingStarterPriceMonthly: "130₾",
+            pricingStarterTitle: "Стартовый", pricingStarterPrice: "1 200₾", 
             pricingStarterFeature1: "Индивидуальная многосекционная цифровая инфраструктура (до 3 страниц высокого качества)",
             pricingStarterFeature2: "Продуманный пользовательский опыт (UX) и люксовая визуальная архитектура",
             pricingStarterFeature3: "Максимально быстрая оптимизация производительности (95+ баллов Google PageSpeed)",
             pricingStarterFeature4: "Базовая поисковая оптимизация (SEO)",
 
-            pricingProTitle: "Про", pricingProPrice: "2 500₾", pricingProPriceMonthly: "250₾",
+
+paymentPlansTitle: "Планы оплаты",
+plan5050Title: "50/50",
+plan3moTitle: "На 3 месяца",
+plan6moTitle: "На 6 месяцев",
+plan5050Period: "50% предоплата /\n50% при запуске",
+plan3moPeriod: "3 ежемесячных платежа\n(+15% комиссия)",
+plan6moPeriod: "6 ежемесячных платежей\n(+25% комиссия)",
+
+pricingStarterPrice5050: "600₾", pricingStarterPrice3mo: "460", pricingStarterPrice6mo: "250₾",
+pricingProPrice5050: "1250", pricingProPrice3mo: "955", pricingProPrice6mo: "520",
+pricingPremiumPrice5050: "2600", pricingPremiumPrice3mo: "1990", pricingPremiumPrice6mo: "630",
+
+
+            pricingProTitle: "Про", pricingProPrice: "2 500₾", 
             pricingProFeature1: "До 5 индивидуальных страниц с высокой конверсией",
             pricingProFeature2: "Расширенная панель администрирования и аналитики",
             pricingProFeature3: "Динамическая интеграция CMS (Supabase / Headless)",
             pricingProFeature4: "Плавные современные микро-анимации и интерактивные эффекты",
 
-            pricingPremiumTitle: "Премиум", pricingPremiumPrice: "5 200₾", pricingPremiumPriceMonthly: "500₾",
+            pricingPremiumTitle: "Премиум", pricingPremiumPrice: "5 200₾", 
             pricingPremiumFeature1: "До 10 страниц и корпоративная индивидуальная архитектура",
             pricingPremiumFeature2: "Продвинутая система электронной коммерции или бронирования",
             pricingPremiumFeature3: "Полный технический и SEO-аудит страниц",
@@ -433,6 +473,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     let currentLang = localStorage.getItem('lang') || (navigator.language.startsWith('ka') ? 'ge' : (navigator.language.startsWith('ru') ? 'ru' : 'en'));
     let currentBillingPeriod = 'onetime';
+
+    let currentPlanType = '5050';
+
+function getPlanSuffix() {
+    if (currentBillingPeriod !== 'plans') return '';
+    return currentPlanType;
+}
+function getPeriodKey() {
+    if (currentBillingPeriod === 'plans') {
+        return currentPlanType === '5050' ? 'plan5050Period'
+             : currentPlanType === '3mo' ? 'plan3moPeriod'
+             : 'plan6moPeriod';
+    }
+    return 'oneTimePayment';
+}
 
 
     const applyTranslations = (lang) => {
@@ -465,8 +520,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const priceEl = card.querySelector('[data-price-point]');
             const periodEl = card.querySelector('[data-billing-period]');
 
-            const priceKey = `pricing${planId}Price${currentBillingPeriod === 'monthly' ? 'Monthly' : ''}`;
-            const periodKey = currentBillingPeriod === 'monthly' ? 'monthlyPaymentBilling' : 'oneTimePayment';
+const priceKey = `pricing${planId}Price${getPlanSuffix()}`;
+const periodKey = getPeriodKey();
 
             if (priceEl && translations[lang][priceKey]) {
                 priceEl.textContent = translations[lang][priceKey];
@@ -602,8 +657,11 @@ document.addEventListener('DOMContentLoaded', () => {
         e.currentTarget.setAttribute('aria-checked', 'true');
         billingToggleButtons.forEach(btn => { if (btn !== e.currentTarget) btn.setAttribute('aria-checked', 'false'); });
         const billingToggleEl = document.querySelector('.billing-cycle-toggle');
-        billingToggleEl?.classList.toggle('is-individual', currentBillingPeriod === 'individual');
-        billingToggleEl?.classList.toggle('is-monthly', currentBillingPeriod === 'monthly');
+billingToggleEl?.classList.toggle('is-individual', currentBillingPeriod === 'individual');
+billingToggleEl?.classList.toggle('is-plans', currentBillingPeriod === 'plans');
+
+const planSubtoggle = document.getElementById('plan-subtoggle');
+if (planSubtoggle) planSubtoggle.hidden = currentBillingPeriod !== 'plans';
         syncToggleIndicator();
 
         if (currentBillingPeriod === 'individual') {
@@ -620,8 +678,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 const priceEl = card.querySelector('[data-price-point]');
                 const periodEl = card.querySelector('[data-billing-period]');
 
-                const priceKey = `pricing${planId}Price${currentBillingPeriod === 'monthly' ? 'Monthly' : ''}`;
-                const periodKey = currentBillingPeriod === 'monthly' ? 'monthlyPaymentBilling' : 'oneTimePayment';
+const priceKey = `pricing${planId}Price${getPlanSuffix()}`;
+const periodKey = getPeriodKey();
 
                 priceEl.textContent = translations[currentLang][priceKey];
                 periodEl.textContent = translations[currentLang][periodKey];
@@ -631,6 +689,37 @@ document.addEventListener('DOMContentLoaded', () => {
 
     billingToggleButtons.forEach(button => {
         button.addEventListener('click', handleBillingToggle);
+    });
+
+    // === NEW SUB-TOGGLE LISTENER ===
+    document.querySelectorAll('.subtoggle-btn').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const selectedPlan = e.currentTarget.getAttribute('data-plan');
+            if (selectedPlan === currentPlanType) return;
+            
+            currentPlanType = selectedPlan;
+
+            // 1. Update visual 'active' state on sub-buttons
+            document.querySelectorAll('.subtoggle-btn').forEach(btn => {
+                btn.classList.toggle('active', btn === e.currentTarget);
+                btn.setAttribute('aria-checked', btn === e.currentTarget ? 'true' : 'false');
+            });
+
+            // 2. Refresh the prices on the cards instantly
+            document.querySelectorAll('.pricing-card:not(.individual-plan)').forEach(card => {
+                const planId = card.getAttribute('data-plan-id');
+                const priceEl = card.querySelector('[data-price-point]');
+                const periodEl = card.querySelector('[data-billing-period]');
+                
+                if (priceEl && periodEl) {
+                    const priceKey = `pricing${planId}Price${getPlanSuffix()}`;
+                    const periodKey = getPeriodKey();
+                    
+                    priceEl.textContent = translations[currentLang][priceKey];
+                    periodEl.textContent = translations[currentLang][periodKey];
+                }
+            });
+        });
     });
 
     requestAnimationFrame(syncToggleIndicator);

@@ -849,6 +849,10 @@ html.hero-cinematic-init header {
     border: 1px solid var(--glass-border);
 }
 
+.billing-period {
+    white-space: pre-line;
+}
+
 .toggle-indicator {
     position: absolute;
     top: 6px;
@@ -871,7 +875,7 @@ html.hero-cinematic-init header {
 
 /* Monthly gets squared-off left/right edges instead of the default
    fully-rounded pill, so it visually reads as distinct from One-Time. */
-.billing-cycle-toggle.is-monthly .toggle-indicator {
+.billing-cycle-toggle.is-plan .toggle-indicator {
     border-radius: 0;
 }
 
@@ -891,6 +895,37 @@ html.hero-cinematic-init header {
 
 .toggle-btn.active {
     color: var(--text-on-accent);
+}
+
+.plan-subtoggle {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+}
+.plan-subtoggle[hidden] { display: none; }
+
+.subtoggle-btn {
+    border: 1px solid var(--glass-border);
+    background: rgba(16, 185, 129, 0.05);
+    color: var(--text-color-light);
+    padding: 0.5rem 1.1rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+.subtoggle-btn.active {
+    background: var(--primary-gradient);
+    color: var(--text-on-accent);
+    border-color: transparent;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+}
+.subtoggle-btn:hover:not(.active) {
+    border-color: var(--accent-emerald);
+    color: var(--accent-mint);
 }
 
 .pricing-cards-grid.individual-mode {

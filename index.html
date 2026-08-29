@@ -573,16 +573,28 @@
         <div class="billing-cycle-toggle" data-aos="fade-up" data-aos-delay="50">
             <span class="toggle-indicator" aria-hidden="true"></span>
             <button class="toggle-btn active" data-period="onetime" data-lang="oneTimePaymentTitle" aria-checked="true" role="radio">One-Time</button>
-            <button class="toggle-btn" data-period="monthly" data-lang="monthlyPayment" aria-checked="false" role="radio">Monthly</button>
+            <button class="toggle-btn" data-period="plans" data-lang="paymentPlansTitle" aria-checked="false" role="radio">Payment Plans</button>
             <button class="toggle-btn" data-period="individual" data-lang="individualPayment" aria-checked="false" role="radio">Individual</button>
         </div>
+
+<div class="plan-subtoggle" id="plan-subtoggle" role="radiogroup" aria-label="Choose a payment plan" hidden>
+    <button class="subtoggle-btn active" data-plan="5050" data-lang="plan5050Title" aria-checked="true" role="radio">50/50</button>
+    <button class="subtoggle-btn" data-plan="3mo" data-lang="plan3moTitle" aria-checked="false" role="radio">3-Month</button>
+    <button class="subtoggle-btn" data-plan="6mo" data-lang="plan6moTitle" aria-checked="false" role="radio">6-Month</button>
+</div>
 
         <div class="pricing-cards-grid">
 
             <div class="pricing-card starter" data-plan-id="Starter">
                 <h3 class="plan-title" data-lang="pricingStarterTitle"></h3>
-                <p class="price" data-lang="pricingStarterPrice" data-price-point></p>
-                <p class="billing-period" data-lang="oneTimePayment" data-billing-period></p>
+<p class="price" data-lang="pricingStarterPrice" data-price-point
+   data-price-5050="pricingStarterPrice5050"
+   data-price-3mo="pricingStarterPrice3mo"
+   data-price-6mo="pricingStarterPrice6mo"></p>
+<p class="billing-period" data-lang="oneTimePayment" data-billing-period
+   data-period-5050="plan5050Period"
+   data-period-3mo="plan3moPeriodFee"
+   data-period-6mo="plan6moPeriodFee"></p>
                 <ul class="features-list">
                     <li class="feature-group-label" data-lang="groupInfrastructure">Digital Infrastructure</li>
                     <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingStarterFeature1"></span></li>
@@ -597,8 +609,14 @@
             <div class="pricing-card most-popular pro" data-plan-id="Pro">
                 <div class="popular-tag" data-lang="pricingMostPopular"></div>
                 <h3 class="plan-title" data-lang="pricingProTitle"></h3>
-                <p class="price" data-lang="pricingProPrice" data-price-point></p>
-                <p class="billing-period" data-lang="oneTimePayment" data-billing-period></p>
+<p class="price" data-lang="pricingProPrice" data-price-point
+   data-price-5050="pricingProPrice5050"
+   data-price-3mo="pricingProPrice3mo"
+   data-price-6mo="pricingProPrice6mo"></p>
+<p class="billing-period" data-lang="oneTimePayment" data-billing-period
+   data-period-5050="plan5050Period"
+   data-period-3mo="plan3moPeriodFee"
+   data-period-6mo="plan6moPeriodFee"></p>
                 <ul class="features-list">
                     <li class="feature-group-label" data-lang="pricingProInclLabel">Includes All Starter Tier Capabilities +</li>
                     <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingProFeature1"></span></li>
@@ -612,8 +630,14 @@
 
             <div class="pricing-card premium" data-plan-id="Premium">
                 <h3 class="plan-title" data-lang="pricingPremiumTitle"></h3>
-                <p class="price" data-lang="pricingPremiumPrice" data-price-point></p>
-                <p class="billing-period" data-lang="oneTimePayment" data-billing-period></p>
+<p class="price" data-lang="pricingPremiumPrice" data-price-point
+   data-price-5050="pricingPremiumPrice5050"
+   data-price-3mo="pricingPremiumPrice3mo"
+   data-price-6mo="pricingPremiumPrice6mo"></p>
+<p class="billing-period" data-lang="oneTimePayment" data-billing-period
+   data-period-5050="plan5050Period"
+   data-period-3mo="plan3moPeriodFee"
+   data-period-6mo="plan6moPeriodFee"></p>
                 <ul class="features-list">
                     <li class="feature-group-label" data-lang="pricingPremiumInclLabel">Includes All Pro Tier Capabilities +</li>
                     <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingPremiumFeature1"></span></li>
