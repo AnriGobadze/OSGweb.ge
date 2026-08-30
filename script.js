@@ -271,9 +271,9 @@ plan5050Period: "50% Upfront / 50% at Launch",
 plan3moPeriod: "3 monthly payments\n(+15% fee)",
 plan6moPeriod: "6 monthly payments\n(+25% fee)",
 
-pricingStarterPrice5050: "600₾", pricingStarterPrice3mo: "460", pricingStarterPrice6mo: "250₾",
-pricingProPrice5050: "1250", pricingProPrice3mo: "955", pricingProPrice6mo: "520",
-pricingPremiumPrice5050: "2600", pricingPremiumPrice3mo: "1990", pricingPremiumPrice6mo: "630",
+pricingStarterPrice5050: "600₾", pricingStarterPrice3mo: "460₾", pricingStarterPrice6mo: "250₾",
+pricingProPrice5050: "1250₾", pricingProPrice3mo: "955₾", pricingProPrice6mo: "520₾",
+pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPremiumPrice6mo: "630₾",
 
 
             pricingProTitle: "Pro", pricingProPrice: "2,500₾", 
@@ -357,9 +357,9 @@ plan5050Period: "50% წინასწარ /\n50% გაშვებისა
 plan3moPeriod: "3 ყოველთვიური გადახდა\n(+15% საკომისიო)",
 plan6moPeriod: "6 ყოველთვიური გადახდა\n(+25% საკომისიო)",
 
-pricingStarterPrice5050: "600₾", pricingStarterPrice3mo: "460", pricingStarterPrice6mo: "250₾",
-pricingProPrice5050: "1250", pricingProPrice3mo: "955", pricingProPrice6mo: "520",
-pricingPremiumPrice5050: "2600", pricingPremiumPrice3mo: "1990", pricingPremiumPrice6mo: "630",
+pricingStarterPrice5050: "600₾", pricingStarterPrice3mo: "460₾", pricingStarterPrice6mo: "250₾",
+pricingProPrice5050: "1250₾", pricingProPrice3mo: "955₾", pricingProPrice6mo: "520₾",
+pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPremiumPrice6mo: "630₾",
 
 
 
@@ -446,9 +446,9 @@ plan5050Period: "50% предоплата /\n50% при запуске",
 plan3moPeriod: "3 ежемесячных платежа\n(+15% комиссия)",
 plan6moPeriod: "6 ежемесячных платежей\n(+25% комиссия)",
 
-pricingStarterPrice5050: "600₾", pricingStarterPrice3mo: "460", pricingStarterPrice6mo: "250₾",
-pricingProPrice5050: "1250", pricingProPrice3mo: "955", pricingProPrice6mo: "520",
-pricingPremiumPrice5050: "2600", pricingPremiumPrice3mo: "1990", pricingPremiumPrice6mo: "630",
+pricingStarterPrice5050: "600₾", pricingStarterPrice3mo: "460₾", pricingStarterPrice6mo: "250₾",
+pricingProPrice5050: "1250₾", pricingProPrice3mo: "955₾", pricingProPrice6mo: "520₾",
+pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPremiumPrice6mo: "630₾",
 
 
             pricingProTitle: "Про", pricingProPrice: "2 500₾", 
