@@ -1,64 +1,64 @@
-<!DOCTYPE html>
-<html lang="ka">
+    <!DOCTYPE html>
+    <html lang="ka">
 
-<head>
-    <script>
-    (function () {
-      try {
-        var html = document.documentElement;
-        var hash = window.location.hash;
-        var landingOnHero = !hash || hash === '#hero';
-        var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        if (!landingOnHero || reducedMotion) return;
+    <head>
+        <script>
+        (function () {
+        try {
+            var html = document.documentElement;
+            var hash = window.location.hash;
+            var landingOnHero = !hash || hash === '#hero';
+            var reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+            if (!landingOnHero || reducedMotion) return;
 
-        html.classList.add('hero-cinematic-init', 'hero-scroll-lock');
+            html.classList.add('hero-cinematic-init', 'hero-scroll-lock');
 
-        document.addEventListener('DOMContentLoaded', function () {
-          if (document.body && html.classList.contains('hero-scroll-lock')) {
-            document.body.classList.add('hero-scroll-lock');
-          }
-        });
+            document.addEventListener('DOMContentLoaded', function () {
+            if (document.body && html.classList.contains('hero-scroll-lock')) {
+                document.body.classList.add('hero-scroll-lock');
+            }
+            });
 
-        setTimeout(function () {
-          html.classList.remove('hero-scroll-lock');
-          if (document.body) { document.body.classList.remove('hero-scroll-lock'); }
-          var video = document.getElementById('hero-video');
-          if (video) {
-            try { video.playbackRate = 0.55; } catch (e) {}
-          }
-        }, 1800);
-      } catch (e) {}
-    })();
-    </script>
-    <!-- Google Tag Manager-->
-    <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-5PF6965C');
-    </script>
+            setTimeout(function () {
+            html.classList.remove('hero-scroll-lock');
+            if (document.body) { document.body.classList.remove('hero-scroll-lock'); }
+            var video = document.getElementById('hero-video');
+            if (video) {
+                try { video.playbackRate = 0.55; } catch (e) {}
+            }
+            }, 1800);
+        } catch (e) {}
+        })();
+        </script>
+        <!-- Google Tag Manager-->
+        <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5PF6965C');
+        </script>
 
-    <link rel="icon" href="https://osgweb.ge/osgMainLogo.png" sizes="32x32" type="image/png">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anta&family=Patrick+Hand&family=Noto+Sans+Georgian:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="icon" href="https://osgweb.ge/osgMainLogo.png" sizes="32x32" type="image/png">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anta&family=Patrick+Hand&family=Noto+Sans+Georgian:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
     <link rel="canonical" href="https://osgweb.ge/">
 
     <meta name="google-site-verification" content="yxlfAERYpyJN7tiegYkfkmjW9rxLjulnjqoyYn6TqN4" />
-    <meta property="og:title" content="Custom Web Development & UI/UX Design Studio | OSG">
-    <meta property="og:description" content="OSG is a boutique web development and UI/UX design studio building high-performance digital platforms for ambitious brands. No templates, pure custom engineering.">
+    <meta property="og:title" content="ვებსაიტების დამზადება და UI/UX დიზაინი | OSG">
+    <meta property="og:description" content="OSG Digital Agency — ბუტიკ ვებ სტუდია. ვქმნით მორგებულ, მაღალხარისხიან ციფრულ პლატფორმებს და ვებსაიტებს ბიზნესებისთვის.">
     <meta property="og:image" content="https://osgweb.ge/osgMainLogo.png">
     <meta property="og:url" content="https://osgweb.ge">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:locale:alternate" content="ka_GE">
+    <meta property="og:locale" content="ka_GE">
+    <meta property="og:locale:alternate" content="en_US">
     <meta property="og:locale:alternate" content="ru_RU">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Custom Web Development & UI/UX Design Studio | OSG">
-    <meta name="twitter:description" content="OSG is a boutique web development and UI/UX design studio building high-performance digital platforms for ambitious brands. No templates, pure custom engineering.">
+    <meta name="twitter:title" content="ვებსაიტების დამზადება და UI/UX დიზაინი | OSG">
+    <meta name="twitter:description" content="OSG Digital Agency — ბუტიკ ვებ სტუდია. ვქმნით მორგებულ, მაღალხარისხიან ციფრულ პლატფორმებს და ვებსაიტებს ბიზნესებისთვის.">
     <meta name="twitter:image" content="https://osgweb.ge/osgMainLogo.png">
 
     <script type="application/ld+json">
@@ -71,11 +71,20 @@
       "url": "https://osgweb.ge",
       "logo": "https://osgweb.ge/osgMainLogo.png",
       "image": "https://osgweb.ge/osgMainLogo.png",
-      "description": "Boutique web development and UI/UX design studio building high-performance digital platforms for ambitious brands.",
+      "description": "OSG Digital Agency — ბუტიკ ვებ სტუდია. ვქმნით მორგებულ, მაღალხარისხიან ციფრულ პლატფორმებს და ვებსაიტებს ბიზნესებისთვის.",
       "priceRange": "$$-$$$",
       "email": "osgbusiness01@gmail.com",
       "telephone": "+995555095959",
-      "serviceType": ["Web Development", "UI/UX Design", "Digital Agency Services"],
+      "areaServed": {
+        "@type": "Country",
+        "name": "Georgia"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Tbilisi",
+        "addressCountry": "GE"
+      },
+      "serviceType": ["ვებსაიტის დამზადება", "UI/UX დიზაინი", "ციფრული სააგენტოს მომსახურება"],
       "sameAs": [
         "https://www.facebook.com/TheOSGAgency",
         "https://www.instagram.com/osg.agency/",
@@ -86,745 +95,313 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title data-lang="pageTitle">Custom Web Development & UI/UX Design Studio | OSG</title>
-    <meta name="description" content="OSG is a boutique web development and UI/UX design studio building high-performance digital platforms for ambitious brands. No templates, pure custom engineering." data-lang-meta="pageDescription">
+    <title data-lang="pageTitle">ვებსაიტების დამზადება და UI/UX დიზაინი | OSG</title>
+    <meta name="description" content="OSG Digital Agency — ბუტიკ ვებ სტუდია. ვქმნით მორგებულ, მაღალხარისხიან ციფრულ პლატფორმებს და ვებსაიტებს ბიზნესებისთვის." data-lang-meta="pageDescription">
+    <meta name="keywords" content="ვებგვერდის დამზადება, საიტის დამზადება, ვებ დეველოპმენტი, UI/UX დიზაინი, ვებსაიტის შექმნა საქართველოში, SEO ოპტიმიზაცია">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="hanging-badge.css">
     <meta name="theme-color" content="#03110C">
-</head>
+    </head>
 
-<body>
-    <div class="site-bg" aria-hidden="true">
-        <div class="site-bg-image" id="site-bg-image"></div>
-        <div class="site-bg-scrim"></div>
-    </div>
+    <body>
+        <div class="site-bg" aria-hidden="true">
+            <div class="site-bg-image" id="site-bg-image"></div>
+            <div class="site-bg-scrim"></div>
+        </div>
 
-    <!-- Google Tag Manager -->
-    <noscript>
-      <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PF6965C"
-      height="0" width="0" style="display:none;visibility:hidden"></iframe>
-    </noscript>
+        <!-- Google Tag Manager -->
+        <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5PF6965C"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+        </noscript>
 
-    <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
+        <div id="mobile-nav-overlay" class="mobile-nav-overlay"></div>
 
-    <header>
-        <nav class="container">
-            <a href="#hero" class="logo nav-link">
-                <img src="./osg.png" alt="OSGWeb.ge Logo">
-                <span>OSGWeb.ge</span>
-            </a>
-            <div class="nav-right">
-                <ul class="nav-links">
+        <header>
+            <nav class="container">
+                <a href="#hero" class="logo nav-link">
+                    <img src="./osg.png" alt="OSGWeb.ge Logo">
+                    <span>OSGWeb.ge</span>
+                </a>
+                <div class="nav-right">
+                    <ul class="nav-links">
+                        <li><a href="#services" class="nav-link" data-lang="navServices">Services</a></li>
+                        <li><a href="#portfolio" class="nav-link" data-lang="navPortfolio">Portfolio</a></li>
+                        <li><a href="#testimonials" class="nav-link" data-lang="navTestimonials">Testimonials</a></li>
+                        <li><a href="#pricing" class="nav-link" data-lang="navPricing">Pricing</a></li>
+                        <li><a href="#contact-page" class="nav-link" data-lang="navContact">Contact</a></li>
+                    </ul>
+                    <div class="language-selector">
+                        <button class="current-lang-btn" id="current-lang-btn" aria-haspopup="true" aria-expanded="false">GE</button>
+                        <div class="language-options" id="language-options" role="menu">
+                            <a href="#" role="menuitem" data-lang-value="ge">ქართული</a>
+                            <a href="#" role="menuitem" data-lang-value="en">English</a>
+                            <a href="#" role="menuitem" data-lang-value="ru">Русский</a>
+                        </div>
+                    </div>
+                    <button id="hamburger-menu" class="hamburger-menu" aria-label="Open menu" aria-expanded="false">
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                        <span class="hamburger-bar"></span>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <div id="mobile-nav-panel" class="mobile-nav-panel">
+            <div class="mobile-nav-content">
+                <ul class="mobile-nav-links">
                     <li><a href="#services" class="nav-link" data-lang="navServices">Services</a></li>
                     <li><a href="#portfolio" class="nav-link" data-lang="navPortfolio">Portfolio</a></li>
                     <li><a href="#testimonials" class="nav-link" data-lang="navTestimonials">Testimonials</a></li>
                     <li><a href="#pricing" class="nav-link" data-lang="navPricing">Pricing</a></li>
                     <li><a href="#contact-page" class="nav-link" data-lang="navContact">Contact</a></li>
                 </ul>
-                <div class="language-selector">
-                    <button class="current-lang-btn" id="current-lang-btn" aria-haspopup="true" aria-expanded="false">GE</button>
-                    <div class="language-options" id="language-options" role="menu">
-                        <a href="#" role="menuitem" data-lang-value="ge">ქართული</a>
-                        <a href="#" role="menuitem" data-lang-value="en">English</a>
-                        <a href="#" role="menuitem" data-lang-value="ru">Русский</a>
-                    </div>
+                <div class="mobile-lang-switcher">
+                    <button data-lang-value="ge">GE</button>
+                    <span>/</span>
+                    <button data-lang-value="en">EN</button>
+                    <span>/</span>
+                    <button data-lang-value="ru">RU</button>
                 </div>
-                <button id="hamburger-menu" class="hamburger-menu" aria-label="Open menu" aria-expanded="false">
-                    <span class="hamburger-bar"></span>
-                    <span class="hamburger-bar"></span>
-                    <span class="hamburger-bar"></span>
-                </button>
-            </div>
-        </nav>
-    </header>
-
-    <div id="mobile-nav-panel" class="mobile-nav-panel">
-        <div class="mobile-nav-content">
-            <ul class="mobile-nav-links">
-                <li><a href="#services" class="nav-link" data-lang="navServices">Services</a></li>
-                <li><a href="#portfolio" class="nav-link" data-lang="navPortfolio">Portfolio</a></li>
-                <li><a href="#testimonials" class="nav-link" data-lang="navTestimonials">Testimonials</a></li>
-                <li><a href="#pricing" class="nav-link" data-lang="navPricing">Pricing</a></li>
-                <li><a href="#contact-page" class="nav-link" data-lang="navContact">Contact</a></li>
-            </ul>
-            <div class="mobile-lang-switcher">
-                <button data-lang-value="ge">GE</button>
-                <span>/</span>
-                <button data-lang-value="en">EN</button>
-                <span>/</span>
-                <button data-lang-value="ru">RU</button>
             </div>
         </div>
-    </div>
 
-    <main>
-        <!-- ================================ -->
-        <!-- START: MAIN SCROLLING CONTENT    -->
-        <!-- ================================ -->
-        <div id="main-content-view" class="page-view">
-            <section id="hero">
-                <div class="hero-video-wrap">
-                    <video id="hero-video" class="hero-video" autoplay muted loop playsinline disablepictureinpicture preload="auto">
-                        <source src="highqualityosgherosectiondesktopvideo.mp4" type="video/mp4" media="(min-width: 768px)">
-                        <source src="OSGherovideo.mp4" type="video/mp4">
-                    </video>
-                    <div class="hero-video-overlay" aria-hidden="true"></div>
-                </div>
-                <div class="container hero-grid">
-                    <div class="hero-text">
-                        <h1 data-lang="heroTitle"></h1>
-                        <p class="hero-subtitle" data-lang="heroSubtitle"></p>
-                        <div class="hero-buttons">
-                            <a href="#contact-page" class="btn btn-primary nav-link" data-lang="heroButton"></a>
-                            <a href="#services" class="btn btn-secondary nav-link" data-lang="heroButtonSecondary"></a>
-                        </div>
+        <main>
+            <!-- ================================ -->
+            <!-- START: MAIN SCROLLING CONTENT    -->
+            <!-- ================================ -->
+            <div id="main-content-view" class="page-view">
+                <section id="hero">
+                    <div class="hero-video-wrap">
+                        <video id="hero-video" class="hero-video" autoplay muted loop playsinline disablepictureinpicture preload="auto">
+                            <source src="highqualityosgherosectiondesktopvideo.mp4" type="video/mp4" media="(min-width: 768px)">
+                            <source src="OSGherovideo.mp4" type="video/mp4">
+                        </video>
+                        <div class="hero-video-overlay" aria-hidden="true"></div>
                     </div>
-                </div>
-            </section>
-            <section id="trust-bar">
-                <div class="container">
-                    <div class="marquee">
-                        <div class="marquee-content">
-                            <span>🚀 Supabase</span>
-                            <span>🎨 Figma</span>
-                            <span>💻 Webflow</span>
-                            <span>🌟 Framer</span>
-                            <span>⚡ Tailwind</span>
-                            <span>🖌️ Canva</span>
-                            <span>📦 Vercel</span>
-                            <span>🧩 Notion</span>
-                            <span>💻 JavaScript</span>
-                            <span>🐍 Python</span>
-                            <span>☕ Java</span>
-                            <span>⚛️ React</span>
-                            <span>🌐 HTML</span>
-                            <span>🎨 CSS</span>
-                            <span>🔷 TypeScript</span>
-                            <span>🐘 PHP</span>
-                            <span>🛠️ Node.js</span>
-                            <span>🌟 Swift</span>
-                            <span>🎯 Kotlin</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="services" class="content-section">
-                <div class="container">
-                    <h2 class="section-title" data-aos="fade-up" data-lang="servicesTitle"></h2>
-                    <div class="services-grid">
-                        <div class="card" data-aos="fade-up" data-aos-delay="100">
-                            <h3 data-lang="service1Title"></h3>
-                            <p data-lang="service1Desc"></p>
-                        </div>
-                        <div class="card" data-aos="fade-up" data-aos-delay="200">
-                            <h3 data-lang="service2Title"></h3>
-                            <p data-lang="service2Desc"></p>
-                        </div>
-                        <div class="card" data-aos="fade-up" data-aos-delay="300">
-                            <h3 data-lang="service3Title"></h3>
-                            <p data-lang="service3Desc"></p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section id="portfolio" class="content-section-dark">
-                <div class="container">
-                    <h2 class="section-title" data-aos="fade-up" data-lang="portfolioTitle"></h2>
-<div class="portfolio-carousel">
-<button class="carousel-btn carousel-btn--prev" aria-label="Previous">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="19" y1="12" x2="5" y2="12"></line>
-        <polyline points="12 19 5 12 12 5"></polyline>
-    </svg>
-</button>
-    <div class="carousel-track-wrapper">
-        <div class="carousel-track">
-
-            <a href="https://www.suftasivrce.com/" target="_blank" rel="noopener noreferrer" class="carousel-item">
-                <img src="https://i.pinimg.com/1200x/e5/8c/81/e58c8109d19345ffc49111d5a306046f.jpg" alt="'Sufta Sivrce' Hotel laundry website">
-                <div class="overlay">
-                    <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
-                    <h3 data-lang="flagship09Title"></h3>
-                </div>
-            </a>
-
-            <a href="https://www.jagibuilding.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
-                <img src="https://www.factor.law/images/data/M_A_Blog.jpg" alt="'Jagi Building' construction company website">
-                <div class="overlay">
-                    <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
-                    <h3 data-lang="flagship1Title"></h3>
-                </div>
-            </a>
-
-            <a href="https://www.laptopgeorgia.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
-                <img src="https://i.pinimg.com/736x/c6/0e/6a/c60e6ae7667bbb409aae36a46d6d2ec3.jpg" alt="'Laptop Georgia' tech repair website" loading="lazy">
-                <div class="overlay">
-                    <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
-                    <h3 data-lang="flagship2Title"></h3>
-                </div>
-            </a>
-
-            <a href="https://www.stilissivrce.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
-                <img src="https://ir.ozone.ru/s3/multimedia-1-b/7360641515.jpg" alt="'Stilis Sivrce' clothing store website" loading="lazy">
-                <div class="overlay">
-                    <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
-                    <h3 data-lang="flagship3Title"></h3>
-                </div>
-            </a>
-
-            <a href="https://www.terra24.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
-                <img src="https://i.pinimg.com/736x/1d/61/ca/1d61ca69fd1ef0670434ac43d5b31119.jpg" alt="'Terra 24' funeral bureau website" loading="lazy">
-                <div class="overlay">
-                    <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
-                    <h3 data-lang="flagship4Title"></h3>
-                </div>
-            </a>
-
-            <a href="https://www.primegrind.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
-                <img src="https://www.primegrind.ge/work-1.jpg" alt="'Prime Grind' construction website" loading="lazy">
-                <div class="overlay">
-                    <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
-                    <h3 data-lang="flagship5Title"></h3>
-                </div>
-            </a>
-
-            <a href="https://www.skhiladieselmotors.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
-                <img src="https://i.pinimg.com/736x/6b/20/90/6b20906e017013b11a7844e3031b690c.jpg" alt="'Skhila Diesel Motors' car care website" loading="lazy">
-                <div class="overlay">
-                    <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
-                    <h3 data-lang="flagship6Title"></h3>
-                </div>
-            </a>
-
-            <a href="https://laarte.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
-                <img src="https://laarte.ge/about-us-bracelets.jpeg.jpeg" alt="'La Arté' jewellery website" loading="lazy">
-                <div class="overlay">
-                    <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
-                    <h3 data-lang="flagship7Title"></h3>
-                </div>
-            </a>
-
-            <a href="https://www.evakuatorigzaze.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
-                <img src="https://i.pinimg.com/1200x/70/b5/95/70b595d64e2925278c1dfa3b40dcbec3.jpg" alt="'EVAKUATORIGZAZE' tow truck website" loading="lazy">
-                <div class="overlay">
-                    <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
-                    <h3 data-lang="flagship8Title"></h3>
-                </div>
-            </a>
-
-            <a href="https://osg-website-tamplate.vercel.app/" target="_blank" rel="noopener noreferrer" class="carousel-item">
-                <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="'The Slate Table' restaurant project." loading="lazy">
-                <div class="overlay">
-                    <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
-                    <h3 data-lang="portfolio1Title"></h3>
-                </div>
-            </a>
-
-            <a href="https://osgwebsitebarbershoptamplate.vercel.app/" target="_blank" rel="noopener noreferrer" class="carousel-item">
-                <img src="https://t3.ftcdn.net/jpg/05/79/13/18/360_F_579131835_34z1xrboD0IaxbierBEiIt6OJcWQuTly.jpg" alt="BarbershopWeb" loading="lazy">
-                <div class="overlay">
-                    <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
-                    <h3 data-lang="portfolio2Title"></h3>
-                </div>
-            </a>
-
-            <a href="https://osgwebcafetamplate.vercel.app/#home" target="_blank" rel="noopener noreferrer" class="carousel-item">
-                <img src="https://jamcafes.mystagingwebsite.com/wp-content/uploads/2024/09/JamCafe_BestBreakfastBrunch_Vancouver_PancakeStack.jpg" alt="cafe ambiance." loading="lazy">
-                <div class="overlay">
-                    <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
-                    <h3 data-lang="portfolio3Title"></h3>
-                </div>
-            </a>
-
-            <a href="https://salad-web.vercel.app" target="_blank" rel="noopener noreferrer" class="carousel-item">
-                <img src="https://mangia.nyc/wp-content/uploads/2024/07/Salad-Bar-Manhattan.jpg" alt="SaladWeb" loading="lazy">
-                <div class="overlay">
-                    <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
-                    <h3 data-lang="portfolio4Title"></h3>
-                </div>
-            </a>
-
-            <a href="https://osgweb-nexus-ai.vercel.app/" target="_blank" rel="noopener noreferrer" class="carousel-item">
-                <img src="Naxus-AI.png" alt="NaxusAI" loading="lazy">
-                <div class="overlay">
-                    <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
-                    <h3 data-lang="portfolio5Title"></h3>
-                </div>
-            </a>
-
-
-
-        </div>
-    </div>
-
-<button class="carousel-btn carousel-btn--next" aria-label="Next">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-        <line x1="5" y1="12" x2="19" y2="12"></line>
-        <polyline points="12 5 19 12 12 19"></polyline>
-    </svg>
-</button>
-    <div class="carousel-dots"></div>
-</div>
-                </div>
-            </section>
-
-            <section id="testimonials" class="content-section">
-                <div class="container">
-                    <h2 class="section-title" data-aos="fade-up" data-lang="testimonialsTitle"></h2>
-                    <div class="review-card case-card" data-aos="fade-up" role="article" aria-labelledby="everluxe-title">
-                        <div class="case-top">
-                            <img src="./Everluxe.jpg" alt="Everluxe logo" class="review-avatar">
-                            <div class="case-meta">
-                                <p id="everluxe-title" class="review-author">თამილა — მფლობელი, Everluxe <span class="package-pill pro-package" data-lang="proPackageLabel">Pro Package</span></p>
-                                <p class="case-tags" data-lang="webInfoTitle" >eCommerce · Stripe Checkout · Launched: May 2025</p>
-                            </div>
-                            <span class="verified-badge" aria-hidden="true" data-lang="checkedTitle">✓ შემოწმებული</span>
-                        </div>
-                        <div class="case-body">
-                            <div class="screenshot-thumb" aria-hidden="true">
-                                <img src="./Everlux.Web.png" alt="Everluxe websie screenshot" />
-                            </div>
-                            <div class="case-copy">
-                                <div class="outcome-row">
-                                    <span class="outcome-pill" aria-label="+30% გაყიდვები" data-lang="salesTitle">+30% გაყიდვები</span>
-                                    <span class="case-source" data-lang="sourceTitle">წყარო: GA4 • 60 დღე</span>
-                                </div>
-                                <blockquote class="client-quote" cite="https://everluxe.vercel.app">
-                                    “მართლა არ ველოდი ასეთ შედეგს. osg კომპანიის სერვისმა გაყიდვებში ძალაინ დამეხმარა, მადლობა გუნდის თითოეულ წევრს!”
-                                    <footer class="quote-author">— თამილა, Everluxe</footer>
-                                </blockquote>
+                    <div class="container hero-grid">
+                        <div class="hero-text">
+                            <h1 data-lang="heroTitle"></h1>
+                            <p class="hero-subtitle" data-lang="heroSubtitle"></p>
+                            <div class="hero-buttons">
+                                <a href="#contact-page" class="btn btn-primary nav-link" data-lang="heroButton"></a>
+                                <a href="#services" class="btn btn-secondary nav-link" data-lang="heroButtonSecondary"></a>
                             </div>
                         </div>
-                        <div class="case-ctas">
-                            <a class="btn btn-primary" href="https://everluxe.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Open Everluxe live site" data-lang="viewPRTitle">View Live Project</a>
-                        </div>
                     </div>
-
-                    <div class="review-card case-card" data-aos="fade-up" data-aos-delay="100" role="article" aria-labelledby="hellshop-title">
-                        <div class="case-top">
-                            <img src="./osee.png" alt="HellShop logo" class="review-avatar">
-                            <div class="case-meta">
-                                <p id="hellshop-title" class="review-author">თამრიკო — მფლობელი, HellShop <span class="package-pill starter-package" data-lang="starterPackageLabel">Starter Package</span></p>
-                                <p class="case-tags" data-lang="webInfoTitle2">Online Store · Performance · Launched: Apr 2025</p>
-                            </div>
-                            <span class="verified-badge" aria-hidden="true" data-lang="checkedTitle" >✓ შემოწმებული</span>
-                        </div>
-                        <div class="case-body">
-                            <div class="screenshot-thumb" aria-hidden="true">
-                                <img src="./Hellshop.Web.png" alt="HellShop პროდუქტის გვერდის სქრინშოტი" />
-                            </div>
-                            <div class="case-copy">
-                                <div class="outcome-row">
-                                    <span class="outcome-pill" aria-label="+30% გაყიდვები" data-lang="salesTitle2" >+22% გაყიდვები</span>
-                                    <span class="case-source"  data-lang="sourceTitle2" >წყარო: Admin / GA4 • 45 დღე</span>
-                                </div>
-                                <blockquote class="client-quote" cite="https://hellshop.vercel.app/">
-                                    “კმაყოფილი ვარ სერვისით, სწრაფი მომსახურება აქვთ და ამ ფასად ნამდვილად კარგი არჩევანია.”
-                                    <footer class="quote-author">— თამრიკო, HellShop</footer>
-                                </blockquote>
+                </section>
+                <section id="trust-bar">
+                    <div class="container">
+                        <div class="marquee">
+                            <div class="marquee-content">
+                                <span>🚀 Supabase</span>
+                                <span>🎨 Figma</span>
+                                <span>💻 Webflow</span>
+                                <span>🌟 Framer</span>
+                                <span>⚡ Tailwind</span>
+                                <span>🖌️ Canva</span>
+                                <span>📦 Vercel</span>
+                                <span>🧩 Notion</span>
+                                <span>💻 JavaScript</span>
+                                <span>🐍 Python</span>
+                                <span>☕ Java</span>
+                                <span>⚛️ React</span>
+                                <span>🌐 HTML</span>
+                                <span>🎨 CSS</span>
+                                <span>🔷 TypeScript</span>
+                                <span>🐘 PHP</span>
+                                <span>🛠️ Node.js</span>
+                                <span>🌟 Swift</span>
+                                <span>🎯 Kotlin</span>
                             </div>
                         </div>
-                        <div class="case-ctas">
-                            <a class="btn btn-primary" href="https://hellshop.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open HellShop live site" data-lang="viewPRTitle">View Live Project</a>
+                    </div>
+                </section>
+
+                <section id="services" class="content-section">
+                    <div class="container">
+                        <h2 class="section-title" data-aos="fade-up" data-lang="servicesTitle"></h2>
+                        <div class="services-grid">
+                            <div class="card" data-aos="fade-up" data-aos-delay="100">
+                                <h3 data-lang="service1Title"></h3>
+                                <p data-lang="service1Desc"></p>
+                            </div>
+                            <div class="card" data-aos="fade-up" data-aos-delay="200">
+                                <h3 data-lang="service2Title"></h3>
+                                <p data-lang="service2Desc"></p>
+                            </div>
+                            <div class="card" data-aos="fade-up" data-aos-delay="300">
+                                <h3 data-lang="service3Title"></h3>
+                                <p data-lang="service3Desc"></p>
+                            </div>
                         </div>
                     </div>
+                </section>
 
-                    <div class="review-prompt">
-                        <a href="#review-page" class="nav-link" id="haveU" data-lang="reviewPromptText">Have you worked with us? We’d love to hear your feedback.</a>
+                <section id="portfolio" class="content-section-dark">
+                    <div class="container">
+                        <h2 class="section-title" data-aos="fade-up" data-lang="portfolioTitle"></h2>
+    <div class="portfolio-carousel">
+    <button class="carousel-btn carousel-btn--prev" aria-label="Previous">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+        </svg>
+    </button>
+        <div class="carousel-track-wrapper">
+            <div class="carousel-track">
+
+                <a href="https://www.suftasivrce.com/" target="_blank" rel="noopener noreferrer" class="carousel-item">
+                    <img src="https://i.pinimg.com/1200x/e5/8c/81/e58c8109d19345ffc49111d5a306046f.jpg" alt="'Sufta Sivrce' Hotel laundry website">
+                    <div class="overlay">
+                        <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
+                        <h3 data-lang="flagship09Title"></h3>
                     </div>
-                    <div class="end-of-reviews-marker" data-aos="fade-up">
-                        <a href="#all-reviews-page" class="btn btn-secondary nav-link" data-lang="seeAllReviews">See All Reviews</a>
+                </a>
+
+                <a href="https://www.jagibuilding.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
+                    <img src="https://www.factor.law/images/data/M_A_Blog.jpg" alt="'Jagi Building' construction company website">
+                    <div class="overlay">
+                        <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
+                        <h3 data-lang="flagship1Title"></h3>
                     </div>
-                </div>
-            </section>
+                </a>
 
-<section id="pricing" class="content-section">
-    <div class="container">
-        <h2 class="section-title" data-aos="fade-up" data-lang="pricingTitle"></h2>
-        <!-- ═══ EXCLUSIVITY BADGE ═══ -->
-<div id="discount-sign"
-     class="discount-sign-root"
-     role="img"
-     aria-label="Accepting only 2 premium projects for July 2026.">
-   <div class="sign-nail" aria-hidden="true"></div>
-  <svg class="rope-svg"
-       viewBox="0 0 16 88"
-       width="16" height="88"
-       aria-hidden="true"
-       xmlns="http://www.w3.org/2000/svg">
-    <defs>
-       <linearGradient id="ropeCore" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%"   stop-color="#241C0C"/>
-        <stop offset="50%"  stop-color="#463514"/>
-        <stop offset="100%" stop-color="#241C0C"/>
-      </linearGradient>
-       <linearGradient id="ropeStrandA" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%"   stop-color="#5C4A1E"/>
-        <stop offset="35%"  stop-color="#A08830"/>
-        <stop offset="65%"  stop-color="#D6BC66"/>
-        <stop offset="100%" stop-color="#5C4A1E"/>
-      </linearGradient>
-       <linearGradient id="ropeStrandB" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%"   stop-color="#4A3E14"/>
-        <stop offset="40%"  stop-color="#8B7830"/>
-        <stop offset="70%"  stop-color="#C6A840"/>
-        <stop offset="100%" stop-color="#4A3E14"/>
-      </linearGradient>
-       <linearGradient id="ropeStrandC" x1="0" y1="0" x2="1" y2="0">
-        <stop offset="0%"   stop-color="#3A3010"/>
-        <stop offset="45%"  stop-color="#7A6824"/>
-        <stop offset="100%" stop-color="#3A3010"/>
-      </linearGradient>
-       <linearGradient id="ropeHi" x1="0" y1="0" x2="0" y2="1">
-        <stop offset="0%"   stop-color="rgba(230,199,122,0.55)"/>
-        <stop offset="40%"  stop-color="rgba(230,199,122,0.20)"/>
-        <stop offset="100%" stop-color="rgba(230,199,122,0.05)"/>
-      </linearGradient>
+                <a href="https://www.laptopgeorgia.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
+                    <img src="https://i.pinimg.com/736x/c6/0e/6a/c60e6ae7667bbb409aae36a46d6d2ec3.jpg" alt="'Laptop Georgia' tech repair website" loading="lazy">
+                    <div class="overlay">
+                        <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
+                        <h3 data-lang="flagship2Title"></h3>
+                    </div>
+                </a>
 
-    </defs>
-    <path class="rope-core" d="M8,0
-             C5.4,7  10.2,13  8,18
-             C5.8,23 10.4,29  8,34
-             C5.6,39 10.2,45  8,50
-             C5.8,55 10.3,61  8,66
-             C5.7,71 10.1,77  8,82
-             C7,84.5 8,87 8,88"
-          stroke="url(#ropeCore)"
-          stroke-width="5"
-          fill="none"
-          stroke-linecap="round"
-          opacity="0.55"/>
+                <a href="https://www.stilissivrce.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
+                    <img src="https://ir.ozone.ru/s3/multimedia-1-b/7360641515.jpg" alt="'Stilis Sivrce' clothing store website" loading="lazy">
+                    <div class="overlay">
+                        <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
+                        <h3 data-lang="flagship3Title"></h3>
+                    </div>
+                </a>
 
-    <path class="rope-strand-c" d="M10.6,0
-             C8.2,6   5.4,12   5.2,18
-             C5.0,24  8.0,30  10.8,36
-             C11.0,39  8.2,45  5.2,50
-             C5.0,55  8.2,61  11.0,66
-             C11.2,69  8.0,75  5.2,80
-             C5.0,83   7.5,86  8,88"
-          stroke="url(#ropeStrandC)"
-          stroke-width="2.1"
-          fill="none"
-          stroke-linecap="round"/>
+                <a href="https://www.terra24.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
+                    <img src="https://i.pinimg.com/736x/1d/61/ca/1d61ca69fd1ef0670434ac43d5b31119.jpg" alt="'Terra 24' funeral bureau website" loading="lazy">
+                    <div class="overlay">
+                        <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
+                        <h3 data-lang="flagship4Title"></h3>
+                    </div>
+                </a>
 
-    <path class="rope-strand-b" d="M8,0
-             C10.8,6  11.2,13  8.2,18
-             C5.2,23  4.8,29   8,34
-             C10.8,39 11.0,45  8,50
-             C5.2,55  4.8,61   8,66
-             C10.6,71 11.0,77  8,82
-             C5.5,85  7.5,87  8,88"
-          stroke="url(#ropeStrandB)"
-          stroke-width="2.1"
-          fill="none"
-          stroke-linecap="round"/>
+                <a href="https://www.primegrind.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
+                    <img src="https://www.primegrind.ge/work-1.jpg" alt="'Prime Grind' construction website" loading="lazy">
+                    <div class="overlay">
+                        <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
+                        <h3 data-lang="flagship5Title"></h3>
+                    </div>
+                </a>
 
-    <path class="rope-strand-a" d="M5.4,0
-             C5.0,6   8.0,12  10.8,18
-             C11.0,22  8.2,28  5.2,34
-             C5.0,38   8.0,44 10.8,50
-             C11.0,54  8.2,60  5.2,66
-             C5.0,70   8.2,76 10.8,82
-             C11.0,84.5 8.5,87 8,88"
-          stroke="url(#ropeStrandA)"
-          stroke-width="2.1"
-          fill="none"
-          stroke-linecap="round"/>
+                <a href="https://www.skhiladieselmotors.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
+                    <img src="https://i.pinimg.com/736x/6b/20/90/6b20906e017013b11a7844e3031b690c.jpg" alt="'Skhila Diesel Motors' car care website" loading="lazy">
+                    <div class="overlay">
+                        <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
+                        <h3 data-lang="flagship6Title"></h3>
+                    </div>
+                </a>
 
-    <path d="M7,16 L9,20  M9,32 L7,36  M7,48 L9,52  M9,64 L7,68  M7,80 L9,84"
-          stroke="rgba(20,16,2,0.28)"
-          stroke-width="1.2"
-          fill="none"
-          stroke-linecap="round"/>
+                <a href="https://laarte.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
+                    <img src="https://laarte.ge/about-us-bracelets.jpeg.jpeg" alt="'La Arté' jewellery website" loading="lazy">
+                    <div class="overlay">
+                        <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
+                        <h3 data-lang="flagship7Title"></h3>
+                    </div>
+                </a>
 
-    <path class="rope-highlight" d="M6,0
-             C4.8,8  5.2,20  6,30
-             C6.4,40 5.8,55  6,70
-             C6.2,78 6.5,84  6.5,88"
-          stroke="url(#ropeHi)"
-          stroke-width="0.9"
-          fill="none"
-          stroke-linecap="round"
-          opacity="0.70"/>
+                <a href="https://www.evakuatorigzaze.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item">
+                    <img src="https://i.pinimg.com/1200x/70/b5/95/70b595d64e2925278c1dfa3b40dcbec3.jpg" alt="'EVAKUATORIGZAZE' tow truck website" loading="lazy">
+                    <div class="overlay">
+                        <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
+                        <h3 data-lang="flagship8Title"></h3>
+                    </div>
+                </a>
 
-  </svg>
-  <!-- ── END ROPE ─────────────────────────────────────────────── -->
+                <a href="https://osg-website-tamplate.vercel.app/" target="_blank" rel="noopener noreferrer" class="carousel-item">
+                    <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="'The Slate Table' restaurant project." loading="lazy">
+                    <div class="overlay">
+                        <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
+                        <h3 data-lang="portfolio1Title"></h3>
+                    </div>
+                </a>
 
-  <div class="sign-card" aria-hidden="true">
+                <a href="https://osgwebsitebarbershoptamplate.vercel.app/" target="_blank" rel="noopener noreferrer" class="carousel-item">
+                    <img src="https://t3.ftcdn.net/jpg/05/79/13/18/360_F_579131835_34z1xrboD0IaxbierBEiIt6OJcWQuTly.jpg" alt="BarbershopWeb" loading="lazy">
+                    <div class="overlay">
+                        <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
+                        <h3 data-lang="portfolio2Title"></h3>
+                    </div>
+                </a>
 
-    <div class="sign-holes">
-      <span class="sign-hole"></span>
-      <span class="sign-hole"></span>
-    </div>
+                <a href="https://osgwebcafetamplate.vercel.app/#home" target="_blank" rel="noopener noreferrer" class="carousel-item">
+                    <img src="https://jamcafes.mystagingwebsite.com/wp-content/uploads/2024/09/JamCafe_BestBreakfastBrunch_Vancouver_PancakeStack.jpg" alt="cafe ambiance." loading="lazy">
+                    <div class="overlay">
+                        <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
+                        <h3 data-lang="portfolio3Title"></h3>
+                    </div>
+                </a>
 
-    <div class="sign-inner">
+                <a href="https://salad-web.vercel.app" target="_blank" rel="noopener noreferrer" class="carousel-item">
+                    <img src="https://mangia.nyc/wp-content/uploads/2024/07/Salad-Bar-Manhattan.jpg" alt="SaladWeb" loading="lazy">
+                    <div class="overlay">
+                        <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
+                        <h3 data-lang="portfolio4Title"></h3>
+                    </div>
+                </a>
 
-      <p class="sign-eyebrow" data-lang="badgeEyebrow">✦ CURRENTLY ACCEPTING ✦</p>
+                <a href="https://osgweb-nexus-ai.vercel.app/" target="_blank" rel="noopener noreferrer" class="carousel-item">
+                    <img src="Naxus-AI.png" alt="NaxusAI" loading="lazy">
+                    <div class="overlay">
+                        <span class="carousel-item-tag" data-lang="viewPRTitle">View Live Project</span>
+                        <h3 data-lang="portfolio5Title"></h3>
+                    </div>
+                </a>
 
-      <p class="sign-headline" data-lang="badgeHeadline">Only&nbsp;2&nbsp;Premium<br>Projects</p>
 
-      <div class="sign-sep"></div>
 
-      <p class="sign-footer" data-lang="badgeSub">For July 2026</p>
-
-    </div>
-
-  </div>
-</div>
-        <!-- ═══ EXCLUSIVITY BADGE — END ═══ -->
-
-        <div class="billing-cycle-toggle" data-aos="fade-up" data-aos-delay="50">
-            <span class="toggle-indicator" aria-hidden="true"></span>
-            <button class="toggle-btn active" data-period="onetime" data-lang="oneTimePaymentTitle" aria-checked="true" role="radio">One-Time</button>
-            <button class="toggle-btn" data-period="plans" data-lang="paymentPlansTitle" aria-checked="false" role="radio">Payment Plans</button>
-            <button class="toggle-btn" data-period="individual" data-lang="individualPayment" aria-checked="false" role="radio">Individual</button>
-        </div>
-
-<div class="plan-subtoggle" id="plan-subtoggle" role="radiogroup" aria-label="Choose a payment plan" hidden>
-    <button class="subtoggle-btn active" data-plan="5050" data-lang="plan5050Title" aria-checked="true" role="radio">50/50</button>
-    <button class="subtoggle-btn" data-plan="3mo" data-lang="plan3moTitle" aria-checked="false" role="radio">3-Month</button>
-    <button class="subtoggle-btn" data-plan="6mo" data-lang="plan6moTitle" aria-checked="false" role="radio">6-Month</button>
-</div>
-
-        <div class="pricing-cards-grid">
-
-            <div class="pricing-card starter" data-plan-id="Starter">
-                <h3 class="plan-title" data-lang="pricingStarterTitle"></h3>
-<p class="price" data-lang="pricingStarterPrice" data-price-point
-   data-price-5050="pricingStarterPrice5050"
-   data-price-3mo="pricingStarterPrice3mo"
-   data-price-6mo="pricingStarterPrice6mo"></p>
-<p class="billing-period" data-lang="oneTimePayment" data-billing-period
-   data-period-5050="plan5050Period"
-   data-period-3mo="plan3moPeriodFee"
-   data-period-6mo="plan6moPeriodFee"></p>
-                <ul class="features-list">
-                    <li class="feature-group-label" data-lang="groupInfrastructure">Digital Infrastructure</li>
-                    <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingStarterFeature1"></span></li>
-                    <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingStarterFeature2"></span></li>
-                    <li class="feature-group-label" data-lang="groupPerformanceSeo">Performance & SEO</li>
-                    <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingStarterFeature3"></span></li>
-                    <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingStarterFeature4"></span></li>
-                </ul>
-                <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Starter" data-lang="pricingGetStarted"></a>
             </div>
-
-            <div class="pricing-card most-popular pro" data-plan-id="Pro">
-                <div class="popular-tag" data-lang="pricingMostPopular"></div>
-                <h3 class="plan-title" data-lang="pricingProTitle"></h3>
-<p class="price" data-lang="pricingProPrice" data-price-point
-   data-price-5050="pricingProPrice5050"
-   data-price-3mo="pricingProPrice3mo"
-   data-price-6mo="pricingProPrice6mo"></p>
-<p class="billing-period" data-lang="oneTimePayment" data-billing-period
-   data-period-5050="plan5050Period"
-   data-period-3mo="plan3moPeriodFee"
-   data-period-6mo="plan6moPeriodFee"></p>
-                <ul class="features-list">
-                    <li class="feature-group-label" data-lang="pricingProInclLabel">Includes All Starter Tier Capabilities +</li>
-                    <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingProFeature1"></span></li>
-                    <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingProFeature2"></span></li>
-                    <li class="feature-group-label" data-lang="groupAutomation">Automation & Experience</li>
-                    <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingProFeature3"></span></li>
-                    <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingProFeature4"></span></li>
-                </ul>
-                <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Pro" data-lang="pricingGetStarted"></a>
-            </div>
-
-            <div class="pricing-card premium" data-plan-id="Premium">
-                <h3 class="plan-title" data-lang="pricingPremiumTitle"></h3>
-<p class="price" data-lang="pricingPremiumPrice" data-price-point
-   data-price-5050="pricingPremiumPrice5050"
-   data-price-3mo="pricingPremiumPrice3mo"
-   data-price-6mo="pricingPremiumPrice6mo"></p>
-<p class="billing-period" data-lang="oneTimePayment" data-billing-period
-   data-period-5050="plan5050Period"
-   data-period-3mo="plan3moPeriodFee"
-   data-period-6mo="plan6moPeriodFee"></p>
-                <ul class="features-list">
-                    <li class="feature-group-label" data-lang="pricingPremiumInclLabel">Includes All Pro Tier Capabilities +</li>
-                    <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingPremiumFeature1"></span></li>
-                    <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingPremiumFeature2"></span></li>
-                    <li class="feature-group-label" data-lang="groupEnterpriseSupport">Enterprise Support</li>
-                    <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingPremiumFeature3"></span></li>
-                    <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingPremiumFeature4"></span></li>
-                </ul>
-                <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Premium" data-lang="pricingGetStarted"></a>
-            </div>
-                <div class="pricing-card individual-plan hidden" data-aos="fade-up" data-billing-cycle="individual">
-        <h3 class="plan-title" data-lang="individualTitle"></h3>
-        <p class="price" data-lang="individualPrice"></p>
-        <p class="billing-period" data-lang="individualDesc"></p>
-        <ul class="features-list">
-            <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="individualFeature1"></span></li>
-            <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="individualFeature2"></span></li>
-            <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="individualFeature3"></span></li>
-        </ul>
-        <p class="billing-period" data-lang="individualCardPrie"></p>
-        <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Individual" data-lang="pricingGetStarted"></a>
-                </div>
         </div>
 
-        <div class="book-a-call-btn-wrapper" data-aos="fade-up" data-aos-delay="400">
-            <a id="book-a-call-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary book-a-call" data-lang="pricingBookACall"></a>
-        </div>
+    <button class="carousel-btn carousel-btn--next" aria-label="Next">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+        </svg>
+    </button>
+        <div class="carousel-dots"></div>
     </div>
-</section>
-
-
-        </div>
-
-        <!-- ================================ -->
-        <!-- START: VIRTUAL CONTACT PAGE      -->
-        <!-- ================================ -->
-        <div id="contact-page-view" class="page-view">
-            <section id="contact-page" class="content-section-dark centered-page">
-                <div class="container">
-                    <div class="page-header" data-aos="fade-up">
-                        <a href="#hero" class="nav-link back-link" data-lang="backToHome">← Back</a>
                     </div>
+                </section>
 
-                    <div class="contact-grid">
-                        <div class="contact-info" data-aos="fade-right">
-                            <h3 data-lang="contactInfoTitle"></h3>
-                            <p data-lang="contactInfoDesc"></p>
-                            <div class="info-item"><i class="fas fa-envelope"></i><a href="mailto:osgbusiness01@gmail.com">osgbusiness01@gmail.com</a></div>
-                            <div class="info-item"><i class="fas fa-phone"></i><span>+995 555 09 59 59</span></div>
-                            <div class="info-item"><i class="fas fa-map-marker-alt"></i><span data-lang="contactInfoLocation"></span></div>
-                        </div>
-                        <form action="https://formspree.io/f/myzjpoln" method="POST" class="contact-form" data-aos="fade-left">
-                            <div class="form-group">
-                                <label for="contact-name" class="visually-hidden" data-lang="formNamePlaceholder"></label>
-                                <input id="contact-name" type="text" name="name" data-lang-placeholder="formNamePlaceholder" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="contact-email" class="visually-hidden" data-lang="formEmailPlaceholder"></label>
-                                <input id="contact-email" type="email" name="email" data-lang-placeholder="formEmailPlaceholder" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="contact-message" class="visually-hidden" data-lang="formMessagePlaceholder"></label>
-                                <textarea id="contact-message" name="message" rows="5" data-lang-placeholder="formMessagePlaceholder" required></textarea>
-                            </div>
-                            <div class="form-button-group">
-                                <button type="submit" class="btn btn-primary" data-lang="formSendButton"></button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- ================================ -->
-        <!-- START: VIRTUAL REVIEW-FORM PAGE  -->
-        <!-- ================================ -->
-        <div id="review-page-view" class="page-view">
-            <section id="review-page" class="review-page-section centered-page">
-                <div class="container">
-                    <div class="page-header" data-aos="fade-up">
-                        <h2 class="section-title" data-lang="reviewPageTitle"></h2>
-                        <a href="#testimonials" class="nav-link back-link" data-lang="backToHome">← Back</a>
-                    </div>
-
-                    <div class="review-form-container" data-aos="fade-up">
-                        <div id="review-form-wrapper">
-                            <div class="review-form-header">
-                                <p class="review-form-subtitle" data-lang="reviewPageSubtitle"></p>
-                            </div>
-                            <form id="review-form" class="review-form horizontal-form" action="https://formspree.io/f/myzjpoln" method="POST">
-                                <div class="form-grid">
-                                    <div class="input-group form-group">
-                                        <label for="review-fullname" class="visually-hidden" data-lang-placeholder="formFullNamePlaceholder"></label>
-                                        <i class="fa-solid fa-user"></i>
-                                        <input id="review-fullname" type="text" name="fullname" data-lang-placeholder="formFullNamePlaceholder" required>
-                                    </div>
-                                    <div class="input-group form-group">
-                                        <label for="review-email" class="visually-hidden" data-lang-placeholder="formEmailPlaceholder"></label>
-                                        <i class="fa-solid fa-envelope"></i>
-                                        <input id="review-email" type="email" name="email" data-lang-placeholder="formEmailPlaceholder" required>
-                                    </div>
-                                    <div class="input-group form-group">
-                                        <label for="review-company" class="visually-hidden" data-lang-placeholder="formCompanyPlaceholder"></label>
-                                        <i class="fa-solid fa-building"></i>
-                                        <input id="review-company" type="text" name="company" data-lang-placeholder="formCompanyPlaceholder">
-                                    </div>
-                                    <div id="logo-upload-wrapper" class="input-group form-group">
-                                        <div id="image-preview-container" class="image-preview-container">
-                                            <img src="#" alt="Company logo preview" id="image-preview" class="image-preview">
-                                            <button type="button" id="remove-image-btn" class="remove-image-btn" aria-label="Remove image">×</button>
-                                        </div>
-                                        <label for="review-logo" class="file-upload-label">
-                                            <i class="fa-solid fa-image"></i>
-                                            <span class="file-upload-text" data-lang="formLogoPlaceholder">Add company logo (optional)</span>
-                                        </label>
-                                        <input id="review-logo" type="file" name="company_logo" accept="image/*" class="visually-hidden">
-                                    </div>
-                                    <div class="input-group form-group">
-                                        <label for="review-website" class="visually-hidden" data-lang-placeholder="formWebsitePlaceholder"></label>
-                                        <i class="fa-solid fa-link"></i>
-                                        <input id="review-website" type="url" name="website_link" data-lang-placeholder="formWebsitePlaceholder" required>
-                                    </div>
-                                    <div class="input-group star-rating-group">
-                                        <label id="rating-label" data-lang="reviewFormRatingLabel"></label>
-                                        <div class="star-rating-system" role="radiogroup" aria-labelledby="rating-label">
-                                            <input type="radio" id="rate-5" name="rating" value="5" required><label for="rate-5" title="5 stars">★</label>
-                                            <input type="radio" id="rate-4" name="rating" value="4"><label for="rate-4" title="4 stars">★</label>
-                                            <input type="radio" id="rate-3" name="rating" value="3"><label for="rate-3" title="3 stars">★</label>
-                                            <input type="radio" id="rate-2" name="rating" value="2"><label for="rate-2" title="2 stars">★</label>
-                                            <input type="radio" id="rate-1" name="rating" value="1"><label for="rate-1" title="1 star">★</label>
-                                        </div>
-                                    </div>
-                                    <div class="input-group textarea-group form-group">
-                                        <label for="review-message" class="visually-hidden" data-lang-placeholder="reviewFormMessagePlaceholder"></label>
-                                        <i class="fa-solid fa-comment-dots"></i>
-                                        <textarea id="review-message" name="review_message" rows="4" data-lang-placeholder="reviewFormMessagePlaceholder" required></textarea>
-                                    </div>
-                                </div>
-                                <button type="submit" class="btn btn-primary form-submit-btn" data-lang="reviewFormSubmitButton"></button>
-                            </form>
-                        </div>
-                        <div id="review-success-message" class="review-success-message" style="display: none;">
-                            <i class="fas fa-check-circle"></i>
-                            <h3 data-lang="reviewSuccessTitle"></h3>
-                            <p data-lang="reviewPendingMessage"></p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </div>
-
-        <!-- ================================ -->
-        <!-- START: VIRTUAL ALL-REVIEWS PAGE  -->
-        <!-- ================================ -->
-        <div id="all-reviews-page-view" class="page-view">
-            <section id="all-reviews-page" class="content-section-dark centered-page">
-                <div class="container">
-                    <div class="page-header" data-aos="fade-up">
-                        <h2 class="section-title" data-lang="allReviewsTitle"></h2>
-                        <a href="#testimonials" class="nav-link back-link" data-lang="backToHome">← Back</a>
-                    </div>
-
-                    <div class="all-reviews-grid" data-aos="fade-up" data-aos-delay="100">
-                        <div class="review-card case-card">
+                <section id="testimonials" class="content-section">
+                    <div class="container">
+                        <h2 class="section-title" data-aos="fade-up" data-lang="testimonialsTitle"></h2>
+                        <div class="review-card case-card" data-aos="fade-up" role="article" aria-labelledby="everluxe-title">
                             <div class="case-top">
                                 <img src="./Everluxe.jpg" alt="Everluxe logo" class="review-avatar">
                                 <div class="case-meta">
-                                    <p class="review-author">თამილა — მფლობელი, Everluxe <span class="package-pill pro-package" data-lang="proPackageLabel">Pro Package</span></p>
+                                    <p id="everluxe-title" class="review-author">თამილა — მფლობელი, Everluxe <span class="package-pill pro-package" data-lang="proPackageLabel">Pro Package</span></p>
                                     <p class="case-tags" data-lang="webInfoTitle" >eCommerce · Stripe Checkout · Launched: May 2025</p>
                                 </div>
-                                <span class="verified-badge" aria-hidden="true" data-lang="checkedTitle" >✓ შემოწმებული</span>
+                                <span class="verified-badge" aria-hidden="true" data-lang="checkedTitle">✓ შემოწმებული</span>
                             </div>
                             <div class="case-body">
                                 <div class="screenshot-thumb" aria-hidden="true">
-                                    <img src="./Everlux.Web.png" alt="Everluxe პროდუქტის გვერდის სქრინშოტი" />
+                                    <img src="./Everlux.Web.png" alt="Everluxe websie screenshot" />
                                 </div>
                                 <div class="case-copy">
                                     <div class="outcome-row">
-                                        <span class="outcome-pill" aria-label="+30% გაყიდვები" data-lang="salesTitle" >+30% გაყიდვები</span>
+                                        <span class="outcome-pill" aria-label="+30% გაყიდვები" data-lang="salesTitle">+30% გაყიდვები</span>
                                         <span class="case-source" data-lang="sourceTitle">წყარო: GA4 • 60 დღე</span>
                                     </div>
                                     <blockquote class="client-quote" cite="https://everluxe.vercel.app">
@@ -838,12 +415,12 @@
                             </div>
                         </div>
 
-                        <div class="review-card case-card">
+                        <div class="review-card case-card" data-aos="fade-up" data-aos-delay="100" role="article" aria-labelledby="hellshop-title">
                             <div class="case-top">
                                 <img src="./osee.png" alt="HellShop logo" class="review-avatar">
                                 <div class="case-meta">
-                                    <p class="review-author">თამრიკო — მფლობელი, HellShop <span class="package-pill starter-package" data-lang="starterPackageLabel">Starter Package</span></p>
-                                    <p class="case-tags"  data-lang="webInfoTitle2">Online Store · Performance · Launched: Apr 2025</p>
+                                    <p id="hellshop-title" class="review-author">თამრიკო — მფლობელი, HellShop <span class="package-pill starter-package" data-lang="starterPackageLabel">Starter Package</span></p>
+                                    <p class="case-tags" data-lang="webInfoTitle2">Online Store · Performance · Launched: Apr 2025</p>
                                 </div>
                                 <span class="verified-badge" aria-hidden="true" data-lang="checkedTitle" >✓ შემოწმებული</span>
                             </div>
@@ -854,7 +431,7 @@
                                 <div class="case-copy">
                                     <div class="outcome-row">
                                         <span class="outcome-pill" aria-label="+30% გაყიდვები" data-lang="salesTitle2" >+22% გაყიდვები</span>
-                                        <span class="case-source" data-lang="sourceTitle2">წყარო: Admin / GA4 • 45 დღე</span>
+                                        <span class="case-source"  data-lang="sourceTitle2" >წყარო: Admin / GA4 • 45 დღე</span>
                                     </div>
                                     <blockquote class="client-quote" cite="https://hellshop.vercel.app/">
                                         “კმაყოფილი ვარ სერვისით, სწრაფი მომსახურება აქვთ და ამ ფასად ნამდვილად კარგი არჩევანია.”
@@ -866,52 +443,485 @@
                                 <a class="btn btn-primary" href="https://hellshop.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open HellShop live site" data-lang="viewPRTitle">View Live Project</a>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="end-of-reviews-marker" data-aos="fade-up">
-                        <span data-lang="noMoreReviews">No more reviews</span>
+                        <div class="review-prompt">
+                            <a href="#review-page" class="nav-link" id="haveU" data-lang="reviewPromptText">Have you worked with us? We’d love to hear your feedback.</a>
+                        </div>
+                        <div class="end-of-reviews-marker" data-aos="fade-up">
+                            <a href="#all-reviews-page" class="btn btn-secondary nav-link" data-lang="seeAllReviews">See All Reviews</a>
+                        </div>
                     </div>
-                </div>
-            </section>
-        </div>
-    </main>
+                </section>
 
-    <footer class="site-footer">
+    <section id="pricing" class="content-section">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-col" data-aos="fade-up">
-                    <h4 class="logo">OSGWeb.ge</h4>
-                    <p data-lang="footerAbout"></p>
+            <h2 class="section-title" data-aos="fade-up" data-lang="pricingTitle"></h2>
+            <!-- ═══ EXCLUSIVITY BADGE ═══ -->
+    <div id="discount-sign"
+        class="discount-sign-root"
+        role="img"
+        aria-label="Accepting only 2 premium projects for July 2026.">
+    <div class="sign-nail" aria-hidden="true"></div>
+    <svg class="rope-svg"
+        viewBox="0 0 16 88"
+        width="16" height="88"
+        aria-hidden="true"
+        xmlns="http://www.w3.org/2000/svg">
+        <defs>
+        <linearGradient id="ropeCore" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"   stop-color="#241C0C"/>
+            <stop offset="50%"  stop-color="#463514"/>
+            <stop offset="100%" stop-color="#241C0C"/>
+        </linearGradient>
+        <linearGradient id="ropeStrandA" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"   stop-color="#5C4A1E"/>
+            <stop offset="35%"  stop-color="#A08830"/>
+            <stop offset="65%"  stop-color="#D6BC66"/>
+            <stop offset="100%" stop-color="#5C4A1E"/>
+        </linearGradient>
+        <linearGradient id="ropeStrandB" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"   stop-color="#4A3E14"/>
+            <stop offset="40%"  stop-color="#8B7830"/>
+            <stop offset="70%"  stop-color="#C6A840"/>
+            <stop offset="100%" stop-color="#4A3E14"/>
+        </linearGradient>
+        <linearGradient id="ropeStrandC" x1="0" y1="0" x2="1" y2="0">
+            <stop offset="0%"   stop-color="#3A3010"/>
+            <stop offset="45%"  stop-color="#7A6824"/>
+            <stop offset="100%" stop-color="#3A3010"/>
+        </linearGradient>
+        <linearGradient id="ropeHi" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%"   stop-color="rgba(230,199,122,0.55)"/>
+            <stop offset="40%"  stop-color="rgba(230,199,122,0.20)"/>
+            <stop offset="100%" stop-color="rgba(230,199,122,0.05)"/>
+        </linearGradient>
+
+        </defs>
+        <path class="rope-core" d="M8,0
+                C5.4,7  10.2,13  8,18
+                C5.8,23 10.4,29  8,34
+                C5.6,39 10.2,45  8,50
+                C5.8,55 10.3,61  8,66
+                C5.7,71 10.1,77  8,82
+                C7,84.5 8,87 8,88"
+            stroke="url(#ropeCore)"
+            stroke-width="5"
+            fill="none"
+            stroke-linecap="round"
+            opacity="0.55"/>
+
+        <path class="rope-strand-c" d="M10.6,0
+                C8.2,6   5.4,12   5.2,18
+                C5.0,24  8.0,30  10.8,36
+                C11.0,39  8.2,45  5.2,50
+                C5.0,55  8.2,61  11.0,66
+                C11.2,69  8.0,75  5.2,80
+                C5.0,83   7.5,86  8,88"
+            stroke="url(#ropeStrandC)"
+            stroke-width="2.1"
+            fill="none"
+            stroke-linecap="round"/>
+
+        <path class="rope-strand-b" d="M8,0
+                C10.8,6  11.2,13  8.2,18
+                C5.2,23  4.8,29   8,34
+                C10.8,39 11.0,45  8,50
+                C5.2,55  4.8,61   8,66
+                C10.6,71 11.0,77  8,82
+                C5.5,85  7.5,87  8,88"
+            stroke="url(#ropeStrandB)"
+            fill="none"
+            stroke-width="2.1"
+            stroke-linecap="round"/>
+
+        <path class="rope-strand-a" d="M5.4,0
+                C5.0,6   8.0,12  10.8,18
+                C11.0,22  8.2,28  5.2,34
+                C5.0,38   8.0,44 10.8,50
+                C11.0,54  8.2,60  5.2,66
+                C5.0,70   8.2,76 10.8,82
+                C11.0,84.5 8.5,87 8,88"
+            stroke="url(#ropeStrandA)"
+            stroke-width="2.1"
+            fill="none"
+            stroke-linecap="round"/>
+
+        <path d="M7,16 L9,20  M9,32 L7,36  M7,48 L9,52  M9,64 L7,68  M7,80 L9,84"
+            stroke="rgba(20,16,2,0.28)"
+            stroke-width="1.2"
+            fill="none"
+            stroke-linecap="round"/>
+
+        <path class="rope-highlight" d="M6,0
+                C4.8,8  5.2,20  6,30
+                C6.4,40 5.8,55  6,70
+                C6.2,78 6.5,84  6.5,88"
+            stroke="url(#ropeHi)"
+            stroke-width="0.9"
+            fill="none"
+            stroke-linecap="round"
+            opacity="0.70"/>
+
+    </svg>
+    <!-- ── END ROPE ─────────────────────────────────────────────── -->
+
+    <div class="sign-card" aria-hidden="true">
+
+        <div class="sign-holes">
+        <span class="sign-hole"></span>
+        <span class="sign-hole"></span>
+        </div>
+
+        <div class="sign-inner">
+
+        <p class="sign-eyebrow" data-lang="badgeEyebrow">✦ CURRENTLY ACCEPTING ✦</p>
+
+        <p class="sign-headline" data-lang="badgeHeadline">Only&nbsp;2&nbsp;Premium<br>Projects</p>
+
+        <div class="sign-sep"></div>
+
+        <p class="sign-footer" data-lang="badgeSub">For July 2026</p>
+
+        </div>
+
+    </div>
+    </div>
+            <!-- ═══ EXCLUSIVITY BADGE — END ═══ -->
+
+            <div class="billing-cycle-toggle" data-aos="fade-up" data-aos-delay="50">
+                <span class="toggle-indicator" aria-hidden="true"></span>
+                <button class="toggle-btn active" data-period="onetime" data-lang="oneTimePaymentTitle" aria-checked="true" role="radio">One-Time</button>
+                <button class="toggle-btn" data-period="plans" data-lang="paymentPlansTitle" aria-checked="false" role="radio">Payment Plans</button>
+                <button class="toggle-btn" data-period="individual" data-lang="individualPayment" aria-checked="false" role="radio">Individual</button>
+            </div>
+
+    <div class="plan-subtoggle" id="plan-subtoggle" role="radiogroup" aria-label="Choose a payment plan" hidden>
+        <button class="subtoggle-btn active" data-plan="5050" data-lang="plan5050Title" aria-checked="true" role="radio">50/50</button>
+        <button class="subtoggle-btn" data-plan="3mo" data-lang="plan3moTitle" aria-checked="false" role="radio">3-Month</button>
+        <button class="subtoggle-btn" data-plan="6mo" data-lang="plan6moTitle" aria-checked="false" role="radio">6-Month</button>
+    </div>
+
+            <div class="pricing-cards-grid">
+
+                <div class="pricing-card starter" data-plan-id="Starter">
+                    <h3 class="plan-title" data-lang="pricingStarterTitle"></h3>
+    <p class="price" data-lang="pricingStarterPrice" data-price-point
+    data-price-5050="pricingStarterPrice5050"
+    data-price-3mo="pricingStarterPrice3mo"
+    data-price-6mo="pricingStarterPrice6mo"></p>
+    <p class="billing-period" data-lang="oneTimePayment" data-billing-period
+    data-period-5050="plan5050Period"
+    data-period-3mo="plan3moPeriodFee"
+    data-period-6mo="plan6moPeriodFee"></p>
+                    <ul class="features-list">
+                        <li class="feature-group-label" data-lang="groupInfrastructure">Digital Infrastructure</li>
+                        <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingStarterFeature1"></span></li>
+                        <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingStarterFeature2"></span></li>
+                        <li class="feature-group-label" data-lang="groupPerformanceSeo">Performance & SEO</li>
+                        <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingStarterFeature3"></span></li>
+                        <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingStarterFeature4"></span></li>
+                    </ul>
+                    <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Starter" data-lang="pricingGetStarted"></a>
                 </div>
-                <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
-                    <h4 data-lang="footerContactTitle"></h4>
-                    <p><i class="fas fa-envelope"></i> osgbusiness01@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> +995 555 09 59 59 </p>
+
+                <div class="pricing-card most-popular pro" data-plan-id="Pro">
+                    <div class="popular-tag" data-lang="pricingMostPopular"></div>
+                    <h3 class="plan-title" data-lang="pricingProTitle"></h3>
+    <p class="price" data-lang="pricingProPrice" data-price-point
+    data-price-5050="pricingProPrice5050"
+    data-price-3mo="pricingProPrice3mo"
+    data-price-6mo="pricingProPrice6mo"></p>
+    <p class="billing-period" data-lang="oneTimePayment" data-billing-period
+    data-period-5050="plan5050Period"
+    data-period-3mo="plan3moPeriodFee"
+    data-period-6mo="plan6moPeriodFee"></p>
+                    <ul class="features-list">
+                        <li class="feature-group-label" data-lang="pricingProInclLabel">Includes All Starter Tier Capabilities +</li>
+                        <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingProFeature1"></span></li>
+                        <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingProFeature2"></span></li>
+                        <li class="feature-group-label" data-lang="groupAutomation">Automation & Experience</li>
+                        <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingProFeature3"></span></li>
+                        <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingProFeature4"></span></li>
+                    </ul>
+                    <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Pro" data-lang="pricingGetStarted"></a>
                 </div>
-                <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
-                    <h4 data-lang="footerSocialTitle"></h4>
-                    <div class="social-icons">
-                        <a href="https://www.facebook.com/TheOSGAgency" target="_blank" rel="noopener noreferrer" aria-label="Our Facebook Page"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://www.instagram.com/osg.agency/" target="_blank" rel="noopener noreferrer" aria-label="Our Instagram Profile"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.tiktok.com/@osg.agency" target="_blank" rel="noopener noreferrer" aria-label="Our TikTok Profile"><i class="fab fa-tiktok"></i></a>
+
+                <div class="pricing-card premium" data-plan-id="Premium">
+                    <h3 class="plan-title" data-lang="pricingPremiumTitle"></h3>
+    <p class="price" data-lang="pricingPremiumPrice" data-price-point
+    data-price-5050="pricingPremiumPrice5050"
+    data-price-3mo="pricingPremiumPrice3mo"
+    data-price-6mo="pricingPremiumPrice6mo"></p>
+    <p class="billing-period" data-lang="oneTimePayment" data-billing-period
+    data-period-5050="plan5050Period"
+    data-period-3mo="plan3moPeriodFee"
+    data-period-6mo="plan6moPeriodFee"></p>
+                    <ul class="features-list">
+                        <li class="feature-group-label" data-lang="pricingPremiumInclLabel">Includes All Pro Tier Capabilities +</li>
+                        <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingPremiumFeature1"></span></li>
+                        <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingPremiumFeature2"></span></li>
+                        <li class="feature-group-label" data-lang="groupEnterpriseSupport">Enterprise Support</li>
+                        <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingPremiumFeature3"></span></li>
+                        <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingPremiumFeature4"></span></li>
+                    </ul>
+                    <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Premium" data-lang="pricingGetStarted"></a>
+                </div>
+                    <div class="pricing-card individual-plan hidden" data-aos="fade-up" data-billing-cycle="individual">
+            <h3 class="plan-title" data-lang="individualTitle"></h3>
+            <p class="price" data-lang="individualPrice"></p>
+            <p class="billing-period" data-lang="individualDesc"></p>
+            <ul class="features-list">
+                <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="individualFeature1"></span></li>
+                <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="individualFeature2"></span></li>
+                <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="individualFeature3"></span></li>
+            </ul>
+            <p class="billing-period" data-lang="individualCardPrie"></p>
+            <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Individual" data-lang="pricingGetStarted"></a>
+                    </div>
+            </div>
+
+            <div class="book-a-call-btn-wrapper" data-aos="fade-up" data-aos-delay="400">
+                <a id="book-a-call-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary book-a-call" data-lang="pricingBookACall"></a>
+            </div>
+        </div>
+    </section>
+
+
+            </div>
+
+            <!-- ================================ -->
+            <!-- START: VIRTUAL CONTACT PAGE      -->
+            <!-- ================================ -->
+            <div id="contact-page-view" class="page-view">
+                <section id="contact-page" class="content-section-dark centered-page">
+                    <div class="container">
+                        <div class="page-header" data-aos="fade-up">
+                            <a href="#hero" class="nav-link back-link" data-lang="backToHome">← Back</a>
+                        </div>
+
+                        <div class="contact-grid">
+                            <div class="contact-info" data-aos="fade-right">
+                                <h3 data-lang="contactInfoTitle"></h3>
+                                <p data-lang="contactInfoDesc"></p>
+                                <div class="info-item"><i class="fas fa-envelope"></i><a href="mailto:osgbusiness01@gmail.com">osgbusiness01@gmail.com</a></div>
+                                <div class="info-item"><i class="fas fa-phone"></i><span>+995 555 09 59 59</span></div>
+                                <div class="info-item"><i class="fas fa-map-marker-alt"></i><span data-lang="contactInfoLocation"></span></div>
+                            </div>
+                            <form action="https://formspree.io/f/myzjpoln" method="POST" class="contact-form" data-aos="fade-left">
+                                <div class="form-group">
+                                    <label for="contact-name" class="visually-hidden" data-lang="formNamePlaceholder"></label>
+                                    <input id="contact-name" type="text" name="name" data-lang-placeholder="formNamePlaceholder" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-email" class="visually-hidden" data-lang="formEmailPlaceholder"></label>
+                                    <input id="contact-email" type="email" name="email" data-lang-placeholder="formEmailPlaceholder" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="contact-message" class="visually-hidden" data-lang="formMessagePlaceholder"></label>
+                                    <textarea id="contact-message" name="message" rows="5" data-lang-placeholder="formMessagePlaceholder" required></textarea>
+                                </div>
+                                <div class="form-button-group">
+                                    <button type="submit" class="btn btn-primary" data-lang="formSendButton"></button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ================================ -->
+            <!-- START: VIRTUAL REVIEW-FORM PAGE  -->
+            <!-- ================================ -->
+            <div id="review-page-view" class="page-view">
+                <section id="review-page" class="review-page-section centered-page">
+                    <div class="container">
+                        <div class="page-header" data-aos="fade-up">
+                            <h2 class="section-title" data-lang="reviewPageTitle"></h2>
+                            <a href="#testimonials" class="nav-link back-link" data-lang="backToHome">← Back</a>
+                        </div>
+
+                        <div class="review-form-container" data-aos="fade-up">
+                            <div id="review-form-wrapper">
+                                <div class="review-form-header">
+                                    <p class="review-form-subtitle" data-lang="reviewPageSubtitle"></p>
+                                </div>
+                                <form id="review-form" class="review-form horizontal-form" action="https://formspree.io/f/myzjpoln" method="POST">
+                                    <div class="form-grid">
+                                        <div class="input-group form-group">
+                                            <label for="review-fullname" class="visually-hidden" data-lang-placeholder="formFullNamePlaceholder"></label>
+                                            <i class="fa-solid fa-user"></i>
+                                            <input id="review-fullname" type="text" name="fullname" data-lang-placeholder="formFullNamePlaceholder" required>
+                                        </div>
+                                        <div class="input-group form-group">
+                                            <label for="review-email" class="visually-hidden" data-lang-placeholder="formEmailPlaceholder"></label>
+                                            <i class="fa-solid fa-envelope"></i>
+                                            <input id="review-email" type="email" name="email" data-lang-placeholder="formEmailPlaceholder" required>
+                                        </div>
+                                        <div class="input-group form-group">
+                                            <label for="review-company" class="visually-hidden" data-lang-placeholder="formCompanyPlaceholder"></label>
+                                            <i class="fa-solid fa-building"></i>
+                                            <input id="review-company" type="text" name="company" data-lang-placeholder="formCompanyPlaceholder">
+                                        </div>
+                                        <div id="logo-upload-wrapper" class="input-group form-group">
+                                            <div id="image-preview-container" class="image-preview-container">
+                                                <img src="#" alt="Company logo preview" id="image-preview" class="image-preview">
+                                                <button type="button" id="remove-image-btn" class="remove-image-btn" aria-label="Remove image">×</button>
+                                            </div>
+                                            <label for="review-logo" class="file-upload-label">
+                                                <i class="fa-solid fa-image"></i>
+                                                <span class="file-upload-text" data-lang="formLogoPlaceholder">Add company logo (optional)</span>
+                                            </label>
+                                            <input id="review-logo" type="file" name="company_logo" accept="image/*" class="visually-hidden">
+                                        </div>
+                                        <div class="input-group form-group">
+                                            <label for="review-website" class="visually-hidden" data-lang-placeholder="formWebsitePlaceholder"></label>
+                                            <i class="fa-solid fa-link"></i>
+                                            <input id="review-website" type="url" name="website_link" data-lang-placeholder="formWebsitePlaceholder" required>
+                                        </div>
+                                        <div class="input-group star-rating-group">
+                                            <label id="rating-label" data-lang="reviewFormRatingLabel"></label>
+                                            <div class="star-rating-system" role="radiogroup" aria-labelledby="rating-label">
+                                                <input type="radio" id="rate-5" name="rating" value="5" required><label for="rate-5" title="5 stars">★</label>
+                                                <input type="radio" id="rate-4" name="rating" value="4"><label for="rate-4" title="4 stars">★</label>
+                                                <input type="radio" id="rate-3" name="rating" value="3"><label for="rate-3" title="3 stars">★</label>
+                                                <input type="radio" id="rate-2" name="rating" value="2"><label for="rate-2" title="2 stars">★</label>
+                                                <input type="radio" id="rate-1" name="rating" value="1"><label for="rate-1" title="1 star">★</label>
+                                            </div>
+                                        </div>
+                                        <div class="input-group textarea-group form-group">
+                                            <label for="review-message" class="visually-hidden" data-lang-placeholder="reviewFormMessagePlaceholder"></label>
+                                            <i class="fa-solid fa-comment-dots"></i>
+                                            <textarea id="review-message" name="review_message" rows="4" data-lang-placeholder="reviewFormMessagePlaceholder" required></textarea>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary form-submit-btn" data-lang="reviewFormSubmitButton"></button>
+                                </form>
+                            </div>
+                            <div id="review-success-message" class="review-success-message" style="display: none;">
+                                <i class="fas fa-check-circle"></i>
+                                <h3 data-lang="reviewSuccessTitle"></h3>
+                                <p data-lang="reviewPendingMessage"></p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- ================================ -->
+            <!-- START: VIRTUAL ALL-REVIEWS PAGE  -->
+            <!-- ================================ -->
+            <div id="all-reviews-page-view" class="page-view">
+                <section id="all-reviews-page" class="content-section-dark centered-page">
+                    <div class="container">
+                        <div class="page-header" data-aos="fade-up">
+                            <h2 class="section-title" data-lang="allReviewsTitle"></h2>
+                            <a href="#testimonials" class="nav-link back-link" data-lang="backToHome">← Back</a>
+                        </div>
+
+                        <div class="all-reviews-grid" data-aos="fade-up" data-aos-delay="100">
+                            <div class="review-card case-card">
+                                <div class="case-top">
+                                    <img src="./Everluxe.jpg" alt="Everluxe logo" class="review-avatar">
+                                    <div class="case-meta">
+                                        <p class="review-author">თამილა — მფლობელი, Everluxe <span class="package-pill pro-package" data-lang="proPackageLabel">Pro Package</span></p>
+                                        <p class="case-tags" data-lang="webInfoTitle" >eCommerce · Stripe Checkout · Launched: May 2025</p>
+                                    </div>
+                                    <span class="verified-badge" aria-hidden="true" data-lang="checkedTitle" >✓ შემოწმებული</span>
+                                </div>
+                                <div class="case-body">
+                                    <div class="screenshot-thumb" aria-hidden="true">
+                                        <img src="./Everlux.Web.png" alt="Everluxe პროდუქტის გვერდის სქრინშოტი" />
+                                    </div>
+                                    <div class="case-copy">
+                                        <div class="outcome-row">
+                                            <span class="outcome-pill" aria-label="+30% გაყიდვები" data-lang="salesTitle" >+30% გაყიდვები</span>
+                                            <span class="case-source" data-lang="sourceTitle">წყარო: GA4 • 60 დღე</span>
+                                        </div>
+                                        <blockquote class="client-quote" cite="https://everluxe.vercel.app">
+                                            “მართლა არ ველოდი ასეთ შედეგს. osg კომპანიის სერვისმა გაყიდვებში ძალაინ დამეხმარა, მადლობა გუნდის თითოეულ წევრს!”
+                                            <footer class="quote-author">— თამილა, Everluxe</footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="case-ctas">
+                                    <a class="btn btn-primary" href="https://everluxe.vercel.app" target="_blank" rel="noopener noreferrer" aria-label="Open Everluxe live site" data-lang="viewPRTitle">View Live Project</a>
+                                </div>
+                            </div>
+
+                            <div class="review-card case-card">
+                                <div class="case-top">
+                                    <img src="./osee.png" alt="HellShop logo" class="review-avatar">
+                                    <div class="case-meta">
+                                        <p class="review-author">თამრიკო — მფლობელი, HellShop <span class="package-pill starter-package" data-lang="starterPackageLabel">Starter Package</span></p>
+                                        <p class="case-tags"  data-lang="webInfoTitle2">Online Store · Performance · Launched: Apr 2025</p>
+                                    </div>
+                                    <span class="verified-badge" aria-hidden="true" data-lang="checkedTitle" >✓ შემოწმებული</span>
+                                </div>
+                                <div class="case-body">
+                                    <div class="screenshot-thumb" aria-hidden="true">
+                                        <img src="./Hellshop.Web.png" alt="HellShop პროდუქტის გვერდის სქრინშოტი" />
+                                    </div>
+                                    <div class="case-copy">
+                                        <div class="outcome-row">
+                                            <span class="outcome-pill" aria-label="+30% გაყიდვები" data-lang="salesTitle2" >+22% გაყიდვები</span>
+                                            <span class="case-source" data-lang="sourceTitle2">წყარო: Admin / GA4 • 45 დღე</span>
+                                        </div>
+                                        <blockquote class="client-quote" cite="https://hellshop.vercel.app/">
+                                            “კმაყოფილი ვარ სერვისით, სწრაფი მომსახურება აქვთ და ამ ფასად ნამდვილად კარგი არჩევანია.”
+                                            <footer class="quote-author">— თამრიკო, HellShop</footer>
+                                        </blockquote>
+                                    </div>
+                                </div>
+                                <div class="case-ctas">
+                                    <a class="btn btn-primary" href="https://hellshop.vercel.app/" target="_blank" rel="noopener noreferrer" aria-label="Open HellShop live site" data-lang="viewPRTitle">View Live Project</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="end-of-reviews-marker" data-aos="fade-up">
+                            <span data-lang="noMoreReviews">No more reviews</span>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-col" data-aos="fade-up">
+                        <h4 class="logo">OSGWeb.ge</h4>
+                        <p data-lang="footerAbout"></p>
+                    </div>
+                    <div class="footer-col" data-aos="fade-up" data-aos-delay="200">
+                        <h4 data-lang="footerContactTitle"></h4>
+                        <p><i class="fas fa-envelope"></i> osgbusiness01@gmail.com</p>
+                        <p><i class="fas fa-phone"></i> +995 555 09 59 59 </p>
+                    </div>
+                    <div class="footer-col" data-aos="fade-up" data-aos-delay="300">
+                        <h4 data-lang="footerSocialTitle"></h4>
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/TheOSGAgency" target="_blank" rel="noopener noreferrer" aria-label="Our Facebook Page"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/osg.agency/" target="_blank" rel="noopener noreferrer" aria-label="Our Instagram Profile"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.tiktok.com/@osg.agency" target="_blank" rel="noopener noreferrer" aria-label="Our TikTok Profile"><i class="fab fa-tiktok"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p data-lang="footerCopyright"></p>
+                    <div class="footer-legal-links">
+                        <a href="terms.html" data-lang="footerTerms">Terms of Service</a>
                     </div>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p data-lang="footerCopyright"></p>
-                <div class="footer-legal-links">
-                    <a href="terms.html" data-lang="footerTerms">Terms of Service</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+        </footer>
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script src="vendor-gsap.min.js"></script>
-    <script src="vendor-gsap-scrolltrigger.min.js"></script>
-    <script src="vendor-gsap-scrolltoplugin.min.js"></script>
-    <script src="script.js"></script>
-    <script src="hanging-badge.js" defer></script>
-</body>
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script src="vendor-gsap.min.js"></script>
+        <script src="vendor-gsap-scrolltrigger.min.js"></script>
+        <script src="vendor-gsap-scrolltoplugin.min.js"></script>
+        <script src="script.js"></script>
+        <script src="hanging-badge.js" defer></script>
+    </body>
 
-</html>
+    </html>
