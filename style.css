@@ -385,10 +385,10 @@ section { padding: 4rem 0; }
     position: absolute;
     inset: 0;
     background:
-        radial-gradient(65% 85% at 14% 58%, rgba(1, 6, 4, 0.60) 0%, rgba(1, 6, 4, 0) 68%),
-        linear-gradient(180deg, rgba(2, 10, 7, 0.40) 0%, rgba(2, 10, 7, 0.56) 48%, rgba(2, 10, 7, 0.76) 100%);
-    backdrop-filter: blur(2px);
-    -webkit-backdrop-filter: blur(2px);
+        radial-gradient(65% 85% at 14% 58%, rgba(1, 6, 4, 0.32) 0%, rgba(1, 6, 4, 0) 68%),
+        linear-gradient(180deg, rgba(2, 10, 7, 0.18) 0%, rgba(2, 10, 7, 0.28) 48%, rgba(2, 10, 7, 0.42) 100%);
+    backdrop-filter: blur(1px);
+    -webkit-backdrop-filter: blur(1px);
     opacity: 1;
     transition: opacity 1s ease;
 }
@@ -1266,4 +1266,12 @@ html.hero-cinematic-init header {
 .standalone-back-link {
     left: 1.5rem;
     right: auto;
+}
+
+
+
+@media (min-width: 768px) {
+    .hero-video-wrap--mobile-only {
+        display: none;
+    }
 }
