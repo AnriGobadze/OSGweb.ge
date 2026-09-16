@@ -273,7 +273,7 @@ plan6moPeriod: "6 monthly payments\n(+25% fee)",
 
 pricingStarterPrice5050: "600₾", pricingStarterPrice3mo: "460₾", pricingStarterPrice6mo: "250₾",
 pricingProPrice5050: "1250₾", pricingProPrice3mo: "955₾", pricingProPrice6mo: "520₾",
-pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPremiumPrice6mo: "630₾",
+pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPremiumPrice6mo: "1080₾",
 
 
             pricingProTitle: "Pro", pricingProPrice: "2,500₾", 
@@ -359,7 +359,7 @@ plan6moPeriod: "6 ყოველთვიური გადახდა\n(+25%
 
 pricingStarterPrice5050: "600₾", pricingStarterPrice3mo: "460₾", pricingStarterPrice6mo: "250₾",
 pricingProPrice5050: "1250₾", pricingProPrice3mo: "955₾", pricingProPrice6mo: "520₾",
-pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPremiumPrice6mo: "630₾",
+pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPremiumPrice6mo: "1080₾",
 
 
 
@@ -448,7 +448,7 @@ plan6moPeriod: "6 ежемесячных платежей\n(+25% комисси�
 
 pricingStarterPrice5050: "600₾", pricingStarterPrice3mo: "460₾", pricingStarterPrice6mo: "250₾",
 pricingProPrice5050: "1250₾", pricingProPrice3mo: "955₾", pricingProPrice6mo: "520₾",
-pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPremiumPrice6mo: "630₾",
+pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPremiumPrice6mo: "1080₾",
 
 
             pricingProTitle: "Про", pricingProPrice: "2 500₾", 
