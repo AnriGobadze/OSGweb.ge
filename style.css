@@ -175,7 +175,7 @@ body {
 }
 .site-bg-image {
     position: absolute;
-    inset: -3%;
+    inset: -5.2%;
     background-image: var(--bg-texture);
     background-size: cover;
     background-position: center;
@@ -793,16 +793,29 @@ html.hero-cinematic-init header {
 
 .case-tags { font-size: .82rem; line-height: 1.3; color: var(--text-color-light); opacity: .95; }
 @media (max-width: 767px) {
-    /* "eCommerce · Stripe Checkout · " stays desktop-only; mobile shows
-       just the launch date to keep this line compact. */
     .case-tag-prefix { display: none; }
+
+    .verified-badge { display: none; }
+
+    .case-top .package-pill {
+        position: absolute;
+        top: -7px;
+        right: -10px;
+        margin: 0;
+        white-space: nowrap;
+        font-size: 0.72rem;
+        padding: 0.15rem 0.5rem;
+    }
+
+    .case-meta .review-author { padding-right: 5rem; }
+    .case-tags { margin-top: -1rem; }
+
 }
 .verified-badge { position: absolute; top: -7px; right: -10px; background: var(--verified-bg); color: var(--verified-text); font-weight: 700; padding: 0.2rem .55rem; border-radius: 999px; font-size: .68rem; border: 1px solid var(--verified-border); box-shadow: 0 2px 6px var(--verified-shadow); white-space: nowrap; }
 
 .case-body { display: flex; flex-direction: column; gap: 1rem; align-items: flex-start; margin-top: 0.25rem; }
-.screenshot-thumb { width: 100%; height: 220px; min-width: auto; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--glass-border); flex-shrink: 0; background: linear-gradient(180deg, var(--screenshot-gradient-start) 0%, var(--screenshot-gradient-end) 100%); }
+.screenshot-thumb { width: 100%; aspect-ratio: 16 / 9; height: auto; min-width: auto; border-radius: 10px; overflow: hidden; box-shadow: var(--shadow-sm); border: 1px solid var(--glass-border); flex-shrink: 0; background: linear-gradient(180deg, var(--screenshot-gradient-start) 0%, var(--screenshot-gradient-end) 100%); }
 .screenshot-thumb img { width: 100%; height: 100%; object-fit: cover; display: block; }
-
 .case-copy { flex: 1; display: flex; flex-direction: column; gap: .75rem; }
 .outcome-row { display: flex; gap: .75rem; align-items: center; flex-wrap: wrap; }
 .outcome-pill { background: var(--outcome-bg); color: var(--outcome-text); padding: 6px 10px; border-radius: 999px; font-weight: 700; font-size: .95rem; border: 1px solid var(--outcome-border); box-shadow: 0 2px 6px var(--outcome-shadow); }
@@ -905,6 +918,40 @@ html.hero-cinematic-init header {
     flex-wrap: wrap;
 }
 .plan-subtoggle[hidden] { display: none; }
+
+.portfolio-filter {
+    display: flex;
+    justify-content: center;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+    margin-bottom: 2.5rem;
+}
+.filter-btn {
+    border: 1px solid var(--glass-border);
+    background: rgba(16, 185, 129, 0.05);
+    color: var(--text-color-light);
+    padding: 0.55rem 1.3rem;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+.filter-btn.active {
+    background: var(--primary-gradient);
+    color: var(--text-on-accent);
+    border-color: transparent;
+    box-shadow: 0 4px 14px rgba(16, 185, 129, 0.35);
+}
+.filter-btn.is-default {
+    border-color: var(--accent-emerald);
+    color: var(--accent-mint);
+}
+.filter-btn:hover:not(.active) {
+    border-color: var(--accent-emerald);
+    color: var(--accent-mint);
+}
 
 .subtoggle-btn {
     border: 1px solid var(--glass-border);
@@ -1200,7 +1247,7 @@ html.hero-cinematic-init header {
     section { padding: 6rem 0; }
 
     .case-body { flex-direction: row; }
-    .screenshot-thumb { width: 180px; min-width: 120px; height: 120px; }
+    .screenshot-thumb { width: 240px; min-width: 240px; aspect-ratio: 16 / 9; height: auto; }
     .verified-badge { top: 0.25rem; right: 0.25rem; padding: 0.25rem .6rem; font-size: .8rem; }
     .case-top { align-items: center; }
     .case-ctas { flex-direction: row; }

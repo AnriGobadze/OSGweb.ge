@@ -225,11 +225,12 @@ document.addEventListener('DOMContentLoaded', () => {
             heroTitle: "Your Business,<br><span class='gradient-text'>Digitally.</span>", heroSubtitle: "Websites That Work For You", heroButton: "Start a Project <i class=\"fas fa-chevron-right\" aria-hidden=\"true\"></i>", heroButtonSecondary: "Explore Services",
 
             servicesTitle: "Our Goal Is Your Success",
-            service1Title: "Design", service1Desc: "A technically sound website is not enough — the visual impression decides whether the user stays. The design should be modern, easy to understand, and tailored to the brand.",
+            service1Title: "Design", service1Desc: "A technically sound website is not enough , the visual impression decides whether the user stays. The design should be modern, easy to understand, and tailored to the brand.",
             service2Title: "Security", service2Desc: "User trust begins with website security. Modern protection mechanisms ensure defense against hacking attacks, data leaks, and other threats.",
-            service3Title: "Easy Management", service3Desc: "An intuitive system lets you easily change texts, add images, and customize the site to your needs — without coding knowledge.",
+            service3Title: "Easy Management", service3Desc: "An intuitive system lets you easily change texts, add images, and customize the site to your needs , without coding knowledge.",
 
             portfolioTitle: "Featured Works",
+            filterClientLabel: "Client Sites", filterTemplateLabel: "Template Builds", viewDemoTitle: "View Demo",
             flagship09Title:"'Sufta Sivrce' - Hotel laundry website" ,flagship1Title: "'Jagi Building' - Construction Website", flagship2Title: "'Laptop Georgia' - Tech Repair Website", flagship3Title: "'Stilis Sivrce' - Clothing Store Website", flagship4Title: "'Terra 24' - Funeral Bureau Website",
             flagship5Title: "'Prime Grind' - Construction Website", flagship6Title: "'Skhila Diesel Motors' - Car Care Website", flagship7Title: "'La Arté' - Jewellery Website", flagship8Title: "'EVAKUATORIGZAZE' - Tow Truck Website",
             portfolio1Title: "'The Golden Fork' - Restaurant Website", portfolio2Title: "'The Trim House' - Barbershop Branding", portfolio3Title: "'Olio & Sale' - Cafe Online Website",
@@ -306,18 +307,19 @@ pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPr
 
             salesTitle2: "+22% გაყიდვები", sourceTitle2: "წყარო: Admin / GA4 • 45 დღე", webInfoTitle2: "<span class=\"case-tag-prefix\">ონლაინ მაღაზია · შესრულება · </span>გამოშვების თარიღი: აპრ 2025", viewPRTitle: "პროექტის ნახვა",
 
-            pageDescription: "OSG Digital Agency — ბუტიკ ვებ სტუდია. ვქმნით მორგებულ, მაღალხარისხიან ციფრულ პლატფორმებს და ვებსაიტებს ბიზნესებისთვის.",
+            pageDescription: "OSG Digital Agency , ბუტიკ ვებ სტუდია. ვქმნით მორგებულ, მაღალხარისხიან ციფრულ პლატფორმებს და ვებსაიტებს ბიზნესებისთვის.",
             pageTitle: "ვებსაიტების დამზადება და UI/UX დიზაინი | OSG",
 
             navServices: "სერვისები", navPortfolio: "პორტფოლიო", navTestimonials: "შეფასებები", navPricing: "ფასები", navContact: "კონტაქტი",
             heroTitle: "შენი ბიზნესი,<br><span class='gradient-text'>ციფრულად.</span>", heroSubtitle: "ვებსაიტები, რომლებიც მუშაობენ თქვენთვის", heroButton: "პროექტის დაწყება <i class=\"fas fa-chevron-right\" aria-hidden=\"true\"></i>", heroButtonSecondary: "სერვისების ნახვა",
 
             servicesTitle: "ჩვენი მიზანია შენი წარმატება",
-            service1Title: "დიზაინი", service1Desc: "ტექნიკურად გამართული საიტი საკმარისი არაა — ვიზუალური შთაბეჭდილება გადაწყვიტავს, დარჩება თუ არა მომხმარებელი. დიზაინი უნდა იყოს თანამედროვე, მარტივად აღსაქმელი და ბრენდზე მორგებული.",
+            service1Title: "დიზაინი", service1Desc: "ტექნიკურად გამართული საიტი საკმარისი არაა , ვიზუალური შთაბეჭდილება გადაწყვიტავს, დარჩება თუ არა მომხმარებელი. დიზაინი უნდა იყოს თანამედროვე, მარტივად აღსაქმელი და ბრენდზე მორგებული.",
             service2Title: "უსაფრთხოება", service2Desc: "მომხმარებლის ნდობა იწყება საიტის უსაფრთხოებით. თანამედროვე დაცვით მექანიზმებს უზრუნველყოფს ჰაკერული თავდასხმების, მონაცემთა გაჟონვის და სხვა საფრთხეებისგან დაცვას.",
-            service3Title: "მარტივი მართვა", service3Desc: "ინტუიციური სისტემა საშუალებას გაძლევთ მარტივად შეცვალოთ ტექსტები, დაამატოთ სურათები და მოარგოთ საიტი თქვენს საჭიროებებს — კოდის ცოდნის გარეშე.",
+            service3Title: "მარტივი მართვა", service3Desc: "ინტუიციური სისტემა საშუალებას გაძლევთ მარტივად შეცვალოთ ტექსტები, დაამატოთ სურათები და მოარგოთ საიტი თქვენს საჭიროებებს , კოდის ცოდნის გარეშე.",
 
             portfolioTitle: "გამორჩეული ნამუშევრები",
+            filterClientLabel: "კლიენტის საიტები", filterTemplateLabel: "შაბლონები", viewDemoTitle: "დემოს ნახვა",
             flagship09Title:"'Sufta Sivrce' - სასტუმროს სამრეცხაო ვებსაიტი" ,flagship1Title: "'Jagi Building' - სამშენებლო კომპანიის ვებსაიტი", flagship2Title: "'Laptop Georgia' - ტექნიკის შეკეთების ვებსაიტი", flagship3Title: "'Stilis Sivrce' - ტანსაცმლის მაღაზიის ვებსაიტი", flagship4Title: "'Terra 24' - სარიტუალო ბიუროს ვებსაიტი",
             flagship5Title: "'Prime Grind' - სამშენებლო კომპანიის ვებსაიტი", flagship6Title: "'Skhila Diesel Motors' - ავტოსერვისის ვებსაიტი", flagship7Title: "'La Arté' - საიუველირო ვებსაიტი", flagship8Title: "'EVAKUATORIGZAZE' - ევაკუატორის სერვისის ვებსაიტი",
             portfolio1Title: "'The Golden Fork' - რესტორნის ვებსაიტი", portfolio4Title: "'Healthy Salad' - რესტორნის ვებსაიტი", portfolio5Title: "'Naxus AI' - კორპორატიული ტექნოლოგიური ვებსაიტი",
@@ -400,16 +402,17 @@ pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPr
             navServices: "Услуги", navPortfolio: "Портфолио", navTestimonials: "Отзывы", navPricing: "Цены", navContact: "Контакты",
             heroTitle: "Свой бизнес,<br><span class='gradient-text'>в цифре.</span>", heroSubtitle: "Сайты, которые работают на вас", heroButton: "Начать проект <i class=\"fas fa-chevron-right\" aria-hidden=\"true\"></i>", heroButtonSecondary: "Изучить услуги",
 
-            servicesTitle: "Наша цель – ваш успех",
-            service1Title: "Дизайн", service1Desc: "Технически совершенного сайта недостаточно — визуальное впечатление решает, останется ли пользователь. Дизайн должен быть современным, понятным и адаптированным под бренд.",
+            servicesTitle: "Наша цель , ваш успех",
+            service1Title: "Дизайн", service1Desc: "Технически совершенного сайта недостаточно , визуальное впечатление решает, останется ли пользователь. Дизайн должен быть современным, понятным и адаптированным под бренд.",
             service2Title: "Безопасность", service2Desc: "Доверие пользователей начинается с безопасности сайта. Современные механизмы защиты обеспечивают отражение хакерских атак, утечек данных и других угроз.",
-            service3Title: "Простое управление", service3Desc: "Интуитивно понятная система позволяет легко изменять тексты, добавлять изображения и настраивать сайт под свои нужды — без знаний кодирования.",
+            service3Title: "Простое управление", service3Desc: "Интуитивно понятная система позволяет легко изменять тексты, добавлять изображения и настраивать сайт под свои нужды , без знаний кодирования.",
 
             portfolioTitle: "Избранные работы",
+            filterClientLabel: "Клиентские сайты", filterTemplateLabel: "На основе шаблонов", viewDemoTitle: "Смотреть демо",
             flagship09Title:"'Sufta Sivrce' - Веб-сайт прачечной при отеле" ,flagship1Title: "'Jagi Building' - Сайт строительной компании", flagship2Title: "'Laptop Georgia' - Сайт по ремонту техники", flagship3Title: "'Stilis Sivrce' - Сайт магазина одежды", flagship4Title: "'Terra 24' - Сайт ритуального бюро",
             flagship5Title: "'Prime Grind' - Сайт строительной компании", flagship6Title: "'Skhila Diesel Motors' - Сайт автосервиса", flagship7Title: "'La Arté' - Сайт ювелирного бренда", flagship8Title: "'EVAKUATORIGZAZE' - Сайт эвакуатора",
             portfolio1Title: "'Золотая Вилка' - Сайт ресторана", portfolio2Title: "'Дом Стрижки' - Брендинг барбершопа", portfolio3Title: "'Олио и Сале' - Онлайн-сайт кафе",
-            portfolio4Title: "'полезный салат' - Сайт ресторана", portfolio5Title: "'Naxus AI' — Корпоративный технологический веб-сайт",
+            portfolio4Title: "'полезный салат' - Сайт ресторана", portfolio5Title: "'Naxus AI' , Корпоративный технологический веб-сайт",
 
             testimonialsTitle: "Отзывы и рекомендации", contactTitle: "Свяжитесь с нами", contactInfoTitle: "Контактная информация",
             contactInfoDesc: "Есть проект или вопрос? Напишите нам, позвоните или заполните форму.",
@@ -764,29 +767,30 @@ const periodKey = getPeriodKey();
     // ================================
     // PORTFOLIO CAROUSEL
     // ================================
-    const initPortfolioCarousel = () => {
-        const track = document.querySelector('.carousel-track');
-        const items = document.querySelectorAll('.carousel-item');
-        const prevBtn = document.querySelector('.carousel-btn--prev');
-        const nextBtn = document.querySelector('.carousel-btn--next');
-        const dotsContainer = document.querySelector('.carousel-dots');
+const initPortfolioCarousel = () => {
+    const track = document.querySelector('.carousel-track');
+    const allItems = Array.from(document.querySelectorAll('.carousel-item'));
+    const prevBtn = document.querySelector('.carousel-btn--prev');
+    const nextBtn = document.querySelector('.carousel-btn--next');
+    const dotsContainer = document.querySelector('.carousel-dots');
+    const filterButtons = document.querySelectorAll('.filter-btn');
 
-        if (!track || !items.length) return;
+    if (!track || !allItems.length) return;
 
-        let currentIndex = 0;
-        const total = items.length;
+    let visibleItems = allItems;
+    let currentIndex = 0;
+    let dots = [];
+    let dotsTrack = null;
+    let dotPitch = 0;
 
-        // --- Build dots: ONE real dot per project, inside a track that's
-        // wider than its viewport. `.carousel-dots` is the viewport
-        // (`overflow: hidden`, ~5 dots wide); `.carousel-dots-track` is
-        // the full-width strip of `total` dots that physically slides
-        // via `transform`, so extra dots visibly scroll past behind the
-        // centered active one instead of just relabeling 5 static dots. ---
-        const dotsTrack = document.createElement('div');
+    const buildDots = () => {
+        dotsContainer.innerHTML = '';
+        dots = [];
+        dotsTrack = document.createElement('div');
         dotsTrack.className = 'carousel-dots-track';
         dotsContainer.appendChild(dotsTrack);
 
-        const dots = [];
+        const total = visibleItems.length;
         for (let i = 0; i < total; i++) {
             const dot = document.createElement('button');
             dot.classList.add('carousel-dot');
@@ -795,29 +799,17 @@ const periodKey = getPeriodKey();
             dotsTrack.appendChild(dot);
             dots.push(dot);
         }
+        if (!total) { dotsContainer.style.width = '0px'; return; }
 
-        // Size the viewport by measuring REAL rendered geometry directly
-        // (not a hand-rolled width formula), with the CENTER slot marked
-        // active — the exact "2 resting + 1 active pill + 2 resting"
-        // configuration the steady-state slide shows — then add a small
-        // rounding buffer. This is what guarantees all 5 dots actually
-        // fit with zero clipping, regardless of gap units or subpixel
-        // rounding quirks.
         const VISIBLE_SLOTS = Math.min(5, total);
         const centerSlot = Math.min(Math.floor(VISIBLE_SLOTS / 2), total - 1);
         const restingDotWidth = dots[0].offsetWidth;
         const dotGap = parseFloat(getComputedStyle(dotsTrack).gap) || 0;
-        const dotPitch = restingDotWidth + dotGap;
+        dotPitch = restingDotWidth + dotGap;
 
-        // Suspend the transition while measuring: toggling `.is-active`
-        // and reading `offsetWidth`/`offsetLeft` in the same synchronous
-        // tick can otherwise catch the width mid-transition (or before
-        // it's committed at all), silently under-measuring the pill and
-        // making the viewport a few px too narrow to fit the 5th dot.
-        // `transition: none` forces the new width to apply instantly.
         dots[centerSlot].style.transition = 'none';
         dots[centerSlot].classList.add('is-active');
-        void dots[centerSlot].offsetWidth; // force the style flush above to take effect
+        void dots[centerSlot].offsetWidth;
 
         const firstVisibleDot = dots[0];
         const lastVisibleDot = dots[VISIBLE_SLOTS - 1];
@@ -825,90 +817,95 @@ const periodKey = getPeriodKey();
             (lastVisibleDot.offsetLeft + lastVisibleDot.offsetWidth) - firstVisibleDot.offsetLeft;
 
         dots[centerSlot].classList.remove('is-active');
-        void dots[centerSlot].offsetWidth; // flush the removal too, before restoring the transition
+        void dots[centerSlot].offsetWidth;
         dots[centerSlot].style.transition = '';
 
         const TRAILING_BUFFER = 23;
         dotsContainer.style.width = `${Math.ceil(measuredSpan) + TRAILING_BUFFER}px`;
-
-        const syncDots = () => {
-            if (!dots.length) return;
-            dots.forEach((dot, i) => dot.classList.toggle('is-active', i === currentIndex));
-
-            // Fixed-step slide, not continuous centering:
-            //   item 0, 1        -> 0 steps (start of track)
-            //   item 2 .. N-3    -> (currentIndex - 2) steps — the active
-            //                       dot always lands in the 3rd (center)
-            //                       visible slot while the track itself
-            //                       keeps sliding by exactly 1 step
-            //   item N-2, N-1    -> locked at (N - 5) steps (end of track)
-            let steps = 0;
-            if (total > VISIBLE_SLOTS) {
-                if (currentIndex <= 1) steps = 0;
-                else if (currentIndex >= total - 2) steps = total - VISIBLE_SLOTS;
-                else steps = currentIndex - 2;
-            }
-
-            dotsTrack.style.transform = `translateX(${-(steps * dotPitch)}px)`;
-        };
-
-        const goTo = (index) => {
-            currentIndex = Math.max(0, Math.min(index, total - 1));
-
-            const wrapperWidth = track.parentElement.offsetWidth;
-            const itemWidth = items[currentIndex].offsetWidth;
-
-            const gap = parseFloat(getComputedStyle(track).gap) || 0;
-
-            const offset = (currentIndex * (itemWidth + gap)) - (wrapperWidth / 2) + (itemWidth / 2);
-
-            track.style.transform = `translateX(${-offset}px)`;
-
-            items.forEach((item, i) => {
-                item.classList.toggle('is-active', i === currentIndex);
-            });
-
-            syncDots();
-
-            prevBtn.style.opacity = currentIndex === 0 ? "0" : "1";
-            prevBtn.style.pointerEvents = currentIndex === 0 ? "none" : "auto";
-
-            nextBtn.style.opacity = currentIndex === total - 1 ? "0" : "1";
-            nextBtn.style.pointerEvents = currentIndex === total - 1 ? "none" : "auto";
-        };
-
-        prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
-        nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
-
-        document.addEventListener('keydown', (e) => {
-            const portfolioSection = document.getElementById('portfolio');
-            if (!portfolioSection) return;
-            const rect = portfolioSection.getBoundingClientRect();
-            const inView = rect.top < window.innerHeight && rect.bottom > 0;
-            if (!inView) return;
-
-            if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
-            if (e.key === 'ArrowRight') goTo(currentIndex + 1);
-        });
-
-        let touchStartX = 0;
-        let touchDelta = 0;
-
-        track.addEventListener('touchstart', (e) => {
-            touchStartX = e.touches[0].clientX;
-        }, { passive: true });
-
-        track.addEventListener('touchend', (e) => {
-            touchDelta = touchStartX - e.changedTouches[0].clientX;
-            if (Math.abs(touchDelta) > 50) {
-                touchDelta > 0 ? goTo(currentIndex + 1) : goTo(currentIndex - 1);
-            }
-        }, { passive: true });
-
-        window.addEventListener('resize', () => goTo(currentIndex));
-
-        goTo(0);
     };
+
+    const syncDots = () => {
+        const total = visibleItems.length;
+        if (!dots.length) return;
+        dots.forEach((dot, i) => dot.classList.toggle('is-active', i === currentIndex));
+
+        const VISIBLE_SLOTS = Math.min(5, total);
+        let steps = 0;
+        if (total > VISIBLE_SLOTS) {
+            if (currentIndex <= 1) steps = 0;
+            else if (currentIndex >= total - 2) steps = total - VISIBLE_SLOTS;
+            else steps = currentIndex - 2;
+        }
+        dotsTrack.style.transform = `translateX(${-(steps * dotPitch)}px)`;
+    };
+
+    const goTo = (index) => {
+        const total = visibleItems.length;
+        if (!total) return;
+        currentIndex = Math.max(0, Math.min(index, total - 1));
+
+        const wrapperWidth = track.parentElement.offsetWidth;
+        const itemWidth = visibleItems[currentIndex].offsetWidth;
+        const gap = parseFloat(getComputedStyle(track).gap) || 0;
+        const offset = (currentIndex * (itemWidth + gap)) - (wrapperWidth / 2) + (itemWidth / 2);
+        track.style.transform = `translateX(${-offset}px)`;
+
+        visibleItems.forEach((item, i) => item.classList.toggle('is-active', i === currentIndex));
+        syncDots();
+
+        prevBtn.style.opacity = currentIndex === 0 ? "0" : "1";
+        prevBtn.style.pointerEvents = currentIndex === 0 ? "none" : "auto";
+        nextBtn.style.opacity = currentIndex === total - 1 ? "0" : "1";
+        nextBtn.style.pointerEvents = currentIndex === total - 1 ? "none" : "auto";
+    };
+
+    const applyFilter = (filter) => {
+        allItems.forEach(item => {
+            const matches = filter === 'all' || item.getAttribute('data-category') === filter;
+            item.style.display = matches ? '' : 'none';
+            item.classList.remove('is-active');
+        });
+        visibleItems = filter === 'all' ? allItems : allItems.filter(item => item.getAttribute('data-category') === filter);
+        currentIndex = 0;
+        buildDots();
+        requestAnimationFrame(() => goTo(0));
+    };
+
+    filterButtons.forEach(btn => {
+        btn.addEventListener('click', () => {
+            filterButtons.forEach(b => {
+                b.classList.remove('is-default');
+                b.classList.toggle('active', b === btn);
+                b.setAttribute('aria-selected', b === btn ? 'true' : 'false');
+            });
+            applyFilter(btn.getAttribute('data-filter'));
+        });
+    });
+
+    prevBtn.addEventListener('click', () => goTo(currentIndex - 1));
+    nextBtn.addEventListener('click', () => goTo(currentIndex + 1));
+
+    document.addEventListener('keydown', (e) => {
+        const portfolioSection = document.getElementById('portfolio');
+        if (!portfolioSection) return;
+        const rect = portfolioSection.getBoundingClientRect();
+        const inView = rect.top < window.innerHeight && rect.bottom > 0;
+        if (!inView) return;
+        if (e.key === 'ArrowLeft') goTo(currentIndex - 1);
+        if (e.key === 'ArrowRight') goTo(currentIndex + 1);
+    });
+
+    let touchStartX = 0, touchDelta = 0;
+    track.addEventListener('touchstart', (e) => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    track.addEventListener('touchend', (e) => {
+        touchDelta = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(touchDelta) > 50) touchDelta > 0 ? goTo(currentIndex + 1) : goTo(currentIndex - 1);
+    }, { passive: true });
+
+    window.addEventListener('resize', () => goTo(currentIndex));
+
+    applyFilter('client');
+};
 
     initPortfolioCarousel();
 
@@ -964,8 +961,8 @@ const periodKey = getPeriodKey();
         const MAGNET_STRENGTH = 0.28;
         const MAX_OFFSET = 10;
 
-        document.querySelectorAll('.btn-primary, .btn-secondary').forEach(btn => {
-            let pendingEvent = null;
+        document.querySelectorAll('.btn-primary, .btn-secondary, .filter-btn, .subtoggle-btn').forEach(btn => {
+        let pendingEvent = null;
 
             btn.addEventListener('mousemove', (e) => {
                 const isFirstPending = pendingEvent === null;
