@@ -143,10 +143,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    let currentLang = localStorage.getItem('lang') || (navigator.language.startsWith('ka') ? 'ge' : (navigator.language.startsWith('ru') ? 'ru' : 'en'));
+    // Georgian unless the visitor picked a language (see script.js).
+    let currentLang = localStorage.getItem('lang') || (navigator.language.startsWith('ru') ? 'ru' : 'ge');
 
     const applyTranslations = (lang) => {
         if (!translations[lang]) return;
+        document.documentElement.lang = lang === 'ge' ? 'ka' : lang;
 
         if (translations[lang].pageTitle) {
             document.title = translations[lang].pageTitle;

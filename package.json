@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "prerender:ka": "node tools/prerender-ka.js"
+  },
   "dependencies": {
     "gsap": "^3.15.0"
   }

@@ -307,8 +307,8 @@ pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPr
 
             salesTitle2: "+22% გაყიდვები", sourceTitle2: "წყარო: Admin / GA4 • 45 დღე", webInfoTitle2: "<span class=\"case-tag-prefix\">ონლაინ მაღაზია · შესრულება · </span>გამოშვების თარიღი: აპრ 2025", viewPRTitle: "პროექტის ნახვა",
 
-            pageDescription: "OSG Digital Agency , ბუტიკ ვებ სტუდია. ვქმნით მორგებულ, მაღალხარისხიან ციფრულ პლატფორმებს და ვებსაიტებს ბიზნესებისთვის.",
-            pageTitle: "ვებსაიტების დამზადება და UI/UX დიზაინი | OSG",
+            pageDescription: "საიტის დამზადება თბილისში 1,200₾-დან: სწრაფი, SEO-ზე მორგებული ვებსაიტები, ონლაინ მაღაზიები და ადმინ პანელი. განვადება 6 თვემდე. OSG Digital Agency.",
+            pageTitle: "საიტის დამზადება და ვებ დიზაინი თბილისში | OSG",
 
             navServices: "სერვისები", navPortfolio: "პორტფოლიო", navTestimonials: "შეფასებები", navPricing: "ფასები", navContact: "კონტაქტი",
             heroTitle: "შენი ბიზნესი,<br><span class='gradient-text'>ციფრულად.</span>", heroSubtitle: "ვებსაიტები, რომლებიც მუშაობენ თქვენთვის", heroButton: "პროექტის დაწყება <i class=\"fas fa-chevron-right\" aria-hidden=\"true\"></i>", heroButtonSecondary: "სერვისების ნახვა",
@@ -474,7 +474,10 @@ pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPr
         }
     };
 
-    let currentLang = localStorage.getItem('lang') || (navigator.language.startsWith('ka') ? 'ge' : (navigator.language.startsWith('ru') ? 'ru' : 'en'));
+    // Georgian is the default for everyone who hasn't picked a language.
+    // Don't fall back to English for en-* browsers: Googlebot renders with
+    // navigator.language "en-US", so that made Google index the English copy.
+    let currentLang = localStorage.getItem('lang') || (navigator.language.startsWith('ru') ? 'ru' : 'ge');
     let currentBillingPeriod = 'onetime';
 
     let currentPlanType = '5050';
@@ -495,6 +498,7 @@ function getPeriodKey() {
 
     const applyTranslations = (lang) => {
         document.body.setAttribute('data-lang', lang);
+        document.documentElement.lang = lang === 'ge' ? 'ka' : lang;
 
         document.querySelectorAll('[data-lang]').forEach(element => {
             const key = element.getAttribute('data-lang');

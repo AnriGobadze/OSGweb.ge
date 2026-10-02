@@ -1,0 +1,6 @@
+# Not part of the website — keep out of the deployment (and out of Google's index).
+.agents
+.claude
+.vscode
+tools
+skills-lock.json
