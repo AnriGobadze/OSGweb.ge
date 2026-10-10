@@ -922,6 +922,9 @@ html.hero-cinematic-init header {
     flex-wrap: wrap;
 }
 .plan-subtoggle[hidden] { display: none; }
+/* While the row opens/closes its height is animated; clip the overflow
+   but leave room for the active button's glow. */
+.plan-subtoggle.is-animating { overflow: clip; overflow-clip-margin: 24px; }
 
 .portfolio-filter {
     display: flex;
@@ -1269,7 +1272,9 @@ html.hero-cinematic-init header {
 }
 
 @media (min-width: 992px) {
-    .pricing-card.most-popular { width: 105%; transform: scale(1.05); }
+    /* Scale only (no extra width): scale() grows the card evenly from its
+       center, so the gaps on both sides of the Pro card stay equal. */
+    .pricing-card.most-popular { transform: scale(1.05); }
     .hamburger-menu { display: none; }
     .nav-links, .language-selector { display: flex; align-items: center; gap: 2rem; }
     .language-selector .nav-links { gap: 0; }

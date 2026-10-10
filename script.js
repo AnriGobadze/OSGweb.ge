@@ -210,6 +210,23 @@ document.addEventListener('DOMContentLoaded', () => {
     // ================================
     afterFirstFrame(() => AOS.init({ duration: 800, once: true, offset: 50 }));
 
+    // AOS works out each element's trigger point once, from the page layout
+    // at that moment. When the layout changes afterwards (switching to the
+    // contact/reviews page, showing the Individual card, the payment-plan
+    // row opening) those points go stale and an element — most visibly the
+    // footer — can stay invisible. This observer reveals any [data-aos]
+    // element as soon as it's actually on screen, whatever AOS thinks.
+    if ('IntersectionObserver' in window) {
+        const aosObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                entry.target.classList.add('aos-animate');
+                aosObserver.unobserve(entry.target);
+            });
+        }, { rootMargin: '0px 0px -40px 0px' });
+        afterFirstFrame(() => document.querySelectorAll('[data-aos]').forEach(el => aosObserver.observe(el)));
+    }
+
     // ================================
     // STAGGERED ANIMATION SETUP
     // ================================
@@ -688,18 +705,20 @@ const periodKey = getPeriodKey();
 billingToggleEl?.classList.toggle('is-individual', currentBillingPeriod === 'individual');
 billingToggleEl?.classList.toggle('is-plans', currentBillingPeriod === 'plans');
 
-const planSubtoggle = document.getElementById('plan-subtoggle');
-if (planSubtoggle) planSubtoggle.hidden = currentBillingPeriod !== 'plans';
+        setSubtoggleVisible(currentBillingPeriod === 'plans');
         syncToggleIndicator();
 
         if (currentBillingPeriod === 'individual') {
             pricingGrid.classList.add('individual-mode');
             standardCards.forEach(card => card.classList.add('hidden'));
             individualCard.classList.remove('hidden');
+            revealCards([individualCard]);
         } else {
+            const wasIndividual = pricingGrid.classList.contains('individual-mode');
             pricingGrid.classList.remove('individual-mode');
             standardCards.forEach(card => card.classList.remove('hidden'));
             individualCard.classList.add('hidden');
+            if (wasIndividual) revealCards(standardCards);
 
             standardCards.forEach(card => {
                 const planId = card.getAttribute('data-plan-id');
@@ -709,11 +728,83 @@ if (planSubtoggle) planSubtoggle.hidden = currentBillingPeriod !== 'plans';
 const priceKey = `pricing${planId}Price${getPlanSuffix()}`;
 const periodKey = getPeriodKey();
 
-                priceEl.textContent = translations[currentLang][priceKey];
-                periodEl.textContent = translations[currentLang][periodKey];
+                setAnimatedText(priceEl, translations[currentLang][priceKey]);
+                setAnimatedText(periodEl, translations[currentLang][periodKey]);
             });
         }
     };
+
+    const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Swap a price/period label with a short fade-up instead of a hard cut.
+    function setAnimatedText(el, text) {
+        if (!el || el.textContent === text) return;
+        el.textContent = text;
+        if (reducedMotion() || !el.animate) return;
+        el.animate([
+            { opacity: 0, translate: '0 6px' },
+            { opacity: 1, translate: '0 0' }
+        ], { duration: 320, easing: 'ease-out' });
+    }
+
+    // Cards that were display:none fade and rise in, one after another.
+    // (`translate`, not `transform`, so the Pro card keeps its scale.)
+    function revealCards(cards) {
+        if (reducedMotion()) return;
+        Array.from(cards).forEach((card, i) => {
+            card.animate?.([
+                { opacity: 0, translate: '0 24px' },
+                { opacity: 1, translate: '0 0' }
+            ], { duration: 500, delay: i * 90, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', fill: 'backwards' });
+        });
+    }
+
+    // The 50/50 · 3-month · 6-month row opens by growing its height, so the
+    // cards below glide down instead of jumping, and its buttons pop in.
+    let subtoggleAnimation = null;
+    function setSubtoggleVisible(show) {
+        const row = document.getElementById('plan-subtoggle');
+        if (!row) return;
+        const isOpen = !row.hidden && !row.classList.contains('is-closing');
+        if (show === isOpen) return;
+
+        subtoggleAnimation?.cancel();
+        row.classList.remove('is-closing');
+
+        if (reducedMotion() || !row.animate) {
+            row.hidden = !show;
+            return;
+        }
+
+        row.hidden = false;
+        const open = { height: `${row.scrollHeight}px`, marginBottom: getComputedStyle(row).marginBottom, opacity: 1 };
+        const closed = { height: '0px', marginBottom: '0px', opacity: 0 };
+        row.classList.add('is-animating');
+
+        subtoggleAnimation = row.animate(show ? [closed, open] : [open, closed], {
+            duration: show ? 420 : 300,
+            easing: 'cubic-bezier(0.22, 1, 0.36, 1)'
+        });
+
+        if (show) {
+            row.querySelectorAll('.subtoggle-btn').forEach((btn, i) => {
+                btn.animate([
+                    { opacity: 0, translate: '0 -8px', scale: '0.9' },
+                    { opacity: 1, translate: '0 0', scale: '1' }
+                ], { duration: 360, delay: 80 + i * 70, easing: 'cubic-bezier(0.34, 1.56, 0.64, 1)', fill: 'backwards' });
+            });
+        } else {
+            row.classList.add('is-closing');
+        }
+
+        const animation = subtoggleAnimation;
+        animation.onfinish = () => {
+            row.classList.remove('is-animating', 'is-closing');
+            if (!show) row.hidden = true;
+            subtoggleAnimation = null;
+        };
+        animation.oncancel = () => row.classList.remove('is-animating');
+    }
 
     billingToggleButtons.forEach(button => {
         button.addEventListener('click', handleBillingToggle);
@@ -743,8 +834,8 @@ const periodKey = getPeriodKey();
                     const priceKey = `pricing${planId}Price${getPlanSuffix()}`;
                     const periodKey = getPeriodKey();
                     
-                    priceEl.textContent = translations[currentLang][priceKey];
-                    periodEl.textContent = translations[currentLang][periodKey];
+                    setAnimatedText(priceEl, translations[currentLang][priceKey]);
+                    setAnimatedText(periodEl, translations[currentLang][periodKey]);
                 }
             });
         });

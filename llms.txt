@@ -36,7 +36,7 @@ Installment plans are available: 50/50, 3 months or 6 months.
 ## კონტაქტი / Contact
 
 - [Contact form](https://osgweb.ge/#contact-page)
-- Email: [business@osgweb.ge](mailto: business@osgweb.ge)
+- Email: [business@osgweb.ge](mailto:business@osgweb.ge)
 - Phone / WhatsApp: [+995 555 09 59 59](tel:+995555095959)
 - Location: Tbilisi, Georgia
 - [Terms and conditions](https://osgweb.ge/terms.html)
