@@ -382,9 +382,8 @@ section { padding: 4rem 0; }
 }
 .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 /* Deliberately much deeper than a typical hero scrim: this is the
-   overlay's RESTING state, reached the instant the 1.8s cinematic
-   intro hands off (see `heroFadeIn` below) — raw video reads first,
-   then contrast steps up hard so the hero copy pops. */
+   overlay's RESTING state, faded in by the cinematic intro (see
+   `heroFadeIn` below) so the hero copy pops. */
 .hero-video-overlay {
     position: absolute;
     inset: 0;
@@ -470,29 +469,27 @@ section { padding: 4rem 0; }
    `html.hero-cinematic-init` is added by a tiny inline script at the
    very top of <body> (only when landing on #hero with no reduced-
    motion preference), so it is present from first paint — no flash.
-   Every reveal below is pure CSS (`animation-delay`), so the sequence
-   completes correctly even if later JS never runs. Only the video
-   playbackRate change and the temporary scroll lock need JS, since
-   CSS cannot touch either.
-   ══════════════════════════════════════════════════════════════════ */
-html.hero-scroll-lock, body.hero-scroll-lock { overflow: hidden; height: 100%; }
+   Every reveal below is pure CSS, so the sequence completes correctly
+   even if later JS never runs. Only the video playbackRate change needs
+   JS, since CSS cannot touch it.
 
-/* Stage 1 (0–1.8s): ONLY the logo mark + "OSGWeb.ge" text float over
-   the raw video (`.logo` is never touched by this class, so it's
-   visible from first paint). Everything else — nav links, language
-   selector, hamburger (`.nav-right`), the header's own background/
-   border/blur, and hero copy — stays hidden until the 1.8s reveal.
-   Hero copy hides via `visibility`, never `opacity`, so its reveal can
-   be a pure slide with zero fade; the navbar reveals with a normal
-   fade. */
+   The reveal starts the moment the page first paints. (It used to wait
+   1.8s with only the logo showing; that pause delayed the headline —
+   the page's Largest Contentful Paint — and the Speed Index by ~2s in
+   PageSpeed Insights.)
+   ══════════════════════════════════════════════════════════════════ */
+
+/* The logo mark + "OSGWeb.ge" text are visible from first paint
+   (`.logo` is never touched by this class). Everything else — nav
+   links, language selector, hamburger (`.nav-right`), the header's own
+   background/border/blur — starts hidden and is revealed right away;
+   the navbar with a normal fade. The hero copy is a pure slide, no fade:
+   it is visible from the very first paint at its starting offset, so the
+   headline counts as painted immediately, and since only `transform`
+   animates, the browser runs the slide off the main thread (it stays
+   smooth while the page's scripts are still starting up). */
 html.hero-cinematic-init .nav-right {
     opacity: 0;
-}
-html.hero-cinematic-init .hero-text h1,
-html.hero-cinematic-init .hero-subtitle,
-html.hero-cinematic-init .hero-buttons {
-    visibility: hidden;
-    transform: translateX(-88px);
 }
 html.hero-cinematic-init .hero-video-overlay { opacity: 0; }
 html.hero-cinematic-init header {
@@ -503,29 +500,36 @@ html.hero-cinematic-init header {
 }
 
 html.hero-cinematic-init .nav-right {
-    animation: heroFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
+    animation: heroFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 html.hero-cinematic-init .hero-text h1 {
-    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
+    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 html.hero-cinematic-init .hero-subtitle {
-    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 1.94s forwards;
+    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.14s both;
 }
 html.hero-cinematic-init .hero-buttons {
-    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 2.08s forwards;
+    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
+}
+/* The glow behind "Digitally." fades in as the headline lands, instead
+   of being drawn in the very first frame: a blurred drop-shadow is
+   expensive to render, and drawing it up front delayed the first paint
+   by ~0.3–0.4s in PageSpeed Insights' (GPU-less) test browser. */
+html.hero-cinematic-init #hero .gradient-text {
+    animation: heroTextGlow 0.6s ease 0.45s backwards;
 }
 html.hero-cinematic-init .hero-video-overlay {
-    animation: heroFadeIn 1s ease 1.8s forwards;
+    animation: heroFadeIn 1s ease forwards;
 }
 html.hero-cinematic-init header {
-    animation: headerFogIn 1.6s cubic-bezier(0.22, 1, 0.36, 1) 1.8s forwards;
+    animation: headerFogIn 1.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes heroFadeIn { from { opacity: 0; } to { opacity: 1; } }
-/* Pure slide — no opacity anywhere. `visibility` flips to `visible`
-   the instant this animation starts (per spec, hidden→visible switches
-   at the start of the segment it's set in), so motion is the only cue. */
-@keyframes heroSlideIn { from { visibility: hidden; transform: translateX(-88px); } to { visibility: visible; transform: translateX(0); } }
+/* Pure slide — no opacity anywhere, so motion is the only cue. */
+@keyframes heroSlideIn { from { transform: translateX(-88px); } to { transform: translateX(0); } }
+/* Ends on the resting drop-shadow set on `#hero .gradient-text`. */
+@keyframes heroTextGlow { from { filter: none; } }
 /* Fog-in: blur overshoots past its resting value before settling,
    reading as mist condensing into solid glass rather than a hard swap. */
 @keyframes headerFogIn {
@@ -536,9 +540,6 @@ html.hero-cinematic-init header {
 
 @media (max-width: 600px) {
     .hero-video-overlay { backdrop-filter: blur(1px); -webkit-backdrop-filter: blur(1px); }
-    html.hero-cinematic-init .hero-text h1,
-    html.hero-cinematic-init .hero-subtitle,
-    html.hero-cinematic-init .hero-buttons { transform: translateX(-48px); }
 }
 
 #trust-bar { padding: 2rem 0; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); background-color: rgba(2, 10, 7, 0.30); }
@@ -623,6 +624,9 @@ html.hero-cinematic-init header {
     transition: transform var(--transition-smooth);
     display: block;
 }
+/* Not loaded yet (its `data-src` is attached by script.js as the carousel
+   nears the screen) — hide the alt text an image without `src` would show. */
+.carousel-item img:not([src]) { visibility: hidden; }
 
 .carousel-item:hover img {
     transform: scale(1.04);
@@ -729,7 +733,9 @@ html.hero-cinematic-init header {
    script.js. */
 .carousel-dots-track {
     display: flex;
-    gap: 0.6rem;
+    /* 10px dot + 16px gap = 26px from dot to dot: meets the 24px minimum
+       touch-target spacing (WCAG 2.5.8 / Lighthouse "target-size"). */
+    gap: 1rem;
     align-items: center;
     transition: transform var(--transition-smooth);
     will-change: transform;
@@ -828,10 +834,6 @@ html.hero-cinematic-init header {
 .quote-author { display: block; margin-top: .6rem; font-weight: 700; font-size: .9rem; color: var(--text-color); }
 .case-ctas { display: flex; flex-direction: column; align-items: stretch; gap: .75rem; margin-top: .5rem; }
 .case-ctas .btn { padding: 10px 18px; font-size: .95rem; border-radius: 10px; }
-
-/* Off-white CTA pill on dark testimonial cards — mirrors the cream
-   accent used in the reference design, distinct from the emerald
-   gradient buttons used everywhere else on the page. */
 .case-ctas .btn-primary {
     background: linear-gradient(180deg, #FFFFFF 0%, #EEF2F0 100%);
     color: #062018;

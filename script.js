@@ -977,17 +977,17 @@ const initPortfolioCarousel = () => {
         loadNeighbours();
     };
 
-    // Card images are lazy, but cards outside the carousel's clipped window
-    // never count as "on screen", so they'd only start loading as they slide
-    // in. Once the carousel is near the screen, load the active card and its
-    // neighbours ahead of time — nothing is fetched during page load, and no
-    // card slides in empty.
+    // Card images have no `src` in the HTML (only `data-src`): with native
+    // lazy-loading, browsers fetched ~1.4 MB of them during page load (their
+    // look-ahead distance reaches the carousel), competing with the first
+    // screen. Once the carousel is near the screen, load the active card and
+    // its neighbours, so no card slides in empty.
     let carouselNearScreen = false;
     function loadNeighbours() {
         if (!carouselNearScreen) return;
         for (let i = currentIndex - 1; i <= currentIndex + 1; i++) {
-            const img = visibleItems[i] && visibleItems[i].querySelector('img');
-            if (img && img.loading === 'lazy') img.loading = 'eager';
+            const img = visibleItems[i] && visibleItems[i].querySelector('img[data-src]');
+            if (img && !img.getAttribute('src')) img.src = img.dataset.src;
         }
     }
     new IntersectionObserver((entries, observer) => {
