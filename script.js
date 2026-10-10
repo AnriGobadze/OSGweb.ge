@@ -184,17 +184,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
         _handleInitialLoad() {
             const initialHash = window.location.hash || '#hero';
+            // Landing on the hero: the main view is already visible (it's
+            // `.active` in the HTML) and the page opens at the top, so skip the
+            // 0.5s scroll tween that forced a full layout during page load.
+            // (Don't read window.scrollY here — that alone forces a layout.)
+            if (initialHash === '#hero') {
+                document.querySelectorAll('.nav-link[href="#hero"]').forEach(link => link.classList.add('active-link'));
+                return;
+            }
             this.switchView(initialHash, true);
         }
     };
 
     SpaNavigator.init();
 
+    // For below-the-fold setup that measures the page (AOS, the portfolio
+    // carousel): run it right after the first frame has rendered, when the
+    // layout is already computed, instead of forcing an extra synchronous
+    // layout in the middle of page load.
+    const afterFirstFrame = (fn) => requestAnimationFrame(() => setTimeout(fn, 0));
+
 
     // ================================
     // AOS INIT
     // ================================
-    AOS.init({ duration: 800, once: true, offset: 50 });
+    afterFirstFrame(() => AOS.init({ duration: 800, once: true, offset: 50 }));
 
     // ================================
     // STAGGERED ANIMATION SETUP
@@ -500,11 +514,18 @@ function getPeriodKey() {
         document.body.setAttribute('data-lang', lang);
         document.documentElement.lang = lang === 'ge' ? 'ka' : lang;
 
+        // The Georgian text is already baked into index.html (tools/prerender-ka.js),
+        // so on a normal Georgian page load most elements already match — only
+        // touch the ones that differ instead of re-creating ~150 DOM subtrees.
+        const scratch = document.createElement('div');
         document.querySelectorAll('[data-lang]').forEach(element => {
             const key = element.getAttribute('data-lang');
             if (translations[lang] && translations[lang][key]) {
                 if (!element.hasAttribute('data-price-point') && !element.hasAttribute('data-billing-period')) {
-                    element.innerHTML = translations[lang][key];
+                    scratch.innerHTML = translations[lang][key];
+                    if (element.innerHTML !== scratch.innerHTML) {
+                        element.innerHTML = translations[lang][key];
+                    }
                 }
             }
         });
@@ -729,7 +750,7 @@ const periodKey = getPeriodKey();
         });
     });
 
-    requestAnimationFrame(syncToggleIndicator);
+    afterFirstFrame(syncToggleIndicator);
     window.addEventListener('resize', () => requestAnimationFrame(syncToggleIndicator));
 
 
@@ -759,7 +780,7 @@ const periodKey = getPeriodKey();
             logoUploadInput.value = null;
             logoUploadWrapper.classList.remove('preview-visible');
 
-            imagePreview.src = '#';
+            imagePreview.removeAttribute('src');
         });
     }
 
@@ -861,7 +882,29 @@ const initPortfolioCarousel = () => {
         prevBtn.style.pointerEvents = currentIndex === 0 ? "none" : "auto";
         nextBtn.style.opacity = currentIndex === total - 1 ? "0" : "1";
         nextBtn.style.pointerEvents = currentIndex === total - 1 ? "none" : "auto";
+
+        loadNeighbours();
     };
+
+    // Card images are lazy, but cards outside the carousel's clipped window
+    // never count as "on screen", so they'd only start loading as they slide
+    // in. Once the carousel is near the screen, load the active card and its
+    // neighbours ahead of time — nothing is fetched during page load, and no
+    // card slides in empty.
+    let carouselNearScreen = false;
+    function loadNeighbours() {
+        if (!carouselNearScreen) return;
+        for (let i = currentIndex - 1; i <= currentIndex + 1; i++) {
+            const img = visibleItems[i] && visibleItems[i].querySelector('img');
+            if (img && img.loading === 'lazy') img.loading = 'eager';
+        }
+    }
+    new IntersectionObserver((entries, observer) => {
+        if (!entries.some(entry => entry.isIntersecting)) return;
+        carouselNearScreen = true;
+        loadNeighbours();
+        observer.disconnect();
+    }, { rootMargin: '800px 0px' }).observe(track.parentElement);
 
     const applyFilter = (filter) => {
         allItems.forEach(item => {
@@ -911,7 +954,7 @@ const initPortfolioCarousel = () => {
     applyFilter('client');
 };
 
-    initPortfolioCarousel();
+    afterFirstFrame(initPortfolioCarousel);
 
 
     // ================================
@@ -920,16 +963,21 @@ const initPortfolioCarousel = () => {
     // as the section scrolls into view. `clearProps` hands control back
     // to the CSS is-active/hover rules the instant the tween settles, so
     // it never fights the carousel's own opacity/scale logic afterward.
+    // Triggered by an IntersectionObserver when #portfolio's top reaches
+    // 80% of the viewport height (what ScrollTrigger's `start: 'top 80%'`
+    // did) — ScrollTrigger re-measured the whole page on load for this one
+    // effect, which was the biggest blocking task left on mobile.
     // ================================
     const initPortfolioScrollReveal = () => {
         const items = document.querySelectorAll('.carousel-item');
-        if (!items.length) return;
+        const section = document.getElementById('portfolio');
+        if (!items.length || !section) return;
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-        if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
+        if (typeof gsap === 'undefined' || !('IntersectionObserver' in window)) return;
 
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.from(items, {
+        // Paused `from` tween: renders the hidden start state immediately,
+        // plays once the trigger point is reached.
+        const reveal = gsap.from(items, {
             opacity: 0,
             y: 40,
             scale: 0.94,
@@ -937,15 +985,21 @@ const initPortfolioCarousel = () => {
             ease: 'power3.out',
             stagger: 0.1,
             clearProps: 'opacity,transform',
-            scrollTrigger: {
-                trigger: '#portfolio',
-                start: 'top 80%',
-                once: true
-            }
+            paused: true
         });
+
+        const observer = new IntersectionObserver((entries) => {
+            const entry = entries[entries.length - 1];
+            // Also play if the page opened already scrolled past the section.
+            if (entry.isIntersecting || entry.boundingClientRect.top < window.innerHeight * 0.8) {
+                reveal.play();
+                observer.disconnect();
+            }
+        }, { rootMargin: '0px 0px -20% 0px' });
+        observer.observe(section);
     };
 
-    initPortfolioScrollReveal();
+    afterFirstFrame(initPortfolioScrollReveal);
 
 
     // ================================
@@ -1062,7 +1116,7 @@ const initPortfolioCarousel = () => {
 
         let currentX = 0, currentY = 0, currentScale = STOPS[0].scale;
         let targetX = 0, targetY = 0, targetScale = STOPS[0].scale;
-        let rafId;
+        let rafId = null;
 
         function computeTarget() {
             const scrollable = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
@@ -1079,19 +1133,67 @@ const initPortfolioCarousel = () => {
             currentX += (targetX - currentX) * 0.07;
             currentY += (targetY - currentY) * 0.07;
             currentScale += (targetScale - currentScale) * 0.07;
+
+            // Once the camera has caught up (sub-pixel), snap and stop the
+            // loop instead of re-writing the same transform every frame;
+            // the next scroll/resize wakes it again.
+            const settled = Math.abs(targetX - currentX) < 0.05
+                && Math.abs(targetY - currentY) < 0.05
+                && Math.abs(targetScale - currentScale) < 0.00005;
+            if (settled) {
+                currentX = targetX; currentY = targetY; currentScale = targetScale;
+            }
+
             bgImage.style.transform = `translate3d(${currentX.toFixed(2)}px, ${currentY.toFixed(2)}px, 0) scale(${currentScale.toFixed(4)})`;
-            rafId = requestAnimationFrame(tick);
+            rafId = settled ? null : requestAnimationFrame(tick);
         }
 
-        computeTarget();
-        rafId = requestAnimationFrame(tick);
+        function wake() {
+            computeTarget();
+            if (rafId === null) rafId = requestAnimationFrame(tick);
+        }
 
-        window.addEventListener('scroll', computeTarget, { passive: true });
-        window.addEventListener('resize', computeTarget);
+        // First frame keeps the CSS fallback transform; start once it's rendered
+        // (computeTarget reads scrollHeight, which would force a layout now).
+        afterFirstFrame(wake);
+
+        window.addEventListener('scroll', wake, { passive: true });
+        window.addEventListener('resize', wake);
         window.addEventListener('pagehide', function () {
-            cancelAnimationFrame(rafId);
-            window.removeEventListener('scroll', computeTarget);
-            window.removeEventListener('resize', computeTarget);
+            if (rafId !== null) cancelAnimationFrame(rafId);
+            rafId = null;
+            window.removeEventListener('scroll', wake);
+            window.removeEventListener('resize', wake);
         });
+    })();
+
+
+    // ================================
+    // HERO VIDEO (mobile only)
+    // The <video> ships without a source: on desktop it's hidden, so it
+    // shouldn't download at all, and on phones it shouldn't compete with
+    // the CSS, fonts and images needed for the first screen. It's attached
+    // once the page has loaded — the clip opens on black and fades in, so
+    // it blends straight into the dark hero background.
+    // ================================
+    (function initHeroVideo() {
+        const video = document.getElementById('hero-video');
+        if (!video || !video.dataset.src) return;
+        // Exact complement of the `min-width: 768px` rule that hides it in style.css.
+        const mobile = window.matchMedia('not all and (min-width: 768px)');
+
+        const attach = () => {
+            if (video.getAttribute('src') || !mobile.matches) return;
+            video.src = video.dataset.src;
+            const playing = video.play();
+            if (playing) playing.catch(() => {});
+        };
+        const attachAfterLoad = () => {
+            if (document.readyState === 'complete') attach();
+            else window.addEventListener('load', attach, { once: true });
+        };
+
+        attachAfterLoad();
+        mobile.addEventListener('change', attachAfterLoad);
     })();
 });

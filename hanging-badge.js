@@ -117,18 +117,24 @@
        own viewBox units (the mobile breakpoint renders the same viewBox
        into a shorter box via `.rope-svg { height: 40px }`). */
     var ropePxPerUnit = 1;
-    function measureRope () {
-      var h = ropeSvg.getBoundingClientRect().height;
+    function setRopeHeight (h) {
       if (h > 0) ropePxPerUnit = h / ROPE_LEN;
     }
-    measureRope();
-    window.addEventListener('load', measureRope);
-
-    var resizeTimer;
-    window.addEventListener('resize', function () {
-      clearTimeout(resizeTimer);
-      resizeTimer = setTimeout(measureRope, 150);
-    }, { passive: true });
+    if ('ResizeObserver' in window) {
+      // Reports the size after the browser's own layout pass, so it never
+      // forces an extra synchronous layout during page load.
+      new ResizeObserver(function (entries) {
+        setRopeHeight(entries[entries.length - 1].contentRect.height);
+      }).observe(ropeSvg);
+    } else {
+      var measureRope = function () { setRopeHeight(ropeSvg.getBoundingClientRect().height); };
+      window.addEventListener('load', measureRope);
+      var resizeTimer;
+      window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(measureRope, 150);
+      }, { passive: true });
+    }
 
     /* ── tunables ─────────────────────────────────────────────────── */
     var SWING_STIFFNESS  = 0.032;
@@ -151,14 +157,18 @@
     var MAX_WOBBLE     = 1.7;   // wrinkled at max slack
     var SETTLE_EPSILON = 0.03;
 
+    // The starting scroll position is read once the first frame has rendered
+    // (see the bottom of this function): reading window.scrollY while the
+    // page is still being laid out forces a synchronous full-page layout.
     var angle = 0, angularVelocity = 0;
-    var laggedY = window.scrollY || window.pageYOffset;
+    var laggedY = 0;
     var laggedVelocity = 0;
-    var lastScrollY = laggedY;
+    var lastScrollY = 0;
     var atRest = true;
 
     root.addEventListener('mouseenter', function () {
       angularVelocity += HOVER_NUDGE * (Math.random() > 0.5 ? 1 : -1);
+      start();
     });
 
     function tick () {
@@ -209,6 +219,7 @@
           strands.forEach(function (s) { applyPathD(s.el, s.original); });
           atRest = true;
         }
+        stop(); // nothing moving -> sleep until the next scroll / hover
         return;
       }
       atRest = false;
@@ -229,16 +240,37 @@
       });
     }
 
+    // The frame loop only runs while the sign is moving: it stops itself
+    // once settled (see tick) and any scroll or hover starts it again.
     var rafId;
-    if (hasGsap) {
-      gsap.ticker.add(tick);
-    } else {
-      (function rafLoop () { tick(); rafId = requestAnimationFrame(rafLoop); })();
+    var running = false;
+    function rafLoop () {
+      if (!running) return;
+      tick();
+      if (running) rafId = requestAnimationFrame(rafLoop);
     }
-
-    window.addEventListener('pagehide', function () {
+    function start () {
+      if (running) return;
+      running = true;
+      if (hasGsap) gsap.ticker.add(tick);
+      else rafId = requestAnimationFrame(rafLoop);
+    }
+    function stop () {
+      if (!running) return;
+      running = false;
       if (hasGsap) gsap.ticker.remove(tick);
       else if (rafId) cancelAnimationFrame(rafId);
+    }
+
+    requestAnimationFrame(function () {
+      setTimeout(function () {
+        laggedY = lastScrollY = window.scrollY || window.pageYOffset;
+        window.addEventListener('scroll', start, { passive: true });
+      }, 0);
+    });
+    window.addEventListener('pagehide', function () {
+      stop();
+      window.removeEventListener('scroll', start);
     });
   }
 

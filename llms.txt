@@ -1,0 +1,42 @@
+# OSG Digital Agency (OSGWeb.ge)
+
+> ვებ სტუდია თბილისში: საიტის დამზადება, ვებ დიზაინი (UI/UX), ონლაინ მაღაზიები და SEO ოპტიმიზაცია ქართული ბიზნესებისთვის. Web design and development studio in Tbilisi, Georgia: custom websites, online stores, UI/UX design and SEO for Georgian businesses.
+
+The website is in Georgian by default, with English and Russian versions available through the language switcher.
+
+## სერვისები / Services
+
+- [საიტის დამზადება / Website development](https://osgweb.ge/#services): custom, mobile-friendly business websites with basic SEO
+- [ონლაინ მაღაზია / Online stores](https://osgweb.ge/#pricing): e-commerce and booking systems
+- [ვებ დიზაინი (UI/UX) / Web design](https://osgweb.ge/#services): brand-tailored interfaces and user experience
+- [ადმინ პანელი და CMS / Admin panel & CMS](https://osgweb.ge/#pricing): site management, analytics, Supabase / headless CMS
+- [SEO ოპტიმიზაცია / SEO](https://osgweb.ge/#pricing): technical and on-page SEO, site speed optimization
+
+## ფასები / Pricing (GEL, one-time payment)
+
+- [სტარტერი / Starter — 1,200₾](https://osgweb.ge/#pricing): up to 3 pages, performance optimization, basic SEO
+- [პრო / Pro — 2,500₾](https://osgweb.ge/#pricing): up to 5 pages, admin and analytics dashboard, CMS integration
+- [პრემიუმი / Premium — 5,200₾](https://osgweb.ge/#pricing): up to 10 pages, e-commerce or booking system, full SEO audit, 3 months of post-launch support
+- [ინდივიდუალური / Custom](https://osgweb.ge/#pricing): 10+ pages and complex API integrations, priced per project
+
+Installment plans are available: 50/50, 3 months or 6 months.
+
+## პორტფოლიო / Portfolio
+
+- [Jagi Building](https://www.jagibuilding.ge/): construction company website
+- [Laptop Georgia](https://www.laptopgeorgia.ge/): tech repair website
+- [Stilis Sivrce](https://www.stilissivrce.ge/): clothing store website
+- [Terra 24](https://www.terra24.ge/): funeral bureau website
+- [Prime Grind](https://www.primegrind.ge/): construction company website
+- [Skhila Diesel Motors](https://www.skhiladieselmotors.ge/): car service website
+- [La Arté](https://laarte.ge/): jewellery website
+- [EVAKUATORIGZAZE](https://www.evakuatorigzaze.ge/): tow truck service website
+- [Sufta Sivrce](https://www.suftasivrce.com/): hotel laundry website
+
+## კონტაქტი / Contact
+
+- [Contact form](https://osgweb.ge/#contact-page)
+- Email: [business@osgweb.ge](mailto: business@osgweb.ge)
+- Phone / WhatsApp: [+995 555 09 59 59](tel:+995555095959)
+- Location: Tbilisi, Georgia
+- [Terms and conditions](https://osgweb.ge/terms.html)

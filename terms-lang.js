@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clause11Title: "საგარანტიო მომსახურების ვადა",
             clause11Body: "ვებსაიტის ინტერნეტში გაშვებიდან OSG უსასყიდლოდ ასწორებს გამოვლენილ ტექნიკურ ხარვეზებსა და მცირე შესწორებებს, არჩეული პაკეტის შესაბამისად:<br><br>Starter პაკეტი: 14 დღე;<br>Pro პაკეტი: 21 დღე;<br>Premium პაკეტი: 3 თვე (90 დღე).<br><br>აღნიშნული საგარანტიო ვადების გასვლის შემდეგ, ნებისმიერი ტექნიკური მხარდაჭერა, განახლება ან ცვლილება ხორციელდება ცალკე შეთანხმებული ტარიფით.",
 
-            footnote: "ბოლო განახლება: 2026 წლის ივლისი · კითხვების შემთხვევაში დაგვიკავშირდით — <a href=\"mailto:osgbusiness01@gmail.com\">osgbusiness01@gmail.com</a>",
+            footnote: "ბოლო განახლება: 2026 წლის ივლისი · კითხვების შემთხვევაში დაგვიკავშირდით — <a href=\"mailto:business@osgweb.ge\">business@osgweb.ge</a>",
 
             footerAbout: "ინოვაციური ციფრული გამოცდილება ბრენდის წარმატებისთვის.",
             footerContactTitle: "კონტაქტი",
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clause11Title: "Warranty Period",
             clause11Body: "From the moment the website goes live, OSG will fix any identified technical faults and minor corrections free of charge, according to the selected package:<br><br>Starter package: 14 days;<br>Pro package: 21 days;<br>Premium package: 3 months (90 days).<br><br>After these warranty periods expire, any technical support, updates, or changes will be provided under a separately agreed rate.",
 
-            footnote: "Last updated: July 2026 · If you have any questions, contact us — <a href=\"mailto:osgbusiness01@gmail.com\">osgbusiness01@gmail.com</a>",
+            footnote: "Last updated: July 2026 · If you have any questions, contact us — <a href=\"mailto:business@osgweb.ge\">business@osgweb.ge</a>",
 
             footerAbout: "A top 1% boutique studio engineering digital presence for brands that demand excellence.",
             footerContactTitle: "Contact",
@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clause11Title: "Гарантийный срок",
             clause11Body: "С момента запуска сайта в интернете OSG бесплатно устраняет выявленные технические неисправности и незначительные доработки в соответствии с выбранным пакетом:<br><br>Пакет Starter: 14 дней;<br>Пакет Pro: 21 день;<br>Пакет Premium: 3 месяца (90 дней).<br><br>По истечении указанных гарантийных сроков любая техническая поддержка, обновления или изменения осуществляются по отдельно согласованному тарифу.",
 
-            footnote: "Последнее обновление: июль 2026 г. · Если у вас есть вопросы, свяжитесь с нами — <a href=\"mailto:osgbusiness01@gmail.com\">osgbusiness01@gmail.com</a>",
+            footnote: "Последнее обновление: июль 2026 г. · Если у вас есть вопросы, свяжитесь с нами — <a href=\"mailto:business@osgweb.ge\">business@osgweb.ge</a>",
 
             footerAbout: "Бутик-студия премиум-класса, создающая цифровое присутствие для брендов, которым нужно совершенство.",
             footerContactTitle: "Контакты",

@@ -32,25 +32,48 @@
             if (document.body) { document.body.classList.remove('hero-scroll-lock'); }
             var video = document.getElementById('hero-video');
             if (video) {
-                try { video.playbackRate = 0.55; } catch (e) {}
+                // defaultPlaybackRate too: the video's source is attached after
+                // page load (script.js), and load() resets playbackRate to it.
+                try { video.defaultPlaybackRate = 0.55; video.playbackRate = 0.55; } catch (e) {}
             }
             }, 1800);
         } catch (e) {}
         })();
         </script>
-        <!-- Google Tag Manager-->
+        <!-- Google Tag Manager — loaded on the visitor's first scroll/tap/keypress,
+             or 5 s after the page has loaded, whichever comes first. GTM (and the
+             Facebook Pixel it injects) is ~1 s of main-thread work on a phone, so
+             it no longer competes with the first render and first interaction. -->
         <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,'script','dataLayer','GTM-5PF6965C');
+        (function (w, d, id) {
+            w.dataLayer = w.dataLayer || [];
+            var events = ['scroll', 'pointerdown', 'keydown', 'touchstart'];
+            var loaded = false;
+            function load() {
+                if (loaded) return;
+                loaded = true;
+                events.forEach(function (e) { w.removeEventListener(e, load); });
+                w.dataLayer.push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+                var j = d.createElement('script');
+                j.async = true;
+                j.src = 'https://www.googletagmanager.com/gtm.js?id=' + id;
+                d.head.appendChild(j);
+            }
+            events.forEach(function (e) { w.addEventListener(e, load, { passive: true }); });
+            w.addEventListener('load', function () { setTimeout(load, 5000); });
+        })(window, document, 'GTM-5PF6965C');
         </script>
 
-        <link rel="icon" href="https://osgweb.ge/osgMainLogo.png" type="image/png">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Anta&family=Patrick+Hand&family=Noto+Sans+Georgian:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+        <link rel="icon" href="/assets/img/favicon-48.png" sizes="48x48" type="image/png">
+        <link rel="icon" href="/assets/img/favicon-192.png" sizes="192x192" type="image/png">
+        <!-- Fonts are self-hosted (fonts.css, built by tools/build-fonts.py).
+             Preloaded: the Georgian + Latin text of the first screen, and the
+             two tiny icon fonts (the hero button's arrow is an icon). -->
+        <link rel="preload" href="assets/fonts/noto-sans-georgian-v48-site.60e92fde.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/anta-v1-site.6ec7cc00.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/fa-solid-900.9b6f0135.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/fonts/fa-brands-400.4d942536.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="assets/img/site-bg.webp" as="image" type="image/webp" fetchpriority="high">
 
     <meta name="google-site-verification" content="yxlfAERYpyJN7tiegYkfkmjW9rxLjulnjqoyYn6TqN4" />
     <meta property="og:site_name" content="OSG Digital Agency">
@@ -149,11 +172,20 @@
 
     <meta name="keywords" content="საიტის დამზადება, ვებგვერდის დამზადება, ვებსაიტის დამზადება, ვებ დიზაინი, ონლაინ მაღაზიის დამზადება, UI/UX დიზაინი, SEO ოპტიმიზაცია, თბილისი">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="assets/vendor/aos-3.0.0-beta.6.css">
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="icons.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="hanging-badge.css">
     <meta name="theme-color" content="#03110C">
+
+    <!-- `defer`: downloaded in parallel with the HTML, run in this order once
+         it's parsed — no longer blocking the first paint. -->
+    <script src="assets/vendor/aos-3.0.0-beta.6.js" defer></script>
+    <script src="assets/vendor/gsap-3.15.0.min.js" defer></script>
+    <script src="assets/vendor/gsap-scrolltoplugin-3.15.0.min.js" defer></script>
+    <script src="script.js" defer></script>
+    <script src="hanging-badge.js" defer></script>
     </head>
 
     <body>
@@ -173,7 +205,7 @@
         <header>
             <nav class="container">
                 <a href="#hero" class="logo nav-link">
-                    <img src="./osg.png" alt="OSG Digital Agency ლოგო">
+                    <img src="assets/img/osg-logo.webp" alt="OSG Digital Agency ლოგო" width="65" height="65">
                     <span>OSGWeb.ge</span>
                 </a>
                 <div class="nav-right">
@@ -224,12 +256,15 @@
             <!-- ================================ -->
             <!-- START: MAIN SCROLLING CONTENT    -->
             <!-- ================================ -->
-            <div id="main-content-view" class="page-view">
+            <!-- `active` from the start: the page used to be hidden (and the
+                 footer drawn at the top of the screen) until script.js ran,
+                 which caused a large layout shift once it was revealed. -->
+            <div id="main-content-view" class="page-view active">
                 <section id="hero">
                  <div class="hero-video-wrap hero-video-wrap--mobile-only">
-    <video id="hero-video" class="hero-video" autoplay muted loop playsinline disablepictureinpicture preload="auto">
-        <source src="OSGherovideo.mp4" type="video/mp4">
-    </video>
+    <!-- Mobile-only video. Its source is attached by script.js after the page
+         has loaded, and only on screens < 768px (it's hidden on desktop). -->
+    <video id="hero-video" class="hero-video" autoplay muted loop playsinline disablepictureinpicture preload="none" data-src="assets/video/hero-mobile-720.mp4"></video>
     <div class="hero-video-overlay" aria-hidden="true"></div>
 </div>
                     <div class="container hero-grid">
@@ -312,7 +347,7 @@
 
                     <!-- CLIENT SITES (1-9) -->
                     <a href="https://www.suftasivrce.com/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img src="https://i.pinimg.com/1200x/e5/8c/81/e58c8109d19345ffc49111d5a306046f.jpg" alt="Sufta Sivrce — სასტუმროს სამრეცხაოს ვებსაიტი">
+                        <img src="https://i.pinimg.com/1200x/e5/8c/81/e58c8109d19345ffc49111d5a306046f.jpg" alt="Sufta Sivrce — სასტუმროს სამრეცხაოს ვებსაიტი" loading="lazy" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship09Title">'Sufta Sivrce' - სასტუმროს სამრეცხაო ვებსაიტი</h3>
@@ -320,7 +355,7 @@
                     </a>
 
                     <a href="https://www.jagibuilding.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img src="https://www.factor.law/images/data/M_A_Blog.jpg" alt="Jagi Building — სამშენებლო კომპანიის ვებსაიტი">
+                        <img src="https://www.factor.law/images/data/M_A_Blog.jpg" alt="Jagi Building — სამშენებლო კომპანიის ვებსაიტი" loading="lazy" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship1Title">'Jagi Building' - სამშენებლო კომპანიის ვებსაიტი</h3>
@@ -328,7 +363,7 @@
                     </a>
 
                     <a href="https://www.laptopgeorgia.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img src="https://i.pinimg.com/736x/c6/0e/6a/c60e6ae7667bbb409aae36a46d6d2ec3.jpg" alt="Laptop Georgia — ტექნიკის შეკეთების ვებსაიტი" loading="lazy">
+                        <img src="https://i.pinimg.com/736x/c6/0e/6a/c60e6ae7667bbb409aae36a46d6d2ec3.jpg" alt="Laptop Georgia — ტექნიკის შეკეთების ვებსაიტი" loading="lazy" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship2Title">'Laptop Georgia' - ტექნიკის შეკეთების ვებსაიტი</h3>
@@ -336,7 +371,7 @@
                     </a>
 
                     <a href="https://www.stilissivrce.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img src="https://ir.ozone.ru/s3/multimedia-1-b/7360641515.jpg" alt="Stilis Sivrce — ტანსაცმლის მაღაზიის ვებსაიტი" loading="lazy">
+                        <img src="https://ir.ozone.ru/s3/multimedia-1-b/7360641515.jpg" alt="Stilis Sivrce — ტანსაცმლის მაღაზიის ვებსაიტი" loading="lazy" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship3Title">'Stilis Sivrce' - ტანსაცმლის მაღაზიის ვებსაიტი</h3>
@@ -344,7 +379,7 @@
                     </a>
 
                     <a href="https://www.terra24.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img src="https://i.pinimg.com/736x/1d/61/ca/1d61ca69fd1ef0670434ac43d5b31119.jpg" alt="Terra 24 — სარიტუალო ბიუროს ვებსაიტი" loading="lazy">
+                        <img src="https://i.pinimg.com/736x/1d/61/ca/1d61ca69fd1ef0670434ac43d5b31119.jpg" alt="Terra 24 — სარიტუალო ბიუროს ვებსაიტი" loading="lazy" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship4Title">'Terra 24' - სარიტუალო ბიუროს ვებსაიტი</h3>
@@ -352,7 +387,7 @@
                     </a>
 
                     <a href="https://www.primegrind.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img src="https://www.primegrind.ge/work-1.jpg" alt="Prime Grind — სამშენებლო კომპანიის ვებსაიტი" loading="lazy">
+                        <img src="https://www.primegrind.ge/work-1.jpg" alt="Prime Grind — სამშენებლო კომპანიის ვებსაიტი" loading="lazy" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship5Title">'Prime Grind' - სამშენებლო კომპანიის ვებსაიტი</h3>
@@ -360,7 +395,7 @@
                     </a>
 
                     <a href="https://www.skhiladieselmotors.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img src="https://i.pinimg.com/736x/6b/20/90/6b20906e017013b11a7844e3031b690c.jpg" alt="სხილა დიზელ მოტორსი — ავტოსერვისის ვებსაიტი" loading="lazy">
+                        <img src="https://i.pinimg.com/736x/6b/20/90/6b20906e017013b11a7844e3031b690c.jpg" alt="სხილა დიზელ მოტორსი — ავტოსერვისის ვებსაიტი" loading="lazy" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship6Title">'Skhila Diesel Motors' - ავტოსერვისის ვებსაიტი</h3>
@@ -368,7 +403,7 @@
                     </a>
 
                     <a href="https://laarte.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img src="https://laarte.ge/about-us-bracelets.jpeg.jpeg" alt="La Arté — საიუველირო ვებსაიტი" loading="lazy">
+                        <img src="https://laarte.ge/about-us-bracelets.jpeg.jpeg" alt="La Arté — საიუველირო ვებსაიტი" loading="lazy" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship7Title">'La Arté' - საიუველირო ვებსაიტი</h3>
@@ -376,7 +411,7 @@
                     </a>
 
                     <a href="https://www.evakuatorigzaze.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img src="https://i.pinimg.com/1200x/70/b5/95/70b595d64e2925278c1dfa3b40dcbec3.jpg" alt="EVAKUATORIGZAZE — ევაკუატორის სერვისის ვებსაიტი" loading="lazy">
+                        <img src="https://i.pinimg.com/1200x/70/b5/95/70b595d64e2925278c1dfa3b40dcbec3.jpg" alt="EVAKUATORIGZAZE — ევაკუატორის სერვისის ვებსაიტი" loading="lazy" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship8Title">'EVAKUATORIGZAZE' - ევაკუატორის სერვისის ვებსაიტი</h3>
@@ -385,7 +420,7 @@
 
                     <!-- TEMPLATE BUILDS (10-14) -->
                     <a href="https://osg-website-tamplate.vercel.app/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="template">
-                        <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="The Golden Fork — რესტორნის ვებსაიტის შაბლონი" loading="lazy">
+                        <img src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="The Golden Fork — რესტორნის ვებსაიტის შაბლონი" loading="lazy" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewDemoTitle">დემოს ნახვა</span>
                             <h3 data-lang="portfolio1Title">'The Golden Fork' - რესტორნის ვებსაიტი</h3>
@@ -393,7 +428,7 @@
                     </a>
 
                     <a href="https://osgwebsitebarbershoptamplate.vercel.app/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="template">
-                        <img src="https://t3.ftcdn.net/jpg/05/79/13/18/360_F_579131835_34z1xrboD0IaxbierBEiIt6OJcWQuTly.jpg" alt="The Trim House — ბარბერშოპის ვებსაიტის შაბლონი" loading="lazy">
+                        <img src="https://t3.ftcdn.net/jpg/05/79/13/18/360_F_579131835_34z1xrboD0IaxbierBEiIt6OJcWQuTly.jpg" alt="The Trim House — ბარბერშოპის ვებსაიტის შაბლონი" loading="lazy" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewDemoTitle">დემოს ნახვა</span>
                             <h3 data-lang="portfolio2Title">'The Trim House' - ბარბერშოპის ბრენდინგი</h3>
@@ -401,7 +436,7 @@
                     </a>
 
                     <a href="https://osgwebcafetamplate.vercel.app/#home" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="template">
-                        <img src="https://jamcafes.mystagingwebsite.com/wp-content/uploads/2024/09/JamCafe_BestBreakfastBrunch_Vancouver_PancakeStack.jpg" alt="Olio &amp; Sale — კაფეს ვებსაიტის შაბლონი" loading="lazy">
+                        <img src="https://jamcafes.mystagingwebsite.com/wp-content/uploads/2024/09/JamCafe_BestBreakfastBrunch_Vancouver_PancakeStack.jpg" alt="Olio &amp; Sale — კაფეს ვებსაიტის შაბლონი" loading="lazy" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewDemoTitle">დემოს ნახვა</span>
                             <h3 data-lang="portfolio3Title">'Olio & Sale' - კაფეს ონლაინ ვებსაიტი</h3>
@@ -409,7 +444,7 @@
                     </a>
 
                     <a href="https://salad-web.vercel.app" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="template">
-                        <img src="https://mangia.nyc/wp-content/uploads/2024/07/Salad-Bar-Manhattan.jpg" alt="Healthy Salad — რესტორნის ვებსაიტის შაბლონი" loading="lazy">
+                        <img src="https://mangia.nyc/wp-content/uploads/2024/07/Salad-Bar-Manhattan.jpg" alt="Healthy Salad — რესტორნის ვებსაიტის შაბლონი" loading="lazy" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewDemoTitle">დემოს ნახვა</span>
                             <h3 data-lang="portfolio4Title">'Healthy Salad' - რესტორნის ვებსაიტი</h3>
@@ -417,7 +452,7 @@
                     </a>
 
                     <a href="https://osgweb-nexus-ai.vercel.app/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="template">
-                        <img src="Naxus-AI.png" alt="Naxus AI — ტექნოლოგიური კომპანიის ვებსაიტის შაბლონი" loading="lazy">
+                        <img src="assets/img/naxus-ai.webp" alt="Naxus AI — ტექნოლოგიური კომპანიის ვებსაიტის შაბლონი" loading="lazy" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewDemoTitle">დემოს ნახვა</span>
                             <h3 data-lang="portfolio5Title">'Naxus AI' - კორპორატიული ტექნოლოგიური ვებსაიტი</h3>
@@ -443,7 +478,7 @@
                         <h2 class="section-title" data-aos="fade-up" data-lang="testimonialsTitle">მიმოხილვები და შეფასებები</h2>
                         <div class="review-card case-card" data-aos="fade-up" role="article" aria-labelledby="everluxe-title">
                             <div class="case-top">
-                                <img src="/JagiBuildingProfile.png" alt="Jagi Building ლოგო" class="review-avatar" loading="lazy">
+                                <img src="assets/img/jagi-building-logo.webp" alt="Jagi Building ლოგო" class="review-avatar" loading="lazy" decoding="async">
                                 <div class="case-meta">
                                     <p id="everluxe-title" class="review-author">გივი ქურდაძე, Jagi&nbsp;Building <span class="package-pill pro-package" data-lang="proPackageLabel">პრო პაკეტი</span></p>
                                 </div>
@@ -452,7 +487,7 @@
                             <p class="case-tags" data-lang="webInfoTitle" ><span class="case-tag-prefix">eCommerce · Stripe Checkout · </span>გამოშვების თარიღი: მაისი 2025</p>
                             <div class="case-body">
                                 <div class="screenshot-thumb" aria-hidden="true">
-                                    <img src="/JagiBuildingBG.png" alt="Jagi Building ვებსაიტის სქრინშოტი" loading="lazy" />
+                                    <img src="assets/img/jagi-building-screenshot.webp" alt="Jagi Building ვებსაიტის სქრინშოტი" loading="lazy" decoding="async" />
                                 </div>
                                 <div class="case-copy">
                                     <div class="outcome-row">
@@ -472,7 +507,7 @@
 
                         <div class="review-card case-card" data-aos="fade-up" data-aos-delay="100" role="article" aria-labelledby="hellshop-title">
                             <div class="case-top">
-                                <img src="/LaptopGeorgiaProfile.png" alt="Laptop Georgia ლოგო" class="review-avatar" loading="lazy">
+                                <img src="assets/img/laptop-georgia-logo.webp" alt="Laptop Georgia ლოგო" class="review-avatar" loading="lazy" decoding="async">
                                 <div class="case-meta"> 
                                     <p id="hellshop-title" class="review-author">გიორგი, LaptopGeorgia <span class="package-pill pro-package" data-lang="proPackageLabel">პრო პაკეტი</span></p>                                </div>
                                 <span class="verified-badge" aria-hidden="true" data-lang="checkedTitle" >✓ შემოწმებული</span>
@@ -480,7 +515,7 @@
                             <p class="case-tags" data-lang="webInfoTitle2"><span class="case-tag-prefix">ონლაინ მაღაზია · შესრულება · </span>გამოშვების თარიღი: აპრ 2025</p>
                             <div class="case-body">
                                 <div class="screenshot-thumb" aria-hidden="true">
-                                    <img src="/LaptopGeorgiaBG.png" alt="Laptop Georgia ვებსაიტის სქრინშოტი" loading="lazy" />
+                                    <img src="assets/img/laptop-georgia-screenshot.webp" alt="Laptop Georgia ვებსაიტის სქრინშოტი" loading="lazy" decoding="async" />
                                 </div>
                                 <div class="case-copy">
                                     <div class="outcome-row">
@@ -818,7 +853,7 @@
                                         </div>
                                         <div id="logo-upload-wrapper" class="input-group form-group">
                                             <div id="image-preview-container" class="image-preview-container">
-                                                <img src="#" alt="Company logo preview" id="image-preview" class="image-preview">
+                                                <img alt="Company logo preview" id="image-preview" class="image-preview">
                                                 <button type="button" id="remove-image-btn" class="remove-image-btn" aria-label="Remove image">×</button>
                                             </div>
                                             <label for="review-logo" class="file-upload-label">
@@ -875,7 +910,7 @@
                         <div class="all-reviews-grid" data-aos="fade-up" data-aos-delay="100">
                             <div class="review-card case-card">
                                 <div class="case-top">
-                                    <img src="/JagiBuildingProfile.png" alt="Jagi Building ლოგო" class="review-avatar" loading="lazy">
+                                    <img src="assets/img/jagi-building-logo.webp" alt="Jagi Building ლოგო" class="review-avatar" loading="lazy" decoding="async">
                                     <div class="case-meta">
                                         <p class="review-author">გივი ქურდაძე, Jagi&nbsp;Building <span class="package-pill pro-package" data-lang="proPackageLabel">პრო პაკეტი</span></p>
                                     </div>
@@ -884,7 +919,7 @@
                                 <p class="case-tags" data-lang="webInfoTitle" ><span class="case-tag-prefix">eCommerce · Stripe Checkout · </span>გამოშვების თარიღი: მაისი 2025</p>
                                 <div class="case-body">
                                     <div class="screenshot-thumb" aria-hidden="true">
-                                        <img src="/JagiBuildingBG.png" alt="Jagi Building ვებსაიტის სქრინშოტი" loading="lazy" />
+                                        <img src="assets/img/jagi-building-screenshot.webp" alt="Jagi Building ვებსაიტის სქრინშოტი" loading="lazy" decoding="async" />
                                     </div>
                                     <div class="case-copy">
                                         <div class="outcome-row">
@@ -904,7 +939,7 @@
 
                             <div class="review-card case-card">
                                 <div class="case-top">
-                                    <img src="/LaptopGeorgiaProfile.png" alt="Laptop Georgia ლოგო" class="review-avatar" loading="lazy">
+                                    <img src="assets/img/laptop-georgia-logo.webp" alt="Laptop Georgia ლოგო" class="review-avatar" loading="lazy" decoding="async">
                                     <div class="case-meta">
                                         <p class="review-author">გიორგი, LaptopGeorgia <span class="package-pill pro-package" data-lang="proPackageLabel">პრო პაკეტი</span></p>
                                     </div>
@@ -913,7 +948,7 @@
                                 <p class="case-tags"  data-lang="webInfoTitle2"><span class="case-tag-prefix">ონლაინ მაღაზია · შესრულება · </span>გამოშვების თარიღი: აპრ 2025</p>
                                 <div class="case-body">
                                     <div class="screenshot-thumb" aria-hidden="true">
-                                        <img src="LaptopGeorgiaBG.png" alt="Laptop Georgia ვებსაიტის სქრინშოტი" loading="lazy" />
+                                        <img src="assets/img/laptop-georgia-screenshot.webp" alt="Laptop Georgia ვებსაიტის სქრინშოტი" loading="lazy" decoding="async" />
                                     </div>
                                     <div class="case-copy">
                                         <div class="outcome-row">
@@ -970,12 +1005,6 @@
             </div>
         </footer>
 
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-        <script src="vendor-gsap.min.js"></script>
-        <script src="vendor-gsap-scrolltrigger.min.js"></script>
-        <script src="vendor-gsap-scrolltoplugin.min.js"></script>
-        <script src="script.js"></script>
-        <script src="hanging-badge.js" defer></script>
     </body>
 
     </html>
