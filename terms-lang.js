@@ -7,10 +7,10 @@ document.addEventListener('DOMContentLoaded', () => {
             pageIntro: "გთხოვთ, ყურადღებით გაეცნოთ მომსახურების პირობებს ჩვენთან თანამშრომლობის დაწყებამდე.",
 
             clause1Title: "ინტელექტუალური საკუთრების უფლება",
-            clause1Body: "ვებსაიტის კოდი, დიზაინი და ყველა მასალა წარმოადგენს შემსრულებლის (OSG) საკუთრებას და კლიენტის მფლობელობაში სრულად გადადის მხოლოდ მომსახურების სრული ღირებულების სრულად დაფარვის შემდეგ, არჩეული გადახდის გეგმის მიუხედავად (50/50, 3-თვიანი ან 6-თვიანი).",
+            clause1Body: "ვებსაიტის კოდი, დიზაინი და ყველა მასალა წარმოადგენს შემსრულებლის (OSG) საკუთრებას და კლიენტის მფლობელობაში სრულად გადადის მხოლოდ მომსახურების სრული ღირებულების სრულად დაფარვის შემდეგ, არჩეული გადახდის ფორმის მიუხედავად (ერთიანი გადახდა, 50/50, 3-თვიანი ან 6-თვიანი).",
 
             clause2Title: "გადახდის მოდელები და სავალდებულო პერიოდი",
-            clause2Body: "თანამშრომლობა ხორციელდება სამი შეთანხმებული გადახდის გეგმიდან ერთ-ერთით:<br><br>50/50 გეგმა: 50% იფარება სამუშაოს დაწყებამდე (ავანსი), ხოლო დარჩენილი 50% — პროექტის დასრულებისთანავე, საიტის ინტერნეტში გაშვებამდე (Live).<br><br>3-თვიანი გეგმა: მთლიანი ღირებულება (დამატებული მომსახურების საკომისიოს ჩათვლით) იყოფა 3 თანაბარ ყოველთვიურ შენატანად.<br><br>6-თვიანი გეგმა: მთლიანი ღირებულება (დამატებული მომსახურების საკომისიოს ჩათვლით) იყოფა 6 თანაბარ ყოველთვიურ შენატანად.<br><br>3-თვიანი და 6-თვიანი გეგმებისთვის, ხელშეკრულება სავალდებულოა არჩეული სრული ვადით. თუ კლიენტი შეწყვეტს ხელშეკრულებას ყველა შენატანის სრულად დაფარვამდე, შესრულებული სამუშაოს საკომპენსაციოდ გამოიყენება ფიქსირებული ჯარიმა, ხოლო დარჩენილი თანხა დაუყოვნებლივ ექვემდებარება გადახდას.",
+            clause2Body: "თანამშრომლობა ხორციელდება ოთხი გადახდის ფორმიდან ერთ-ერთით:<br><br>ერთიანი გადახდა: მომსახურების სრული ღირებულება იფარება ერთ ჯერზე.<br><br>50/50 გეგმა: 50% იფარება სამუშაოს დაწყებამდე (ავანსი), ხოლო დარჩენილი 50% პროექტის დასრულებისთანავე, საიტის ინტერნეტში გაშვებამდე (Live).<br><br>3-თვიანი გეგმა: მთლიანი ღირებულება (დამატებული მომსახურების საკომისიოს ჩათვლით) იყოფა 3 ყოველთვიურ შენატანად.<br><br>6-თვიანი გეგმა (Starter, Pro და Premium პაკეტებისთვის): მთლიანი ღირებულება (დამატებული მომსახურების საკომისიოს ჩათვლით) იყოფა 6 ყოველთვიურ შენატანად.<br><br>3-თვიანი და 6-თვიანი გეგმების პირველი შენატანი იფარება სამუშაოს დაწყებამდე. შენატანები მრგვალდება, ხოლო ბოლო შენატანი კორექტირდება ისე, რომ ჯამი ზუსტად ემთხვეოდეს მთლიან ღირებულებას. ამ გეგმებისთვის ხელშეკრულება სავალდებულოა არჩეული სრული ვადით. თუ კლიენტი შეწყვეტს ხელშეკრულებას ყველა შენატანის სრულად დაფარვამდე, შესრულებული სამუშაოს საკომპენსაციოდ გამოიყენება ფიქსირებული ჯარიმა, ხოლო დარჩენილი თანხა დაუყოვნებლივ ექვემდებარება გადახდას.<br><br>სხვა გადახდის გრაფიკი შესაძლებელია მხოლოდ ინდივიდუალური, წერილობითი შეთანხმებით.",
 
             clause3Title: "მომსახურების შეჩერება და გათიშვა",
             clause3Body: "3-თვიანი ან 6-თვიანი გეგმის ფარგლებში ყოველთვიური შენატანის 5 კალენდარული დღით გადაცილების, ან 50/50 გეგმის შემთხვევაში დარჩენილი 50%-ის დროულად გადაუხდელობის შემთხვევაში, შემსრულებელს (OSG) აქვს უფლება გაფრთხილების გარეშე შეაჩეროს სამუშაოები ან სრულად გათიშოს ვებსაიტი ინტერნეტ სივრციდან დავალიანების სრულად დაფარვამდე.",
@@ -37,9 +37,12 @@ document.addEventListener('DOMContentLoaded', () => {
             clause10Body: "ვებსაიტის სატესტო ვერსიის გადაცემის შემდეგ, კლიენტს აქვს 5 სამუშაო დღე შენიშვნებისა და ხარვეზების მოსაწოდებლად. აღნიშნულ ვადაში უკუკავშირის არარსებობის შემთხვევაში, სამუშაო ითვლება სრულად და ჯეროვნად შესრულებულად.",
 
             clause11Title: "საგარანტიო მომსახურების ვადა",
-            clause11Body: "ვებსაიტის ინტერნეტში გაშვებიდან OSG უსასყიდლოდ ასწორებს გამოვლენილ ტექნიკურ ხარვეზებსა და მცირე შესწორებებს, არჩეული პაკეტის შესაბამისად:<br><br>Starter პაკეტი: 14 დღე;<br>Pro პაკეტი: 21 დღე;<br>Premium პაკეტი: 3 თვე (90 დღე).<br><br>აღნიშნული საგარანტიო ვადების გასვლის შემდეგ, ნებისმიერი ტექნიკური მხარდაჭერა, განახლება ან ცვლილება ხორციელდება ცალკე შეთანხმებული ტარიფით.",
+            clause11Body: "ვებსაიტის ინტერნეტში გაშვებიდან OSG უსასყიდლოდ ასწორებს გამოვლენილ ტექნიკურ ხარვეზებსა და მცირე შესწორებებს, არჩეული პაკეტის შესაბამისად:<br><br>Mini პაკეტი: 7 დღე;<br>Starter პაკეტი: 14 დღე;<br>Pro პაკეტი: 21 დღე;<br>Premium პაკეტი: 3 თვე (90 დღე).<br><br>აღნიშნული საგარანტიო ვადების გასვლის შემდეგ, ნებისმიერი ტექნიკური მხარდაჭერა, განახლება ან ცვლილება ხორციელდება ცალკე შეთანხმებული ტარიფით.",
 
-            footnote: "ბოლო განახლება: 2026 წლის ივლისი · კითხვების შემთხვევაში დაგვიკავშირდით — <a href=\"mailto:business@osgweb.ge\">business@osgweb.ge</a>",
+            clause12Title: "სააქციო ფასები",
+            clause12Body: "აქციის ფარგლებში გამოცხადებული ფასი (მაგალითად, Mini პაკეტის სააქციო ფასი) ფიქსირდება, თუ კლიენტი აქციის დასრულებამდე გადაიხდის მომსახურების სრულ ღირებულებას ან პირველ შენატანს (50/50 ან 3-თვიანი გეგმით). ასეთ შემთხვევაში შენატანები დაითვლება სააქციო ფასიდან. აქციის დასრულების თარიღი და დრო მითითებულია ვებსაიტზე; ამ ვადის გასვლის შემდეგ ახალ შეკვეთებზე მოქმედებს სტანდარტული ფასი.",
+
+            footnote: "ბოლო განახლება: 2026 წლის ოქტომბერი · კითხვების შემთხვევაში დაგვიკავშირდით: <a href=\"mailto:support@osgweb.ge\">support@osgweb.ge</a>",
 
             footerAbout: "ინოვაციური ციფრული გამოცდილება ბრენდის წარმატებისთვის.",
             footerContactTitle: "კონტაქტი",
@@ -54,10 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
             pageIntro: "Please read the terms of service carefully before we begin our collaboration.",
 
             clause1Title: "Intellectual Property Rights",
-            clause1Body: "The website's code, design, and all materials are the property of the Contractor (OSG) and are transferred in full to the Client's ownership only after the total cost of the service has been paid in full, regardless of the payment plan chosen (50/50, 3-Month, or 6-Month).",
+            clause1Body: "The website's code, design, and all materials are the property of the Contractor (OSG) and are transferred in full to the Client's ownership only after the total cost of the service has been paid in full, regardless of the payment option chosen (one-time payment, 50/50, 3-Month, or 6-Month).",
 
             clause2Title: "Payment Models and Mandatory Term",
-            clause2Body: "Cooperation is carried out under one of three agreed payment plans:<br><br>50/50 Plan: 50% is paid before work begins (advance), and the remaining 50% immediately upon completion of the project, before the website goes live.<br><br>3-Month Plan: the total cost (including an added service fee) is divided into 3 equal monthly installments.<br><br>6-Month Plan: the total cost (including an added service fee) is divided into 6 equal monthly installments.<br><br>For the 3-Month and 6-Month plans, the agreement is binding for the full selected duration. If the Client terminates the agreement before all installments are paid, a fixed penalty applies to compensate for the work already performed, and any remaining balance becomes immediately due.",
+            clause2Body: "Cooperation is carried out under one of four payment options:<br><br>One-time payment: the full cost of the service is paid in a single payment.<br><br>50/50 Plan: 50% is paid before work begins (advance), and the remaining 50% immediately upon completion of the project, before the website goes live.<br><br>3-Month Plan: the total cost (including an added service fee) is divided into 3 monthly installments.<br><br>6-Month Plan (for the Starter, Pro, and Premium packages): the total cost (including an added service fee) is divided into 6 monthly installments.<br><br>Under the 3-Month and 6-Month plans, the first installment is paid before work begins. Installments are rounded, and the final installment is adjusted so that the sum matches the total cost exactly. These plans are binding for their full duration. If the Client terminates the agreement before all installments are paid, a fixed penalty applies to compensate for the work already performed, and any remaining balance becomes immediately due.<br><br>Any other payment schedule is possible only by individual written agreement.",
 
             clause3Title: "Suspension and Disconnection of Service",
             clause3Body: "If a monthly installment under the 3-Month or 6-Month plan is delayed by 5 calendar days, or if the remaining 50% under the 50/50 plan is not paid on time, the Contractor (OSG) has the right, without prior notice, to suspend work or take the website fully offline until the outstanding balance is paid in full.",
@@ -84,9 +87,12 @@ document.addEventListener('DOMContentLoaded', () => {
             clause10Body: "After the test version of the website is delivered, the Client has 5 business days to submit comments and report any issues. If no feedback is received within this period, the work is considered fully and properly completed.",
 
             clause11Title: "Warranty Period",
-            clause11Body: "From the moment the website goes live, OSG will fix any identified technical faults and minor corrections free of charge, according to the selected package:<br><br>Starter package: 14 days;<br>Pro package: 21 days;<br>Premium package: 3 months (90 days).<br><br>After these warranty periods expire, any technical support, updates, or changes will be provided under a separately agreed rate.",
+            clause11Body: "From the moment the website goes live, OSG will fix any identified technical faults and minor corrections free of charge, according to the selected package:<br><br>Mini package: 7 days;<br>Starter package: 14 days;<br>Pro package: 21 days;<br>Premium package: 3 months (90 days).<br><br>After these warranty periods expire, any technical support, updates, or changes will be provided under a separately agreed rate.",
 
-            footnote: "Last updated: July 2026 · If you have any questions, contact us — <a href=\"mailto:business@osgweb.ge\">business@osgweb.ge</a>",
+            clause12Title: "Promotional Prices",
+            clause12Body: "A price announced as part of a promotion (for example, the Mini package's promotional price) is locked in if the Client pays the full cost of the service or the first installment (under the 50/50 or 3-Month plan) before the promotion ends. In that case, installments are calculated from the promotional price. The promotion's end date and time are shown on the website; after that, the standard price applies to new orders.",
+
+            footnote: "Last updated: October 2026 · If you have any questions, contact us: <a href=\"mailto:support@osgweb.ge\">support@osgweb.ge</a>",
 
             footerAbout: "A top 1% boutique studio engineering digital presence for brands that demand excellence.",
             footerContactTitle: "Contact",
@@ -101,10 +107,10 @@ document.addEventListener('DOMContentLoaded', () => {
             pageIntro: "Пожалуйста, внимательно ознакомьтесь с условиями обслуживания перед началом сотрудничества с нами.",
 
             clause1Title: "Права на интеллектуальную собственность",
-            clause1Body: "Код сайта, дизайн и все материалы являются собственностью Исполнителя (OSG) и переходят в полную собственность Клиента только после полной оплаты стоимости услуги , независимо от выбранного плана оплаты (50/50, 3 месяца или 6 месяцев).",
+            clause1Body: "Код сайта, дизайн и все материалы являются собственностью Исполнителя (OSG) и переходят в полную собственность Клиента только после полной оплаты стоимости услуги, независимо от выбранного варианта оплаты (разовый платёж, 50/50, 3 или 6 месяцев).",
 
             clause2Title: "Модели оплаты и обязательный срок",
-            clause2Body: "Сотрудничество осуществляется по одному из трёх согласованных планов оплаты:<br><br>План 50/50: 50% оплачивается до начала работ (предоплата), а оставшиеся 50% — сразу после завершения проекта, до запуска сайта в интернете (Live).<br><br>План на 3 месяца: полная стоимость (включая дополнительную комиссию за услугу) делится на 3 равных ежемесячных платежа.<br><br>План на 6 месяцев: полная стоимость (включая дополнительную комиссию за услугу) делится на 6 равных ежемесячных платежей.<br><br>Для планов на 3 и 6 месяцев договор является обязательным на весь выбранный срок. Если Клиент расторгает договор до полной оплаты всех платежей, применяется фиксированный штраф в качестве компенсации за уже выполненную работу, а оставшаяся сумма подлежит немедленной оплате.",
+            clause2Body: "Сотрудничество осуществляется по одному из четырёх вариантов оплаты:<br><br>Разовый платёж: полная стоимость услуги оплачивается одним платежом.<br><br>План 50/50: 50% оплачивается до начала работ (предоплата), а оставшиеся 50% сразу после завершения проекта, до запуска сайта в интернете (Live).<br><br>План на 3 месяца: полная стоимость (включая дополнительную комиссию за услугу) делится на 3 ежемесячных платежа.<br><br>План на 6 месяцев (для пакетов Starter, Pro и Premium): полная стоимость (включая дополнительную комиссию за услугу) делится на 6 ежемесячных платежей.<br><br>По планам на 3 и 6 месяцев первый платёж вносится до начала работ. Платежи округляются, а последний корректируется так, чтобы их сумма точно совпадала с полной стоимостью. Эти планы являются обязательными на весь выбранный срок. Если Клиент расторгает договор до полной оплаты всех платежей, применяется фиксированный штраф в качестве компенсации за уже выполненную работу, а оставшаяся сумма подлежит немедленной оплате.<br><br>Иной график оплаты возможен только по индивидуальному письменному соглашению.",
 
             clause3Title: "Приостановка и отключение услуг",
             clause3Body: "В случае просрочки ежемесячного платежа по плану на 3 или 6 месяцев на 5 календарных дней, либо несвоевременной оплаты оставшихся 50% по плану 50/50, Исполнитель (OSG) имеет право без предупреждения приостановить работы или полностью отключить сайт из интернет-пространства до полного погашения задолженности.",
@@ -131,9 +137,12 @@ document.addEventListener('DOMContentLoaded', () => {
             clause10Body: "После передачи тестовой версии сайта у Клиента есть 5 рабочих дней для предоставления замечаний и указания недочётов. При отсутствии обратной связи в течение этого срока работа считается полностью и надлежащим образом выполненной.",
 
             clause11Title: "Гарантийный срок",
-            clause11Body: "С момента запуска сайта в интернете OSG бесплатно устраняет выявленные технические неисправности и незначительные доработки в соответствии с выбранным пакетом:<br><br>Пакет Starter: 14 дней;<br>Пакет Pro: 21 день;<br>Пакет Premium: 3 месяца (90 дней).<br><br>По истечении указанных гарантийных сроков любая техническая поддержка, обновления или изменения осуществляются по отдельно согласованному тарифу.",
+            clause11Body: "С момента запуска сайта в интернете OSG бесплатно устраняет выявленные технические неисправности и незначительные доработки в соответствии с выбранным пакетом:<br><br>Пакет Mini: 7 дней;<br>Пакет Starter: 14 дней;<br>Пакет Pro: 21 день;<br>Пакет Premium: 3 месяца (90 дней).<br><br>По истечении указанных гарантийных сроков любая техническая поддержка, обновления или изменения осуществляются по отдельно согласованному тарифу.",
 
-            footnote: "Последнее обновление: июль 2026 г. · Если у вас есть вопросы, свяжитесь с нами — <a href=\"mailto:business@osgweb.ge\">business@osgweb.ge</a>",
+            clause12Title: "Акционные цены",
+            clause12Body: "Цена, объявленная в рамках акции (например, акционная цена пакета Mini), фиксируется, если Клиент до окончания акции оплатит полную стоимость услуги или первый платёж (по плану 50/50 или на 3 месяца). В этом случае платежи рассчитываются от акционной цены. Дата и время окончания акции указаны на сайте; после этого для новых заказов действует стандартная цена.",
+
+            footnote: "Последнее обновление: октябрь 2026 г. · Если у вас есть вопросы, свяжитесь с нами: <a href=\"mailto:support@osgweb.ge\">support@osgweb.ge</a>",
 
             footerAbout: "Бутик-студия премиум-класса, создающая цифровое присутствие для брендов, которым нужно совершенство.",
             footerContactTitle: "Контакты",

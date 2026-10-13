@@ -239,20 +239,30 @@ body.mobile-nav-is-open .discount-sign-root {
    pinned to the viewport.
 ══════════════════════════════════════════════════════════════════ */
 @media (max-width: 991px) {
+  /* Up to 991px the pricing heading and subtitle span the full width,
+     so a sign hanging beside them covered the text. Here it hangs
+     centered in the space ABOVE the heading instead: a negative `top`
+     lifts the nail into #pricing's top padding (#pricing keeps
+     `overflow: visible` so this is safe), and the heading is pushed
+     down just far enough to clear the card. */
   .discount-sign-root {
-    right: 4.8rem;
+    top: -5rem;
+    left: 0;
+    right: 0;
+    width: fit-content;
+    margin: 0 auto;
   }
+  .rope-svg { height: 40px !important; }
+  /* padding, not margin: a top margin would collapse through the
+     container and carry the sign down with the heading */
+  #pricing .section-title { padding-top: 8.25rem; }
 }
 
 @media (max-width: 767px) {
-  /* Negative `top` — not a shorter rope — is what lifts the whole
-     assembly (nail + rope + card) up so the card's own bottom edge
-     clears the billing toggle below. The nail still lands inside
-     #pricing's own top padding, and #pricing keeps `overflow: visible`
-     precisely so this is safe to hang above the title's top edge. */
-  .discount-sign-root { top: -1.5rem; right: 1rem; }
-
-  .rope-svg { height: 40px !important; }
+  /* Phones: hangs from the left, lined up with the content's left edge
+     (the container's 2rem side padding) instead of centered. */
+  .discount-sign-root { left: 2rem; right: auto; margin: 0; }
+  #pricing .section-title { padding-top: 7.25rem; }
 
   .sign-card {
     min-width: 136px;
@@ -265,9 +275,6 @@ body.mobile-nav-is-open .discount-sign-root {
   .sign-footer        { font-size: 0.42rem; }
 }
 
-@media (max-width: 380px) {
-  .discount-sign-root { right: 0.6rem; }
-}
 
 /* ══════════════════════════════════════════════════════════════════
    LANGUAGE VARIANTS

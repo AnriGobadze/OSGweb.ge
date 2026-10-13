@@ -196,7 +196,12 @@ code, pre, kbd { font-family: var(--font-mono); }
 
 .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; position: relative; z-index: 2; }
-.section-title { font-size: clamp(2.2rem, 5vw, 3rem); text-align: center; margin-bottom: 4rem; font-weight: 700; color: var(--dark-title); letter-spacing: -0.02em; }
+/* Phones get a smaller size: long Georgian words (e.g. "განხორციელებული")
+   were wider than the screen at 2.2rem. `overflow-wrap` is a last resort. */
+.section-title { font-size: clamp(1.5rem, 7.2vw, 2.2rem); text-align: center; margin-bottom: 4rem; font-weight: 700; color: var(--dark-title); letter-spacing: -0.02em; overflow-wrap: break-word; }
+@media (min-width: 768px) { .section-title { font-size: clamp(2.2rem, 5vw, 3rem); } }
+.section-title.has-subtitle { margin-bottom: 1rem; }
+.section-subtitle { text-align: center; max-width: 540px; margin: 0 auto 3rem; font-size: clamp(1rem, 2vw, 1.15rem); line-height: 1.6; color: var(--text-color-light); position: relative; }
 
 .gradient-text { background: var(--primary-gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
@@ -336,7 +341,7 @@ body.virtual-page-active #main-content-view { display: none; }
 section { padding: 4rem 0; }
 .content-section-dark { background-color: transparent; }
 
-.card { background: var(--card-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); padding: 2.5rem; border: 1px solid var(--glass-border); border-radius: 16px; box-shadow: var(--shadow-sm), var(--shadow-card-highlight); transition: transform var(--transition-smooth), border-color var(--transition-fast), box-shadow var(--transition-smooth); position: relative; overflow: hidden; }
+.card { background: var(--card-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); padding: clamp(1.5rem, 7vw, 2.5rem); border: 1px solid var(--glass-border); border-radius: 16px; box-shadow: var(--shadow-sm), var(--shadow-card-highlight); transition: transform var(--transition-smooth), border-color var(--transition-fast), box-shadow var(--transition-smooth); position: relative; overflow: hidden; }
 .card::before { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; background: radial-gradient(360px circle at var(--spot-x, 50%) var(--spot-y, 50%), rgba(16, 185, 129, 0.16), transparent 70%); transition: opacity 0.5s ease; }
 .card:hover { transform: translateY(-10px); box-shadow: var(--shadow-glow); border-color: var(--verified-border); }
 .card:hover::before { opacity: 1; }
@@ -408,7 +413,11 @@ section { padding: 4rem 0; }
     margin-bottom: 1.5rem;
     position: relative;
 }
-.hero-subtitle { max-width: 550px; margin-bottom: 2.5rem; font-size: clamp(1rem, 2vw, 1.2rem); color: rgba(249, 250, 251, 0.82); position: relative; }
+/* Under the H1: one short lead line, then the services as a compact
+   "a · b · c" line (each item kept on one line). */
+.hero-subtitle { max-width: 560px; margin-bottom: 0.6rem; font-size: clamp(1.1rem, 2.4vw, 1.35rem); font-weight: 600; line-height: 1.45; color: rgba(249, 250, 251, 0.94); position: relative; }
+.hero-subtext { max-width: 560px; margin-bottom: 2.5rem; font-size: clamp(0.9rem, 1.7vw, 1rem); line-height: 1.7; color: rgba(249, 250, 251, 0.74); position: relative; }
+.hero-subtext span { white-space: nowrap; }
 .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: flex-start; position: relative; }
 #hero .gradient-text {
     background: linear-gradient(135deg, var(--accent-mint) 15%, var(--accent-emerald) 85%);
@@ -507,6 +516,9 @@ html.hero-cinematic-init .hero-text h1 {
 }
 html.hero-cinematic-init .hero-subtitle {
     animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.14s both;
+}
+html.hero-cinematic-init .hero-subtext {
+    animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.21s both;
 }
 html.hero-cinematic-init .hero-buttons {
     animation: heroSlideIn 0.8s cubic-bezier(0.16, 1, 0.3, 1) 0.28s both;
@@ -818,6 +830,8 @@ html.hero-cinematic-init header {
     }
 
     .case-meta .review-author { padding-right: 5rem; }
+    /* the right padding is room for the verified badge, hidden on phones */
+    .case-meta { padding-right: 0; }
     .case-tags { margin-top: -1rem; }
 
 }
@@ -1079,12 +1093,83 @@ html.hero-cinematic-init header {
 .pricing-card .price { font-size: 2.9rem; font-weight: 700; color: var(--text-main); margin-bottom: 0.5rem; text-align: center; position: relative; }
 .pricing-card .billing-period { font-size: 0.95rem; color: var(--text-color-light); margin-bottom: 2rem; font-style: normal; text-align: center; position: relative; }
 .pricing-card .features-list { list-style: none; padding: 0; position: relative; }
-.pricing-card .feature-group-label { font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-main); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.6rem; }
+.pricing-card .feature-group-label { overflow-wrap: break-word; hyphens: auto; font-weight: 700; margin-top: 1.5rem; margin-bottom: 0.75rem; color: var(--text-main); font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.06em; border-bottom: 1px solid var(--glass-border); padding-bottom: 0.6rem; }
 .pricing-card .feature-group-label:first-of-type { margin-top: 0; }
-.pricing-card .feature-item { font-size: 1rem; margin-bottom: 0.85rem; display: flex; align-items: flex-start; gap: 10px; color: var(--text-color-light); line-height: 1.5; }
+.pricing-card .feature-item { overflow-wrap: break-word; font-size: 1rem; margin-bottom: 0.85rem; display: flex; align-items: flex-start; gap: 10px; color: var(--text-color-light); line-height: 1.5; }
 .pricing-card .feature-item i { color: var(--success); font-size: 1rem; margin-top: 0.2rem; flex-shrink: 0; }
 .pricing-card .feature-item.fail i { color: var(--error); }
 .pricing-card .get-started-btn { width: 100%; text-align: center; position: relative; }
+/* ── Mini: the entry package ──────────────────────────────────────
+   Phones: a normal card, first in the list (the three wrappers dissolve;
+   order: price → promo → what's included → button). From 768px: a
+   full-width row under the three main packages — price | what's included,
+   promo + button below; from 992px all three side by side in one short
+   row. It sits below them because the hanging "3 premium projects" sign
+   covers the top-right of the grid. The promo parts show only while
+   `.promo-active` (set by script.js until PRICING.miniPromoEnds). */
+.pricing-card.mini .mini-summary,
+.pricing-card.mini .mini-details,
+.pricing-card.mini .mini-cta { display: contents; }
+.pricing-card.mini .mini-promo { order: 1; }
+.pricing-card.mini .features-list { order: 2; margin: 0 0 2rem; }
+.pricing-card.mini .get-started-btn { order: 3; }
+
+.price-old { text-align: center; font-size: 1.15rem; color: var(--text-color-light); margin-bottom: 0.15rem; position: relative; }
+.price-old s { text-decoration-thickness: 2px; }
+.mini-promo {
+    position: relative;
+    text-align: center;
+    margin: -1rem 0 2rem;
+    padding: 0.85rem 1rem;
+    border: 1px dashed rgba(16, 185, 129, 0.5);
+    border-radius: 12px;
+    background: rgba(16, 185, 129, 0.07);
+}
+.mini-promo-deadline { color: var(--accent-mint); font-weight: 600; font-size: 0.95rem; line-height: 1.5; }
+.mini-promo-deadline i { margin-right: 0.3rem; }
+/* "• Ends in 3d 4h" on the same line (filled in by script.js) */
+/* inline-block: moves to its own line as a whole when it doesn't fit */
+.mini-promo-countdown { display: inline-block; max-width: 100%; color: var(--text-main); font-weight: 700; font-variant-numeric: tabular-nums; }
+.mini-promo-countdown:not(:empty)::before { content: '•'; margin: 0 0.45em; color: var(--accent-mint); }
+.mini-promo-lock { color: var(--text-color-light); font-size: 0.85rem; line-height: 1.5; margin-top: 0.35rem; }
+.pricing-card.mini:not(.promo-active) .price-old,
+.pricing-card.mini:not(.promo-active) .mini-promo { display: none; }
+/* Very small phones: drop the grid's extra side padding (the container
+   already has 2rem) so card text, e.g. "დასრულებამდე:", has room. */
+@media (max-width: 400px) {
+    .pricing-cards-grid { padding-left: 0; padding-right: 0; }
+    .mini-promo { padding: 0.75rem 0.6rem; }
+}
+/* stronger than the `display: grid` below: hidden on the "Individual"
+   tab, and on the 6-month plan (Mini doesn't offer it) */
+.pricing-card.mini.hidden,
+.pricing-card.mini.plan-unavailable { display: none; }
+
+@media (min-width: 768px) {
+    .pricing-card.mini {
+        order: 1;
+        grid-column: 1 / -1;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+        gap: 1.75rem 3rem;
+        align-items: center;
+    }
+    .pricing-card.mini .mini-summary { display: flex; flex-direction: column; }
+    .pricing-card.mini .mini-details { display: block; position: relative; }
+    .pricing-card.mini .mini-cta { display: flex; flex-direction: column; grid-column: 1 / -1; position: relative; }
+    .pricing-card.mini .billing-period { margin-bottom: 0; }
+    .pricing-card.mini .features-list { margin: 0; }
+    .pricing-card.mini .mini-promo { margin: 0 0 1.25rem; }
+}
+@media (min-width: 992px) {
+    .pricing-card.mini {
+        /* clear of the Pro card's scale(1.05) above it */
+        margin-top: 1.25rem;
+        grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.1fr) minmax(0, 1.1fr);
+        gap: 2.5rem;
+    }
+    .pricing-card.mini .mini-cta { grid-column: auto; }
+}
 .book-a-call-btn-wrapper { margin-top: 4rem; text-align: center; }
 .book-a-call { font-size: 1.1rem; font-weight: 600; }
 .pricing-trust-snippet { margin-top: 2rem; color: var(--text-color-light); text-align: center; font-size: 1rem; }
@@ -1098,6 +1183,9 @@ html.hero-cinematic-init header {
 .info-item i { font-size: 1.5rem; color: var(--accent-emerald); width: 25px; text-align: center; }
 .info-item a, .info-item span { color: var(--text-color); text-decoration: none; font-size: 1.1rem; }
 .info-item a:hover { color: var(--accent-mint); }
+/* email + a small "new projects" / "support" label under it */
+.info-item .info-stack { display: flex; flex-direction: column; align-items: flex-start; line-height: 1.35; text-align: left; }
+.info-item .info-note { color: var(--text-color-light); font-size: 0.85rem; }
 .contact-form { display: flex; flex-direction: column; gap: 1.5rem; }
 .contact-form input, .contact-form textarea { width: 100%; padding: 1rem; background-color: var(--bg-color-darker); border: 1px solid var(--glass-border); border-radius: 10px; color: var(--text-main); transition: border-color var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast); }
 .contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--text-color-light); opacity: 0.75; }
@@ -1105,20 +1193,17 @@ html.hero-cinematic-init header {
 .form-button-group { display: flex; flex-direction: column; align-items: stretch; gap: 1rem; margin-top: 1rem; }
 
 .review-page-section { min-height: 100vh; padding: 6rem 2rem; display: flex; align-items: center; justify-content: center; }
-.review-form-container {
-    background: var(--card-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
-    box-shadow: var(--shadow-md), var(--shadow-card-highlight);
-    padding: 2.5rem 2rem;
-    width: calc(100% - 1rem);
-    margin: 0 auto;
-}
-.review-form-header { text-align: center; margin-bottom: 2.5rem; }
+/* Review page: heading + intro on the left, the form on the right (stacked
+   below 992px). The form sits directly on the page, no card around it. */
+.review-layout { display: grid; grid-template-columns: 1fr; gap: 2.5rem; }
+.review-intro { text-align: center; }
 .review-page-section .section-title { margin-bottom: 1rem; }
-.review-form-header .review-form-subtitle { max-width: 500px; margin: auto; opacity: 0.85; color: var(--text-color-light); }
+.review-intro .review-form-subtitle { max-width: 460px; margin: 0 auto; font-size: clamp(1rem, 2vw, 1.15rem); line-height: 1.6; color: var(--text-color-light); }
+@media (min-width: 992px) {
+    .review-layout { grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.5fr); gap: 4.5rem; align-items: center; }
+    .review-intro, .review-page-section .section-title { text-align: left; }
+    .review-intro .review-form-subtitle { margin: 0; }
+}
 .horizontal-form .form-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 2rem; }
 .horizontal-form .textarea-group { grid-column: 1 / -1; }
 .horizontal-form .input-group { position: relative; }
@@ -1172,13 +1257,17 @@ html.hero-cinematic-init header {
 .footer-legal-links a { color: var(--text-color-light); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color var(--transition-fast); }
 .footer-legal-links a:hover { color: var(--accent-mint); }
 .centered-page { display: flex; flex-direction: column; min-height: calc(100vh - var(--header-height)); justify-content: center; }
+/* Stretch to the screen width: as a flex item with auto side margins the
+   container otherwise sizes to its content, which on small phones was
+   wider than the screen (the all-reviews cards got cut off on the right). */
+.centered-page > .container { width: 100%; }
 
 /* ================================== */
 /* === All Reviews Page Styles ====== */
 /* ================================== */
 .page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 4rem; min-height: 24px; flex-wrap: wrap; gap: 1rem; }
 .page-header .section-title { margin-bottom: 0; text-align: left; font-size: clamp(2rem, 4vw, 2.5rem); }
-.all-reviews-grid { display: grid; gap: 1.5rem; grid-template-columns: 1fr; }
+.all-reviews-grid { display: grid; gap: 1.5rem; grid-template-columns: minmax(0, 1fr); }
 
 .package-pill { display: inline-flex; align-items: center; padding: 0.2rem 0.6rem; border-radius: 6px; font-size: 0.8rem; font-weight: 600; border: 1px solid transparent; }
 .package-pill.pro-package { background: var(--pro-package-bg); color: var(--pro-package-text); border-color: var(--pro-package-border); }
@@ -1189,15 +1278,16 @@ html.hero-cinematic-init header {
 /* ================================== */
 .legal-header { padding: 6.5rem 0 2.5rem; text-align: center; }
 .legal-eyebrow { font-family: var(--font-mono); font-size: 0.8rem; font-weight: 500; letter-spacing: 0.22em; text-transform: uppercase; color: var(--accent-mint); margin-bottom: 1rem; }
-.legal-header h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); color: var(--dark-title); margin-bottom: 0.75rem; }
+.legal-header h1 { font-size: clamp(1.7rem, 8vw, 2.2rem); color: var(--dark-title); margin-bottom: 0.75rem; }
 .legal-header p { color: var(--text-color-light); max-width: 560px; margin: 0 auto; }
+@media (min-width: 768px) { .legal-header h1 { font-size: clamp(2.2rem, 5vw, 3.2rem); } }
 .legal-page-section { padding-bottom: 6rem; }
 .legal-content { max-width: 760px; margin: 0 auto; display: flex; flex-direction: column; gap: 1.5rem; }
 .legal-clause { background: var(--card-bg); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid var(--glass-border); border-radius: 16px; padding: clamp(1.5rem, 4vw, 2.5rem); box-shadow: var(--shadow-card-highlight); transition: border-color var(--transition-fast), box-shadow var(--transition-smooth); }
 .legal-clause:hover { border-color: var(--verified-border); box-shadow: var(--shadow-md), var(--shadow-card-highlight); }
 .legal-clause-head { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.1rem; }
 .legal-clause-num { flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%; background: var(--primary-gradient); color: var(--text-on-accent); font-weight: 700; font-family: var(--font-heading); display: flex; align-items: center; justify-content: center; font-size: 1.05rem; }
-.legal-clause h2 { font-size: 1.3rem; color: var(--text-main); font-weight: 600; line-height: 1.4; }
+.legal-clause h2 { font-size: clamp(1.1rem, 4.6vw, 1.3rem); min-width: 0; overflow-wrap: break-word; color: var(--text-main); font-weight: 600; line-height: 1.4; }
 .legal-clause p { color: var(--text-color); line-height: 1.9; font-size: 1.02rem; }
 .legal-footnote { text-align: center; color: var(--text-color-light); font-size: 0.9rem; margin-top: 1rem; }
 
@@ -1248,7 +1338,7 @@ html.hero-cinematic-init header {
        `min-width: 0` stops a longer translated label from forcing its
        own button (and therefore the whole row) wider than its share. */
     .billing-cycle-toggle { width: 100%; padding: 5px; }
-    .toggle-btn { flex: 1 1 0; min-width: 0; text-align: center; padding: 0.55rem 0.4rem; font-size: 0.78rem; }
+    .toggle-btn { flex: 1 1 auto; min-width: 0; text-align: center; padding: 0.55rem 0.4rem; font-size: 0.78rem; white-space: normal; line-height: 1.2; }
 }
 
 @media (min-width: 768px) {
@@ -1266,7 +1356,10 @@ html.hero-cinematic-init header {
     .contact-info .info-item { justify-content: flex-start; }
     .form-button-group { flex-direction: row; }
     .horizontal-form .form-grid { grid-template-columns: repeat(2, 1fr); }
-    .horizontal-form .star-rating-group { flex-direction: row; }
+    /* as tall as the text inputs beside it, so the row does not stretch
+       the website field (its icon sat below the text) */
+    .horizontal-form .star-rating-group { flex-direction: row; padding-top: 0.45rem; padding-bottom: 0.45rem; }
+    .horizontal-form .star-rating-system label { font-size: 1.75rem; }
     .footer-grid { grid-template-columns: 1fr 1fr; text-align: left; }
     .footer-col .social-icons { justify-content: flex-start; }
     .footer-col .logo { justify-content: flex-start; }
@@ -1280,12 +1373,15 @@ html.hero-cinematic-init header {
     .hamburger-menu { display: none; }
     .nav-links, .language-selector { display: flex; align-items: center; gap: 2rem; }
     .language-selector .nav-links { gap: 0; }
-    /* The Pro card's scale(1.05) grows it upward from its own center,
-       visually eating into the gap below the billing toggle — this
-       nudges the grid down slightly to compensate. */
-    .pricing-cards-grid { grid-template-columns: repeat(3, 1fr); margin-top: 1rem; }
+    /* The Pro card's scale(1.05) grows it ~25px upward from its own
+       center, eating into the gap below the billing toggle — the extra
+       top padding keeps a clear gap above it. Padding, not margin: a margin
+       here collapsed with the payment-plan row's bottom margin, so when that
+       row closed the cards finished its slide with a sudden 24px jump. */
+    .pricing-cards-grid { grid-template-columns: repeat(3, 1fr); padding-top: 1.75rem; }
+    .plan-subtoggle { margin-bottom: 1.5rem; }
     .footer-grid { grid-template-columns: 1.5fr 1.5fr 1fr; }
-    .all-reviews-grid { grid-template-columns: repeat(2, 1fr); }
+    .all-reviews-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 .back-link:hover { color: var(--accent-mint); border-color: var(--accent-emerald); box-shadow: var(--shadow-md); transform: translateY(-2px); }

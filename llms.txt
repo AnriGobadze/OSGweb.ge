@@ -14,12 +14,13 @@ The website is in Georgian by default, with English and Russian versions availab
 
 ## ფასები / Pricing (GEL, one-time payment)
 
-- [სტარტერი / Starter — 1,200₾](https://osgweb.ge/#pricing): up to 3 pages, performance optimization, basic SEO
-- [პრო / Pro — 2,500₾](https://osgweb.ge/#pricing): up to 5 pages, admin and analytics dashboard, CMS integration
-- [პრემიუმი / Premium — 5,200₾](https://osgweb.ge/#pricing): up to 10 pages, e-commerce or booking system, full SEO audit, 3 months of post-launch support
+- [მინი / Mini — 600₾ (launch offer: 500₾ until 23 October 2026, 23:59 Tbilisi time)](https://osgweb.ge/#pricing): a one-page website, e.g. a landing page or a menu; no admin panel, online payments or booking system
+- [სტარტერი / Starter — 990₾](https://osgweb.ge/#pricing): up to 3 pages, performance optimization, basic SEO
+- [პრო / Pro — 2,190₾](https://osgweb.ge/#pricing): up to 5 pages, admin and analytics dashboard, CMS integration
+- [პრემიუმი / Premium — 4,490₾](https://osgweb.ge/#pricing): up to 10 pages, e-commerce or booking system, full SEO audit, 3 months of post-launch support
 - [ინდივიდუალური / Custom](https://osgweb.ge/#pricing): 10+ pages and complex API integrations, priced per project
 
-Installment plans are available: 50/50, 3 months or 6 months.
+Payment options: one-time payment; 50/50 (50% before work starts, 50% at launch); 3 monthly installments with a ~15% fee; or 6 monthly installments with a ~25% fee (Starter, Pro and Premium). With installments, the first payment is due before work starts. The Mini launch price is locked in if the full amount or the first installment is paid before the offer ends.
 
 ## პორტფოლიო / Portfolio
 
@@ -33,10 +34,18 @@ Installment plans are available: 50/50, 3 months or 6 months.
 - [EVAKUATORIGZAZE](https://www.evakuatorigzaze.ge/): tow truck service website
 - [Sufta Sivrce](https://www.suftasivrce.com/): hotel laundry website
 
+Template / demo builds:
+
+- [Ioseb Tsikaridze Studio](https://osg-web-demo.vercel.app/): photography studio website
+- [zoobum](https://osg-web-demo.vercel.app/petShopDemo.html): pet shop website
+- [Hellshop](https://hellshop.vercel.app/): perfume store website
+- [Everluxe](https://everluxe.vercel.app/): watch brand website
+
 ## კონტაქტი / Contact
 
 - [Contact form](https://osgweb.ge/#contact-page)
-- Email: [business@osgweb.ge](mailto:business@osgweb.ge)
+- General & new projects: [main@osgweb.ge](mailto:main@osgweb.ge)
+- Support: [support@osgweb.ge](mailto:support@osgweb.ge)
 - Phone / WhatsApp: [+995 555 09 59 59](tel:+995555095959)
 - Location: Tbilisi, Georgia
 - [Terms and conditions](https://osgweb.ge/terms.html)

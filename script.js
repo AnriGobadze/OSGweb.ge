@@ -241,7 +241,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const translations = {
         en: {
             proPackageLabel: "Pro Package", starterPackageLabel: "Starter Package",
-            badgeEyebrow: "✦ ONLY ACCEPTING ✦", badgeHeadline: "Only&nbsp;3&nbsp;Premium<br>Projects", badgeSub: "For September 2026",
+            badgeEyebrow: "✦ ONLY ACCEPTING ✦", badgeHeadline: "Only&nbsp;3&nbsp;Premium<br>Projects", badgeSub: "For October 2026",
 
             individualPayment: "Individual", individualTitle: "Custom Solution", individualPrice: "Custom Quote", individualDesc: "Tell us about your project",
             individualFeature1: "Multi-page (10+) websites", individualFeature2: "E-commerce & Booking Systems", individualFeature3: "Advanced API Integrations",
@@ -249,30 +249,33 @@ document.addEventListener('DOMContentLoaded', () => {
 
             salesTitle2: "+22% sales", sourceTitle2: "Source: Admin / GA4 • 45 day", webInfoTitle2: "<span class=\"case-tag-prefix\">Online Store · Performance · </span>Launched: Apr 2025", viewPRTitle: "View Live Project",
 
-            pageDescription: "OSG is a boutique web development and UI/UX design studio building high-performance digital platforms for ambitious brands. No templates, pure custom engineering.",
-            pageTitle: "Custom Web Development & UI/UX Design Studio | OSG",
+            pageDescription: "Website development in Tbilisi from 600 GEL: fast, SEO-ready websites, online stores and admin panels. Pay in full, 50/50 or in installments over up to 6 months.",
+            pageTitle: "Website Development in Tbilisi from 600 GEL | OSGWeb.ge",
 
             navServices: "Services", navPortfolio: "Portfolio", navTestimonials: "Testimonials", navPricing: "Pricing", navContact: "Contact",
-            heroTitle: "Your Business,<br><span class='gradient-text'>Digitally.</span>", heroSubtitle: "Websites That Work For You", heroButton: "Start a Project <i class=\"fas fa-chevron-right\" aria-hidden=\"true\"></i>", heroButtonSecondary: "Explore Services",
+            heroTitle: "Web Agency<br><span class='gradient-text'>in Tbilisi</span>", heroSubtitle: "We build websites that sell.", heroSubtext: "<span>Website development</span> · <span>Online stores</span> · <span>Web apps</span>", heroButton: "Start a Project <i class=\"fas fa-chevron-right\" aria-hidden=\"true\"></i>", heroButtonSecondary: "Explore Services",
 
-            servicesTitle: "Our Goal Is Your Success",
+            servicesTitle: "Not just a beautiful website. A sales system.",
             service1Title: "Design", service1Desc: "A technically sound website is not enough , the visual impression decides whether the user stays. The design should be modern, easy to understand, and tailored to the brand.",
             service2Title: "Security", service2Desc: "User trust begins with website security. Modern protection mechanisms ensure defense against hacking attacks, data leaks, and other threats.",
             service3Title: "Easy Management", service3Desc: "An intuitive system lets you easily change texts, add images, and customize the site to your needs , without coding knowledge.",
 
-            portfolioTitle: "Featured Works",
+            portfolioTitle: "Projects &amp; Case Studies",
             filterClientLabel: "Client Sites", filterTemplateLabel: "Template Builds", viewDemoTitle: "View Demo",
             flagship09Title:"'Sufta Sivrce' - Hotel laundry website" ,flagship1Title: "'Jagi Building' - Construction Website", flagship2Title: "'Laptop Georgia' - Tech Repair Website", flagship3Title: "'Stilis Sivrce' - Clothing Store Website", flagship4Title: "'Terra 24' - Funeral Bureau Website",
             flagship5Title: "'Prime Grind' - Construction Website", flagship6Title: "'Skhila Diesel Motors' - Car Care Website", flagship7Title: "'La Arté' - Jewellery Website", flagship8Title: "'EVAKUATORIGZAZE' - Tow Truck Website",
             portfolio1Title: "'The Golden Fork' - Restaurant Website", portfolio2Title: "'The Trim House' - Barbershop Branding", portfolio3Title: "'Olio & Sale' - Cafe Online Website",
             portfolio4Title: "'Healthy Salad' - Restaurant Website", portfolio5Title: "'Naxus AI' - Corporate Tech Website",
+            portfolio6Title: "'Ioseb Tsikaridze Studio' - Photography Studio Website", portfolio7Title: "'zoobum' - Pet Shop Website",
+            portfolio8Title: "'Hellshop' - Perfume Store Website", portfolio9Title: "'Everluxe' - Watch Brand Website",
 
             testimonialsTitle: "Reviews and Testimonials", contactTitle: "Contact Us", contactInfoTitle: "Contact Information",
             contactInfoDesc: "Have a project or question? Write to us, call us, or fill out the form.",
             reviewPromptText: "Have you worked with us? We’d love to hear your feedback.", contactInfoLocation: "Tbilisi, Georgia",
+            emailSalesLabel: "New projects", emailSupportLabel: "Support",
 
             formNamePlaceholder: "Your Name", formFullNamePlaceholder: "Full Name", formEmailPlaceholder: "Your Email", formCompanyPlaceholder: "Company Name",
-            formMessagePlaceholder: "Your Message", formWebsitePlaceholder: "Link of website", reviewFormMessagePlaceholder: "Write your review here...", reviewFormRatingLabel: "Your Rating",
+            formMessagePlaceholder: "Your Message", formWebsitePlaceholder: "Link of website", reviewFormMessagePlaceholder: "Write your review here...", reviewFormRatingLabel: "Rating",
             formLogoPlaceholder: "Add company logo", formSendButton: "Send", formInterestMessage: "Hello, I am interested in the {planName} package.",
 
             footerAbout: "A top 1% boutique studio engineering digital presence for brands that demand excellence.",
@@ -281,7 +284,7 @@ document.addEventListener('DOMContentLoaded', () => {
             reviewPageTitle: "Leave a Review", reviewPageSubtitle: "Your feedback helps us become even better.", reviewFormSubmitButton: "Submit Review",
             reviewSuccessTitle: "Thank You!", reviewPendingMessage: "Your review will be published after we confirm your project.",
 
-            pricingTitle: "Simple, Transparent Pricing",
+            pricingTitle: "An Investment in Your Digital Growth", pricingSubtitle: "Choose the format that fits your goals, or contact us for a one-on-one consultation.",
 
             oneTimePaymentTitle: "One-time", oneTimePayment: "One-time payment",
 
@@ -289,32 +292,33 @@ document.addEventListener('DOMContentLoaded', () => {
             groupAutomation: "Automation & Experience", groupEnterpriseSupport: "Enterprise Support",
             pricingProInclLabel: "Includes All Starter Tier Capabilities +", pricingPremiumInclLabel: "Includes All Pro Tier Capabilities +",
 
-            pricingStarterTitle: "Starter", pricingStarterPrice: "1,200₾",
+            pricingStarterTitle: "Starter",
             pricingStarterFeature1: "Custom Multi-Section Digital Infrastructure (Up to 3 high-fidelity pages)",
             pricingStarterFeature2: "Bespoke User Experience (UX) & Luxury Visual Architecture",
             pricingStarterFeature3: "Blazing-Fast Performance Optimization (95+ Google PageSpeed Score)",
             pricingStarterFeature4: "Core Search Engine Optimization (SEO)",
 
-paymentPlansTitle: "Payment Plans",
-plan5050Title: "50/50",
-plan3moTitle: "3-Month",
-plan6moTitle: "6-Month",
-plan5050Period: "50% Upfront / 50% at Launch",
-plan3moPeriod: "3 monthly payments\n(+15% fee)",
-plan6moPeriod: "6 monthly payments\n(+25% fee)",
+            paymentPlansTitle: "Payment Plans", plan5050Title: "50/50", plan3moTitle: "3-Month", plan6moTitle: "6-Month",
+            plan5050Period: "50% Upfront / 50% at Launch",
+            // {list} = the payments, {fee} = the fee in ₾ (both filled in from PRICING)
+            plan3moPeriod: "{list} over 3 months\n(+{fee} fee · 1st payment before work starts)",
+            plan6moPeriod: "{list} over 6 months\n(+{fee} fee · 1st payment before work starts)",
 
-pricingStarterPrice5050: "600₾", pricingStarterPrice3mo: "460₾", pricingStarterPrice6mo: "250₾",
-pricingProPrice5050: "1250₾", pricingProPrice3mo: "955₾", pricingProPrice6mo: "520₾",
-pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPremiumPrice6mo: "1080₾",
+            pricingMiniTitle: "Mini", pricingMiniInclLabel: "What's Included",
+            pricingMiniFeature1: "One-page website, e.g. a landing page or a menu",
+            pricingMiniFeature2: "Mobile-friendly, fast-loading design",
+            pricingMiniFeature3: "Basic search engine optimization (SEO)",
+            miniPromoUntil: "Act fast! Offer ends {date}",
+            miniPromoLeftDays: "Ends in {d}d {h}h", miniPromoLeftHours: "Ends in {h}h {m}m",
+            miniPromoLock: "Make your first payment today!",
 
-
-            pricingProTitle: "Pro", pricingProPrice: "2,500₾", 
+            pricingProTitle: "Pro",
             pricingProFeature1: "Up to 5 Custom High-Conversion Pages",
             pricingProFeature2: "Advanced Admin & Analytics Dashboard",
             pricingProFeature3: "Dynamic CMS Integration (Supabase / Headless)",
             pricingProFeature4: "Fluid Modern Micro-Animations & Interactions",
 
-            pricingPremiumTitle: "Premium", pricingPremiumPrice: "5,200₾", 
+            pricingPremiumTitle: "Premium",
             pricingPremiumFeature1: "Up to 10 Pages & Enterprise Custom Architecture",
             pricingPremiumFeature2: "Advanced E-commerce / Custom Booking Engine",
             pricingPremiumFeature3: "Comprehensive Technical & On-Page SEO Audit",
@@ -328,7 +332,7 @@ pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPr
         },
         ge: {
             proPackageLabel: "პრო პაკეტი", starterPackageLabel: "სტარტერ პაკეტი",
-            badgeEyebrow: "✦ ამჟამად ვიღებთ ✦", badgeHeadline: "მხოლოდ&nbsp;3&nbsp;პრემიუმ<br>პროექტს", badgeSub: "2026 წლის სექტემბრისთვის",
+            badgeEyebrow: "✦ ამჟამად ვიღებთ ✦", badgeHeadline: "მხოლოდ&nbsp;3&nbsp;პრემიუმ<br>პროექტს", badgeSub: "2026 წლის ოქტომბრისთვის",
 
             individualPayment: "ინდივ.", individualTitle: "სპეციალური შეკვეთა", individualPrice: "ინდივიდუალური შეთავაზება", individualDesc: "მოგვიყევით პროექტზე.",
             individualFeature1: "10+ გვერდიანი ვებსაიტი", individualFeature2: "ელ. კომერცია და ჯავშნები", individualFeature3: "API-ს რთული ინტეგრაციები",
@@ -338,30 +342,33 @@ pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPr
 
             salesTitle2: "+22% გაყიდვები", sourceTitle2: "წყარო: Admin / GA4 • 45 დღე", webInfoTitle2: "<span class=\"case-tag-prefix\">ონლაინ მაღაზია · შესრულება · </span>გამოშვების თარიღი: აპრ 2025", viewPRTitle: "პროექტის ნახვა",
 
-            pageDescription: "საიტის დამზადება თბილისში 1,200₾-დან: სწრაფი, SEO-ზე მორგებული ვებსაიტები, ონლაინ მაღაზიები და ადმინ პანელი. განვადება 6 თვემდე. OSG Digital Agency.",
-            pageTitle: "საიტის დამზადება და ვებ დიზაინი თბილისში | OSG",
+            pageDescription: "ვებსაიტების დამზადება თბილისში 600 ლარიდან: სწრაფი, SEO-ზე მორგებული საიტები, ონლაინ მაღაზიები და ადმინ პანელი. გადახდა ერთიანად, 50/50 ან განვადებით 6 თვემდე.",
+            pageTitle: "საიტის დამზადება თბილისში 600 ლარიდან | OSGWeb.ge",
 
             navServices: "სერვისები", navPortfolio: "პორტფოლიო", navTestimonials: "შეფასებები", navPricing: "ფასები", navContact: "კონტაქტი",
-            heroTitle: "შენი ბიზნესი,<br><span class='gradient-text'>ციფრულად.</span>", heroSubtitle: "ვებსაიტები, რომლებიც მუშაობენ თქვენთვის", heroButton: "პროექტის დაწყება <i class=\"fas fa-chevron-right\" aria-hidden=\"true\"></i>", heroButtonSecondary: "სერვისების ნახვა",
+            heroTitle: "ვებ სააგენტო<br><span class='gradient-text'>თბილისში</span>", heroSubtitle: "ვქმნით საიტებს, რომლებიც ყიდის.", heroSubtext: "<span>საიტის დამზადება</span> · <span>ონლაინ მაღაზიები</span> · <span>ვებ აპლიკაციები</span>", heroButton: "პროექტის დაწყება <i class=\"fas fa-chevron-right\" aria-hidden=\"true\"></i>", heroButtonSecondary: "სერვისების ნახვა",
 
-            servicesTitle: "ჩვენი მიზანია შენი წარმატება",
+            servicesTitle: "არა უბრალოდ ლამაზი საიტი, არამედ გაყიდვების სისტემა.",
             service1Title: "დიზაინი", service1Desc: "ტექნიკურად გამართული საიტი საკმარისი არაა , ვიზუალური შთაბეჭდილება გადაწყვიტავს, დარჩება თუ არა მომხმარებელი. დიზაინი უნდა იყოს თანამედროვე, მარტივად აღსაქმელი და ბრენდზე მორგებული.",
             service2Title: "უსაფრთხოება", service2Desc: "მომხმარებლის ნდობა იწყება საიტის უსაფრთხოებით. თანამედროვე დაცვით მექანიზმებს უზრუნველყოფს ჰაკერული თავდასხმების, მონაცემთა გაჟონვის და სხვა საფრთხეებისგან დაცვას.",
             service3Title: "მარტივი მართვა", service3Desc: "ინტუიციური სისტემა საშუალებას გაძლევთ მარტივად შეცვალოთ ტექსტები, დაამატოთ სურათები და მოარგოთ საიტი თქვენს საჭიროებებს , კოდის ცოდნის გარეშე.",
 
-            portfolioTitle: "გამორჩეული ნამუშევრები",
+            portfolioTitle: "განხორციელებული პროექტები &amp; ქეისები",
             filterClientLabel: "კლიენტის საიტები", filterTemplateLabel: "შაბლონები", viewDemoTitle: "დემოს ნახვა",
             flagship09Title:"'Sufta Sivrce' - სასტუმროს სამრეცხაო ვებსაიტი" ,flagship1Title: "'Jagi Building' - სამშენებლო კომპანიის ვებსაიტი", flagship2Title: "'Laptop Georgia' - ტექნიკის შეკეთების ვებსაიტი", flagship3Title: "'Stilis Sivrce' - ტანსაცმლის მაღაზიის ვებსაიტი", flagship4Title: "'Terra 24' - სარიტუალო ბიუროს ვებსაიტი",
             flagship5Title: "'Prime Grind' - სამშენებლო კომპანიის ვებსაიტი", flagship6Title: "'Skhila Diesel Motors' - ავტოსერვისის ვებსაიტი", flagship7Title: "'La Arté' - საიუველირო ვებსაიტი", flagship8Title: "'EVAKUATORIGZAZE' - ევაკუატორის სერვისის ვებსაიტი",
             portfolio1Title: "'The Golden Fork' - რესტორნის ვებსაიტი", portfolio4Title: "'Healthy Salad' - რესტორნის ვებსაიტი", portfolio5Title: "'Naxus AI' - კორპორატიული ტექნოლოგიური ვებსაიტი",
             portfolio2Title: "'The Trim House' - ბარბერშოპის ბრენდინგი", portfolio3Title: "'Olio & Sale' - კაფეს ონლაინ ვებსაიტი",
+            portfolio6Title: "'Ioseb Tsikaridze Studio' - ფოტოსტუდიის ვებსაიტი", portfolio7Title: "'zoobum' - ზოომაღაზიის ვებსაიტი",
+            portfolio8Title: "'Hellshop' - სუნამოების მაღაზიის ვებსაიტი", portfolio9Title: "'Everluxe' - საათების ბრენდის ვებსაიტი",
 
             testimonialsTitle: "მიმოხილვები და შეფასებები", reviewPromptText: "გვითანამშრომლია? სიამოვნებით მოვისმენთ თქვენს აზრს.",
             contactTitle: "დაგვიკავშირდით", contactInfoTitle: "საკონტაქტო ინფორმაცია", contactInfoDesc: "გაქვთ პროექტი ან შეკითხვა? მოგვწერეთ, დაგვირეკეთ, ან შეავსეთ ფორმა.",
             contactInfoLocation: "თბილისი, საქართველო",
+            emailSalesLabel: "ახალი პროექტები", emailSupportLabel: "მხარდაჭერა",
 
             formFullNamePlaceholder: "სრული სახელი", formCompanyPlaceholder: "კომპანიის სახელი", formNamePlaceholder: "თქვენი სახელი", formWebsitePlaceholder: "ვებსაიტის ლინკი",
-            reviewFormMessagePlaceholder: "დაწერეთ თქვენი შეფასება აქ...", reviewFormRatingLabel: "თქვენი შეფასება", formLogoPlaceholder: "კომპანიის ლოგო (სურვ.)", formEmailPlaceholder: "თქვენი ელ.ფოსტა",
+            reviewFormMessagePlaceholder: "დაწერეთ თქვენი შეფასება აქ...", reviewFormRatingLabel: "შეფასება", formLogoPlaceholder: "კომპანიის ლოგო (სურვ.)", formEmailPlaceholder: "თქვენი ელ.ფოსტა",
             formMessagePlaceholder: "თქვენი შეტყობინება", formSendButton: "გაგზავნა", formInterestMessage: "გამარჯობა, დაინტერესებული ვარ {planName} პაკეტით.",
 
             footerAbout: "ინოვაციური ციფრული გამოცდილება ბრენდის წარმატებისთვის.",
@@ -370,40 +377,38 @@ pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPr
             reviewPageTitle: "შეფასების დატოვება", reviewPageSubtitle: "თქვენი გამოხმაურება გვეხმარება გავხდეთ უკეთესები.", reviewFormSubmitButton: "შეფასების გაგზავნა",
             reviewSuccessTitle: "გმადლობთ!", reviewPendingMessage: "თქვენი შეფასება გამოქვეყნდება პროექტის დადასტურების შემდეგ.",
 
-            oneTimePaymentTitle: "ერთჯერადი", oneTimePayment: "ერთჯერადი გადახდა", pricingTitle: "მარტივი, გამჭვირვალე ფასები",
+            oneTimePaymentTitle: "ერთჯერადი", oneTimePayment: "ერთჯერადი გადახდა", pricingTitle: "ინვესტიცია თქვენს ციფრულ ზრდაში", pricingSubtitle: "აირჩიეთ თქვენს მიზნებზე მორგებული ფორმატი ან დაგვიკავშირდით ინდივიდუალური კონსულტაციისთვის.",
 
             groupInfrastructure: "ციფრული ინფრასტრუქტურა", groupPerformanceSeo: "წარმადობა და SEO",
             groupAutomation: "ავტომატიზაცია და გამოცდილება", groupEnterpriseSupport: "საწარმოო დონის მხარდაჭერა",
             pricingProInclLabel: "მოიცავს Starter პაკეტის ყველა შესაძლებლობას +", pricingPremiumInclLabel: "მოიცავს Pro პაკეტის ყველა შესაძლებლობას +",
 
-            pricingStarterTitle: "სტარტერი", pricingStarterPrice: "1,200₾",
+            pricingStarterTitle: "სტარტერი",
             pricingStarterFeature1: "მორგებული მრავალსექციური ციფრული ინფრასტრუქტურა (მაქსიმუმ 3 მაღალი ხარისხის გვერდი)",
             pricingStarterFeature2: "ინდივიდუალური მომხმარებლის გამოცდილება (UX) და დახვეწილი ვიზუალური არქიტექტურა",
             pricingStarterFeature3: "მაქსიმალურად სწრაფი წარმადობის ოპტიმიზაცია (Google PageSpeed 95+ ქულა)",
             pricingStarterFeature4: "საბაზისო საძიებო სისტემების ოპტიმიზაცია (SEO)",
 
-paymentPlansTitle: "განვადება",
-plan5050Title: "50/50",
-plan3moTitle: "3-თვიანი",
-plan6moTitle: "6-თვიანი",
-plan5050Period: "50% წინასწარ /\n50% გაშვებისას",
-plan3moPeriod: "3 ყოველთვიური გადახდა\n(+15% საკომისიო)",
-plan6moPeriod: "6 ყოველთვიური გადახდა\n(+25% საკომისიო)",
+            paymentPlansTitle: "განვადება", plan5050Title: "50/50", plan3moTitle: "3-თვიანი", plan6moTitle: "6-თვიანი",
+            plan5050Period: "50% წინასწარ /\n50% გაშვებისას",
+            plan3moPeriod: "3 თვეში: {list}\n(+{fee} საკომისიო · 1-ლი შენატანი სამუშაოს დაწყებამდე)",
+            plan6moPeriod: "6 თვეში: {list}\n(+{fee} საკომისიო · 1-ლი შენატანი სამუშაოს დაწყებამდე)",
 
-pricingStarterPrice5050: "600₾", pricingStarterPrice3mo: "460₾", pricingStarterPrice6mo: "250₾",
-pricingProPrice5050: "1250₾", pricingProPrice3mo: "955₾", pricingProPrice6mo: "520₾",
-pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPremiumPrice6mo: "1080₾",
+            pricingMiniTitle: "მინი", pricingMiniInclLabel: "რას მოიცავს",
+            pricingMiniFeature1: "ერთგვერდიანი ვებსაიტი, მაგ. სავიზიტო გვერდი ან მენიუ",
+            pricingMiniFeature2: "მობილურზე მორგებული, სწრაფი დიზაინი",
+            pricingMiniFeature3: "საბაზისო საძიებო სისტემების ოპტიმიზაცია (SEO)",
+            miniPromoUntil: "იჩქარეთ! აქცია მოქმედებს {date}-⁠მდე", // ⁠: no line break after the hyphen
+            miniPromoLeftDays: "დასრულებამდე: {d} დღე {h} სთ", miniPromoLeftHours: "დასრულებამდე: {h} სთ {m} წთ",
+            miniPromoLock: "გადაიხადეთ პირველი შენატანი დღესვე!",
 
-
-
-
-            pricingProTitle: "პრო", pricingProPrice: "2,500₾", 
+            pricingProTitle: "პრო",
             pricingProFeature1: "მაქსიმუმ 5 მორგებული, მაღალკონვერტირებადი გვერდი",
             pricingProFeature2: "გაფართოებული ადმინისტრირებისა და ანალიტიკის დაფა",
             pricingProFeature3: "დინამიური CMS ინტეგრაცია (Supabase / Headless)",
             pricingProFeature4: "დახვეწილი, თანამედროვე მიკრო-ანიმაციები და ინტერაქციები",
 
-            pricingPremiumTitle: "პრემიუმი", pricingPremiumPrice: "5,200₾", 
+            pricingPremiumTitle: "პრემიუმი",
             pricingPremiumFeature1: "მაქსიმუმ 10 გვერდი და საწარმოო დონის მორგებული არქიტექტურა",
             pricingPremiumFeature2: "გაფართოებული ელ-კომერციის ან მორგებული ჯავშნების სისტემა",
             pricingPremiumFeature3: "ტექნიკური და გვერდზე SEO-ს სრულყოფილი აუდიტი",
@@ -417,7 +422,7 @@ pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPr
         },
         ru: {
             proPackageLabel: "Пакет Pro", starterPackageLabel: "Пакет Стартовый",
-            badgeEyebrow: "✦ СЕЙЧАС ПРИНИМАЕМ ✦", badgeHeadline: "Только&nbsp;3&nbsp;премиум<br>проекта", badgeSub: "На Сентябрь 2026",
+            badgeEyebrow: "✦ СЕЙЧАС ПРИНИМАЕМ ✦", badgeHeadline: "Только&nbsp;3&nbsp;премиум<br>проекта", badgeSub: "На октябрь 2026",
 
             individualPayment: "Индив.", individualTitle: "Индивидуальный проект", individualPrice: "Индивидуальная цена", individualDesc: "Расскажите нам о проекте",
             individualFeature1: "Многостраничные (10+) сайты", individualFeature2: "E-commerce и системы бронирования", individualFeature3: "Сложные API-интеграции",
@@ -427,31 +432,34 @@ pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPr
 
             salesTitle2: "+22% продажи", sourceTitle2: "источник: Admin / GA4 • 45 день", webInfoTitle2: "<span class=\"case-tag-prefix\">Интернет-магазин · Производительность · </span>Запуск: апр 2025", viewPRTitle: "просмотреть проект",
 
-            pageDescription: "OSG Digital Agency создаёт эксклюзивные, высокоэффективные веб-сайты для бизнеса, который не терпит посредственности.",
-            pageTitle: "OSG Digital Agency - Бутик-студия веб-разработки премиум-класса",
+            pageDescription: "Создание сайтов в Тбилиси от 600 лари: быстрые сайты с SEO, интернет-магазины и админ-панели. Оплата сразу, 50/50 или в рассрочку до 6 месяцев.",
+            pageTitle: "Создание сайтов в Тбилиси от 600 лари | OSGWeb.ge",
 
             navServices: "Услуги", navPortfolio: "Портфолио", navTestimonials: "Отзывы", navPricing: "Цены", navContact: "Контакты",
-            heroTitle: "Свой бизнес,<br><span class='gradient-text'>в цифре.</span>", heroSubtitle: "Сайты, которые работают на вас", heroButton: "Начать проект <i class=\"fas fa-chevron-right\" aria-hidden=\"true\"></i>", heroButtonSecondary: "Изучить услуги",
+            heroTitle: "Веб-агентство<br><span class='gradient-text'>в Тбилиси</span>", heroSubtitle: "Создаём сайты, которые продают.", heroSubtext: "<span>Создание сайтов</span> · <span>Интернет-магазины</span> · <span>Веб-приложения</span>", heroButton: "Начать проект <i class=\"fas fa-chevron-right\" aria-hidden=\"true\"></i>", heroButtonSecondary: "Изучить услуги",
 
-            servicesTitle: "Наша цель , ваш успех",
+            servicesTitle: "Не просто красивый сайт, а система продаж.",
             service1Title: "Дизайн", service1Desc: "Технически совершенного сайта недостаточно , визуальное впечатление решает, останется ли пользователь. Дизайн должен быть современным, понятным и адаптированным под бренд.",
             service2Title: "Безопасность", service2Desc: "Доверие пользователей начинается с безопасности сайта. Современные механизмы защиты обеспечивают отражение хакерских атак, утечек данных и других угроз.",
             service3Title: "Простое управление", service3Desc: "Интуитивно понятная система позволяет легко изменять тексты, добавлять изображения и настраивать сайт под свои нужды , без знаний кодирования.",
 
-            portfolioTitle: "Избранные работы",
+            portfolioTitle: "Реализованные проекты и кейсы",
             filterClientLabel: "Клиентские сайты", filterTemplateLabel: "На основе шаблонов", viewDemoTitle: "Смотреть демо",
             flagship09Title:"'Sufta Sivrce' - Веб-сайт прачечной при отеле" ,flagship1Title: "'Jagi Building' - Сайт строительной компании", flagship2Title: "'Laptop Georgia' - Сайт по ремонту техники", flagship3Title: "'Stilis Sivrce' - Сайт магазина одежды", flagship4Title: "'Terra 24' - Сайт ритуального бюро",
             flagship5Title: "'Prime Grind' - Сайт строительной компании", flagship6Title: "'Skhila Diesel Motors' - Сайт автосервиса", flagship7Title: "'La Arté' - Сайт ювелирного бренда", flagship8Title: "'EVAKUATORIGZAZE' - Сайт эвакуатора",
             portfolio1Title: "'Золотая Вилка' - Сайт ресторана", portfolio2Title: "'Дом Стрижки' - Брендинг барбершопа", portfolio3Title: "'Олио и Сале' - Онлайн-сайт кафе",
             portfolio4Title: "'полезный салат' - Сайт ресторана", portfolio5Title: "'Naxus AI' , Корпоративный технологический веб-сайт",
+            portfolio6Title: "'Ioseb Tsikaridze Studio' - Сайт фотостудии", portfolio7Title: "'zoobum' - Сайт зоомагазина",
+            portfolio8Title: "'Hellshop' - Сайт магазина парфюмерии", portfolio9Title: "'Everluxe' - Сайт часового бренда",
 
             testimonialsTitle: "Отзывы и рекомендации", contactTitle: "Свяжитесь с нами", contactInfoTitle: "Контактная информация",
             contactInfoDesc: "Есть проект или вопрос? Напишите нам, позвоните или заполните форму.",
             reviewPromptText: "Работали с нами? Мы будем рады вашему отзыву.", contactInfoLocation: "Тбилиси, Грузия",
+            emailSalesLabel: "Новые проекты", emailSupportLabel: "Поддержка",
 
             formNamePlaceholder: "Ваше имя", formEmailPlaceholder: "Ваш email", formMessagePlaceholder: "Ваше сообщение", formSendButton: "Отправить",
             formFullNamePlaceholder: "полное имя", formCompanyPlaceholder: "Название компании", formWebsitePlaceholder: "Ссылка на сайт",
-            reviewFormMessagePlaceholder: "Оставьте свой отзыв здесь...", reviewFormRatingLabel: "Ваша оценка", formLogoPlaceholder: "Логотип компании (по жел.)", formInterestMessage: "Здравствуйте, я заинтересован в пакете {planName}.",
+            reviewFormMessagePlaceholder: "Оставьте свой отзыв здесь...", reviewFormRatingLabel: "Оценка", formLogoPlaceholder: "Логотип компании (по жел.)", formInterestMessage: "Здравствуйте, я заинтересован в пакете {planName}.",
 
             footerAbout: "Бутик-студия премиум-класса, создающая цифровое присутствие для брендов, которым нужно совершенство.",
             footerContactTitle: "Свяжитесь с нами", footerSocialTitle: "Подпишитесь на нас", footerCopyright: "© 2026 OSG Digital Agency. Все права защищены.", footerTerms: "Условия использования",
@@ -459,39 +467,39 @@ pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPr
             reviewPageTitle: "Оставить отзыв", reviewPageSubtitle: "Ваш отзыв помогает нам стать еще лучше.", reviewFormSubmitButton: "Отправить отзыв",
             reviewSuccessTitle: "Спасибо!", reviewPendingMessage: "Ваш отзыв будет опубликован после подтверждения вашего проекта.",
 
-            pricingTitle: "Простые, прозрачные цены", oneTimePayment: "Разовый платеж", oneTimePaymentTitle: "Разовый",
+            pricingTitle: "Инвестиция в ваш цифровой рост", pricingSubtitle: "Выберите формат под ваши цели или свяжитесь с нами для индивидуальной консультации.", oneTimePayment: "Разовый платеж", oneTimePaymentTitle: "Разовый",
 
             groupInfrastructure: "Цифровая инфраструктура", groupPerformanceSeo: "Производительность и SEO",
             groupAutomation: "Автоматизация и впечатления", groupEnterpriseSupport: "Корпоративная поддержка",
             pricingProInclLabel: "Включает все возможности пакета Starter +", pricingPremiumInclLabel: "Включает все возможности пакета Pro +",
 
-            pricingStarterTitle: "Стартовый", pricingStarterPrice: "1 200₾", 
+            pricingStarterTitle: "Стартовый",
             pricingStarterFeature1: "Индивидуальная многосекционная цифровая инфраструктура (до 3 страниц высокого качества)",
             pricingStarterFeature2: "Продуманный пользовательский опыт (UX) и люксовая визуальная архитектура",
             pricingStarterFeature3: "Максимально быстрая оптимизация производительности (95+ баллов Google PageSpeed)",
             pricingStarterFeature4: "Базовая поисковая оптимизация (SEO)",
 
 
-paymentPlansTitle: "Планы оплаты",
-plan5050Title: "50/50",
-plan3moTitle: "На 3 месяца",
-plan6moTitle: "На 6 месяцев",
-plan5050Period: "50% предоплата /\n50% при запуске",
-plan3moPeriod: "3 ежемесячных платежа\n(+15% комиссия)",
-plan6moPeriod: "6 ежемесячных платежей\n(+25% комиссия)",
+            paymentPlansTitle: "Планы оплаты", plan5050Title: "50/50", plan3moTitle: "На 3 месяца", plan6moTitle: "На 6 месяцев",
+            plan5050Period: "50% предоплата /\n50% при запуске",
+            plan3moPeriod: "{list} за 3 месяца\n(+{fee} комиссия · 1-й платёж до начала работ)",
+            plan6moPeriod: "{list} за 6 месяцев\n(+{fee} комиссия · 1-й платёж до начала работ)",
 
-pricingStarterPrice5050: "600₾", pricingStarterPrice3mo: "460₾", pricingStarterPrice6mo: "250₾",
-pricingProPrice5050: "1250₾", pricingProPrice3mo: "955₾", pricingProPrice6mo: "520₾",
-pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPremiumPrice6mo: "1080₾",
+            pricingMiniTitle: "Мини", pricingMiniInclLabel: "Что входит",
+            pricingMiniFeature1: "Одностраничный сайт, например лендинг или меню",
+            pricingMiniFeature2: "Адаптивный, быстрый дизайн для мобильных",
+            pricingMiniFeature3: "Базовая поисковая оптимизация (SEO)",
+            miniPromoUntil: "Спешите! Акция до {date}",
+            miniPromoLeftDays: "До конца акции: {d} дн. {h} ч", miniPromoLeftHours: "До конца акции: {h} ч {m} мин",
+            miniPromoLock: "Внесите первый платёж сегодня!",
 
-
-            pricingProTitle: "Про", pricingProPrice: "2 500₾", 
+            pricingProTitle: "Про",
             pricingProFeature1: "До 5 индивидуальных страниц с высокой конверсией",
             pricingProFeature2: "Расширенная панель администрирования и аналитики",
             pricingProFeature3: "Динамическая интеграция CMS (Supabase / Headless)",
             pricingProFeature4: "Плавные современные микро-анимации и интерактивные эффекты",
 
-            pricingPremiumTitle: "Премиум", pricingPremiumPrice: "5 200₾", 
+            pricingPremiumTitle: "Премиум",
             pricingPremiumFeature1: "До 10 страниц и корпоративная индивидуальная архитектура",
             pricingPremiumFeature2: "Продвинутая система электронной коммерции или бронирования",
             pricingPremiumFeature3: "Полный технический и SEO-аудит страниц",
@@ -513,18 +521,188 @@ pricingPremiumPrice5050: "2600₾", pricingPremiumPrice3mo: "1990₾", pricingPr
 
     let currentPlanType = '5050';
 
-function getPlanSuffix() {
-    if (currentBillingPeriod !== 'plans') return '';
-    return currentPlanType;
-}
-function getPeriodKey() {
-    if (currentBillingPeriod === 'plans') {
-        return currentPlanType === '5050' ? 'plan5050Period'
-             : currentPlanType === '3mo' ? 'plan3moPeriod'
-             : 'plan6moPeriod';
+    // ================================
+    // PRICES — the one place to change a package price.
+    // Every amount on the pricing cards is calculated from these numbers:
+    //  · 50/50: two halves.
+    //  · 3 / 6 months: price + fee (`feeRates`, rounded down to a multiple
+    //    of 5₾), split into monthly payments rounded to 5₾; the last payment
+    //    absorbs the rounding so the payments add up to the exact total.
+    //    `sixMonths: false` hides a package while the 6-month plan is shown.
+    //  · Mini: `promoPrice` until `miniPromoEnds` (Tbilisi time, UTC+4), then
+    //    `price` — the cards switch by themselves, no redeploy needed.
+    //    `halfUpfront`: on the One-time tab the card shows the 50/50 first
+    //    payment (250₾ + "50% upfront / 50% at launch") instead of the total.
+    // After editing, run `npm run prerender:ka` so index.html shows the same.
+    // ================================
+    // @pricing-start — tools/prerender-ka.js runs everything down to @pricing-end
+    const PRICING = {
+        miniPromoEnds: '2026-10-23T23:59:59+04:00',
+        packages: {
+            Mini:    { price: 600, promoPrice: 500, sixMonths: false, halfUpfront: true },
+            Starter: { price: 990 },
+            Pro:     { price: 2190 },
+            Premium: { price: 4490 },
+        },
+        feeRates: { '3mo': 0.15, '6mo': 0.25 },
+    };
+
+    const isMiniPromoActive = () => Date.now() < Date.parse(PRICING.miniPromoEnds);
+
+    // `total` split into `count` payments rounded to 5₾; the last one takes
+    // the rounding difference, so the payments always add up to `total`.
+    function splitPayments(total, count) {
+        const each = Math.round(total / count / 5) * 5;
+        return [...Array(count - 1).fill(each), total - each * (count - 1)];
     }
-    return 'oneTimePayment';
-}
+
+    // What a package costs under each payment option.
+    function paymentOptions(price) {
+        const fees = {}, options = { onetime: [price], '5050': splitPayments(price, 2), fees };
+        for (const [plan, rate] of Object.entries(PRICING.feeRates)) {
+            fees[plan] = Math.floor(price * rate / 5) * 5;
+            options[plan] = splitPayments(price + fees[plan], parseInt(plan, 10));
+        }
+        return options;
+    }
+
+    const formatNumber = (n, lang) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, lang === 'ru' ? ' ' : ',');
+    const formatGel = (n, lang) => `${formatNumber(n, lang)}₾`;
+
+    // "{list}" in the installment text: "380 + 380 + 375₾", "5 × 205 + 210₾",
+    // or "3 × 230₾" when all payments are equal.
+    function formatPayments(parts, lang) {
+        const rest = parts.slice(0, -1), last = parts[parts.length - 1];
+        if (last === parts[0]) return `${parts.length} × ${formatGel(last, lang)}`;
+        if (rest.length > 2) return `${rest.length} × ${formatNumber(rest[0], lang)} + ${formatGel(last, lang)}`;
+        return `${rest.map(p => formatNumber(p, lang)).join(' + ')} + ${formatGel(last, lang)}`;
+    }
+
+    const MONTHS = {
+        en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+        ge: ['იანვრის', 'თებერვლის', 'მარტის', 'აპრილის', 'მაისის', 'ივნისის', 'ივლისის', 'აგვისტოს', 'სექტემბრის', 'ოქტომბრის', 'ნოემბრის', 'დეკემბრის'],
+        ru: ['января', 'февраля', 'марта', 'апреля', 'мая', 'июня', 'июля', 'августа', 'сентября', 'октября', 'ноября', 'декабря'],
+    };
+    // The promo's end in Tbilisi time (UTC+4 all year), e.g. "18 ოქტომბრის 23:59".
+    function formatPromoEnd(lang) {
+        const d = new Date(Date.parse(PRICING.miniPromoEnds) + 4 * 3600 * 1000);
+        const time = `${String(d.getUTCHours()).padStart(2, '0')}:${String(d.getUTCMinutes()).padStart(2, '0')}`;
+        const day = d.getUTCDate(), month = MONTHS[lang][d.getUTCMonth()];
+        return lang === 'en' ? `${month} ${day}, ${time}` : lang === 'ru' ? `${day} ${month}, ${time}` : `${day} ${month} ${time}`;
+    }
+
+    // The price, crossed-out regular price (Mini promo) and payment line a
+    // card shows for one payment option ('onetime' | '5050' | '3mo' | '6mo').
+    function cardPriceTexts(planId, option, lang, t) {
+        const pkg = PRICING.packages[planId];
+        const onPromo = pkg.promoPrice !== undefined && isMiniPromoActive();
+        const amounts = paymentOptions(onPromo ? pkg.promoPrice : pkg.price);
+        const shown = option === 'onetime' && pkg.halfUpfront ? '5050' : option;
+        const period = shown === '5050' ? t.plan5050Period
+            : amounts.fees[shown] !== undefined ? t[`plan${shown}Period`].replace('{list}', formatPayments(amounts[shown], lang)).replace('{fee}', formatGel(amounts.fees[shown], lang))
+            : t.oneTimePayment;
+        return {
+            available: !(option === '6mo' && pkg.sixMonths === false),
+            onPromo,
+            price: formatGel(amounts[shown][0], lang),
+            regular: formatGel(paymentOptions(pkg.price)[shown][0], lang),
+            period,
+            promoEnd: t.miniPromoUntil.replace('{date}', formatPromoEnd(lang)),
+        };
+    }
+    // @pricing-end
+
+    // Writes every card's price and payment line for the selected payment
+    // option. `animate` (user-triggered changes): the changed labels fade in,
+    // a payment line whose height changes (1 line ↔ 4 lines) eases to its new
+    // height so the cards grow/shrink smoothly instead of jumping, and the
+    // Mini card fades out/in when the 6-month plan hides it.
+    function renderPrices(lang, animate = false) {
+        const t = translations[lang];
+        const option = currentBillingPeriod === 'plans' ? currentPlanType : 'onetime';
+        const changes = [];
+        document.querySelectorAll('.pricing-card[data-plan-id]').forEach(card => {
+            if (!PRICING.packages[card.dataset.planId]) return;
+            const texts = cardPriceTexts(card.dataset.planId, option, lang, t);
+            [['[data-price-point]', texts.price], ['[data-billing-period]', texts.period],
+             ['[data-price-old]', texts.regular], ['[data-mini-deadline]', texts.promoEnd]].forEach(([selector, text]) => {
+                const el = card.querySelector(selector);
+                if (el && el.textContent !== text) changes.push({ el, text });
+            });
+            card.classList.toggle('promo-active', texts.onPromo);
+            setCardAvailable(card, texts.available, animate);
+        });
+        if (animate && !reducedMotion()) animateTextChanges(changes);
+        else changes.forEach(({ el, text }) => { el.textContent = text; });
+        updatePromoCountdown(lang);
+    }
+
+    // Swaps several labels at once: reads every current height, writes all
+    // the texts, reads the new heights (two layouts in total), then fades each
+    // label in and eases the ones whose height changed.
+    function animateTextChanges(changes) {
+        changes.forEach(c => {
+            c.from = c.el.getBoundingClientRect().height;
+            c.el.getAnimations().forEach(a => a.cancel());
+        });
+        changes.forEach(c => { c.el.textContent = c.text; });
+        changes.forEach(c => { c.to = c.el.getBoundingClientRect().height; });
+        changes.forEach(({ el, from, to }) => {
+            el.animate([
+                { opacity: 0, translate: '0 6px' },
+                { opacity: 1, translate: '0 0' }
+            ], { duration: 320, easing: 'ease-out' });
+            if (Math.abs(from - to) < 1) return;
+            el.style.overflow = 'hidden';
+            const resize = el.animate([{ height: `${from}px` }, { height: `${to}px` }],
+                { duration: 420, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
+            resize.onfinish = resize.oncancel = () => { el.style.overflow = ''; };
+        });
+    }
+
+    // Mini has no 6-month plan: it fades out while that plan is shown, and
+    // rises back in after. Switching back mid-fade just keeps it.
+    const cardFadeOuts = new WeakMap();
+    function setCardAvailable(card, available, animate) {
+        const fading = cardFadeOuts.get(card);
+        if (fading) {
+            if (available) fading.cancel();
+            return;
+        }
+        if (available === !card.classList.contains('plan-unavailable')) return;
+        if (available) {
+            card.classList.remove('plan-unavailable');
+            if (animate) revealCards([card]);
+        } else if (animate && !reducedMotion() && card.offsetParent !== null) {
+            const fade = fadeOut(card);
+            cardFadeOuts.set(card, fade);
+            fade.onfinish = () => { card.classList.add('plan-unavailable'); fade.cancel(); };
+            fade.oncancel = () => cardFadeOuts.delete(card);
+        } else {
+            card.classList.add('plan-unavailable');
+        }
+    }
+
+    // "Ends in 3d 4h" under the Mini promo; when the deadline passes while
+    // the page is open, the cards switch to the regular price.
+    function updatePromoCountdown(lang = currentLang) {
+        const el = document.querySelector('[data-mini-countdown]');
+        if (!el) return;
+        const left = Date.parse(PRICING.miniPromoEnds) - Date.now();
+        if (left <= 0) { el.textContent = ''; return; }
+        const t = translations[lang];
+        const days = Math.floor(left / 86400000), hours = Math.floor(left / 3600000) % 24, minutes = Math.floor(left / 60000) % 60;
+        el.textContent = days > 0
+            ? t.miniPromoLeftDays.replace('{d}', days).replace('{h}', hours)
+            : t.miniPromoLeftHours.replace('{h}', hours).replace('{m}', minutes);
+    }
+    if (isMiniPromoActive()) {
+        const promoClock = setInterval(() => {
+            if (isMiniPromoActive()) { updatePromoCountdown(); return; }
+            clearInterval(promoClock);
+            renderPrices(currentLang, true);
+        }, 30000);
+    }
 
 
     const applyTranslations = (lang) => {
@@ -560,21 +738,7 @@ function getPeriodKey() {
             }
         });
 
-        document.querySelectorAll('.pricing-card').forEach(card => {
-            const planId = card.getAttribute('data-plan-id');
-            const priceEl = card.querySelector('[data-price-point]');
-            const periodEl = card.querySelector('[data-billing-period]');
-
-const priceKey = `pricing${planId}Price${getPlanSuffix()}`;
-const periodKey = getPeriodKey();
-
-            if (priceEl && translations[lang][priceKey]) {
-                priceEl.textContent = translations[lang][priceKey];
-            }
-            if (periodEl && translations[lang][periodKey]) {
-                periodEl.textContent = translations[lang][periodKey];
-            }
-        });
+        renderPrices(lang);
     };
 
     const updateLanguageSelector = (lang) => {
@@ -638,6 +802,7 @@ const periodKey = getPeriodKey();
             const plan = button.getAttribute('data-plan');
             let planTitleKey;
             switch(plan) {
+                case 'Mini': planTitleKey = 'pricingMiniTitle'; break;
                 case 'Starter': planTitleKey = 'pricingStarterTitle'; break;
                 case 'Pro': planTitleKey = 'pricingProTitle'; break;
                 case 'Premium': planTitleKey = 'pricingPremiumTitle'; break;
@@ -709,42 +874,58 @@ billingToggleEl?.classList.toggle('is-plans', currentBillingPeriod === 'plans');
         syncToggleIndicator();
 
         if (currentBillingPeriod === 'individual') {
-            pricingGrid.classList.add('individual-mode');
-            standardCards.forEach(card => card.classList.add('hidden'));
-            individualCard.classList.remove('hidden');
-            revealCards([individualCard]);
-        } else {
-            const wasIndividual = pricingGrid.classList.contains('individual-mode');
-            pricingGrid.classList.remove('individual-mode');
-            standardCards.forEach(card => card.classList.remove('hidden'));
-            individualCard.classList.add('hidden');
-            if (wasIndividual) revealCards(standardCards);
-
-            standardCards.forEach(card => {
-                const planId = card.getAttribute('data-plan-id');
-                const priceEl = card.querySelector('[data-price-point]');
-                const periodEl = card.querySelector('[data-billing-period]');
-
-const priceKey = `pricing${planId}Price${getPlanSuffix()}`;
-const periodKey = getPeriodKey();
-
-                setAnimatedText(priceEl, translations[currentLang][priceKey]);
-                setAnimatedText(periodEl, translations[currentLang][periodKey]);
+            swapCardsAfterFadeOut(standardCards, () => {
+                pricingGrid.classList.add('individual-mode');
+                standardCards.forEach(card => card.classList.add('hidden'));
+                individualCard.classList.remove('hidden');
+                revealCards([individualCard]);
             });
+        } else {
+            const showStandardCards = () => {
+                const wasIndividual = pricingGrid.classList.contains('individual-mode');
+                pricingGrid.classList.remove('individual-mode');
+                standardCards.forEach(card => card.classList.remove('hidden'));
+                individualCard.classList.add('hidden');
+                if (wasIndividual) revealCards(standardCards);
+                renderPrices(currentLang, !wasIndividual);
+            };
+            if (pricingGrid.classList.contains('individual-mode')) {
+                swapCardsAfterFadeOut([individualCard], showStandardCards);
+            } else {
+                cancelCardSwap();
+                showStandardCards();
+            }
         }
     };
 
     const reducedMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    // Swap a price/period label with a short fade-up instead of a hard cut.
-    function setAnimatedText(el, text) {
-        if (!el || el.textContent === text) return;
-        el.textContent = text;
-        if (reducedMotion() || !el.animate) return;
-        el.animate([
-            { opacity: 0, translate: '0 6px' },
-            { opacity: 1, translate: '0 0' }
-        ], { duration: 320, easing: 'ease-out' });
+    // A card sinks and fades out (the reverse of `revealCards`).
+    const fadeOut = (card) => card.animate([
+        { opacity: 1, translate: '0 0' },
+        { opacity: 0, translate: '0 16px' }
+    ], { duration: 220, easing: 'ease-in', fill: 'forwards' });
+
+    // Tab switches to/from "Individual": the cards on screen fade out first,
+    // then `swap` hides them and shows the other set (which rises in). A
+    // newer click cancels a swap that hasn't happened yet.
+    let pendingCardSwap = null;
+    function cancelCardSwap() {
+        pendingCardSwap?.forEach(fade => fade.cancel());
+        pendingCardSwap = null;
+    }
+    function swapCardsAfterFadeOut(cards, swap) {
+        cancelCardSwap();
+        const visible = Array.from(cards).filter(card => card.offsetParent !== null);
+        if (reducedMotion() || !visible.length) { swap(); return; }
+        const fades = visible.map(fadeOut);
+        pendingCardSwap = fades;
+        Promise.all(fades.map(fade => fade.finished)).then(() => {
+            if (pendingCardSwap !== fades) return;
+            pendingCardSwap = null;
+            swap();
+            fades.forEach(fade => fade.cancel());
+        }, () => {});
     }
 
     // Cards that were display:none fade and rise in, one after another.
@@ -825,19 +1006,7 @@ const periodKey = getPeriodKey();
             });
 
             // 2. Refresh the prices on the cards instantly
-            document.querySelectorAll('.pricing-card:not(.individual-plan)').forEach(card => {
-                const planId = card.getAttribute('data-plan-id');
-                const priceEl = card.querySelector('[data-price-point]');
-                const periodEl = card.querySelector('[data-billing-period]');
-                
-                if (priceEl && periodEl) {
-                    const priceKey = `pricing${planId}Price${getPlanSuffix()}`;
-                    const periodKey = getPeriodKey();
-                    
-                    setAnimatedText(priceEl, translations[currentLang][priceKey]);
-                    setAnimatedText(periodEl, translations[currentLang][periodKey]);
-                }
-            });
+            renderPrices(currentLang, true);
         });
     });
 

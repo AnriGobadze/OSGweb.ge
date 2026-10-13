@@ -18,7 +18,7 @@ from fontTools.ttLib import TTFont
 FA_VERSION = '6.4.0'
 ICONS = {
     'solid': ['chevron-right', 'check', 'check-circle', 'envelope', 'phone', 'map-marker-alt',
-              'comment-dots', 'link', 'image', 'building', 'user'],
+              'comment-dots', 'link', 'image', 'building', 'user', 'clock'],
     'brands': ['facebook-f', 'instagram', 'tiktok'],
 }
 
