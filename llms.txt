@@ -20,7 +20,7 @@ The website is in Georgian by default, with English and Russian versions availab
 - [პრემიუმი / Premium — 4,490₾](https://osgweb.ge/#pricing): up to 10 pages, e-commerce or booking system, full SEO audit, 3 months of post-launch support
 - [ინდივიდუალური / Custom](https://osgweb.ge/#pricing): 10+ pages and complex API integrations, priced per project
 
-Payment options: one-time payment; 50/50 (50% before work starts, 50% at launch); 3 monthly installments with a ~15% fee; or 6 monthly installments with a ~25% fee (Starter, Pro and Premium). With installments, the first payment is due before work starts. The Mini launch price is locked in if the full amount or the first installment is paid before the offer ends.
+Payment options: one-time payment; 50/50 (50% before work starts, 50% at launch); or 3 monthly installments with a ~10% fee, the first one due before work starts. The Mini launch price is locked in if the full amount or the first installment is paid before the offer ends.
 
 ## პორტფოლიო / Portfolio
 

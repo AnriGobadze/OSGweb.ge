@@ -121,7 +121,11 @@ document.addEventListener('DOMContentLoaded', () => {
                 this.elements.body.style.overflow = 'hidden';
                 this.elements.body.classList.add('virtual-page-active');
                 const targetView = document.getElementById(targetId.substring(1) + '-view');
-                if (targetView) targetView.classList.add('active');
+                if (targetView) {
+                    targetView.classList.add('active');
+                    // lets a page load what it needs only once it's opened
+                    targetView.dispatchEvent(new CustomEvent('view:shown'));
+                }
                 window.scrollTo(0, 0);
                 if (typeof onComplete === 'function') {
                     setTimeout(onComplete, 50);
@@ -249,7 +253,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             salesTitle2: "+22% sales", sourceTitle2: "Source: Admin / GA4 • 45 day", webInfoTitle2: "<span class=\"case-tag-prefix\">Online Store · Performance · </span>Launched: Apr 2025", viewPRTitle: "View Live Project",
 
-            pageDescription: "Website development in Tbilisi from 600 GEL: fast, SEO-ready websites, online stores and admin panels. Pay in full, 50/50 or in installments over up to 6 months.",
+            pageDescription: "Website development in Tbilisi from 600 GEL: fast, SEO-ready websites, online stores and admin panels. Pay in full, 50/50 or over 3 months.",
             pageTitle: "Website Development in Tbilisi from 600 GEL | OSGWeb.ge",
 
             navServices: "Services", navPortfolio: "Portfolio", navTestimonials: "Testimonials", navPricing: "Pricing", navContact: "Contact",
@@ -298,11 +302,10 @@ document.addEventListener('DOMContentLoaded', () => {
             pricingStarterFeature3: "Blazing-Fast Performance Optimization (95+ Google PageSpeed Score)",
             pricingStarterFeature4: "Core Search Engine Optimization (SEO)",
 
-            paymentPlansTitle: "Payment Plans", plan5050Title: "50/50", plan3moTitle: "3-Month", plan6moTitle: "6-Month",
+            paymentPlansTitle: "Payment Plans", plan5050Title: "50/50", plan3moTitle: "3-Month",
             plan5050Period: "50% Upfront / 50% at Launch",
-            // {list} = the payments, {fee} = the fee in ₾ (both filled in from PRICING)
-            plan3moPeriod: "{list} over 3 months\n(+{fee} fee · 1st payment before work starts)",
-            plan6moPeriod: "{list} over 6 months\n(+{fee} fee · 1st payment before work starts)",
+            // {rate} = the 3-month fee in %, from PRICING
+            plan3moPeriod: "{rate}% fee",
 
             pricingMiniTitle: "Mini", pricingMiniInclLabel: "What's Included",
             pricingMiniFeature1: "One-page website, e.g. a landing page or a menu",
@@ -324,7 +327,8 @@ document.addEventListener('DOMContentLoaded', () => {
             pricingPremiumFeature3: "Comprehensive Technical & On-Page SEO Audit",
             pricingPremiumFeature4: "Priority 24/7 Dedicated Line & 3 Months Post-Launch Maintenance",
 
-            pricingMostPopular: "Most Popular", pricingGetStarted: "Get Started", pricingBookACall: "Book a Call",
+            pricingMostPopular: "Most Popular", pricingGetStarted: "Get Started", seeWorksButton: "See Works", seeWorksSoon: "Premium works coming soon!", pricingBookACall: "Book a Call",
+            worksPageTitle: "Our Work by Package", worksPageSubtitle: "See the websites and templates we’ve built with each package.",
             whatsappMessage: "Hello! I'd like to book a call to discuss your web services.",
 
             seeAllReviews: "See All Reviews", allReviewsTitle: "What Our Clients Say", backToHome: "← Back", noMoreReviews: "No more reviews",
@@ -342,7 +346,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             salesTitle2: "+22% გაყიდვები", sourceTitle2: "წყარო: Admin / GA4 • 45 დღე", webInfoTitle2: "<span class=\"case-tag-prefix\">ონლაინ მაღაზია · შესრულება · </span>გამოშვების თარიღი: აპრ 2025", viewPRTitle: "პროექტის ნახვა",
 
-            pageDescription: "ვებსაიტების დამზადება თბილისში 600 ლარიდან: სწრაფი, SEO-ზე მორგებული საიტები, ონლაინ მაღაზიები და ადმინ პანელი. გადახდა ერთიანად, 50/50 ან განვადებით 6 თვემდე.",
+            pageDescription: "ვებსაიტების დამზადება თბილისში 600 ლარიდან: სწრაფი, SEO-ზე მორგებული საიტები, ონლაინ მაღაზიები და ადმინ პანელი. გადახდა ერთიანად, 50/50 ან 3 თვეში.",
             pageTitle: "საიტის დამზადება თბილისში 600 ლარიდან | OSGWeb.ge",
 
             navServices: "სერვისები", navPortfolio: "პორტფოლიო", navTestimonials: "შეფასებები", navPricing: "ფასები", navContact: "კონტაქტი",
@@ -389,10 +393,9 @@ document.addEventListener('DOMContentLoaded', () => {
             pricingStarterFeature3: "მაქსიმალურად სწრაფი წარმადობის ოპტიმიზაცია (Google PageSpeed 95+ ქულა)",
             pricingStarterFeature4: "საბაზისო საძიებო სისტემების ოპტიმიზაცია (SEO)",
 
-            paymentPlansTitle: "განვადება", plan5050Title: "50/50", plan3moTitle: "3-თვიანი", plan6moTitle: "6-თვიანი",
+            paymentPlansTitle: "განვადება", plan5050Title: "50/50", plan3moTitle: "3-თვიანი",
             plan5050Period: "50% წინასწარ /\n50% გაშვებისას",
-            plan3moPeriod: "3 თვეში: {list}\n(+{fee} საკომისიო · 1-ლი შენატანი სამუშაოს დაწყებამდე)",
-            plan6moPeriod: "6 თვეში: {list}\n(+{fee} საკომისიო · 1-ლი შენატანი სამუშაოს დაწყებამდე)",
+            plan3moPeriod: "{rate}% საკომისიო",
 
             pricingMiniTitle: "მინი", pricingMiniInclLabel: "რას მოიცავს",
             pricingMiniFeature1: "ერთგვერდიანი ვებსაიტი, მაგ. სავიზიტო გვერდი ან მენიუ",
@@ -414,7 +417,8 @@ document.addEventListener('DOMContentLoaded', () => {
             pricingPremiumFeature3: "ტექნიკური და გვერდზე SEO-ს სრულყოფილი აუდიტი",
             pricingPremiumFeature4: "პრიორიტეტული 24/7 პირდაპირი ხაზი და 3 თვიანი გაშვების შემდგომი მხარდაჭერა",
 
-            pricingMostPopular: "პოპულარული", pricingGetStarted: "დაწყება", pricingBookACall: "ზარის დაჯავშნა",
+            pricingMostPopular: "პოპულარული", pricingGetStarted: "დაწყება", seeWorksButton: "ნამუშევრების ნახვა", seeWorksSoon: "პრემიუმ ნამუშევრები მალე დაემატება!", pricingBookACall: "ზარის დაჯავშნა",
+            worksPageTitle: "ნამუშევრები პაკეტების მიხედვით", worksPageSubtitle: "ნახეთ, რა საიტები და შაბლონები შევქმენით თითოეული პაკეტით.",
             whatsappMessage: "გამარჯობა, მსურს ზარის დაჯავშნა თქვენს ვებ-გვერდის სერვისებზე სასაუბროდ.",
 
             seeAllReviews: "ყველა შეფასების ნახვა", allReviewsTitle: "რას ამბობენ კლიენტები", backToHome: "← უკან", noMoreReviews: "მეტი შეფასება არ არის",
@@ -432,7 +436,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             salesTitle2: "+22% продажи", sourceTitle2: "источник: Admin / GA4 • 45 день", webInfoTitle2: "<span class=\"case-tag-prefix\">Интернет-магазин · Производительность · </span>Запуск: апр 2025", viewPRTitle: "просмотреть проект",
 
-            pageDescription: "Создание сайтов в Тбилиси от 600 лари: быстрые сайты с SEO, интернет-магазины и админ-панели. Оплата сразу, 50/50 или в рассрочку до 6 месяцев.",
+            pageDescription: "Создание сайтов в Тбилиси от 600 лари: быстрые сайты с SEO, интернет-магазины и админ-панели. Оплата сразу, 50/50 или за 3 месяца.",
             pageTitle: "Создание сайтов в Тбилиси от 600 лари | OSGWeb.ge",
 
             navServices: "Услуги", navPortfolio: "Портфолио", navTestimonials: "Отзывы", navPricing: "Цены", navContact: "Контакты",
@@ -480,10 +484,9 @@ document.addEventListener('DOMContentLoaded', () => {
             pricingStarterFeature4: "Базовая поисковая оптимизация (SEO)",
 
 
-            paymentPlansTitle: "Планы оплаты", plan5050Title: "50/50", plan3moTitle: "На 3 месяца", plan6moTitle: "На 6 месяцев",
+            paymentPlansTitle: "Планы оплаты", plan5050Title: "50/50", plan3moTitle: "На 3 месяца",
             plan5050Period: "50% предоплата /\n50% при запуске",
-            plan3moPeriod: "{list} за 3 месяца\n(+{fee} комиссия · 1-й платёж до начала работ)",
-            plan6moPeriod: "{list} за 6 месяцев\n(+{fee} комиссия · 1-й платёж до начала работ)",
+            plan3moPeriod: "комиссия {rate}%",
 
             pricingMiniTitle: "Мини", pricingMiniInclLabel: "Что входит",
             pricingMiniFeature1: "Одностраничный сайт, например лендинг или меню",
@@ -505,7 +508,8 @@ document.addEventListener('DOMContentLoaded', () => {
             pricingPremiumFeature3: "Полный технический и SEO-аудит страниц",
             pricingPremiumFeature4: "Приоритетная круглосуточная линия связи и 3 месяца поддержки после запуска",
 
-            pricingMostPopular: "популярный", pricingGetStarted: "Начать", pricingBookACall: "Заказать звонок",
+            pricingMostPopular: "популярный", pricingGetStarted: "Начать", seeWorksButton: "Смотреть работы", seeWorksSoon: "Премиум-работы скоро появятся!", pricingBookACall: "Заказать звонок",
+            worksPageTitle: "Наши работы по пакетам", worksPageSubtitle: "Сайты и шаблоны, созданные в рамках каждого пакета.",
             whatsappMessage: "Здравствуйте, я хотел бы заказать звонок, чтобы обсудить ваши услуги по веб-разработке.",
 
             seeAllReviews: "Посмотреть все отзывы", allReviewsTitle: "Что говорят наши клиенты", backToHome: "← Назад", noMoreReviews: "Больше отзывов нет",
@@ -525,26 +529,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // PRICES — the one place to change a package price.
     // Every amount on the pricing cards is calculated from these numbers:
     //  · 50/50: two halves.
-    //  · 3 / 6 months: price + fee (`feeRates`, rounded down to a multiple
-    //    of 5₾), split into monthly payments rounded to 5₾; the last payment
-    //    absorbs the rounding so the payments add up to the exact total.
-    //    `sixMonths: false` hides a package while the 6-month plan is shown.
+    //  · 3 months: price + fee (`threeMonthFeeRate`, rounded down to a
+    //    multiple of 5₾), split into 3 payments rounded to 5₾ (the last one
+    //    absorbs the rounding); the card shows the monthly payment.
     //  · Mini: `promoPrice` until `miniPromoEnds` (Tbilisi time, UTC+4), then
     //    `price` — the cards switch by themselves, no redeploy needed.
-    //    `halfUpfront`: on the One-time tab the card shows the 50/50 first
-    //    payment (250₾ + "50% upfront / 50% at launch") instead of the total.
+    //    `fixed`: the card shows its full price + "50% upfront / 50% at
+    //    launch" on every tab (it doesn't follow the payment-plan toggle).
     // After editing, run `npm run prerender:ka` so index.html shows the same.
     // ================================
     // @pricing-start — tools/prerender-ka.js runs everything down to @pricing-end
     const PRICING = {
         miniPromoEnds: '2026-10-23T23:59:59+04:00',
         packages: {
-            Mini:    { price: 600, promoPrice: 500, sixMonths: false, halfUpfront: true },
+            Mini:    { price: 600, promoPrice: 500, fixed: true },
             Starter: { price: 990 },
             Pro:     { price: 2190 },
             Premium: { price: 4490 },
         },
-        feeRates: { '3mo': 0.15, '6mo': 0.25 },
+        threeMonthFeeRate: 0.10,
     };
 
     const isMiniPromoActive = () => Date.now() < Date.parse(PRICING.miniPromoEnds);
@@ -558,25 +561,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // What a package costs under each payment option.
     function paymentOptions(price) {
-        const fees = {}, options = { onetime: [price], '5050': splitPayments(price, 2), fees };
-        for (const [plan, rate] of Object.entries(PRICING.feeRates)) {
-            fees[plan] = Math.floor(price * rate / 5) * 5;
-            options[plan] = splitPayments(price + fees[plan], parseInt(plan, 10));
-        }
-        return options;
+        const fee = Math.floor(price * PRICING.threeMonthFeeRate / 5) * 5;
+        return { onetime: [price], '5050': splitPayments(price, 2), '3mo': splitPayments(price + fee, 3) };
     }
 
     const formatNumber = (n, lang) => String(n).replace(/\B(?=(\d{3})+(?!\d))/g, lang === 'ru' ? ' ' : ',');
     const formatGel = (n, lang) => `${formatNumber(n, lang)}₾`;
-
-    // "{list}" in the installment text: "380 + 380 + 375₾", "5 × 205 + 210₾",
-    // or "3 × 230₾" when all payments are equal.
-    function formatPayments(parts, lang) {
-        const rest = parts.slice(0, -1), last = parts[parts.length - 1];
-        if (last === parts[0]) return `${parts.length} × ${formatGel(last, lang)}`;
-        if (rest.length > 2) return `${rest.length} × ${formatNumber(rest[0], lang)} + ${formatGel(last, lang)}`;
-        return `${rest.map(p => formatNumber(p, lang)).join(' + ')} + ${formatGel(last, lang)}`;
-    }
 
     const MONTHS = {
         en: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
@@ -592,17 +582,16 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // The price, crossed-out regular price (Mini promo) and payment line a
-    // card shows for one payment option ('onetime' | '5050' | '3mo' | '6mo').
+    // card shows for one payment option ('onetime' | '5050' | '3mo').
     function cardPriceTexts(planId, option, lang, t) {
         const pkg = PRICING.packages[planId];
         const onPromo = pkg.promoPrice !== undefined && isMiniPromoActive();
         const amounts = paymentOptions(onPromo ? pkg.promoPrice : pkg.price);
-        const shown = option === 'onetime' && pkg.halfUpfront ? '5050' : option;
-        const period = shown === '5050' ? t.plan5050Period
-            : amounts.fees[shown] !== undefined ? t[`plan${shown}Period`].replace('{list}', formatPayments(amounts[shown], lang)).replace('{fee}', formatGel(amounts.fees[shown], lang))
+        const shown = pkg.fixed ? 'onetime' : option;
+        const period = (pkg.fixed || shown === '5050') ? t.plan5050Period
+            : shown === '3mo' ? t.plan3moPeriod.replace('{rate}', Math.round(PRICING.threeMonthFeeRate * 100))
             : t.oneTimePayment;
         return {
-            available: !(option === '6mo' && pkg.sixMonths === false),
             onPromo,
             price: formatGel(amounts[shown][0], lang),
             regular: formatGel(paymentOptions(pkg.price)[shown][0], lang),
@@ -614,9 +603,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Writes every card's price and payment line for the selected payment
     // option. `animate` (user-triggered changes): the changed labels fade in,
-    // a payment line whose height changes (1 line ↔ 4 lines) eases to its new
-    // height so the cards grow/shrink smoothly instead of jumping, and the
-    // Mini card fades out/in when the 6-month plan hides it.
+    // and a payment line whose height changes (1 line ↔ 2 lines) eases to its
+    // new height so the cards grow/shrink smoothly instead of jumping.
     function renderPrices(lang, animate = false) {
         const t = translations[lang];
         const option = currentBillingPeriod === 'plans' ? currentPlanType : 'onetime';
@@ -630,7 +618,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (el && el.textContent !== text) changes.push({ el, text });
             });
             card.classList.toggle('promo-active', texts.onPromo);
-            setCardAvailable(card, texts.available, animate);
         });
         if (animate && !reducedMotion()) animateTextChanges(changes);
         else changes.forEach(({ el, text }) => { el.textContent = text; });
@@ -658,29 +645,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 { duration: 420, easing: 'cubic-bezier(0.22, 1, 0.36, 1)' });
             resize.onfinish = resize.oncancel = () => { el.style.overflow = ''; };
         });
-    }
-
-    // Mini has no 6-month plan: it fades out while that plan is shown, and
-    // rises back in after. Switching back mid-fade just keeps it.
-    const cardFadeOuts = new WeakMap();
-    function setCardAvailable(card, available, animate) {
-        const fading = cardFadeOuts.get(card);
-        if (fading) {
-            if (available) fading.cancel();
-            return;
-        }
-        if (available === !card.classList.contains('plan-unavailable')) return;
-        if (available) {
-            card.classList.remove('plan-unavailable');
-            if (animate) revealCards([card]);
-        } else if (animate && !reducedMotion() && card.offsetParent !== null) {
-            const fade = fadeOut(card);
-            cardFadeOuts.set(card, fade);
-            fade.onfinish = () => { card.classList.add('plan-unavailable'); fade.cancel(); };
-            fade.oncancel = () => cardFadeOuts.delete(card);
-        } else {
-            card.classList.add('plan-unavailable');
-        }
     }
 
     // "Ends in 3d 4h" under the Mini promo; when the deadline passes while
@@ -1058,7 +1022,7 @@ const initPortfolioCarousel = () => {
     const prevBtn = document.querySelector('.carousel-btn--prev');
     const nextBtn = document.querySelector('.carousel-btn--next');
     const dotsContainer = document.querySelector('.carousel-dots');
-    const filterButtons = document.querySelectorAll('.filter-btn');
+    const filterButtons = document.querySelectorAll('#portfolio .filter-btn');
 
     if (!track || !allItems.length) return;
 
@@ -1260,6 +1224,71 @@ const initPortfolioCarousel = () => {
     };
 
     afterFirstFrame(initPortfolioScrollReveal);
+
+    // ================================
+    // WORKS PAGE — example sites per package ("See Works" on the pricing
+    // cards). A virtual page like the contact/review pages: the button is a
+    // nav-link to #works-page, and its data-tier picks the tab. Screenshots
+    // load only once the page is open. Premium has no examples yet, so its
+    // button shows a short "coming soon" bubble instead.
+    // ================================
+    (function initWorksPage() {
+        const view = document.getElementById('works-page-view');
+        if (!view) return;
+        const tabs = view.querySelectorAll('.works-filter .filter-btn');
+        const cards = view.querySelectorAll('.work-card');
+        let tier = 'Starter';
+
+        function showTier(next, animate) {
+            tier = next;
+            tabs.forEach(tab => {
+                const on = tab.dataset.tier === tier;
+                tab.classList.toggle('active', on);
+                tab.setAttribute('aria-selected', on ? 'true' : 'false');
+            });
+            const shown = [];
+            cards.forEach(card => {
+                card.hidden = card.dataset.tier !== tier;
+                if (!card.hidden) shown.push(card);
+            });
+            if (!view.classList.contains('active')) return;
+            shown.forEach(card => {
+                const img = card.querySelector('img[data-src]');
+                if (img) { img.src = img.dataset.src; img.removeAttribute('data-src'); }
+            });
+            if (!animate || reducedMotion()) return;
+            shown.forEach((card, i) => card.animate([
+                { opacity: 0, translate: '0 18px' },
+                { opacity: 1, translate: '0 0' }
+            ], { duration: 450, delay: Math.min(i, 8) * 50, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', fill: 'backwards' }));
+        }
+
+        tabs.forEach(tab => tab.addEventListener('click', () => {
+            if (tab.dataset.tier !== tier) showTier(tab.dataset.tier, true);
+        }));
+        view.addEventListener('view:shown', () => showTier(tier, true));
+
+        let soonTimer = null;
+        function showComingSoon(button) {
+            const bubble = button.parentElement.querySelector('.see-works-soon');
+            if (!bubble) return;
+            bubble.textContent = translations[currentLang].seeWorksSoon;
+            bubble.classList.add('is-visible');
+            clearTimeout(soonTimer);
+            soonTimer = setTimeout(() => bubble.classList.remove('is-visible'), 2600);
+        }
+
+        // Runs before the page switch (this listener is on the button, the
+        // navigation one on the document), so the right tab is ready.
+        document.querySelectorAll('.see-works-btn[data-tier]').forEach(button => {
+            button.addEventListener('click', (e) => {
+                if (button.dataset.tier === 'Premium') { e.preventDefault(); showComingSoon(button); return; }
+                showTier(button.dataset.tier, false);
+            });
+        });
+
+        showTier(tier, false);
+    })();
 
 
     // ================================

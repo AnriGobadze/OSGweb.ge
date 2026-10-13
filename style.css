@@ -1099,11 +1099,69 @@ html.hero-cinematic-init header {
 .pricing-card .feature-item i { color: var(--success); font-size: 1rem; margin-top: 0.2rem; flex-shrink: 0; }
 .pricing-card .feature-item.fail i { color: var(--error); }
 .pricing-card .get-started-btn { width: 100%; text-align: center; position: relative; }
+
+/* "See Works" hangs directly under "Get started" as one block: no top
+   border, a thin violet frame (the Individual card's accent) on the other
+   three sides, transparent inside. */
+.card-actions { position: relative; }
+.card-actions .get-started-btn { display: block; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.see-works-btn {
+    display: block;
+    width: 100%;
+    padding: 0.7rem 1rem;
+    background: transparent;
+    border: 1.5px solid var(--bespoke-border);
+    border-top: none;
+    border-radius: 0 0 12px 12px;
+    color: var(--bespoke-accent-light);
+    font: inherit;
+    font-size: 0.92rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: color var(--transition-fast), border-color var(--transition-fast);
+}
+.see-works-btn:hover,
+.see-works-btn:focus-visible { color: #F5EDFF; border-color: var(--bespoke-accent-light); }
+/* Premium has no examples yet: a "coming soon" bubble above the buttons */
+.see-works-soon {
+    position: absolute;
+    left: 50%;
+    bottom: calc(100% + 0.75rem);
+    z-index: 2;
+    width: max-content;
+    max-width: 100%;
+    padding: 0.55rem 0.9rem;
+    border-radius: 10px;
+    background: #2A1052;
+    border: 1px solid var(--bespoke-border);
+    color: #F5EDFF;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 0 10px 30px -10px var(--bespoke-glow);
+    opacity: 0;
+    transform: translate(-50%, 6px) scale(0.96);
+    transition: opacity 0.2s ease, transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    pointer-events: none;
+}
+.see-works-soon::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    margin-left: -6px;
+    border: 6px solid transparent;
+    border-top-color: #2A1052;
+}
+.see-works-soon:empty { display: none; }
+.see-works-soon.is-visible { opacity: 1; transform: translate(-50%, 0) scale(1); }
 /* ── Mini: the entry package ──────────────────────────────────────
    Phones: a normal card, first in the list (the three wrappers dissolve;
-   order: price → promo → what's included → button). From 768px: a
+   order: price → promo → what's included → buttons). From 768px: a
    full-width row under the three main packages — price | what's included,
-   promo + button below; from 992px all three side by side in one short
+   promo + buttons below; from 992px all three side by side in one short
    row. It sits below them because the hanging "3 premium projects" sign
    covers the top-right of the grid. The promo parts show only while
    `.promo-active` (set by script.js until PRICING.miniPromoEnds). */
@@ -1112,7 +1170,7 @@ html.hero-cinematic-init header {
 .pricing-card.mini .mini-cta { display: contents; }
 .pricing-card.mini .mini-promo { order: 1; }
 .pricing-card.mini .features-list { order: 2; margin: 0 0 2rem; }
-.pricing-card.mini .get-started-btn { order: 3; }
+.pricing-card.mini .card-actions { order: 3; }
 
 .price-old { text-align: center; font-size: 1.15rem; color: var(--text-color-light); margin-bottom: 0.15rem; position: relative; }
 .price-old s { text-decoration-thickness: 2px; }
@@ -1140,10 +1198,8 @@ html.hero-cinematic-init header {
     .pricing-cards-grid { padding-left: 0; padding-right: 0; }
     .mini-promo { padding: 0.75rem 0.6rem; }
 }
-/* stronger than the `display: grid` below: hidden on the "Individual"
-   tab, and on the 6-month plan (Mini doesn't offer it) */
-.pricing-card.mini.hidden,
-.pricing-card.mini.plan-unavailable { display: none; }
+/* stronger than the `display: grid` below (hidden on the "Individual" tab) */
+.pricing-card.mini.hidden { display: none; }
 
 @media (min-width: 768px) {
     .pricing-card.mini {
@@ -1171,6 +1227,32 @@ html.hero-cinematic-init header {
     .pricing-card.mini .mini-cta { grid-column: auto; }
 }
 .book-a-call-btn-wrapper { margin-top: 4rem; text-align: center; }
+
+/* ── Works page: example sites per package ─────────────────────── */
+.works-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(280px, 100%), 1fr)); gap: 1.5rem; }
+.work-card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+    background: var(--card-bg);
+    border: 1px solid var(--glass-border);
+    box-shadow: var(--shadow-card-highlight);
+    color: inherit;
+    text-decoration: none;
+    transition: transform var(--transition-smooth), box-shadow var(--transition-smooth), border-color var(--transition-fast);
+}
+.work-card:hover,
+.work-card:focus-visible { transform: translateY(-6px); box-shadow: var(--shadow-glow); border-color: var(--verified-border); }
+.work-card[hidden] { display: none; }
+.work-thumb { display: block; aspect-ratio: 16 / 10; overflow: hidden; background: var(--bg-elevated); border-bottom: 1px solid var(--glass-border); }
+.work-thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; transition: transform var(--transition-smooth); }
+.work-card:hover .work-thumb img { transform: scale(1.04); }
+.work-info { display: flex; flex-direction: column; gap: 0.6rem; padding: 1.1rem 1.25rem 1.25rem; flex: 1; }
+.work-title { font-weight: 600; color: var(--dark-title); line-height: 1.4; overflow-wrap: break-word; }
+.work-link { margin-top: auto; color: var(--accent-mint); font-size: 0.9rem; font-weight: 600; }
+.work-link i { font-size: 0.75em; margin-left: 0.3rem; transition: transform var(--transition-fast); }
+.work-card:hover .work-link i { transform: translateX(3px); }
 .book-a-call { font-size: 1.1rem; font-weight: 600; }
 .pricing-trust-snippet { margin-top: 2rem; color: var(--text-color-light); text-align: center; font-size: 1rem; }
 
