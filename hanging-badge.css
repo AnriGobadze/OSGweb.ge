@@ -1,5 +1,5 @@
 /* ====================================================================
-   OSGWeb.ge — Exclusivity Badge (hanging sign)
+   OSGWeb.ge — Exclusivity Badge (hanging tag)
    hanging-badge.css
    Load AFTER style.css in <head>
    ==================================================================== */
@@ -11,18 +11,21 @@
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   SIGN ROOT & PENDULUM
-   Stays absolutely positioned inside #pricing at every breakpoint —
-   it must never become `fixed` to the viewport on mobile, or it will
-   stick and scroll along with the page instead of its section.
+   TAG ROOT & PENDULUM
+   A slim tag on a twisted cord, hanging from a pin centered above the
+   pricing heading at every width. It's in the normal flow (first thing
+   in the section's container), so the heading always starts below it,
+   whatever the language or text size. The negative top margin lifts the
+   pin into #pricing's top padding. hanging-badge.js swings the whole
+   root around the pin (`--sign-rotate`) and stretches/twists the cord.
 ══════════════════════════════════════════════════════════════════ */
 .discount-sign-root {
   --sign-rotate: 0deg;
 
-  position: absolute;
-  top: 2.6rem;
-  right: clamp(0.25rem, 3.5vw, 2rem);
+  position: relative;
   z-index: 30;
+  width: fit-content;
+  margin: -2rem auto 1.75rem;
 
   display: flex;
   flex-direction: column;
@@ -44,169 +47,155 @@ body.mobile-nav-is-open .discount-sign-root {
   pointer-events: none;
 }
 
-/* ── NAIL — forged iron look ─────────────────────────────────────── */
+/* ── PIN — small brushed-metal head ──────────────────────────────── */
 .sign-nail {
-  width: 13px;
-  height: 13px;
+  width: 11px;
+  height: 11px;
   border-radius: 50%;
-  background:
-    radial-gradient(circle at 30% 28%, #6B6B6B 0%, #2A2A2A 50%, #111 100%);
+  background: radial-gradient(circle at 35% 30%, #F2FBF7 0%, #A9C2B8 32%, #4C625A 72%, #1B2622 100%);
   box-shadow:
-    0 2px 5px rgba(0,0,0,0.7),
-    0 1px 0 rgba(255,255,255,0.12),
-    inset 0 1px 1px rgba(255,255,255,0.15);
+    0 2px 4px rgba(0, 0, 0, 0.65),
+    0 0 0 3px rgba(16, 185, 129, 0.10);
   flex-shrink: 0;
   position: relative;
-  z-index: 2;
+  z-index: 3;
 }
 
-/* ── ROPE ─────────────────────────────────────────────────────────── */
+/* ── CORD ─────────────────────────────────────────────────────────
+   Two thin strands twisted around each other. The SVG stretches to the
+   height set here (preserveAspectRatio="none"), and the strokes keep
+   their pixel width (vector-effect). It's drawn over the tag so the cord
+   runs into the eyelet. */
 .rope-svg {
   display: block;
   overflow: visible;
   flex-shrink: 0;
-  filter: drop-shadow(1px 2px 3px rgba(0,0,0,0.45));
+  height: 56px;
+  margin-top: -2px;
+  position: relative;
+  z-index: 2;
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   SIGN CARD — light ivory/cream plaque, gold-trimmed, emerald accents
+   TAG — dark emerald glass, like the site's cards
 ══════════════════════════════════════════════════════════════════ */
 .sign-card {
-  background:
-    linear-gradient(165deg, rgba(14, 48, 36, 0.94) 0%, rgba(3, 15, 11, 0.97) 100%);
-
-  border: 1px solid rgba(16, 185, 129, 0.38);
-  border-radius: 10px;
-  padding: 0.7rem 1.1rem 0.85rem;
-  min-width: 168px;
-  max-width: 188px;
+  /* pulls the tag up so the cord's end sits in the eyelet's center
+     (1px border + 6px offset + 5px radius) */
+  margin-top: -12px;
   position: relative;
+  z-index: 1;
   overflow: hidden;
   will-change: transform;
 
+  min-width: 188px;
+  max-width: 220px;
+  padding: 1.45rem 1.25rem 1rem;
+  border-radius: 14px;
+  border: 1px solid rgba(16, 185, 129, 0.32);
+  background: linear-gradient(165deg, rgba(17, 53, 40, 0.97) 0%, rgba(4, 17, 12, 0.98) 100%);
   box-shadow:
-    0 5px 0 rgba(0, 0, 0, 0.25),
-    0 1px 0 rgba(16,185,129,0.25),
-    0 20px 44px rgba(0, 0, 0, 0.55),
-    inset 0 1px 0 rgba(255,255,255,0.07),
-    inset 0 -1px 0 rgba(0, 0, 0, 0.35);
+    inset 0 1px 0 rgba(255, 255, 255, 0.07),
+    0 22px 44px -14px rgba(0, 0, 0, 0.75),
+    0 14px 36px -18px rgba(16, 185, 129, 0.45);
 }
 
-/* Ambient emerald vignette at edges */
+/* soft emerald light from the top edge */
 .sign-card::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: radial-gradient(
-    ellipse at 50% 0%,
-    rgba(16,185,129,0.18) 0%,
-    transparent 65%
-  );
-  border-radius: inherit;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(16, 185, 129, 0.16) 0%, transparent 70%);
   pointer-events: none;
-  z-index: 0;
 }
 
-/* Top sheen / highlight */
-.sign-card::after {
-  content: '';
+/* ── EYELET — one metal ring at the top center ──────────────────── */
+.sign-hole {
   position: absolute;
-  inset: 0 0 65% 0;
-  background: linear-gradient(to bottom, rgba(255,255,255,0.10), transparent);
-  border-radius: 10px 10px 0 0;
-  pointer-events: none;
-  z-index: 0;
-}
-
-/* ── EYELET HOLES — brass grommets ─────────────────────────────── */
-.sign-holes {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 0.25rem;
-  margin-bottom: 0.55rem;
-  position: relative;
+  top: 6px;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  margin-left: -5px;
+  border-radius: 50%;
+  background: #020A07;
+  box-shadow:
+    inset 0 1px 2px rgba(0, 0, 0, 0.9),
+    0 0 0 1.5px #8DA59C,
+    0 0 0 3px rgba(0, 0, 0, 0.35);
   z-index: 1;
 }
 
-.sign-hole {
-  display: block;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: conic-gradient(
-    from 120deg,
-    #4A3E14 0deg,
-    #D6BC66 90deg,
-    #A08830 180deg,
-    #4A3E14 270deg,
-    #4A3E14 360deg
-  );
-  box-shadow:
-    inset 0 1px 3px rgba(0,0,0,0.6),
-    0 1px 2px rgba(200,168,58,0.30);
-  position: relative;
-}
-
-.sign-hole::after {
-  content: '';
-  position: absolute;
-  inset: 2.5px;
-  border-radius: 50%;
-  background: radial-gradient(circle at 40% 35%, #0A2A1F, #010D08);
-  box-shadow: inset 0 1px 3px rgba(0,0,0,0.9);
-}
-
-/* ── SIGN INNER ───────────────────────────────────────────────── */
+/* ── TEXT ──────────────────────────────────────────────────────── */
 .sign-inner {
   position: relative;
   z-index: 1;
   text-align: center;
 }
 
-/* ── EYEBROW — "✦ CURRENTLY ACCEPTING ✦" ─────────────────────── */
+/* "● NOW ACCEPTING" — the dot pulses like a live status light */
 .sign-eyebrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-bottom: 0.5rem;
   font-family: var(--font-mono);
-  font-size: 0.5rem;
-  font-weight: 500;
-  letter-spacing: 0.18em;
-  color: var(--accent-mint);
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
-  margin-bottom: 0.55rem;
-  opacity: 0.95;
+  color: var(--accent-mint);
+}
+.sign-live {
+  position: relative;
+  flex-shrink: 0;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-mint);
+  box-shadow: 0 0 6px rgba(52, 211, 153, 0.8);
+}
+.sign-live::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  border: 1px solid var(--accent-mint);
+  animation: signLive 2.2s ease-out infinite;
+}
+@keyframes signLive {
+  from { transform: scale(1); opacity: 0.9; }
+  to   { transform: scale(3); opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sign-live::after { animation: none; opacity: 0; }
 }
 
-/* ── HEADLINE ─────────────────────────────────────────────────── */
 .sign-headline {
   font-family: var(--font-heading);
-  font-style: italic;
-  font-size: 1.12rem;
-  font-weight: 600;
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.25;
   color: var(--text-main);
-  line-height: 1.22;
-  letter-spacing: -0.01em;
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.7rem;
+}
+.sign-num {
+  color: var(--accent-mint);
 }
 
-/* ── DIVIDER ──────────────────────────────────────────────────── */
 .sign-sep {
   height: 1px;
-  background: linear-gradient(
-    to right,
-    transparent,
-    rgba(16,185,129,0.4),
-    transparent
-  );
-  margin: 0.4rem 0;
+  margin: 0 0.25rem 0.6rem;
+  background: linear-gradient(to right, transparent, rgba(16, 185, 129, 0.45), transparent);
 }
 
-/* ── FOOTER LINE ──────────────────────────────────────────────── */
 .sign-footer {
   font-family: var(--font-mono);
-  font-size: 0.5rem;
+  font-size: 0.6rem;
   letter-spacing: 0.1em;
-  color: var(--text-color-light);
   text-transform: uppercase;
-  opacity: 0.85;
+  color: var(--text-color-light);
 }
 
 /* ══════════════════════════════════════════════════════════════════
@@ -232,69 +221,73 @@ body.mobile-nav-is-open .discount-sign-root {
 }
 
 /* ══════════════════════════════════════════════════════════════════
-   RESPONSIVE
-   NOTE: the sign only ever moves horizontally here (`right` offset) —
-   it must keep `position: absolute` inherited from the base rule above
-   at every breakpoint so it scrolls WITH the pricing section, never
-   pinned to the viewport.
+   RESPONSIVE — phones: shorter cord, a slightly smaller tag, lifted
+   higher into the section's top padding; desktops: a larger tag.
 ══════════════════════════════════════════════════════════════════ */
-@media (max-width: 991px) {
-  /* Up to 991px the pricing heading and subtitle span the full width,
-     so a sign hanging beside them covered the text. Here it hangs
-     centered in the space ABOVE the heading instead: a negative `top`
-     lifts the nail into #pricing's top padding (#pricing keeps
-     `overflow: visible` so this is safe), and the heading is pushed
-     down just far enough to clear the card. */
-  .discount-sign-root {
-    top: -5rem;
-    left: 0;
-    right: 0;
-    width: fit-content;
-    margin: 0 auto;
+@media (max-width: 767px) {
+  .discount-sign-root { margin: -3.25rem auto 1.5rem; }
+  .rope-svg { height: 44px; }
+  .sign-card {
+    min-width: 172px;
+    padding: 1.35rem 1.1rem 0.9rem;
   }
-  .rope-svg { height: 40px !important; }
-  /* padding, not margin: a top margin would collapse through the
-     container and carry the sign down with the heading */
-  #pricing .section-title { padding-top: 8.25rem; }
+  .sign-headline { font-size: 1rem; }
 }
 
-@media (max-width: 767px) {
-  /* Phones: hangs from the left, lined up with the content's left edge
-     (the container's 2rem side padding) instead of centered. */
-  .discount-sign-root { left: 2rem; right: auto; margin: 0; }
-  #pricing .section-title { padding-top: 7.25rem; }
-
+@media (min-width: 992px) {
+  .discount-sign-root { margin-top: -2.5rem; }
   .sign-card {
-    min-width: 136px;
-    max-width: 152px;
-    padding: 0.55rem 0.85rem 0.7rem;
+    min-width: 214px;
+    max-width: 240px;
+    padding: 1.6rem 1.4rem 1.1rem;
   }
+  .sign-eyebrow,
+  .sign-footer { font-size: 0.66rem; }
+  .sign-headline { font-size: 1.22rem; }
+}
 
-  .sign-eyebrow       { font-size: 0.46rem; }
-  .sign-headline      { font-size: 0.95rem; }
-  .sign-footer        { font-size: 0.42rem; }
+/* Wide desktops: hangs on the right, beside the subtitle and toggle (the
+   pin sits below the heading so the cord never crosses it). */
+@media (min-width: 1200px) {
+  .discount-sign-root {
+    position: absolute;
+    top: 5.25rem;
+    right: 2rem;
+    margin: 0;
+  }
+  .rope-svg { height: 40px; }
 }
 
 
 /* ══════════════════════════════════════════════════════════════════
    LANGUAGE VARIANTS
-   Georgian/Russian render the headline through the Noto Sans Georgian /
-   fallback sans-serif face (Anta has no non-Latin glyphs) which runs
-   wider per character than Anta, and has no real italic — the browser's
-   synthetic slant was pushing the widest word past the card's
-   `overflow:hidden` edge. Drop the italic and size the headline down a
-   notch for these languages only; English keeps its original look.
+   Georgian has no capitals and the Georgian/Russian text renders in
+   Noto Sans Georgian / a sans fallback (Anta and JetBrains Mono have no
+   Georgian glyphs): no wide letter-spacing for Georgian, and the
+   headline a notch smaller, as those faces run wider than Anta.
 ══════════════════════════════════════════════════════════════════ */
+body[data-lang="ge"] .sign-eyebrow,
+body[data-lang="ge"] .sign-footer {
+  font-family: var(--font-body);
+  font-size: 0.66rem;
+  letter-spacing: 0.02em;
+}
+
 body[data-lang="ge"] .sign-headline,
 body[data-lang="ru"] .sign-headline {
-  font-style: normal;
-  font-size: 0.95rem;
-  letter-spacing: 0;
+  font-size: 0.98rem;
 }
 
 @media (max-width: 767px) {
   body[data-lang="ge"] .sign-headline,
   body[data-lang="ru"] .sign-headline {
-    font-size: 0.78rem;
+    font-size: 0.92rem;
   }
+}
+
+@media (min-width: 992px) {
+  body[data-lang="ge"] .sign-eyebrow,
+  body[data-lang="ge"] .sign-footer { font-size: 0.74rem; }
+  body[data-lang="ge"] .sign-headline,
+  body[data-lang="ru"] .sign-headline { font-size: 1.08rem; }
 }

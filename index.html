@@ -265,7 +265,7 @@
                  <div class="hero-video-wrap hero-video-wrap--mobile-only">
     <!-- Mobile-only video. Its source is attached by script.js after the page
          has loaded, and only on screens < 768px (it's hidden on desktop). -->
-    <video id="hero-video" class="hero-video" autoplay muted loop playsinline disablepictureinpicture preload="none" data-src="assets/video/hero-mobile-720.mp4">
+    <video id="hero-video" class="hero-video" autoplay muted loop playsinline disablepictureinpicture preload="none" data-src-hevc="assets/video/hero-mobile-1080.hevc.mp4" data-src="assets/video/hero-mobile-1080.mp4">
         <!-- The video has no sound or speech; the empty captions track satisfies
              the accessibility check for <video> (never fetched unless enabled). -->
         <track kind="captions" src="assets/video/hero-mobile-720.ka.vtt" srclang="ka" label="ქართული">
@@ -353,7 +353,7 @@
 
                     <!-- CLIENT SITES (1-9) -->
                     <a href="https://www.suftasivrce.com/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img data-src="https://i.pinimg.com/1200x/e5/8c/81/e58c8109d19345ffc49111d5a306046f.jpg" alt="Sufta Sivrce: სასტუმროს სამრეცხაოს ვებსაიტი" decoding="async">
+                        <img data-src="assets/img/portfolio/sufta-sivrce.webp" alt="Sufta Sivrce: სასტუმროს სამრეცხაოს ვებსაიტი" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship09Title">'Sufta Sivrce' - სასტუმროს სამრეცხაო ვებსაიტი</h3>
@@ -361,7 +361,7 @@
                     </a>
 
                     <a href="https://www.jagibuilding.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img data-src="https://www.factor.law/images/data/M_A_Blog.jpg" alt="Jagi Building: სამშენებლო კომპანიის ვებსაიტი" decoding="async">
+                        <img data-src="assets/img/portfolio/jagi-building.webp" alt="Jagi Building: სამშენებლო კომპანიის ვებსაიტი" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship1Title">'Jagi Building' - სამშენებლო კომპანიის ვებსაიტი</h3>
@@ -369,7 +369,7 @@
                     </a>
 
                     <a href="https://www.laptopgeorgia.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img data-src="https://i.pinimg.com/736x/c6/0e/6a/c60e6ae7667bbb409aae36a46d6d2ec3.jpg" alt="Laptop Georgia: ტექნიკის შეკეთების ვებსაიტი" decoding="async">
+                        <img data-src="assets/img/portfolio/laptop-georgia.webp" alt="Laptop Georgia: ტექნიკის შეკეთების ვებსაიტი" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship2Title">'Laptop Georgia' - ტექნიკის შეკეთების ვებსაიტი</h3>
@@ -377,7 +377,7 @@
                     </a>
 
                     <a href="https://www.stilissivrce.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img data-src="https://ir.ozone.ru/s3/multimedia-1-b/7360641515.jpg" alt="Stilis Sivrce: ტანსაცმლის მაღაზიის ვებსაიტი" decoding="async">
+                        <img data-src="assets/img/portfolio/stilis-sivrce.webp" alt="Stilis Sivrce: ტანსაცმლის მაღაზიის ვებსაიტი" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship3Title">'Stilis Sivrce' - ტანსაცმლის მაღაზიის ვებსაიტი</h3>
@@ -385,7 +385,7 @@
                     </a>
 
                     <a href="https://www.terra24.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img data-src="https://i.pinimg.com/736x/1d/61/ca/1d61ca69fd1ef0670434ac43d5b31119.jpg" alt="Terra 24: სარიტუალო ბიუროს ვებსაიტი" decoding="async">
+                        <img data-src="assets/img/portfolio/terra-24.webp" alt="Terra 24: სარიტუალო ბიუროს ვებსაიტი" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship4Title">'Terra 24' - სარიტუალო ბიუროს ვებსაიტი</h3>
@@ -393,7 +393,7 @@
                     </a>
 
                     <a href="https://www.primegrind.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img data-src="https://www.primegrind.ge/work-1.jpg" alt="Prime Grind: სამშენებლო კომპანიის ვებსაიტი" decoding="async">
+                        <img data-src="assets/img/portfolio/prime-grind.webp" alt="Prime Grind: სამშენებლო კომპანიის ვებსაიტი" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship5Title">'Prime Grind' - სამშენებლო კომპანიის ვებსაიტი</h3>
@@ -401,7 +401,7 @@
                     </a>
 
                     <a href="https://www.skhiladieselmotors.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img data-src="https://i.pinimg.com/736x/6b/20/90/6b20906e017013b11a7844e3031b690c.jpg" alt="სხილა დიზელ მოტორსი: ავტოსერვისის ვებსაიტი" decoding="async">
+                        <img data-src="assets/img/portfolio/skhila-diesel-motors.webp" alt="სხილა დიზელ მოტორსი: ავტოსერვისის ვებსაიტი" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship6Title">'Skhila Diesel Motors' - ავტოსერვისის ვებსაიტი</h3>
@@ -409,7 +409,7 @@
                     </a>
 
                     <a href="https://laarte.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img data-src="https://laarte.ge/about-us-bracelets.jpeg.jpeg" alt="La Arté: საიუველირო ვებსაიტი" decoding="async">
+                        <img data-src="assets/img/portfolio/la-arte.webp" alt="La Arté: საიუველირო ვებსაიტი" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship7Title">'La Arté' - საიუველირო ვებსაიტი</h3>
@@ -417,7 +417,7 @@
                     </a>
 
                     <a href="https://www.evakuatorigzaze.ge/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="client">
-                        <img data-src="https://i.pinimg.com/1200x/70/b5/95/70b595d64e2925278c1dfa3b40dcbec3.jpg" alt="EVAKUATORIGZAZE: ევაკუატორის სერვისის ვებსაიტი" decoding="async">
+                        <img data-src="assets/img/portfolio/evakuatorigzaze.webp" alt="EVAKUATORIGZAZE: ევაკუატორის სერვისის ვებსაიტი" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewPRTitle">პროექტის ნახვა</span>
                             <h3 data-lang="flagship8Title">'EVAKUATORIGZAZE' - ევაკუატორის სერვისის ვებსაიტი</h3>
@@ -458,7 +458,7 @@
                     </a>
 
                     <a href="https://osg-website-tamplate.vercel.app/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="template">
-                        <img data-src="https://images.pexels.com/photos/262978/pexels-photo-262978.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750" alt="The Golden Fork: რესტორნის ვებსაიტის შაბლონი" decoding="async">
+                        <img data-src="assets/img/portfolio/golden-fork.webp" alt="The Golden Fork: რესტორნის ვებსაიტის შაბლონი" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewDemoTitle">დემოს ნახვა</span>
                             <h3 data-lang="portfolio1Title">'The Golden Fork' - რესტორნის ვებსაიტი</h3>
@@ -466,7 +466,7 @@
                     </a>
 
                     <a href="https://osgwebsitebarbershoptamplate.vercel.app/" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="template">
-                        <img data-src="https://t3.ftcdn.net/jpg/05/79/13/18/360_F_579131835_34z1xrboD0IaxbierBEiIt6OJcWQuTly.jpg" alt="The Trim House: ბარბერშოპის ვებსაიტის შაბლონი" decoding="async">
+                        <img data-src="assets/img/portfolio/trim-house.webp" alt="The Trim House: ბარბერშოპის ვებსაიტის შაბლონი" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewDemoTitle">დემოს ნახვა</span>
                             <h3 data-lang="portfolio2Title">'The Trim House' - ბარბერშოპის ბრენდინგი</h3>
@@ -474,7 +474,7 @@
                     </a>
 
                     <a href="https://osgwebcafetamplate.vercel.app/#home" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="template">
-                        <img data-src="https://jamcafes.mystagingwebsite.com/wp-content/uploads/2024/09/JamCafe_BestBreakfastBrunch_Vancouver_PancakeStack.jpg" alt="Olio &amp; Sale: კაფეს ვებსაიტის შაბლონი" decoding="async">
+                        <img data-src="assets/img/portfolio/olio-sale.webp" alt="Olio &amp; Sale: კაფეს ვებსაიტის შაბლონი" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewDemoTitle">დემოს ნახვა</span>
                             <h3 data-lang="portfolio3Title">'Olio & Sale' - კაფეს ონლაინ ვებსაიტი</h3>
@@ -482,7 +482,7 @@
                     </a>
 
                     <a href="https://salad-web.vercel.app" target="_blank" rel="noopener noreferrer" class="carousel-item" data-category="template">
-                        <img data-src="https://mangia.nyc/wp-content/uploads/2024/07/Salad-Bar-Manhattan.jpg" alt="Healthy Salad: რესტორნის ვებსაიტის შაბლონი" decoding="async">
+                        <img data-src="assets/img/portfolio/healthy-salad.webp" alt="Healthy Salad: რესტორნის ვებსაიტის შაბლონი" decoding="async">
                         <div class="overlay">
                             <span class="carousel-item-tag" data-lang="viewDemoTitle">დემოს ნახვა</span>
                             <h3 data-lang="portfolio4Title">'Healthy Salad' - რესტორნის ვებსაიტი</h3>
@@ -582,139 +582,45 @@
 
     <section id="pricing" class="content-section">
         <div class="container">
+            <!-- ═══ EXCLUSIVITY BADGE ═══
+                 A tag hanging from a pin above the heading. hanging-badge.js
+                 swings it on scroll and twists/stretches the cord's paths. -->
+            <div id="discount-sign"
+                class="discount-sign-root"
+                role="img"
+                aria-label="ამჟამად ვიღებთ მხოლოდ 3 პრემიუმ პროექტს 2026 წლის ოქტომბრისთვის.">
+                <div class="sign-nail" aria-hidden="true"></div>
+                <svg class="rope-svg" viewBox="0 0 16 88" width="16" height="88" preserveAspectRatio="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                        <linearGradient id="cordA" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#7F988E"/>
+                            <stop offset="50%" stop-color="#DCEAE3"/>
+                            <stop offset="100%" stop-color="#7F988E"/>
+                        </linearGradient>
+                        <linearGradient id="cordB" x1="0" y1="0" x2="1" y2="0">
+                            <stop offset="0%" stop-color="#3F5650"/>
+                            <stop offset="50%" stop-color="#8FA79E"/>
+                            <stop offset="100%" stop-color="#3F5650"/>
+                        </linearGradient>
+                    </defs>
+                    <path class="rope-core" d="M8,0 C8,29 8,59 8,88" stroke="rgba(0,0,0,0.5)" stroke-width="3.4" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+                    <path class="rope-strand-b" d="M8,0 C6.50,3.63 6.50,7.37 8,11 C9.50,14.63 9.50,18.37 8,22 C6.50,25.63 6.50,29.37 8,33 C9.50,36.63 9.50,40.37 8,44 C6.50,47.63 6.50,51.37 8,55 C9.50,58.63 9.50,62.37 8,66 C6.50,69.63 6.50,73.37 8,77 C9.50,80.63 9.50,84.37 8,88" stroke="url(#cordB)" stroke-width="1.5" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+                    <path class="rope-strand-a" d="M8,0 C9.50,3.63 9.50,7.37 8,11 C6.50,14.63 6.50,18.37 8,22 C9.50,25.63 9.50,29.37 8,33 C6.50,36.63 6.50,40.37 8,44 C9.50,47.63 9.50,51.37 8,55 C6.50,58.63 6.50,62.37 8,66 C9.50,69.63 9.50,73.37 8,77 C6.50,80.63 6.50,84.37 8,88" stroke="url(#cordA)" stroke-width="1.5" fill="none" stroke-linecap="round" vector-effect="non-scaling-stroke"/>
+                </svg>
+                <div class="sign-card" aria-hidden="true">
+                    <span class="sign-hole"></span>
+                    <div class="sign-inner">
+                        <p class="sign-eyebrow"><span class="sign-live"></span><span data-lang="badgeEyebrow">ამჟამად ვიღებთ</span></p>
+                        <p class="sign-headline" data-lang="badgeHeadline">მხოლოდ&nbsp;<span class='sign-num'>3</span>&nbsp;პრემიუმ<br>პროექტს</p>
+                        <div class="sign-sep"></div>
+                        <p class="sign-footer" data-lang="badgeSub">2026 წლის ოქტომბრისთვის</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ═══ EXCLUSIVITY BADGE — END ═══ -->
+
             <h2 class="section-title has-subtitle" data-aos="fade-up" data-lang="pricingTitle">ინვესტიცია თქვენს ციფრულ ზრდაში</h2>
             <p class="section-subtitle" data-aos="fade-up" data-lang="pricingSubtitle">აირჩიეთ თქვენს მიზნებზე მორგებული ფორმატი ან დაგვიკავშირდით ინდივიდუალური კონსულტაციისთვის.</p>
-            <!-- ═══ EXCLUSIVITY BADGE ═══ -->
-    <div id="discount-sign"
-        class="discount-sign-root"
-        role="img"
-        aria-label="ამჟამად ვიღებთ მხოლოდ 3 პრემიუმ პროექტს 2026 წლის ოქტომბრისთვის.">
-    <div class="sign-nail" aria-hidden="true"></div>
-    <svg class="rope-svg"
-        viewBox="0 0 16 88"
-        width="16" height="88"
-        aria-hidden="true"
-        xmlns="http://www.w3.org/2000/svg">
-        <defs>
-        <linearGradient id="ropeCore" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%"   stop-color="#241C0C"/>
-            <stop offset="50%"  stop-color="#463514"/>
-            <stop offset="100%" stop-color="#241C0C"/>
-        </linearGradient>
-        <linearGradient id="ropeStrandA" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%"   stop-color="#5C4A1E"/>
-            <stop offset="35%"  stop-color="#A08830"/>
-            <stop offset="65%"  stop-color="#D6BC66"/>
-            <stop offset="100%" stop-color="#5C4A1E"/>
-        </linearGradient>
-        <linearGradient id="ropeStrandB" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%"   stop-color="#4A3E14"/>
-            <stop offset="40%"  stop-color="#8B7830"/>
-            <stop offset="70%"  stop-color="#C6A840"/>
-            <stop offset="100%" stop-color="#4A3E14"/>
-        </linearGradient>
-        <linearGradient id="ropeStrandC" x1="0" y1="0" x2="1" y2="0">
-            <stop offset="0%"   stop-color="#3A3010"/>
-            <stop offset="45%"  stop-color="#7A6824"/>
-            <stop offset="100%" stop-color="#3A3010"/>
-        </linearGradient>
-        <linearGradient id="ropeHi" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%"   stop-color="rgba(230,199,122,0.55)"/>
-            <stop offset="40%"  stop-color="rgba(230,199,122,0.20)"/>
-            <stop offset="100%" stop-color="rgba(230,199,122,0.05)"/>
-        </linearGradient>
-
-        </defs>
-        <path class="rope-core" d="M8,0
-                C5.4,7  10.2,13  8,18
-                C5.8,23 10.4,29  8,34
-                C5.6,39 10.2,45  8,50
-                C5.8,55 10.3,61  8,66
-                C5.7,71 10.1,77  8,82
-                C7,84.5 8,87 8,88"
-            stroke="url(#ropeCore)"
-            stroke-width="5"
-            fill="none"
-            stroke-linecap="round"
-            opacity="0.55"/>
-
-        <path class="rope-strand-c" d="M10.6,0
-                C8.2,6   5.4,12   5.2,18
-                C5.0,24  8.0,30  10.8,36
-                C11.0,39  8.2,45  5.2,50
-                C5.0,55  8.2,61  11.0,66
-                C11.2,69  8.0,75  5.2,80
-                C5.0,83   7.5,86  8,88"
-            stroke="url(#ropeStrandC)"
-            stroke-width="2.1"
-            fill="none"
-            stroke-linecap="round"/>
-
-        <path class="rope-strand-b" d="M8,0
-                C10.8,6  11.2,13  8.2,18
-                C5.2,23  4.8,29   8,34
-                C10.8,39 11.0,45  8,50
-                C5.2,55  4.8,61   8,66
-                C10.6,71 11.0,77  8,82
-                C5.5,85  7.5,87  8,88"
-            stroke="url(#ropeStrandB)"
-            fill="none"
-            stroke-width="2.1"
-            stroke-linecap="round"/>
-
-        <path class="rope-strand-a" d="M5.4,0
-                C5.0,6   8.0,12  10.8,18
-                C11.0,22  8.2,28  5.2,34
-                C5.0,38   8.0,44 10.8,50
-                C11.0,54  8.2,60  5.2,66
-                C5.0,70   8.2,76 10.8,82
-                C11.0,84.5 8.5,87 8,88"
-            stroke="url(#ropeStrandA)"
-            stroke-width="2.1"
-            fill="none"
-            stroke-linecap="round"/>
-
-        <path d="M7,16 L9,20  M9,32 L7,36  M7,48 L9,52  M9,64 L7,68  M7,80 L9,84"
-            stroke="rgba(20,16,2,0.28)"
-            stroke-width="1.2"
-            fill="none"
-            stroke-linecap="round"/>
-
-        <path class="rope-highlight" d="M6,0
-                C4.8,8  5.2,20  6,30
-                C6.4,40 5.8,55  6,70
-                C6.2,78 6.5,84  6.5,88"
-            stroke="url(#ropeHi)"
-            stroke-width="0.9"
-            fill="none"
-            stroke-linecap="round"
-            opacity="0.70"/>
-
-    </svg>
-    <!-- ── END ROPE ─────────────────────────────────────────────── -->
-
-    <div class="sign-card" aria-hidden="true">
-
-        <div class="sign-holes">
-        <span class="sign-hole"></span>
-        <span class="sign-hole"></span>
-        </div>
-
-        <div class="sign-inner">
-
-        <p class="sign-eyebrow" data-lang="badgeEyebrow">✦ ამჟამად ვიღებთ ✦</p>
-
-        <p class="sign-headline" data-lang="badgeHeadline">მხოლოდ&nbsp;3&nbsp;პრემიუმ<br>პროექტს</p>
-
-        <div class="sign-sep"></div>
-
-        <p class="sign-footer" data-lang="badgeSub">2026 წლის ოქტომბრისთვის</p>
-
-        </div>
-
-    </div>
-    </div>
-            <!-- ═══ EXCLUSIVITY BADGE — END ═══ -->
 
             <div class="billing-cycle-toggle" data-aos="fade-up" data-aos-delay="50">
                 <span class="toggle-indicator" aria-hidden="true"></span>
@@ -732,34 +638,6 @@
                  script.js from its PRICING block (the one place to change a
                  price); `npm run prerender:ka` writes them in here. -->
             <div class="pricing-cards-grid">
-
-                <div class="pricing-card mini promo-active" data-plan-id="Mini">
-                    <div class="mini-summary">
-                        <h3 class="plan-title" data-lang="pricingMiniTitle">მინი</h3>
-                        <p class="price-old"><s data-price-old>600₾</s></p>
-                        <p class="price" data-price-point>500₾</p>
-                        <p class="billing-period" data-billing-period>50% წინასწარ /
-50% გაშვებისას</p>
-                    </div>
-                    <div class="mini-details">
-                        <ul class="features-list">
-                            <li class="feature-group-label" data-lang="pricingMiniInclLabel">რას მოიცავს</li>
-                            <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingMiniFeature1">ერთგვერდიანი ვებსაიტი, მაგ. სავიზიტო გვერდი ან მენიუ</span></li>
-                            <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingMiniFeature2">მობილურზე მორგებული, სწრაფი დიზაინი</span></li>
-                            <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingMiniFeature3">საბაზისო საძიებო სისტემების ოპტიმიზაცია (SEO)</span></li>
-                        </ul>
-                    </div>
-                    <div class="mini-cta">
-                        <div class="mini-promo">
-                            <p class="mini-promo-deadline"><i class="fas fa-clock" aria-hidden="true"></i> <span data-mini-deadline>იჩქარეთ! აქცია მოქმედებს 23 ოქტომბრის 23:59-⁠მდე</span><span class="mini-promo-countdown" data-mini-countdown></span></p>
-                            <p class="mini-promo-lock" data-lang="miniPromoLock">გადაიხადეთ პირველი შენატანი დღესვე!</p>
-                        </div>
-                        <div class="card-actions">
-                            <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Mini" data-lang="pricingGetStarted">დაწყება</a>
-                            <a href="#works-page" class="see-works-btn nav-link" data-tier="Mini" data-lang="seeWorksButton">ნამუშევრების ნახვა</a>
-                        </div>
-                    </div>
-                </div>
 
                 <div class="pricing-card starter" data-plan-id="Starter">
                     <h3 class="plan-title" data-lang="pricingStarterTitle">სტარტერი</h3>
@@ -814,6 +692,34 @@
                         <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Premium" data-lang="pricingGetStarted">დაწყება</a>
                         <button type="button" class="see-works-btn" data-tier="Premium" data-lang="seeWorksButton">ნამუშევრების ნახვა</button>
                         <span class="see-works-soon" role="status" aria-live="polite"></span>
+                    </div>
+                </div>
+
+                <div class="pricing-card mini promo-active" data-plan-id="Mini">
+                    <div class="mini-summary">
+                        <h3 class="plan-title" data-lang="pricingMiniTitle">მინი</h3>
+                        <p class="price-old"><s data-price-old>600₾</s></p>
+                        <p class="price" data-price-point>500₾</p>
+                        <p class="billing-period" data-billing-period>50% წინასწარ /
+50% გაშვებისას</p>
+                    </div>
+                    <div class="mini-details">
+                        <ul class="features-list">
+                            <li class="feature-group-label" data-lang="pricingMiniInclLabel">რას მოიცავს</li>
+                            <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingMiniFeature1">ერთგვერდიანი ვებსაიტი, მაგ. სავიზიტო გვერდი ან მენიუ</span></li>
+                            <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingMiniFeature2">მობილურზე მორგებული, სწრაფი დიზაინი</span></li>
+                            <li class="feature-item success"><i class="fas fa-check"></i> <span data-lang="pricingMiniFeature3">საბაზისო საძიებო სისტემების ოპტიმიზაცია (SEO)</span></li>
+                        </ul>
+                    </div>
+                    <div class="mini-cta">
+                        <div class="mini-promo">
+                            <p class="mini-promo-deadline"><i class="fas fa-clock" aria-hidden="true"></i> <span data-mini-deadline>იჩქარეთ! აქცია მოქმედებს 23 ოქტომბრის 23:59-⁠მდე</span><span class="mini-promo-countdown" data-mini-countdown></span></p>
+                            <p class="mini-promo-lock" data-lang="miniPromoLock">გადაიხადეთ პირველი შენატანი დღესვე!</p>
+                        </div>
+                        <div class="card-actions">
+                            <a href="#contact-page" class="btn btn-primary get-started-btn" data-plan="Mini" data-lang="pricingGetStarted">დაწყება</a>
+                            <a href="#works-page" class="see-works-btn nav-link" data-tier="Mini" data-lang="seeWorksButton">ნამუშევრების ნახვა</a>
+                        </div>
                     </div>
                 </div>
                     <div class="pricing-card individual-plan hidden" data-aos="fade-up" data-billing-cycle="individual">
@@ -1054,7 +960,7 @@
                             <a href="#pricing" class="nav-link back-link" data-lang="backToHome">← უკან</a>
                         </div>
                         <h2 class="section-title has-subtitle" data-lang="worksPageTitle">ნამუშევრები პაკეტების მიხედვით</h2>
-                        <p class="section-subtitle" data-lang="worksPageSubtitle">ნახეთ, რა საიტები და შაბლონები შევქმენით თითოეული პაკეტით.</p>
+                        <p class="section-subtitle" data-lang="worksPageSubtitle">იხილეთ ჩვენს მიერ შექმნილი შაბლონები, დემოები და კლიენტების საიტები ერთ სივრცეში.</p>
                         <div class="portfolio-filter works-filter" role="tablist" aria-label="Works by package">
                             <button class="filter-btn" data-tier="Mini" role="tab" aria-selected="false" data-lang="pricingMiniTitle">მინი</button>
                             <button class="filter-btn active" data-tier="Starter" role="tab" aria-selected="true" data-lang="pricingStarterTitle">სტარტერი</button>

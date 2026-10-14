@@ -245,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const translations = {
         en: {
             proPackageLabel: "Pro Package", starterPackageLabel: "Starter Package",
-            badgeEyebrow: "✦ ONLY ACCEPTING ✦", badgeHeadline: "Only&nbsp;3&nbsp;Premium<br>Projects", badgeSub: "For October 2026",
+            badgeEyebrow: "Now accepting", badgeHeadline: "Only&nbsp;<span class='sign-num'>3</span>&nbsp;Premium<br>Projects", badgeSub: "For October 2026",
 
             individualPayment: "Individual", individualTitle: "Custom Solution", individualPrice: "Custom Quote", individualDesc: "Tell us about your project",
             individualFeature1: "Multi-page (10+) websites", individualFeature2: "E-commerce & Booking Systems", individualFeature3: "Advanced API Integrations",
@@ -328,7 +328,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pricingPremiumFeature4: "Priority 24/7 Dedicated Line & 3 Months Post-Launch Maintenance",
 
             pricingMostPopular: "Most Popular", pricingGetStarted: "Get Started", seeWorksButton: "See Works", seeWorksSoon: "Premium works coming soon!", pricingBookACall: "Book a Call",
-            worksPageTitle: "Our Work by Package", worksPageSubtitle: "See the websites and templates we’ve built with each package.",
+            worksPageTitle: "Our Work by Package", worksPageSubtitle: "Explore the templates, demos and client websites we’ve built, all in one place.",
             whatsappMessage: "Hello! I'd like to book a call to discuss your web services.",
 
             seeAllReviews: "See All Reviews", allReviewsTitle: "What Our Clients Say", backToHome: "← Back", noMoreReviews: "No more reviews",
@@ -336,7 +336,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         ge: {
             proPackageLabel: "პრო პაკეტი", starterPackageLabel: "სტარტერ პაკეტი",
-            badgeEyebrow: "✦ ამჟამად ვიღებთ ✦", badgeHeadline: "მხოლოდ&nbsp;3&nbsp;პრემიუმ<br>პროექტს", badgeSub: "2026 წლის ოქტომბრისთვის",
+            badgeEyebrow: "ამჟამად ვიღებთ", badgeHeadline: "მხოლოდ&nbsp;<span class='sign-num'>3</span>&nbsp;პრემიუმ<br>პროექტს", badgeSub: "2026 წლის ოქტომბრისთვის",
 
             individualPayment: "ინდივ.", individualTitle: "სპეციალური შეკვეთა", individualPrice: "ინდივიდუალური შეთავაზება", individualDesc: "მოგვიყევით პროექტზე.",
             individualFeature1: "10+ გვერდიანი ვებსაიტი", individualFeature2: "ელ. კომერცია და ჯავშნები", individualFeature3: "API-ს რთული ინტეგრაციები",
@@ -418,7 +418,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pricingPremiumFeature4: "პრიორიტეტული 24/7 პირდაპირი ხაზი და 3 თვიანი გაშვების შემდგომი მხარდაჭერა",
 
             pricingMostPopular: "პოპულარული", pricingGetStarted: "დაწყება", seeWorksButton: "ნამუშევრების ნახვა", seeWorksSoon: "პრემიუმ ნამუშევრები მალე დაემატება!", pricingBookACall: "ზარის დაჯავშნა",
-            worksPageTitle: "ნამუშევრები პაკეტების მიხედვით", worksPageSubtitle: "ნახეთ, რა საიტები და შაბლონები შევქმენით თითოეული პაკეტით.",
+            worksPageTitle: "ნამუშევრები პაკეტების მიხედვით", worksPageSubtitle: "იხილეთ ჩვენს მიერ შექმნილი შაბლონები, დემოები და კლიენტების საიტები ერთ სივრცეში.",
             whatsappMessage: "გამარჯობა, მსურს ზარის დაჯავშნა თქვენს ვებ-გვერდის სერვისებზე სასაუბროდ.",
 
             seeAllReviews: "ყველა შეფასების ნახვა", allReviewsTitle: "რას ამბობენ კლიენტები", backToHome: "← უკან", noMoreReviews: "მეტი შეფასება არ არის",
@@ -426,7 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
         },
         ru: {
             proPackageLabel: "Пакет Pro", starterPackageLabel: "Пакет Стартовый",
-            badgeEyebrow: "✦ СЕЙЧАС ПРИНИМАЕМ ✦", badgeHeadline: "Только&nbsp;3&nbsp;премиум<br>проекта", badgeSub: "На октябрь 2026",
+            badgeEyebrow: "Сейчас принимаем", badgeHeadline: "Только&nbsp;<span class='sign-num'>3</span>&nbsp;премиум<br>проекта", badgeSub: "На октябрь 2026",
 
             individualPayment: "Индив.", individualTitle: "Индивидуальный проект", individualPrice: "Индивидуальная цена", individualDesc: "Расскажите нам о проекте",
             individualFeature1: "Многостраничные (10+) сайты", individualFeature2: "E-commerce и системы бронирования", individualFeature3: "Сложные API-интеграции",
@@ -509,7 +509,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pricingPremiumFeature4: "Приоритетная круглосуточная линия связи и 3 месяца поддержки после запуска",
 
             pricingMostPopular: "популярный", pricingGetStarted: "Начать", seeWorksButton: "Смотреть работы", seeWorksSoon: "Премиум-работы скоро появятся!", pricingBookACall: "Заказать звонок",
-            worksPageTitle: "Наши работы по пакетам", worksPageSubtitle: "Сайты и шаблоны, созданные в рамках каждого пакета.",
+            worksPageTitle: "Наши работы по пакетам", worksPageSubtitle: "Шаблоны, демо и сайты клиентов, созданные нами, в одном месте.",
             whatsappMessage: "Здравствуйте, я хотел бы заказать звонок, чтобы обсудить ваши услуги по веб-разработке.",
 
             seeAllReviews: "Посмотреть все отзывы", allReviewsTitle: "Что говорят наши клиенты", backToHome: "← Назад", noMoreReviews: "Больше отзывов нет",
@@ -1111,24 +1111,37 @@ const initPortfolioCarousel = () => {
     };
 
     // Card images have no `src` in the HTML (only `data-src`): with native
-    // lazy-loading, browsers fetched ~1.4 MB of them during page load (their
-    // look-ahead distance reaches the carousel), competing with the first
-    // screen. Once the carousel is near the screen, load the active card and
-    // its neighbours, so no card slides in empty.
-    let carouselNearScreen = false;
+    // lazy-loading, browsers fetched them during page load (their look-ahead
+    // distance reaches the carousel), competing with the first screen.
+    // Instead they start right after the page has loaded, once the browser
+    // is idle (or earlier, if the carousel comes within ~2 screens first):
+    // the active card and two neighbours on each side, so they are ready
+    // before the section scrolls in and no card slides in empty. They're
+    // small, self-hosted WebP files (assets/img/portfolio/).
+    let carouselImagesAllowed = false;
     function loadNeighbours() {
-        if (!carouselNearScreen) return;
-        for (let i = currentIndex - 1; i <= currentIndex + 1; i++) {
+        if (!carouselImagesAllowed) return;
+        for (let i = currentIndex - 2; i <= currentIndex + 2; i++) {
             const img = visibleItems[i] && visibleItems[i].querySelector('img[data-src]');
             if (img && !img.getAttribute('src')) img.src = img.dataset.src;
         }
     }
+    const allowCarouselImages = () => {
+        if (carouselImagesAllowed) return;
+        carouselImagesAllowed = true;
+        loadNeighbours();
+    };
+    const allowWhenIdle = () => {
+        if ('requestIdleCallback' in window) requestIdleCallback(allowCarouselImages, { timeout: 2000 });
+        else setTimeout(allowCarouselImages, 1000);
+    };
+    if (document.readyState === 'complete') allowWhenIdle();
+    else window.addEventListener('load', allowWhenIdle, { once: true });
     new IntersectionObserver((entries, observer) => {
         if (!entries.some(entry => entry.isIntersecting)) return;
-        carouselNearScreen = true;
-        loadNeighbours();
+        allowCarouselImages();
         observer.disconnect();
-    }, { rootMargin: '800px 0px' }).observe(track.parentElement);
+    }, { rootMargin: '1500px 0px' }).observe(track.parentElement);
 
     const applyFilter = (filter) => {
         allItems.forEach(item => {
@@ -1464,6 +1477,8 @@ const initPortfolioCarousel = () => {
     // the CSS, fonts and images needed for the first screen. It's attached
     // once the page has loaded — the clip opens on black and fades in, so
     // it blends straight into the dark hero background.
+    // Full 1080p: HEVC where the phone can play it (iPhones, most Android
+    // phones; about 30% smaller at the same quality), H.264 otherwise.
     // ================================
     (function initHeroVideo() {
         const video = document.getElementById('hero-video');
@@ -1473,7 +1488,8 @@ const initPortfolioCarousel = () => {
 
         const attach = () => {
             if (video.getAttribute('src') || !mobile.matches) return;
-            video.src = video.dataset.src;
+            const hevc = video.dataset.srcHevc && video.canPlayType('video/mp4; codecs="hvc1.1.6.L123.B0"');
+            video.src = hevc ? video.dataset.srcHevc : video.dataset.src;
             const playing = video.play();
             if (playing) playing.catch(() => {});
         };

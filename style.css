@@ -375,28 +375,28 @@ section { padding: 4rem 0; }
    else on the page — shows through and the hero merges seamlessly into
    the rest of the page instead of sitting on top of it as a separate
    box. A single linear gradient keeps the fade predictable and free of
-   cross-browser multi-layer mask-compositing quirks. */
+   cross-browser multi-layer mask-compositing quirks. The fade covers only
+   the bottom 15%, so the video stays at full strength everywhere else. */
 .hero-video-wrap {
     position: absolute;
     inset: 0;
     z-index: 0;
     overflow: hidden;
     background: var(--bg-color-darker);
-    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 58%, transparent 100%);
-    mask-image: linear-gradient(to bottom, #000 0%, #000 58%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 85%, transparent 100%);
+    mask-image: linear-gradient(to bottom, #000 0%, #000 85%, transparent 100%);
 }
 .hero-video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
-/* Deliberately much deeper than a typical hero scrim: this is the
-   overlay's RESTING state, faded in by the cinematic intro (see
-   `heroFadeIn` below) so the hero copy pops. */
+/* A tint only (no blur, which softened the whole video): darker behind
+   the copy and toward the bottom so the white text stays readable. It's
+   the overlay's RESTING state, faded in by the cinematic intro (see
+   `heroFadeIn` below). */
 .hero-video-overlay {
     position: absolute;
     inset: 0;
     background:
         radial-gradient(65% 85% at 14% 58%, rgba(1, 6, 4, 0.32) 0%, rgba(1, 6, 4, 0) 68%),
         linear-gradient(180deg, rgba(2, 10, 7, 0.18) 0%, rgba(2, 10, 7, 0.28) 48%, rgba(2, 10, 7, 0.42) 100%);
-    backdrop-filter: blur(1px);
-    -webkit-backdrop-filter: blur(1px);
     opacity: 1;
     transition: opacity 1s ease;
 }
@@ -414,8 +414,12 @@ section { padding: 4rem 0; }
     position: relative;
 }
 /* Under the H1: one short lead line, then the services as a compact
-   "a · b · c" line (each item kept on one line). */
-.hero-subtitle { max-width: 560px; margin-bottom: 0.6rem; font-size: clamp(1.1rem, 2.4vw, 1.35rem); font-weight: 600; line-height: 1.45; color: rgba(249, 250, 251, 0.94); position: relative; }
+   "a · b · c" line (each item kept on one line).
+   The lead line stays on ONE line on phones: the Georgian text is ~18.9×
+   its font size wide, so below ~480px the size follows the container's
+   inner width (100vw minus its 2rem side paddings) ÷ 19.4. Wider screens
+   keep the 1.1rem–1.35rem scale. */
+.hero-subtitle { max-width: 560px; margin-bottom: 0.6rem; font-size: clamp(0.8rem, max(min(1.1rem, (100vw - 4rem) / 19.4), 2.4vw), 1.35rem); font-weight: 600; line-height: 1.45; color: rgba(249, 250, 251, 0.94); position: relative; }
 .hero-subtext { max-width: 560px; margin-bottom: 2.5rem; font-size: clamp(0.9rem, 1.7vw, 1rem); line-height: 1.7; color: rgba(249, 250, 251, 0.74); position: relative; }
 .hero-subtext span { white-space: nowrap; }
 .hero-buttons { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: flex-start; position: relative; }
@@ -550,10 +554,6 @@ html.hero-cinematic-init header {
     100% { background-color: var(--header-bg-color); border-bottom-color: var(--glass-border); backdrop-filter: blur(16px) saturate(140%); -webkit-backdrop-filter: blur(16px) saturate(140%); }
 }
 
-@media (max-width: 600px) {
-    .hero-video-overlay { backdrop-filter: blur(1px); -webkit-backdrop-filter: blur(1px); }
-}
-
 #trust-bar { padding: 2rem 0; border-top: 1px solid var(--glass-border); border-bottom: 1px solid var(--glass-border); background-color: rgba(2, 10, 7, 0.30); }
 .marquee { overflow: hidden; position: relative; width: 100%; -webkit-mask-image: linear-gradient(to right, transparent, var(--mask-fade) 20%, var(--mask-fade) 80%, transparent); mask-image: linear-gradient(to right, transparent, var(--mask-fade) 20%, var(--mask-fade) 80%, transparent); }
 .marquee-content { display: flex; animation: marquee 30s linear infinite; width: fit-content; }
@@ -573,10 +573,15 @@ html.hero-cinematic-init header {
     gap: 1.5rem;
 }
 
+/* `overflow: hidden` crops the off-screen cards, and would also crop the
+   active card's green glow: the bottom padding leaves room for the whole
+   glow to fade out, and the negative margin gives that space back so the
+   dots stay where they were. */
 .carousel-track-wrapper {
     width: 100%;
     overflow: hidden;
-    padding: 1rem 0;
+    padding: 1.25rem 0 4rem;
+    margin-bottom: -3rem;
 }
 
 .carousel-track {
@@ -609,10 +614,12 @@ html.hero-cinematic-init header {
     text-decoration: none;
 }
 
+/* Glows reach at most ~58px below the card, inside the track wrapper's
+   bottom padding, so they always fade out completely. */
 .carousel-item.is-active {
     opacity: 1;
     transform: scale(1);
-    box-shadow: var(--shadow-glow);
+    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.20), 0 18px 46px -14px rgba(16, 185, 129, 0.42);
     border-color: var(--verified-border);
 }
 
@@ -620,13 +627,13 @@ html.hero-cinematic-init header {
    toward full visibility on hover, inviting the click into focus. */
 .carousel-item:hover {
     opacity: 0.85;
-    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.28), 0 22px 55px -14px rgba(16, 185, 129, 0.45);
+    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.28), 0 18px 46px -14px rgba(16, 185, 129, 0.45);
     border-color: rgba(16, 185, 129, 0.45);
 }
 
 .carousel-item.is-active:hover {
     opacity: 1;
-    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.32), 0 26px 62px -14px rgba(16, 185, 129, 0.55);
+    box-shadow: 0 0 0 1px rgba(16, 185, 129, 0.32), 0 20px 52px -14px rgba(16, 185, 129, 0.55);
 }
 
 .carousel-item img {
@@ -1100,30 +1107,34 @@ html.hero-cinematic-init header {
 .pricing-card .feature-item.fail i { color: var(--error); }
 .pricing-card .get-started-btn { width: 100%; text-align: center; position: relative; }
 
-/* "See Works" hangs directly under "Get started" as one block: no top
-   border, a thin violet frame (the Individual card's accent) on the other
-   three sides, transparent inside. */
-.card-actions { position: relative; }
-.card-actions .get-started-btn { display: block; border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+/* "See Works" is a narrower tab tucked under the fully rounded "Get
+   started" button: no top border (its sides start behind the button), a
+   thin violet frame (the Individual card's accent) on the other three
+   sides, transparent inside. */
+.card-actions { position: relative; display: flex; flex-direction: column; align-items: center; }
+.card-actions .get-started-btn { display: block; z-index: 1; }
 .see-works-btn {
+    --tuck: 12px;
     display: block;
-    width: 100%;
-    padding: 0.7rem 1rem;
+    width: 84%;
+    margin-top: calc(-1 * var(--tuck));
+    padding: calc(var(--tuck) + 0.45rem) 0.75rem 0.5rem;
     background: transparent;
     border: 1.5px solid var(--bespoke-border);
     border-top: none;
     border-radius: 0 0 12px 12px;
     color: var(--bespoke-accent-light);
     font: inherit;
-    font-size: 0.92rem;
+    font-size: 0.84rem;
     font-weight: 600;
+    line-height: 1.4;
     text-align: center;
     text-decoration: none;
     cursor: pointer;
-    transition: color var(--transition-fast), border-color var(--transition-fast);
+    transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
 }
 .see-works-btn:hover,
-.see-works-btn:focus-visible { color: #F5EDFF; border-color: var(--bespoke-accent-light); }
+.see-works-btn:focus-visible { color: #F5EDFF; border-color: var(--bespoke-accent-light); background-color: rgba(168, 85, 247, 0.08); }
 /* Premium has no examples yet: a "coming soon" bubble above the buttons */
 .see-works-soon {
     position: absolute;
@@ -1158,13 +1169,13 @@ html.hero-cinematic-init header {
 .see-works-soon:empty { display: none; }
 .see-works-soon.is-visible { opacity: 1; transform: translate(-50%, 0) scale(1); }
 /* ── Mini: the entry package ──────────────────────────────────────
-   Phones: a normal card, first in the list (the three wrappers dissolve;
-   order: price → promo → what's included → buttons). From 768px: a
-   full-width row under the three main packages — price | what's included,
-   promo + buttons below; from 992px all three side by side in one short
-   row. It sits below them because the hanging "3 premium projects" sign
-   covers the top-right of the grid. The promo parts show only while
-   `.promo-active` (set by script.js until PRICING.miniPromoEnds). */
+   Last in the markup, so it comes after the three main packages
+   everywhere. Phones: a normal card (the three wrappers dissolve; order:
+   price → promo → what's included → buttons). From 768px: a full-width
+   row under the three main packages — price | what's included, promo +
+   buttons below; from 992px all three side by side in one short row. The
+   promo parts show only while `.promo-active` (set by script.js until
+   PRICING.miniPromoEnds). */
 .pricing-card.mini .mini-summary,
 .pricing-card.mini .mini-details,
 .pricing-card.mini .mini-cta { display: contents; }
@@ -1203,7 +1214,6 @@ html.hero-cinematic-init header {
 
 @media (min-width: 768px) {
     .pricing-card.mini {
-        order: 1;
         grid-column: 1 / -1;
         display: grid;
         grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
@@ -1324,7 +1334,7 @@ html.hero-cinematic-init header {
 @keyframes popIn { 0% { transform: scale(0); opacity: 0; } 100% { transform: scale(1); opacity: 1; } }
 
 .site-footer { padding: 6rem 0 3rem 0; background-color: rgba(2, 9, 7, 0.6); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); border-top: 1px solid var(--glass-border); }
-.footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; margin-bottom: 4rem; text-align: center; }
+.footer-grid { display: grid; grid-template-columns: 1fr; gap: 3rem; text-align: center; }
 .footer-col h4 { color: var(--dark-title); margin-bottom: 1.5rem; font-size: 1.2rem; font-weight: 600; letter-spacing: 0.5px; }
 .footer-col h4:not(.logo) { opacity: 0.9; }
 .footer-col .logo { font-size: 1.8rem; margin-bottom: 1rem; opacity: 1; justify-content: center; }
@@ -1333,7 +1343,8 @@ html.hero-cinematic-init header {
 .footer-col .social-icons a { color: var(--text-color); display: flex; align-items: center; justify-content: center; font-size: 1rem; width: 42px; height: 42px; border: 1px solid var(--glass-border); border-radius: 50%; transition: color var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast), transform var(--transition-spring); background-color: rgba(16, 185, 129, 0.05); }
 .footer-col .social-icons a:hover { color: var(--text-on-accent); background: var(--primary-gradient); border-color: transparent; transform: translateY(-3px); }
 
-.footer-bottom { border-top: 1px solid var(--glass-border); padding-top: 2rem; margin-top: 4rem; text-align: center; color: var(--text-color-light); display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+/* Social icons → divider: 2.5rem on phones, 3.5rem from 768px. */
+.footer-bottom { border-top: 1px solid var(--glass-border); padding-top: 2rem; margin-top: 2.5rem; text-align: center; color: var(--text-color-light); display: flex; flex-direction: column; align-items: center; gap: 1rem; }
 .footer-bottom p { text-wrap: balance; }
 .footer-legal-links { display: flex; gap: 1.5rem; flex-wrap: wrap; justify-content: center; }
 .footer-legal-links a { color: var(--text-color-light); text-decoration: none; font-size: 0.9rem; font-weight: 600; transition: color var(--transition-fast); }
@@ -1445,7 +1456,7 @@ html.hero-cinematic-init header {
     .footer-grid { grid-template-columns: 1fr 1fr; text-align: left; }
     .footer-col .social-icons { justify-content: flex-start; }
     .footer-col .logo { justify-content: flex-start; }
-    .footer-bottom { flex-direction: row; justify-content: space-between; }
+    .footer-bottom { flex-direction: row; justify-content: space-between; margin-top: 3.5rem; }
 }
 
 @media (min-width: 992px) {
