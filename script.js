@@ -251,7 +251,7 @@ document.addEventListener('DOMContentLoaded', () => {
             individualFeature1: "Multi-page (10+) websites", individualFeature2: "E-commerce & Booking Systems", individualFeature3: "Advanced API Integrations",
             individualCardPrie: "The price is determined by the project complexity.",
 
-            salesTitle2: "+22% sales", sourceTitle2: "Source: Admin / GA4 • 45 day", webInfoTitle2: "<span class=\"case-tag-prefix\">Online Store · Performance · </span>Launched: Apr 2025", viewPRTitle: "View Live Project",
+            salesTitle2: "+22% sales", sourceTitle2: "Source: Admin / GA4 • 45 days", webInfoTitle2: "<span class=\"case-tag-prefix\">Online Store · Performance · </span>Launched: Apr 2025", viewPRTitle: "View Live Project",
 
             pageDescription: "Website development in Tbilisi from 600 GEL: fast, SEO-ready websites, online stores and admin panels. Pay in full, 50/50 or over 3 months.",
             pageTitle: "Website Development in Tbilisi from 600 GEL | OSGWeb.ge",
@@ -327,12 +327,12 @@ document.addEventListener('DOMContentLoaded', () => {
             pricingPremiumFeature3: "Comprehensive Technical & On-Page SEO Audit",
             pricingPremiumFeature4: "Priority 24/7 Dedicated Line & 3 Months Post-Launch Maintenance",
 
-            pricingMostPopular: "Most Popular", pricingGetStarted: "Get Started", seeWorksButton: "See Works", seeWorksSoon: "Premium works coming soon!", pricingBookACall: "Book a Call",
+            pricingMostPopular: "Most Popular", pricingGetStarted: "Get Started", seeWorksButton: "See Works", showcaseQuoteJagi: "“Honestly, I didn’t expect<br>results like this.”", showcaseAuthorJagi: "Givi Kurdadze, Jagi Building", showcaseQuoteLaptop: "“…a really good choice<br>for the price.”", showcaseAuthorLaptop: "Giorgi, LaptopGeorgia", showcaseTypeStilis: "Online clothing store", showcaseTypeEvak: "Tow truck service", showcaseSeoTitle: "SEO 100/100", showcaseSeoSub: "Google Lighthouse audit", showcasePause: "Pause the showcase", seeWorksSoon: "Premium works coming soon!", pricingBookACall: "Book a Call",
             worksPageTitle: "Our Work by Package", worksPageSubtitle: "Explore the templates, demos and client websites we’ve built, all in one place.",
             whatsappMessage: "Hello! I'd like to book a call to discuss your web services.",
 
             seeAllReviews: "See All Reviews", allReviewsTitle: "What Our Clients Say", backToHome: "← Back", noMoreReviews: "No more reviews",
-            checkedTitle: "✓ Checked", webInfoTitle: "<span class=\"case-tag-prefix\">eCommerce · Stripe Checkout · </span>Launched: May 2025", salesTitle: "+30% Sales", sourceTitle: "Source: GA4 • 60 day",
+            checkedTitle: "✓ Checked", webInfoTitle: "<span class=\"case-tag-prefix\">eCommerce · Stripe Checkout · </span>Launched: May 2025", salesTitle: "+30% sales", sourceTitle: "Source: GA4 • 60 days",
         },
         ge: {
             proPackageLabel: "პრო პაკეტი", starterPackageLabel: "სტარტერ პაკეტი",
@@ -417,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pricingPremiumFeature3: "ტექნიკური და გვერდზე SEO-ს სრულყოფილი აუდიტი",
             pricingPremiumFeature4: "პრიორიტეტული 24/7 პირდაპირი ხაზი და 3 თვიანი გაშვების შემდგომი მხარდაჭერა",
 
-            pricingMostPopular: "პოპულარული", pricingGetStarted: "დაწყება", seeWorksButton: "ნამუშევრების ნახვა", seeWorksSoon: "პრემიუმ ნამუშევრები მალე დაემატება!", pricingBookACall: "ზარის დაჯავშნა",
+            pricingMostPopular: "პოპულარული", pricingGetStarted: "დაწყება", seeWorksButton: "ნამუშევრების ნახვა", showcaseQuoteJagi: "“მართლა არ ველოდი<br>ასეთ შედეგს.”", showcaseAuthorJagi: "გივი ქურდაძე, Jagi Building", showcaseQuoteLaptop: "“…ამ ფასად ნამდვილად<br>კარგი არჩევანია.”", showcaseAuthorLaptop: "გიორგი, LaptopGeorgia", showcaseTypeStilis: "ტანსაცმლის ონლაინ მაღაზია", showcaseTypeEvak: "ევაკუატორის სერვისი", showcaseSeoTitle: "SEO 100/100", showcaseSeoSub: "Google Lighthouse შემოწმება", showcasePause: "ნამუშევრების ჩვენების შეჩერება", seeWorksSoon: "პრემიუმ ნამუშევრები მალე დაემატება!", pricingBookACall: "ზარის დაჯავშნა",
             worksPageTitle: "ნამუშევრები პაკეტების მიხედვით", worksPageSubtitle: "იხილეთ ჩვენს მიერ შექმნილი შაბლონები, დემოები და კლიენტების საიტები ერთ სივრცეში.",
             whatsappMessage: "გამარჯობა, მსურს ზარის დაჯავშნა თქვენს ვებ-გვერდის სერვისებზე სასაუბროდ.",
 
@@ -434,7 +434,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
      
 
-            salesTitle2: "+22% продажи", sourceTitle2: "источник: Admin / GA4 • 45 день", webInfoTitle2: "<span class=\"case-tag-prefix\">Интернет-магазин · Производительность · </span>Запуск: апр 2025", viewPRTitle: "просмотреть проект",
+            salesTitle2: "+22% продаж", sourceTitle2: "Источник: Admin / GA4 • 45 дней", webInfoTitle2: "<span class=\"case-tag-prefix\">Интернет-магазин · Производительность · </span>Запуск: апр 2025", viewPRTitle: "просмотреть проект",
 
             pageDescription: "Создание сайтов в Тбилиси от 600 лари: быстрые сайты с SEO, интернет-магазины и админ-панели. Оплата сразу, 50/50 или за 3 месяца.",
             pageTitle: "Создание сайтов в Тбилиси от 600 лари | OSGWeb.ge",
@@ -508,12 +508,12 @@ document.addEventListener('DOMContentLoaded', () => {
             pricingPremiumFeature3: "Полный технический и SEO-аудит страниц",
             pricingPremiumFeature4: "Приоритетная круглосуточная линия связи и 3 месяца поддержки после запуска",
 
-            pricingMostPopular: "популярный", pricingGetStarted: "Начать", seeWorksButton: "Смотреть работы", seeWorksSoon: "Премиум-работы скоро появятся!", pricingBookACall: "Заказать звонок",
+            pricingMostPopular: "популярный", pricingGetStarted: "Начать", seeWorksButton: "Смотреть работы", showcaseQuoteJagi: "“Честно, не ожидал<br>такого результата.”", showcaseAuthorJagi: "Гиви Курдадзе, Jagi Building", showcaseQuoteLaptop: "“…за такую цену<br>действительно хороший выбор.”", showcaseAuthorLaptop: "Гиорги, LaptopGeorgia", showcaseTypeStilis: "Интернет-магазин одежды", showcaseTypeEvak: "Служба эвакуатора", showcaseSeoTitle: "SEO 100/100", showcaseSeoSub: "Аудит Google Lighthouse", showcasePause: "Остановить показ работ", seeWorksSoon: "Премиум-работы скоро появятся!", pricingBookACall: "Заказать звонок",
             worksPageTitle: "Наши работы по пакетам", worksPageSubtitle: "Шаблоны, демо и сайты клиентов, созданные нами, в одном месте.",
             whatsappMessage: "Здравствуйте, я хотел бы заказать звонок, чтобы обсудить ваши услуги по веб-разработке.",
 
             seeAllReviews: "Посмотреть все отзывы", allReviewsTitle: "Что говорят наши клиенты", backToHome: "← Назад", noMoreReviews: "Больше отзывов нет",
-            checkedTitle: "✓ Проверено", webInfoTitle: "<span class=\"case-tag-prefix\">eCommerce · Stripe Checkout · </span>Дата выхода: май 2025 г.", salesTitle: "+30% Продажи", sourceTitle: "источник: GA4 • 60 день",
+            checkedTitle: "✓ Проверено", webInfoTitle: "<span class=\"case-tag-prefix\">eCommerce · Stripe Checkout · </span>Дата выхода: май 2025 г.", salesTitle: "+30% продаж", sourceTitle: "Источник: GA4 • 60 дней",
         }
     };
 
@@ -1292,8 +1292,9 @@ const initPortfolioCarousel = () => {
         }
 
         // Runs before the page switch (this listener is on the button, the
-        // navigation one on the document), so the right tab is ready.
-        document.querySelectorAll('.see-works-btn[data-tier]').forEach(button => {
+        // navigation one on the document), so the right tab is ready. The
+        // hero showcase window opens the tab of the site it's showing.
+        document.querySelectorAll('.see-works-btn[data-tier], .showcase-screen[data-tier]').forEach(button => {
             button.addEventListener('click', (e) => {
                 if (button.dataset.tier === 'Premium') { e.preventDefault(); showComingSoon(button); return; }
                 showTier(button.dataset.tier, false);
@@ -1500,5 +1501,240 @@ const initPortfolioCarousel = () => {
 
         attachAfterLoad();
         mobile.addEventListener('change', attachAfterLoad);
+    })();
+
+
+    // ================================
+    // HERO SHOWCASE (desktop ≥ 992px)
+    // The browser window beside the hero copy cycles through real client
+    // sites: each screenshot scrolls slowly from top to bottom, the address
+    // bar types the domain, and the two chips show that client's review and
+    // result. Only real ones: the quotes and sales figures come from the case
+    // studies; sites without a review show the client instead, and their
+    // Lighthouse SEO score (measured 2026-10-16).
+    // Only the first screenshot is in the HTML; each next one loads while the
+    // current one plays. It pauses on hover/focus, off-screen, in a background
+    // tab or with the pause button, and stays on the first site with reduced
+    // motion.
+    // ================================
+    (function initHeroShowcase() {
+        const root = document.getElementById('hero-showcase');
+        if (!root) return;
+        const SITE_MS = 8000;
+        const SHOT_SIZES = '(min-width: 1200px) 520px, 380px';
+        const TREND_ICON = '<svg viewBox="0 0 20 20" width="18" height="18"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M3 14l5-5 3.5 3.5L17 7M12.5 7H17v4.5"/></svg>';
+        const TIER_LABELS = { Pro: 'proPackageLabel', Starter: 'starterPackageLabel' };
+        const SITES = [
+            { slug: 'jagi-building', domain: 'jagibuilding.ge', tier: 'Pro',
+              review: { logo: 'assets/img/jagi-building-logo.webp', quote: 'showcaseQuoteJagi', author: 'showcaseAuthorJagi' },
+              result: { title: 'salesTitle', sub: 'sourceTitle' } },
+            { slug: 'laptop-georgia', domain: 'laptopgeorgia.ge', tier: 'Pro',
+              review: { logo: 'assets/img/laptop-georgia-logo.webp', quote: 'showcaseQuoteLaptop', author: 'showcaseAuthorLaptop' },
+              result: { title: 'salesTitle2', sub: 'sourceTitle2' } },
+            { slug: 'stilis-sivrce', domain: 'stilissivrce.ge', tier: 'Pro',
+              client: { name: 'Stilis Sivrce', type: 'showcaseTypeStilis' },
+              result: { seo: true, title: 'showcaseSeoTitle', sub: 'showcaseSeoSub' } },
+            { slug: 'evakuatorigzaze', domain: 'evakuatorigzaze.ge', tier: 'Starter',
+              client: { name: 'Evakuatorigzaze', type: 'showcaseTypeEvak' },
+              result: { seo: true, title: 'showcaseSeoTitle', sub: 'showcaseSeoSub' } },
+        ];
+
+        const desktop = window.matchMedia('(min-width: 992px)');
+        const screen = root.querySelector('.showcase-screen');
+        const cta = root.querySelector('.showcase-cta');
+        const urlBox = root.querySelector('.showcase-url');
+        const urlText = root.querySelector('[data-showcase-url]');
+        const tierLabel = root.querySelector('[data-showcase-tier]');
+        const progressBar = root.querySelector('.showcase-progress i');
+        const pauseButton = root.querySelector('.showcase-pause');
+        const [reviewChip, resultChip] = root.querySelectorAll('.showcase-chip');
+        const shots = [root.querySelector('.showcase-shot')];
+        const holds = new Set();
+        let current = 0, started = false, waiting = false;
+        let scrollAnim = null, progressAnim = null, typingTimer = null;
+
+        // Translated text keeps its data-lang key, so a language switch updates it too.
+        function setText(el, key, plain) {
+            if (key) {
+                el.setAttribute('data-lang', key);
+                el.innerHTML = translations[currentLang][key];
+            } else {
+                el.removeAttribute('data-lang');
+                el.textContent = plain;
+            }
+        }
+
+        function shotFor(i) {
+            if (!shots[i]) {
+                const img = document.createElement('img');
+                img.className = 'showcase-shot';
+                img.alt = '';
+                img.width = 540;
+                img.height = 1013;
+                img.decoding = 'async';
+                img.sizes = SHOT_SIZES;
+                img.srcset = `assets/img/showcase/${SITES[i].slug}-540.webp 540w, assets/img/showcase/${SITES[i].slug}-1080.webp 1080w`;
+                screen.insertBefore(img, cta);
+                shots[i] = img;
+            }
+            return shots[i];
+        }
+        const whenReady = (img) => (img.decode ? img.decode() : Promise.resolve()).catch(() => {});
+
+        function renderChips(site) {
+            const badge = reviewChip.querySelector('[data-chip-badge]');
+            if (site.review) {
+                badge.className = 'chip-badge';
+                badge.innerHTML = `<img src="${site.review.logo}" alt="" width="36" height="36" decoding="async">`;
+                setText(reviewChip.querySelector('[data-chip-title]'), site.review.quote);
+                setText(reviewChip.querySelector('[data-chip-sub]'), site.review.author);
+            } else {
+                badge.className = 'chip-badge chip-badge--letter';
+                badge.textContent = site.client.name.charAt(0);
+                setText(reviewChip.querySelector('[data-chip-title]'), null, site.client.name);
+                setText(reviewChip.querySelector('[data-chip-sub]'), site.client.type);
+            }
+            const metric = resultChip.querySelector('[data-chip-badge]');
+            metric.className = 'chip-badge ' + (site.result.seo ? 'chip-badge--ring' : 'chip-badge--metric');
+            metric.innerHTML = site.result.seo ? '100' : TREND_ICON;
+            setText(resultChip.querySelector('[data-chip-title]'), site.result.title);
+            setText(resultChip.querySelector('[data-chip-sub]'), site.result.sub);
+        }
+
+        async function swapChips(site) {
+            const chips = [reviewChip, resultChip];
+            await Promise.all(chips.map((chip, n) => chip.animate(
+                [{ opacity: 1, transform: 'none' }, { opacity: 0, transform: 'translateY(6px)' }],
+                { duration: 200, delay: n * 60, easing: 'ease-in', fill: 'forwards' }
+            ).finished.catch(() => {})));
+            renderChips(site);
+            chips.forEach((chip, n) => {
+                chip.getAnimations().forEach(anim => anim.cancel());
+                chip.animate(
+                    [{ opacity: 0, transform: 'translateY(-6px)' }, { opacity: 1, transform: 'none' }],
+                    { duration: 420, delay: n * 90, easing: 'cubic-bezier(0.22, 1, 0.36, 1)', fill: 'backwards' }
+                );
+            });
+        }
+
+        function typeDomain(domain) {
+            clearTimeout(typingTimer);
+            let n = 0;
+            urlBox.classList.add('is-typing');
+            (function step() {
+                urlText.textContent = domain.slice(0, n);
+                if (n++ < domain.length) typingTimer = setTimeout(step, 40);
+                else urlBox.classList.remove('is-typing');
+            })();
+        }
+
+        // One site: hold at the top, scroll to the bottom, hold; the progress
+        // line runs alongside and moves on to the next site when it's full.
+        function play(i, delay = 0) {
+            const site = SITES[i];
+            const shot = shotFor(i);
+            const previous = shots[current];
+            if (previous !== shot) {
+                const fading = scrollAnim;
+                shot.classList.add('is-active');
+                previous.classList.remove('is-active');
+                setTimeout(() => fading && fading.cancel(), 800); // back to its top once faded out
+                typeDomain(site.domain);
+                setText(tierLabel, TIER_LABELS[site.tier]);
+                screen.dataset.tier = site.tier;
+                swapChips(site);
+            }
+            current = i;
+            const distance = Math.max(0, shot.offsetHeight - screen.clientHeight);
+            scrollAnim = shot.animate([
+                { transform: 'translateY(0)', offset: 0 },
+                { transform: 'translateY(0)', offset: 0.12, easing: 'cubic-bezier(0.45, 0, 0.2, 1)' },
+                { transform: `translateY(${-distance}px)`, offset: 0.84 },
+                { transform: `translateY(${-distance}px)`, offset: 1 }
+            ], { duration: SITE_MS, delay, fill: 'forwards' });
+            if (progressAnim) progressAnim.cancel();
+            progressAnim = progressBar.animate(
+                [{ transform: 'scaleX(0)' }, { transform: 'scaleX(1)' }],
+                { duration: SITE_MS, delay, fill: 'forwards' }
+            );
+            progressAnim.onfinish = advance;
+            if (holds.size) { scrollAnim.pause(); progressAnim.pause(); }
+            shotFor((i + 1) % SITES.length); // the next screenshot starts loading now
+        }
+
+        async function advance() {
+            if (holds.size) { waiting = true; return; }
+            waiting = false;
+            const next = (current + 1) % SITES.length;
+            await whenReady(shotFor(next));
+            if (holds.size) { waiting = true; return; }
+            play(next);
+        }
+
+        function setHold(reason, on) {
+            if (on) holds.add(reason); else holds.delete(reason);
+            const held = holds.size > 0;
+            for (const anim of [scrollAnim, progressAnim]) {
+                if (!anim) continue;
+                if (held && anim.playState === 'running') anim.pause();
+                else if (!held && anim.playState === 'paused') anim.play();
+            }
+            if (!held && waiting) advance();
+        }
+
+        // Mouse only: the window leans slightly toward the cursor.
+        function enableTilt() {
+            if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+            const win = root.querySelector('.showcase-window');
+            let frame = 0, x = 0, y = 0;
+            win.addEventListener('pointermove', (e) => {
+                const box = win.getBoundingClientRect();
+                x = (e.clientX - box.left) / box.width - 0.5;
+                y = (e.clientY - box.top) / box.height - 0.5;
+                if (frame) return;
+                frame = requestAnimationFrame(() => {
+                    frame = 0;
+                    win.style.setProperty('--tilt-y', (x * 8).toFixed(2) + 'deg');
+                    win.style.setProperty('--tilt-x', (-y * 6).toFixed(2) + 'deg');
+                });
+            });
+            win.addEventListener('pointerleave', () => {
+                cancelAnimationFrame(frame);
+                frame = 0;
+                win.style.removeProperty('--tilt-y');
+                win.style.removeProperty('--tilt-x');
+            });
+        }
+
+        function start() {
+            if (started || !desktop.matches) return;
+            started = true;
+            if (reducedMotion()) { root.classList.add('is-static'); return; }
+            enableTilt();
+            root.addEventListener('pointerenter', () => setHold('hover', true));
+            root.addEventListener('pointerleave', () => setHold('hover', false));
+            root.addEventListener('focusin', () => setHold('focus', true));
+            root.addEventListener('focusout', (e) => { if (!root.contains(e.relatedTarget)) setHold('focus', false); });
+            pauseButton.addEventListener('click', () => {
+                const paused = !holds.has('user');
+                pauseButton.setAttribute('aria-pressed', String(paused));
+                setHold('user', paused);
+            });
+            document.addEventListener('visibilitychange', () => setHold('hidden', document.hidden));
+            new IntersectionObserver((entries) => {
+                setHold('offscreen', !entries[entries.length - 1].isIntersecting);
+            }).observe(root);
+            play(0, 1200);
+        }
+
+        // After the page has loaded: the next screenshots never compete with
+        // the first screen.
+        const startSoon = () => requestAnimationFrame(() => setTimeout(start, 0));
+        if (document.readyState === 'complete') startSoon();
+        else window.addEventListener('load', startSoon, { once: true });
+        desktop.addEventListener('change', () => {
+            setHold('small', !desktop.matches);
+            if (desktop.matches && document.readyState === 'complete') startSoon();
+        });
     })();
 });
