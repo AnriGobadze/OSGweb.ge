@@ -689,7 +689,7 @@ html.hero-cinematic-init header {
 .hero-showcase.is-static .showcase-pause,
 .hero-showcase.is-static .showcase-progress { display: none; }
 
-/* ── the page itself (a link to the works page) ── */
+/* ── the page itself (a link to the live site, in a new tab) ── */
 .showcase-screen {
     position: relative;
     display: block;
@@ -708,7 +708,7 @@ html.hero-cinematic-init header {
     transition: opacity 0.7s ease;
 }
 .showcase-shot.is-active { opacity: 1; }
-/* on hover/focus: a shade at the bottom and the "See works" pill */
+/* on hover/focus: a shade at the bottom and the "See work" pill */
 .showcase-screen::after {
     content: '';
     position: absolute;
@@ -738,6 +738,25 @@ html.hero-cinematic-init header {
     translate: -50% 10px;
     transition: opacity 0.3s ease, translate 0.35s cubic-bezier(0.22, 1, 0.36, 1);
 }
+/* still screenshots: says the live site has more (hidden while the pill shows) */
+.showcase-note {
+    position: absolute;
+    right: 0.6rem;
+    bottom: 0.6rem;
+    z-index: 1;
+    padding: 0.25rem 0.6rem;
+    border-radius: 999px;
+    background: rgba(2, 10, 7, 0.72);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: rgba(249, 250, 251, 0.75);
+    font-size: 0.66rem;
+    font-weight: 600;
+    white-space: nowrap;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+.showcase-screen:hover .showcase-note,
+.showcase-screen:focus-visible .showcase-note { opacity: 0; }
 .showcase-screen:hover::after,
 .showcase-screen:focus-visible::after { opacity: 1; }
 .showcase-screen:hover .showcase-cta,

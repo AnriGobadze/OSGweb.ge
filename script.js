@@ -327,7 +327,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pricingPremiumFeature3: "Comprehensive Technical & On-Page SEO Audit",
             pricingPremiumFeature4: "Priority 24/7 Dedicated Line & 3 Months Post-Launch Maintenance",
 
-            pricingMostPopular: "Most Popular", pricingGetStarted: "Get Started", seeWorksButton: "See Works", showcaseQuoteJagi: "“Honestly, I didn’t expect<br>results like this.”", showcaseAuthorJagi: "Givi Kurdadze, Jagi Building", showcaseQuoteLaptop: "“…a really good choice<br>for the price.”", showcaseAuthorLaptop: "Giorgi, LaptopGeorgia", showcaseTypeStilis: "Online clothing store", showcaseTypeEvak: "Tow truck service", showcaseSeoTitle: "SEO 100/100", showcaseSeoSub: "Google Lighthouse audit", showcasePause: "Pause the showcase", seeWorksSoon: "Premium works coming soon!", pricingBookACall: "Book a Call",
+            pricingMostPopular: "Most Popular", pricingGetStarted: "Get Started", seeWorksButton: "See Works", showcaseVisitButton: "See Work", showcaseNote: "Screenshot · no animations", showcaseQuoteJagi: "“Honestly, I didn’t expect<br>results like this.”", showcaseAuthorJagi: "Givi Kurdadze, Jagi Building", showcaseQuoteLaptop: "“…a really good choice<br>for the price.”", showcaseAuthorLaptop: "Giorgi, LaptopGeorgia", showcaseTypeStilis: "Online clothing store", showcaseTypeEvak: "Tow truck service", showcaseSeoTitle: "SEO 100/100", showcaseSeoSub: "Google Lighthouse audit", showcasePause: "Pause the showcase", seeWorksSoon: "Premium works coming soon!", pricingBookACall: "Book a Call",
             worksPageTitle: "Our Work by Package", worksPageSubtitle: "Explore the templates, demos and client websites we’ve built, all in one place.",
             whatsappMessage: "Hello! I'd like to book a call to discuss your web services.",
 
@@ -417,7 +417,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pricingPremiumFeature3: "ტექნიკური და გვერდზე SEO-ს სრულყოფილი აუდიტი",
             pricingPremiumFeature4: "პრიორიტეტული 24/7 პირდაპირი ხაზი და 3 თვიანი გაშვების შემდგომი მხარდაჭერა",
 
-            pricingMostPopular: "პოპულარული", pricingGetStarted: "დაწყება", seeWorksButton: "ნამუშევრების ნახვა", showcaseQuoteJagi: "“მართლა არ ველოდი<br>ასეთ შედეგს.”", showcaseAuthorJagi: "გივი ქურდაძე, Jagi Building", showcaseQuoteLaptop: "“…ამ ფასად ნამდვილად<br>კარგი არჩევანია.”", showcaseAuthorLaptop: "გიორგი, LaptopGeorgia", showcaseTypeStilis: "ტანსაცმლის ონლაინ მაღაზია", showcaseTypeEvak: "ევაკუატორის სერვისი", showcaseSeoTitle: "SEO 100/100", showcaseSeoSub: "Google Lighthouse შემოწმება", showcasePause: "ნამუშევრების ჩვენების შეჩერება", seeWorksSoon: "პრემიუმ ნამუშევრები მალე დაემატება!", pricingBookACall: "ზარის დაჯავშნა",
+            pricingMostPopular: "პოპულარული", pricingGetStarted: "დაწყება", seeWorksButton: "ნამუშევრების ნახვა", showcaseVisitButton: "ნამუშევრის ნახვა", showcaseNote: "სქრინშოტი · ანიმაციების გარეშე", showcaseQuoteJagi: "“მართლა არ ველოდი<br>ასეთ შედეგს.”", showcaseAuthorJagi: "გივი ქურდაძე, Jagi Building", showcaseQuoteLaptop: "“…ამ ფასად ნამდვილად<br>კარგი არჩევანია.”", showcaseAuthorLaptop: "გიორგი, LaptopGeorgia", showcaseTypeStilis: "ტანსაცმლის ონლაინ მაღაზია", showcaseTypeEvak: "ევაკუატორის სერვისი", showcaseSeoTitle: "SEO 100/100", showcaseSeoSub: "Google Lighthouse შემოწმება", showcasePause: "ნამუშევრების ჩვენების შეჩერება", seeWorksSoon: "პრემიუმ ნამუშევრები მალე დაემატება!", pricingBookACall: "ზარის დაჯავშნა",
             worksPageTitle: "ნამუშევრები პაკეტების მიხედვით", worksPageSubtitle: "იხილეთ ჩვენს მიერ შექმნილი შაბლონები, დემოები და კლიენტების საიტები ერთ სივრცეში.",
             whatsappMessage: "გამარჯობა, მსურს ზარის დაჯავშნა თქვენს ვებ-გვერდის სერვისებზე სასაუბროდ.",
 
@@ -508,7 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
             pricingPremiumFeature3: "Полный технический и SEO-аудит страниц",
             pricingPremiumFeature4: "Приоритетная круглосуточная линия связи и 3 месяца поддержки после запуска",
 
-            pricingMostPopular: "популярный", pricingGetStarted: "Начать", seeWorksButton: "Смотреть работы", showcaseQuoteJagi: "“Честно, не ожидал<br>такого результата.”", showcaseAuthorJagi: "Гиви Курдадзе, Jagi Building", showcaseQuoteLaptop: "“…за такую цену<br>действительно хороший выбор.”", showcaseAuthorLaptop: "Гиорги, LaptopGeorgia", showcaseTypeStilis: "Интернет-магазин одежды", showcaseTypeEvak: "Служба эвакуатора", showcaseSeoTitle: "SEO 100/100", showcaseSeoSub: "Аудит Google Lighthouse", showcasePause: "Остановить показ работ", seeWorksSoon: "Премиум-работы скоро появятся!", pricingBookACall: "Заказать звонок",
+            pricingMostPopular: "популярный", pricingGetStarted: "Начать", seeWorksButton: "Смотреть работы", showcaseVisitButton: "Смотреть работу", showcaseNote: "Скриншот · без анимаций", showcaseQuoteJagi: "“Честно, не ожидал<br>такого результата.”", showcaseAuthorJagi: "Гиви Курдадзе, Jagi Building", showcaseQuoteLaptop: "“…за такую цену<br>действительно хороший выбор.”", showcaseAuthorLaptop: "Гиорги, LaptopGeorgia", showcaseTypeStilis: "Интернет-магазин одежды", showcaseTypeEvak: "Служба эвакуатора", showcaseSeoTitle: "SEO 100/100", showcaseSeoSub: "Аудит Google Lighthouse", showcasePause: "Остановить показ работ", seeWorksSoon: "Премиум-работы скоро появятся!", pricingBookACall: "Заказать звонок",
             worksPageTitle: "Наши работы по пакетам", worksPageSubtitle: "Шаблоны, демо и сайты клиентов, созданные нами, в одном месте.",
             whatsappMessage: "Здравствуйте, я хотел бы заказать звонок, чтобы обсудить ваши услуги по веб-разработке.",
 
@@ -1292,9 +1292,8 @@ const initPortfolioCarousel = () => {
         }
 
         // Runs before the page switch (this listener is on the button, the
-        // navigation one on the document), so the right tab is ready. The
-        // hero showcase window opens the tab of the site it's showing.
-        document.querySelectorAll('.see-works-btn[data-tier], .showcase-screen[data-tier]').forEach(button => {
+        // navigation one on the document), so the right tab is ready.
+        document.querySelectorAll('.see-works-btn[data-tier]').forEach(button => {
             button.addEventListener('click', (e) => {
                 if (button.dataset.tier === 'Premium') { e.preventDefault(); showComingSoon(button); return; }
                 showTier(button.dataset.tier, false);
@@ -1641,7 +1640,7 @@ const initPortfolioCarousel = () => {
                 setTimeout(() => fading && fading.cancel(), 800); // back to its top once faded out
                 typeDomain(site.domain);
                 setText(tierLabel, TIER_LABELS[site.tier]);
-                screen.dataset.tier = site.tier;
+                screen.href = 'https://' + site.domain;
                 swapChips(site);
             }
             current = i;
