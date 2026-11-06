@@ -272,6 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
             portfolio4Title: "'Healthy Salad' - Restaurant Website", portfolio5Title: "'Naxus AI' - Corporate Tech Website",
             portfolio6Title: "'Ioseb Tsikaridze Studio' - Photography Studio Website", portfolio7Title: "'zoobum' - Pet Shop Website",
             portfolio8Title: "'Hellshop' - Perfume Store Website", portfolio9Title: "'Everluxe' - Watch Brand Website",
+            portfolio10Title: "'Sushi Cake' - Sushi Website",
 
             testimonialsTitle: "Reviews and Testimonials", contactTitle: "Contact Us", contactInfoTitle: "Contact Information",
             contactInfoDesc: "Have a project or question? Write to us, call us, or fill out the form.",
@@ -365,6 +366,7 @@ document.addEventListener('DOMContentLoaded', () => {
             portfolio2Title: "'The Trim House' - ბარბერშოპის ბრენდინგი", portfolio3Title: "'Olio & Sale' - კაფეს ონლაინ ვებსაიტი",
             portfolio6Title: "'Ioseb Tsikaridze Studio' - ფოტოსტუდიის ვებსაიტი", portfolio7Title: "'zoobum' - ზოომაღაზიის ვებსაიტი",
             portfolio8Title: "'Hellshop' - სუნამოების მაღაზიის ვებსაიტი", portfolio9Title: "'Everluxe' - საათების ბრენდის ვებსაიტი",
+            portfolio10Title: "'Sushi Cake' - სუშის ვებსაიტი", 
 
             testimonialsTitle: "მიმოხილვები და შეფასებები", reviewPromptText: "გვითანამშრომლია? სიამოვნებით მოვისმენთ თქვენს აზრს.",
             contactTitle: "დაგვიკავშირდით", contactInfoTitle: "საკონტაქტო ინფორმაცია", contactInfoDesc: "გაქვთ პროექტი ან შეკითხვა? მოგვწერეთ, დაგვირეკეთ, ან შეავსეთ ფორმა.",
@@ -455,6 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
             portfolio4Title: "'полезный салат' - Сайт ресторана", portfolio5Title: "'Naxus AI' , Корпоративный технологический веб-сайт",
             portfolio6Title: "'Ioseb Tsikaridze Studio' - Сайт фотостудии", portfolio7Title: "'zoobum' - Сайт зоомагазина",
             portfolio8Title: "'Hellshop' - Сайт магазина парфюмерии", portfolio9Title: "'Everluxe' - Сайт часового бренда",
+            portfolio10Title: "'Sushi Cake' - Сайт суши",
 
             testimonialsTitle: "Отзывы и рекомендации", contactTitle: "Свяжитесь с нами", contactInfoTitle: "Контактная информация",
             contactInfoDesc: "Есть проект или вопрос? Напишите нам, позвоните или заполните форму.",
