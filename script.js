@@ -253,8 +253,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             salesTitle2: "+22% sales", sourceTitle2: "Source: Admin / GA4 • 45 days", webInfoTitle2: "<span class=\"case-tag-prefix\">Online Store · Performance · </span>Launched: Apr 2025", viewPRTitle: "View Live Project",
 
-            pageDescription: "Website development in Tbilisi from 600 GEL: fast, SEO-ready websites, online stores and admin panels. Pay in full, 50/50 or over 3 months.",
-            pageTitle: "Website Development in Tbilisi from 600 GEL | OSGWeb.ge",
+            pageDescription: "Website development in Tbilisi from 300 GEL: fast, SEO-ready websites, online stores and admin panels. Pay in full, 50/50 or over 3 months.",
+            pageTitle: "Website Development in Tbilisi from 300 GEL | OSGWeb.ge",
 
             navServices: "Services", navPortfolio: "Portfolio", navTestimonials: "Testimonials", navPricing: "Pricing", navContact: "Contact",
             heroTitle: "Web Agency<br><span class='gradient-text'>in Tbilisi</span>", heroSubtitle: "We build websites that sell.", heroSubtext: "<span>Website development</span> · <span>Online stores</span> · <span>Web apps</span>", heroButton: "Start a Project <i class=\"fas fa-chevron-right\" aria-hidden=\"true\"></i>", heroButtonSecondary: "Explore Services",
@@ -346,8 +346,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             salesTitle2: "+22% გაყიდვები", sourceTitle2: "წყარო: Admin / GA4 • 45 დღე", webInfoTitle2: "<span class=\"case-tag-prefix\">ონლაინ მაღაზია · შესრულება · </span>გამოშვების თარიღი: აპრ 2025", viewPRTitle: "პროექტის ნახვა",
 
-            pageDescription: "ვებსაიტების დამზადება თბილისში 600 ლარიდან: სწრაფი, SEO-ზე მორგებული საიტები, ონლაინ მაღაზიები და ადმინ პანელი. გადახდა ერთიანად, 50/50 ან 3 თვეში.",
-            pageTitle: "საიტის დამზადება თბილისში 600 ლარიდან | OSGWeb.ge",
+            pageDescription: "ვებსაიტების დამზადება თბილისში 300 ლარიდან: სწრაფი, SEO-ზე მორგებული საიტები, ონლაინ მაღაზიები და ადმინ პანელი. გადახდა ერთიანად, 50/50 ან 3 თვეში.",
+            pageTitle: "საიტის დამზადება თბილისში 300 ლარიდან | OSGWeb.ge",
 
             navServices: "სერვისები", navPortfolio: "პორტფოლიო", navTestimonials: "შეფასებები", navPricing: "ფასები", navContact: "კონტაქტი",
             heroTitle: "ვებ სააგენტო<br><span class='gradient-text'>თბილისში</span>", heroSubtitle: "ვქმნით საიტებს, რომლებიც ყიდის.", heroSubtext: "<span>საიტის დამზადება</span> · <span>ონლაინ მაღაზიები</span> · <span>ვებ აპლიკაციები</span>", heroButton: "პროექტის დაწყება <i class=\"fas fa-chevron-right\" aria-hidden=\"true\"></i>", heroButtonSecondary: "სერვისების ნახვა",
@@ -436,8 +436,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             salesTitle2: "+22% продаж", sourceTitle2: "Источник: Admin / GA4 • 45 дней", webInfoTitle2: "<span class=\"case-tag-prefix\">Интернет-магазин · Производительность · </span>Запуск: апр 2025", viewPRTitle: "просмотреть проект",
 
-            pageDescription: "Создание сайтов в Тбилиси от 600 лари: быстрые сайты с SEO, интернет-магазины и админ-панели. Оплата сразу, 50/50 или за 3 месяца.",
-            pageTitle: "Создание сайтов в Тбилиси от 600 лари | OSGWeb.ge",
+            pageDescription: "Создание сайтов в Тбилиси от 300 лари: быстрые сайты с SEO, интернет-магазины и админ-панели. Оплата сразу, 50/50 или за 3 месяца.",
+            pageTitle: "Создание сайтов в Тбилиси от 300 лари | OSGWeb.ge",
 
             navServices: "Услуги", navPortfolio: "Портфолио", navTestimonials: "Отзывы", navPricing: "Цены", navContact: "Контакты",
             heroTitle: "Веб-агентство<br><span class='gradient-text'>в Тбилиси</span>", heroSubtitle: "Создаём сайты, которые продают.", heroSubtext: "<span>Создание сайтов</span> · <span>Интернет-магазины</span> · <span>Веб-приложения</span>", heroButton: "Начать проект <i class=\"fas fa-chevron-right\" aria-hidden=\"true\"></i>", heroButtonSecondary: "Изучить услуги",
@@ -542,10 +542,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const PRICING = {
         miniPromoEnds: '2026-10-23T23:59:59+04:00',
         packages: {
-            Mini:    { price: 600, promoPrice: 500, fixed: true },
-            Starter: { price: 990 },
-            Pro:     { price: 2190 },
-            Premium: { price: 4490 },
+            Mini:    { price: 300, promoPrice: 500, fixed: true },
+            Starter: { price: 500 },
+            Pro:     { price: 900 },
+            Premium: { price: 1400 },
         },
         threeMonthFeeRate: 0.10,
     };
