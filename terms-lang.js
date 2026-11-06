@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clause10Body: "ვებსაიტის სატესტო ვერსიის გადაცემის შემდეგ, კლიენტს აქვს 5 სამუშაო დღე შენიშვნებისა და ხარვეზების მოსაწოდებლად. აღნიშნულ ვადაში უკუკავშირის არარსებობის შემთხვევაში, სამუშაო ითვლება სრულად და ჯეროვნად შესრულებულად.",
 
             clause11Title: "საგარანტიო მომსახურების ვადა",
-            clause11Body: "ვებსაიტის ინტერნეტში გაშვებიდან OSG უსასყიდლოდ ასწორებს გამოვლენილ ტექნიკურ ხარვეზებსა და მცირე შესწორებებს, არჩეული პაკეტის შესაბამისად:<br><br>Mini პაკეტი: 7 დღე;<br>Starter პაკეტი: 14 დღე;<br>Pro პაკეტი: 21 დღე;<br>Premium პაკეტი: 3 თვე (90 დღე).<br><br>აღნიშნული საგარანტიო ვადების გასვლის შემდეგ, ნებისმიერი ტექნიკური მხარდაჭერა, განახლება ან ცვლილება ხორციელდება ცალკე შეთანხმებული ტარიფით.",
+            clause11Body: "ვებსაიტის ინტერნეტში გაშვებიდან OSG უსასყიდლოდ ასწორებს მხოლოდ შეთანხმებული ფუნქციებისა და დიზაინის ფარგლებში გამოვლენილ ტექნიკურ ხარვეზებს, არჩეული პაკეტის შესაბამისად:<br><br>Mini პაკეტი: 7 დღე;<br>Starter პაკეტი: 14 დღე;<br>Pro პაკეტი: 21 დღე;<br>Premium პაკეტი: 3 თვე (90 დღე).<br><br>აღნიშნული საგარანტიო ვადების გასვლის შემდეგ, ნებისმიერი ტექნიკური მხარდაჭერა, განახლება ან ცვლილება ხორციელდება ცალკე შეთანხმებული ტარიფით.",
 
             clause12Title: "სააქციო ფასები",
             clause12Body: "აქციის ფარგლებში გამოცხადებული ფასი (მაგალითად, Mini პაკეტის სააქციო ფასი) ფიქსირდება, თუ კლიენტი აქციის დასრულებამდე გადაიხდის მომსახურების სრულ ღირებულებას ან პირველ შენატანს (50/50 ან 3-თვიანი გეგმით). ასეთ შემთხვევაში შენატანები დაითვლება სააქციო ფასიდან. აქციის დასრულების თარიღი და დრო მითითებულია ვებსაიტზე; ამ ვადის გასვლის შემდეგ ახალ შეკვეთებზე მოქმედებს სტანდარტული ფასი.",
@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clause10Body: "After the test version of the website is delivered, the Client has 5 business days to submit comments and report any issues. If no feedback is received within this period, the work is considered fully and properly completed.",
 
             clause11Title: "Warranty Period",
-            clause11Body: "From the moment the website goes live, OSG will fix any identified technical faults and minor corrections free of charge, according to the selected package:<br><br>Mini package: 7 days;<br>Starter package: 14 days;<br>Pro package: 21 days;<br>Premium package: 3 months (90 days).<br><br>After these warranty periods expire, any technical support, updates, or changes will be provided under a separately agreed rate.",
+            clause11Body: "From the moment the website is launched on the internet, OSG free of charge fixes only technical bugs identified within the scope of the agreed-upon functions and design, in accordance with the selected package:<br><br>Mini package: 7 days;<br>Starter package: 14 days;<br>Pro package: 21 days;<br>Premium package: 3 months (90 days).<br><br>After these warranty periods expire, any technical support, updates, or changes will be provided under a separately agreed rate.",
 
             clause12Title: "Promotional Prices",
             clause12Body: "A price announced as part of a promotion (for example, the Mini package's promotional price) is locked in if the Client pays the full cost of the service or the first installment (under the 50/50 or 3-Month plan) before the promotion ends. In that case, installments are calculated from the promotional price. The promotion's end date and time are shown on the website; after that, the standard price applies to new orders.",
@@ -137,7 +137,7 @@ document.addEventListener('DOMContentLoaded', () => {
             clause10Body: "После передачи тестовой версии сайта у Клиента есть 5 рабочих дней для предоставления замечаний и указания недочётов. При отсутствии обратной связи в течение этого срока работа считается полностью и надлежащим образом выполненной.",
 
             clause11Title: "Гарантийный срок",
-            clause11Body: "С момента запуска сайта в интернете OSG бесплатно устраняет выявленные технические неисправности и незначительные доработки в соответствии с выбранным пакетом:<br><br>Пакет Mini: 7 дней;<br>Пакет Starter: 14 дней;<br>Пакет Pro: 21 день;<br>Пакет Premium: 3 месяца (90 дней).<br><br>По истечении указанных гарантийных сроков любая техническая поддержка, обновления или изменения осуществляются по отдельно согласованному тарифу.",
+            clause11Body: "С момента запуска веб-сайт в интернет OSG бесплатно устраняет только технические ошибки, выявленные в рамках согласованных функций и дизайна, в соответствии с выбранным пакетом:<br><br>Пакет Mini: 7 дней;<br>Пакет Starter: 14 дней;<br>Пакет Pro: 21 день;<br>Пакет Premium: 3 месяца (90 дней).<br><br>По истечении указанных гарантийных сроков любая техническая поддержка, обновления или изменения осуществляются по отдельно согласованному тарифу.",
 
             clause12Title: "Акционные цены",
             clause12Body: "Цена, объявленная в рамках акции (например, акционная цена пакета Mini), фиксируется, если Клиент до окончания акции оплатит полную стоимость услуги или первый платёж (по плану 50/50 или на 3 месяца). В этом случае платежи рассчитываются от акционной цены. Дата и время окончания акции указаны на сайте; после этого для новых заказов действует стандартная цена.",
